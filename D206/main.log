@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.3)  28 OCT 2020 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.3)  28 OCT 2020 15:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/jana/Dokumente/my AP 2020/D206/main.tex"
-(/home/jana/Dokumente/my AP 2020/D206/main.tex
+**/home/jana/Dokumente/AP-2020/D206/main.tex
+(/home/jana/Dokumente/AP-2020/D206/main.tex
 LaTeX2e <2020-10-01>
-L3 programming layer <2020-09-24> xparse <2020-03-03> (/home/jana/Dokumente/my AP 2020/D206/header.tex (/home/jana/.local/texlive/2020/texmf-dist/tex/latex/koma-script/scrartcl.cls
+L3 programming layer <2020-09-24> xparse <2020-03-03> (/home/jana/Dokumente/AP-2020/D206/header.tex (/home/jana/.local/texlive/2020/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2020/09/21 v3.32 KOMA-Script document class (article)
 (/home/jana/.local/texlive/2020/texmf-dist/tex/latex/koma-script/scrkbase.sty
 Package: scrkbase 2020/09/21 v3.32 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
@@ -356,10 +356,10 @@ l.45 \msg_fatal:nn {fontspec} {cannot-use-pdftex}
  
 Here is how much of TeX's memory you used:
  5957 strings out of 479917
- 115926 string characters out of 5879248
+ 115906 string characters out of 5879248
  500746 words of memory out of 5000000
  22497 multiletter control sequences out of 15000+600000
  535388 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,1n,101p,10657b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,1n,101p,10652b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
 /home/jana/.local/texlive/2020/texmf-dist/tex/latex/fontspec/fontspec.sty:45:  ==> Fatal error occurred, no output PDF file produced!
