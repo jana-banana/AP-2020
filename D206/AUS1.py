@@ -16,8 +16,7 @@ plt.ylabel('T [K]')
 plt.plot(X, Y, 'o',label='T1')
 plt.plot(X,Z, 'o',label ='T2')
 plt.legend()
-plt.title('Temperaturverlauf der Reservoire während der Messung')
 
 plt.tight_layout()
-plt.savefig('tempK.png')
+plt.savefig('build/tempK.png')
 
