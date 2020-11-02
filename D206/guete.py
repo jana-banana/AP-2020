@@ -32,7 +32,7 @@ def idealGute(a,b):
     return a/(a-b)
 
 def fehlerRealGute(X,dA,dB):
-    return ((2*X)**2 * (dA)**2 + (dB)**2)**0.5
+    return (((4*4184 + 750)*(2*X))**2 *(dA)**2 + (4*4184 + 750)**2 * (dB)**2)**0.5
 
 def fehlerIdealGute(T1, T2, dT):
     return ((-T2/((T1-T2)**2))**2 * dT**2 +(T1/(T1-T2)**2)**2 * dT**2)**0.5
