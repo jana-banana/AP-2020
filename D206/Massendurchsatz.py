@@ -87,8 +87,8 @@ def ableitung(X,A,B): #für Aufgabe c
 def realGute(ab, N): #für Aufgabe d
     return ((4*4184 + 750)*ab)/N  #dimensionslos
 
-def fehlerMassendurchsatz(X,A,B,dA,dB,dL):
-    return (((4*4184 + 750)*(2*X))**2 *(dA)**2 + (4*4184 + 750)**2 * (dB)**2 + ((4*4184 + 750)*(2*A*X+B)/(L**2))**2 * dL)**0.5
+def fehlerMassendurchsatz(X,A,B,dA,dB,L,dL):
+    return ( (((4*4184 + 750)/L)*2*L*dA)**2 + (((4*4184 + 750)/L)*dB)**2 +  ( (( (4*4184 + 750)*(2*A*X+B) ) / (L**2) ) * dL )**2 )**0.5
     
 popt, pcov = curve_fit(line, X, T2)
 
@@ -102,12 +102,25 @@ B = popt[1]
 dA = pcov[0,0]**0.5
 dB = pcov[1,1]**0.5
 
-for i in range(1,5):
-    print("ableitung bei t [s]= ", X[i]*60)
-    abl = ableitung(X[i], popt[0], popt[1])
-    print("Massendurchsatz hier: ", (realGute(abl, N[i]))/L)
-    print("Fehler Massendurchstz: ",fehlerMassendurchsatz(X[i],A,B,dA,dB,dL))
 
+def kompress(p_a,p_b,MaDu): #Aufgabe f Bestimmung der mechanischen Kompressorleistung N_mech
+  k=1.4
+  p0 = p2[0]*100000
+  roh = 5.51
+  T0 = T2[0]
+  return (1/(k-1)) * (p_b * (p_a/p_b)**(1/k) - p_a ) * ((T*p0)/(roh*T0*p_a)) * MaDu
+
+
+for i in range(1,5):
+  print()
+  print("ableitung bei t [s]= ", X[i]*60)
+  abl = ableitung(X[i], popt[0], popt[1])
+  MaDu = (realGute(abl, N[i])) / L
+  print("Massendurchsatz hier: ", MaDu)
+  print("Fehler Massendurchstz: ",fehlerMassendurchsatz(X[i],A,B,dA,dB,L,dL))
+  print()
+  print("Bestimmung der mechanischen Kompressorleistung N_mech")
+  print("mech Kompr.Leistung hier ", kompress(p1[i]*100000,p2[i]*100000,T2[i],MaDu))
 
 plt.legend() 
 plt.savefig('build/TempDruck.pdf')
