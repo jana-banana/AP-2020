@@ -34,9 +34,9 @@ def idealGute(a,b):
 popt, pcov = curve_fit(line, X, T1)
 
 print("T1")
-print("A =", popt[0])
-print("B =", popt[1])
-print("C =", popt[2])
+print("A =", popt[0], "+/-", pcov[0,0]**0.5)
+print("B =", popt[1], "+/-", pcov[1,1]**0.5)
+print("C =", popt[2], "+/-", pcov[2,2]**0.5)
 
 for i in range(1,5): #einfach die ersten vier Punkte
     print("ableitung bei t = ", X[i])
@@ -48,9 +48,10 @@ for i in range(1,5): #einfach die ersten vier Punkte
 popt, pcov = curve_fit(line, X, T2)
 
 print("T2")
-print("A =", popt[0])
-print("B =", popt[1])
-print("C =", popt[2])
+print("A =", popt[0], "+/-", pcov[0,0]**0.5)
+print("B =", popt[1], "+/-", pcov[1,1]**0.5)
+print("C =", popt[2], "+/-", pcov[2,2]**0.5)
+
 
 
 for i in range(1,5):

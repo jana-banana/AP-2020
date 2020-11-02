@@ -22,20 +22,20 @@ plt.ylabel("log(p/p_0)")
 a,b =[],[]
 for i in range(36):
   a.append(1/K1[i])
-  b.append(np.log(p1[i]/p1[1]))
+  b.append(np.log(p1[i]/p1[0]))
 
 c,d =[],[]
 for i in range(36):
   c.append(1/K2[i])
-  d.append(np.log(p2[i]/p2[1]))
+  d.append(np.log(p2[i]/p2[0]))
 
 
 plt.plot(a, b, 'o',label='Reservoir 1')
 plt.plot(c, d, 'o',label='Reservoir 2')
-plt.legend()
+
 
 plt.tight_layout()
-plt.savefig('TempDruck.png')
+
 
 def line(x,m,b):
     return m*x + b
@@ -43,11 +43,25 @@ def line(x,m,b):
 popt, pcov = curve_fit(line, a, b)
 
 print("Reservoir 1")
-print("m =", popt[0])
-print("b =", popt[1])
+print("m =", popt[0],"+/-", pcov[0,0]**0.5)
+print("b =", popt[1],"+/-", pcov[1,1]**0.5)
+
+
+plt.plot(X, popt[0]*X + popt[1], label='Ausgleichsgerade zu Reservoir 1')
 
 popt, pcov = curve_fit(line, c, d)
 
 print("Reservoir 2")
-print("m =", popt[0])
-print("b =", popt[1])
+print("m =", popt[0],"+/-", pcov[0,0]**0.5)
+print("b =", popt[1],"+/-", pcov[1,1]**0.5)
+
+plt.plot(X, popt[0]*X + popt[1], label='Ausgleichsgerade zu Reservoir 2')
+
+print("Verdampfungswärme L")#nur für T2; [L] = J/mol
+print("L = ",(-popt[0])*8.314) #L=-m*R ; R= 8.314(J)/(mol*K) 
+
+f= 8.314*pcov[0,0] #dL/dm = R; Fehler L = R*(Fehler m)
+print("Fehler von L = +/- ",f )
+
+plt.legend() 
+plt.savefig('build/TempDruck.pdf')
