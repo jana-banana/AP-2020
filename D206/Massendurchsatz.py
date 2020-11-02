@@ -46,8 +46,8 @@ print("Reservoir 1")
 print("m =", popt[0],"+/-", pcov[0,0]**0.5)
 print("b =", popt[1],"+/-", pcov[1,1]**0.5)
 
-
-plt.plot(X, popt[0]*X + popt[1], label='Ausgleichsgerade zu Reservoir 1')
+z = np.array([Z])
+plt.plot(z, popt[0]*z + popt[1], label='Ausgleichsgerade zu Reservoir 1')
 
 popt, pcov = curve_fit(line, c, d)
 
@@ -55,13 +55,72 @@ print("Reservoir 2")
 print("m =", popt[0],"+/-", pcov[0,0]**0.5)
 print("b =", popt[1],"+/-", pcov[1,1]**0.5)
 
-plt.plot(X, popt[0]*X + popt[1], label='Ausgleichsgerade zu Reservoir 2')
+m = -popt[0]
+dm = pcov[0,0]**0.5 #feheler m
+
+plt.plot(z, popt[0]*z + popt[1], label='Ausgleichsgerade zu Reservoir 2')
+
 
 print("Verdampfungswärme L")#nur für T2; [L] = J/mol
-print("L = ",(-popt[0])*8.314) #L=-m*R ; R= 8.314(J)/(mol*K) 
+L = m*8.314
 
-f= 8.314*pcov[0,0] #dL/dm = R; Fehler L = R*(Fehler m)
-print("Fehler von L = +/- ",f )
+print("L = ",(m*8.314))#L=-m*R ; R= 8.314(J)/(mol*K) 
+
+#dL/dm = R; Fehler L = R*(Fehler m)
+print("Fehler von L = +/- ", 8.314*dm )
+dL = 8.314*dm
+
+X, T1, T2, N= [],[], [], []
+for line in open('data.txt', 'r'):
+  values = [float(s) for s in line.split()]
+  X.append(values[0])
+  T1.append(values[1]+273.15)
+  T2.append(values[3]+273.15)
+  N.append(values[5])
+
+def line(X, A, B, C):
+    return A * X**2 + B*X + C
+
+def ableitung(X,A,B): #für Aufgabe c
+    return 2*A*X + B
+    
+def realGute(ab, N): #für Aufgabe d
+    return ((4*4184 + 750)*ab)/N  #dimensionslos
+
+def fehlerMassendurchsatz(X,A,B,dA,dB,L,dL):
+    return ( (((4*4184 + 750)/L)*2*L*dA)**2 + (((4*4184 + 750)/L)*dB)**2 +  ( (( (4*4184 + 750)*(2*A*X+B) ) / (L**2) ) * dL )**2 )**0.5
+    
+popt, pcov = curve_fit(line, X, T2)
+
+print("T2")
+print("A =", popt[0], "+/-", pcov[0,0]**0.5)
+print("B =", popt[1], "+/-", pcov[1,1]**0.5)
+print("C =", popt[2], "+/-", pcov[2,2]**0.5)
+
+A = popt[0]
+B = popt[1] 
+dA = pcov[0,0]**0.5
+dB = pcov[1,1]**0.5
+
+
+def kompress(p_a,p_b,MaDu): #Aufgabe f Bestimmung der mechanischen Kompressorleistung N_mech
+  k=1.4
+  p0 = p2[0]*100000
+  roh = 5.51
+  T0 = T2[0]
+  return (1/(k-1)) * (p_b * (p_a/p_b)**(1/k) - p_a ) * ((T*p0)/(roh*T0*p_a)) * MaDu
+
+
+for i in range(1,5):
+  print()
+  print("ableitung bei t [s]= ", X[i]*60)
+  abl = ableitung(X[i], popt[0], popt[1])
+  MaDu = (realGute(abl, N[i])) / L
+  print("Massendurchsatz hier: ", MaDu)
+  print("Fehler Massendurchstz: ",fehlerMassendurchsatz(X[i],A,B,dA,dB,L,dL))
+  print()
+  print("Bestimmung der mechanischen Kompressorleistung N_mech")
+  print("mech Kompr.Leistung hier ", kompress(p1[i]*100000,p2[i]*100000,T2[i],MaDu))
 
 plt.legend() 
 plt.savefig('build/TempDruck.pdf')
