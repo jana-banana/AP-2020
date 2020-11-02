@@ -8,7 +8,10 @@ build/TempDruck.pdf: Massendurchsatz.py matplotlibrc header-matplotlib.tex | bui
 	TEXINPUTS=$$(pwd): python Massendurchsatz.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/tempK.pdf
+build/main.pdf: build/tempK.pdf 
+				build/TempDruck.pdf
+				Darstellung_Waermepumpe.pdf
+				Aufbau_Waermepumpe.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

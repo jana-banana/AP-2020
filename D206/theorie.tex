@@ -10,8 +10,16 @@ Dafür benötigt man zusätzliche mechanische Arbeit.
 \subsection{Arbeitsweise einer Wärmepumpe}
 \begin{figure}
     \centering
+<<<<<<< HEAD
     \includegraphics[width=\textwidth]{Aufbau_Waermepumpe.png}
     \caption{Prinzipielle Aufbau einer Wärmepumpe. \cite[3]{anleitung}}    
+||||||| dcda01c
+    \includegraphics[width=\textwidth]{Aufbau_Waermepumpe.png}
+    \caption{Prinzipielle Aufbau einer Wärmepumpe.\cite[3]{anleitung}}    
+=======
+    \includegraphics[width=\textwidth]{Aufbau_Waermepumpe.pdf}
+    \caption{Prinzipielle Aufbau einer Wärmepumpe.\cite[3]{anleitung}}    
+>>>>>>> 5cf90c3efdffabecca71e3ca8a0dccc823cdfae6
 \end{figure}
 Die Hauptbauteile einer Wärmepumpe sind ein Kompressor, zwei Reservoire mit Wasser und einem Drosselventil.
 Das Transportmedium der Wärmepumpe sollte ein reales Gas mit hoher Kondensationswärme sein, da die Wärmeaufnahme  durch Verdampfen und die Wärmeabgabe beim Verflüssigen erfolgt.
@@ -38,7 +46,7 @@ Mit der Grundannahme, dass es keine Temperaturänderung der Reservoire gibt, fol
 \end{equation}
 , wobei $T_1$ und $T_2$ die Wassertemperaturen der Reservoire bezeichnet.
 Daraus folgt für die Güteziffer in idealen Bedingungen:
-\begin{equation}
+\begin{equation}\label{eqn:idguete}
     \nu_{\text{id}} = \frac{Q_1}{A} = \frac{T_1}{T_1 - T_2}
 \end{equation}
 Dementsprechent ist der Arbeitsaufwand für die Pumpe geringer, je kleiner die Temperaturdifferenz $\Delta T = |T_1 - T_2|$ ist.
@@ -51,7 +59,7 @@ Mit der Wärmekapazität des Wassers aus Reservoir 1 $m_1c_w$ und der Wärmekapa
     \frac{\symup{d}Q_1}{\symup{d}t} = (m_1c_w + m_kc_k) \frac{\symup{d}T_1}{\symup{d}t}.
 \end{equation}
 Für die Güteziffer ergibt sich dann 
-\begin{equation}
+\begin{equation}\label{eqn:gueteziffer}
     \nu = \frac{\symup{d}Q_1}{\symup{d}t \cdot N} = (m_1c_w + m_kc_k) \frac{\symup{d}T_1}{\symup{d}t} \cdot \frac{1}{N},
 \end{equation}
 wobei $N$ für die gemittelte Leistungsaufnahme des Kompressors steht.
@@ -66,17 +74,17 @@ Die pro Zeiteinheit aus dem Reservoir 2 entnommene Wärmemenge errechnet sich da
     \frac{\symup{d}Q_2}{\symup{d}t} = (m_2c_w + m_kc_k) \frac{\symup{d}T_2}{\symup{d}t}
 \end{equation}
 Somit ergibt sich für den Massendurchsatz $\frac{\symup{d}m}{\symup{d}t}$:
-\begin{equation}
+\begin{equation}\label{eqn:massendurchsatz}
     \frac{\symup{d}m}{\symup{d}t} = (m_2c_w + m_kc_k) \frac{\symup{d}T_2}{\symup{d}t} \cdot \frac{1}{L}
 \end{equation}
 
 \subsection{Die mechanische Kompressorleistung}
 Im allgemeinen gilt für die Arbeit $A_{\text{m}}$, die es braucht um das Gasvolumen $V_{\text{a}}$ auf das Gasvolumen $V_{\text{b}}$ zu verringern: 
-\begin{equation}
+\begin{equation*}
     A_m = - \int_{V_{\text{b}}}^{V_{\text{b}}} p\, \symup{d}V
-\end{equation}
+\end{equation*}
 Mit der Annahme, dass die Kompression adiabatisch abläuft, und der Poissonschen Gleichung, folgt für die Arbeit $A_{\text{m}}$ und somit auch für die mechanische Kompressionsleistung $N_{\text{mech}} = \frac{\symup{d}A_{\text{m}}}{\symup{d}t}$:
-\begin{equation}
+\begin{equation} \label{eqn:kompressorleistung}
     N_{\text{mech}} = \frac{\symup{d}A_{\text{m}}}{\symup{d}t} 
     = \frac{1}{\kappa - 1} \biggl( p_{\text{b}} \sqrt[\kappa]{\frac{p_{\text{a}}}{p_{\text{b}}}} - p_{\text{a}} \biggr) \frac{\symup{d}V_{\text{a}}}{ßsymup{d}t}
     = \frac{1}{\kappa -1} \biggl( p_{\text{b}} \sqrt[\kappa]{\frac{p_{\text{a}}}{p_{\text{b}}}} - p_{\text{a}} \biggr) \frac{1}{\rho} \frac{\symup{d}m}{\symup{d}t}
