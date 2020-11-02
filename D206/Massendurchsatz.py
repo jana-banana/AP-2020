@@ -68,6 +68,7 @@ print("L = ",(m*8.314))#L=-m*R ; R= 8.314(J)/(mol*K)
 
 #dL/dm = R; Fehler L = R*(Fehler m)
 print("Fehler von L = +/- ", 8.314*dm )
+dL = 8.314*dm
 
 X, T1, T2, N= [],[], [], []
 for line in open('data.txt', 'r'):
@@ -86,6 +87,8 @@ def ableitung(X,A,B): #für Aufgabe c
 def realGute(ab, N): #für Aufgabe d
     return ((4*4184 + 750)*ab)/N  #dimensionslos
 
+def fehlerMassendurchsatz(X,A,B,dA,dB,dL):
+    return (((4*4184 + 750)*(2*X))**2 *(dA)**2 + (4*4184 + 750)**2 * (dB)**2 + ((4*4184 + 750)*(2*A*X+B)/(L**2))**2 * dL)**0.5
     
 popt, pcov = curve_fit(line, X, T2)
 
@@ -94,6 +97,8 @@ print("A =", popt[0], "+/-", pcov[0,0]**0.5)
 print("B =", popt[1], "+/-", pcov[1,1]**0.5)
 print("C =", popt[2], "+/-", pcov[2,2]**0.5)
 
+A = popt[0]
+B = popt[1] 
 dA = pcov[0,0]**0.5
 dB = pcov[1,1]**0.5
 
@@ -101,6 +106,7 @@ for i in range(1,5):
     print("ableitung bei t [s]= ", X[i]*60)
     abl = ableitung(X[i], popt[0], popt[1])
     print("Massendurchsatz hier: ", (realGute(abl, N[i]))/L)
+    print("Fehler Massendurchstz: ",fehlerMassendurchsatz(X[i],A,B,dA,dB,dL))
 
 
 plt.legend() 
