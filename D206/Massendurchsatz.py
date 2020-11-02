@@ -62,10 +62,46 @@ plt.plot(z, popt[0]*z + popt[1], label='Ausgleichsgerade zu Reservoir 2')
 
 
 print("Verdampfungswärme L")#nur für T2; [L] = J/mol
-print("L = ",(m*8.314) #L=-m*R ; R= 8.314(J)/(mol*K) 
+L = m*8.314
+
+print("L = ",(m*8.314))#L=-m*R ; R= 8.314(J)/(mol*K) 
 
 #dL/dm = R; Fehler L = R*(Fehler m)
 print("Fehler von L = +/- ", 8.314*dm )
+
+X, T1, T2, N= [],[], [], []
+for line in open('data.txt', 'r'):
+  values = [float(s) for s in line.split()]
+  X.append(values[0])
+  T1.append(values[1]+273.15)
+  T2.append(values[3]+273.15)
+  N.append(values[5])
+
+def line(X, A, B, C):
+    return A * X**2 + B*X + C
+
+def ableitung(X,A,B): #für Aufgabe c
+    return 2*A*X + B
+    
+def realGute(ab, N): #für Aufgabe d
+    return ((4*4184 + 750)*ab)/N  #dimensionslos
+
+    
+popt, pcov = curve_fit(line, X, T2)
+
+print("T2")
+print("A =", popt[0], "+/-", pcov[0,0]**0.5)
+print("B =", popt[1], "+/-", pcov[1,1]**0.5)
+print("C =", popt[2], "+/-", pcov[2,2]**0.5)
+
+dA = pcov[0,0]**0.5
+dB = pcov[1,1]**0.5
+
+for i in range(1,5):
+    print("ableitung bei t [s]= ", X[i]*60)
+    abl = ableitung(X[i], popt[0], popt[1])
+    print("Massendurchsatz hier: ", (realGute(abl, N[i]))/L)
+
 
 plt.legend() 
 plt.savefig('build/TempDruck.pdf')
