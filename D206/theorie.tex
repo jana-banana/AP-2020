@@ -10,7 +10,7 @@ Dafür benötigt man zusätzliche mechanische Arbeit.
 \subsection{Arbeitsweise einer Wärmepumpe}
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{Aufbau_Waermepumpe.png}
+    \includegraphics[width=\textwidth]{Aufbau_Waermepumpe.pdf}
     \caption{Prinzipielle Aufbau einer Wärmepumpe.\cite[3]{anleitung}}    
 \end{figure}
 Die Hauptbauteile einer Wärmepumpe sind ein Kompressor, zwei Reservoire mit Wasser und einem Drosselventil.
@@ -38,7 +38,7 @@ Mit der Grundannahme, dass es keine Temperaturänderung der Reservoire gibt, fol
 \end{equation}
 , wobei $T_1$ und $T_2$ die Wassertemperaturen der Reservoire bezeichnet.
 Daraus folgt für die Güteziffer in idealen Bedingungen:
-\begin{equation}
+\begin{equation}\label{eqn:idguete}
     \nu_{\text{id}} = \frac{Q_1}{A} = \frac{T_1}{T_1 - T_2}
 \end{equation}
 Dementsprechent ist der Arbeitsaufwand für die Pumpe geringer, je kleiner die Temperaturdifferenz $\Delta T = |T_1 - T_2|$ ist.
@@ -51,7 +51,7 @@ Mit der Wärmekapazität des Wassers aus Reservoir 1 $m_1c_w$ und der Wärmekapa
     \frac{\symup{d}Q_1}{\symup{d}t} = (m_1c_w + m_kc_k) \frac{\symup{d}T_1}{\symup{d}t}.
 \end{equation}
 Für die Güteziffer ergibt sich dann 
-\begin{equation}
+\begin{equation}\label{eqn:gueteziffer}
     \nu = \frac{\symup{d}Q_1}{\symup{d}t \cdot N} = (m_1c_w + m_kc_k) \frac{\symup{d}T_1}{\symup{d}t} \cdot \frac{1}{N},
 \end{equation}
 wobei $N$ für die gemittelte Leistungsaufnahme des Kompressors steht.

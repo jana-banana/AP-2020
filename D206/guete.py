@@ -38,7 +38,7 @@ print("A =", popt[0])
 print("B =", popt[1])
 print("C =", popt[2])
 
-for i in range(1,4): #einfach die ersten vier Punkte
+for i in range(1,5): #einfach die ersten vier Punkte
     print("ableitung bei t = ", X[i])
     abl = ableitung(X[i], popt[0], popt[1])
     print(abl)
@@ -53,7 +53,7 @@ print("B =", popt[1])
 print("C =", popt[2])
 
 
-for i in range(1,4):
+for i in range(1,5):
     print("ableitung bei t = ", X[i])
     abl = ableitung(X[i], popt[0], popt[1])
     print(abl)
