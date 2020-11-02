@@ -50,7 +50,7 @@ dB = pcov[1,1]**0.5
 for i in range(1,5): #einfach die ersten vier Punkte
     print("ableitung bei t = ", X[i])
     abl = ableitung(X[i], popt[0], popt[1])
-    print(abl)
+    print("Ableitungswert hier: ",abl)
     print("reale Güteziffer hier ", realGute(abl, N[i]))
     print("fehler der realen Güteziffer hier ", fehlerRealGute(X[i],dA,dB))
     print("ideale Güteziffer hier ", idealGute(T1[i], T2[i]))
@@ -69,11 +69,12 @@ dB = pcov[1,1]**0.5
 for i in range(1,5):
     print("ableitung bei t = ", X[i])
     abl = ableitung(X[i], popt[0], popt[1])
-    print(abl)
+    print("Ableitungswert hier: ",abl)
     print("reale Güteziffer hier ", realGute(abl, N[i]))
     print("fehler  der realen Güteziffer hier ", fehlerRealGute(X[i],dA,dB))
     print("ideale Güteziffer hier ", idealGute(T1[i], T2[i]))
     print("fehler der idealen Güteziffer ", fehlerIdealGute(T1[i], T2[i], 273.25))
+
 
 
 
