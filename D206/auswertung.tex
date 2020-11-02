@@ -79,21 +79,21 @@ Die Wärmekapazität der Kupferschlangen und des Wasser ergeben sich zu:
   \begin{tabular}{
     S[table-format=3.0] %Zeit
     S[table-format=3.4] %guete gerechnet
+    @{${}\pm {}$}
     S[table-format=3.2] %fehler der gueteziffer 
     S[table-format=3.4] %guete ideal
     S[table-format=2.2] %Abweichung
   }
   \toprule
   {$ t \mathbin{/} \si{\second} $} &
-  {$ \nu $} &
-  {$ \Delta \nu $} &
+  \multicolumn{2}{c}{$ \nu $}&
   {$ \nu_{\text{id}}$} &
   {$ \text{Abweichung} \mathbin{/} \si{\percent}$} \\
   \midrule
-  60&   173.9232&     & 227.8077& 23.65\\
-  120&  170.5397&     & 110.1667& 54.80\\
-  180&  167.1562&     & 78.5395&  112.83\\
-  240&  163.7728&     & 53.4911&  206.17
+  60&   173.9232& 95.7291  & 227.8077 &23.65\\
+  120&  170.5397& 96.1649  & 110.1667   &54.80\\
+  180&  167.1562& 96.8867  & 78.5395    &112.83\\
+  240&  163.7728& 97.8885  & 53.4911    &206.17\\
   \end{tabular}
 \end{table}
 
@@ -115,10 +115,64 @@ $R$ entspricht der allgemeinen Gaskonstante.
   \includegraphics{TempDruck.pdf}
 \end{figure}
 
-Für die Steigung $m$ der Ausgleichsgerade ergibt sich:
+Für die Ausgleichsgeraden für $\log(\frac{p}{p_0}) = m\cdot\frac{1}{T} + b$ ergeben sich:
 \begin{align*}
-  \text{für}T_1 \text{und} p_}\text{a}}: m&=\\
-  \text{für}T_2 \text{und} p_{\text{b}}: m&=
+  \text{für}T_1 \text{und} p_}\text{a}}: m&= \SI{-2462.4863 \pm 70.5436}{\kelvin} & b&=\num{8.5260 \pm 0.2268} \\
+  \text{für}T_2 \text{und} p_{\text{b}}: m&= \SI{-1719.8296 \pm 88.3692}{\kelvin} & b&=\num{5.6974 \pm 0.3097}
 \end{align*}
 Da wir den Massendurchsatz aus den Messwerten bezüglich Reservoir 2 berechnen, werden wir zur Berechnung von $L$ auch die Steigung bezüglich Reservoir 2 benutzen.
-Mit Fehlerrechnung nach \cite{fehler}
+Mit Fehlerrechnung nach \cite{fehler} erhalten wir für $L$ :
+\begin{equation*}
+  L = \SI{14298.6636\pm 734.6999}{\joule\per\mole}
+\end{equation*}
+
+Mit der bekannten Verdampfungswärme L lässt sich der Massendurchsatz zu unseren Differentialquotienten nach \eqref{eqn:massendurchsatz} berechnen.
+\begin{table}
+  \centering
+  \begin{tabular}{S[table-format=3.0]
+                  S[table-format=1.4]
+                  S[table-format=1.4]}
+    \toprule
+    {$t \mathbin{/} \si{\second}$}&
+    {$\frac{\symup{d}m}{\symup{d}t}\mathbin{/}\si{\mole\per\second}$}&
+    {$\frac{\symup{d}m}{\symup{d}t}\mathbin{/}\si{\gram\per\second}$}\\
+    \midrule
+    60&   -0.00678  &  -0.8136    \\
+    120&  -0.00671  &  -0.8052   \\
+    180&  -0.00664  &  -0.7968    \\
+    240&  -0.00657  &  -0.7884    \\
+    \bottomrule    
+  \end{tabular}
+\end{table}
+
+Für ein leichteres Weiterrechnen haben wir den Massendurchsatz zusätzlich noch in SI-Einheiten aufgeschrieben.
+Dafür multipliziert man den Massendurchsatz mit der molaren Masse, die sich zu $M=\SI{120.9}{\gram\per\mole}$ ergibt.
+
+\subsection{Bestimmung der mechanischen Kompressionsleistung $N_{\text{mech}}$}
+Um die Formel \eqref{eqn:kompressorleistung} zur Berechung der mechanischen Kompressorleistung zu benutzen, 
+müssen wir $\rho$ aus der idealen Gasgleichung mithilfe der angegebenen Werte errechnen.
+Aus der Anleitung\cite[7]{anleitung} entnehmen wir $\rho_0 = \SI{5.51}{\gram\per\litre}$ bei $T=\SI{0}{\celsius}=\SI{273.25}{\kelvin}$ und $\kappa = \num{1.14}$, außerdem wissen wir $R=\SI{8.314}{\joule\per\mole\kelvin}$.
+\begin{equation*}
+  p\cdot V = n\cdot R\cdot T \implies nR = \frac{pV}{T}
+\end{equation*}
+Da die Stoffmenge über die Zeit konstant bleibt, folgt $nR=$const., außerdem ist $\rho \cdot V = m$.
+\begin{gather*}
+  \frac{p_0 V_0}{T_0} = \frac{p_{\text{a}} V_2}{T_2}\\
+  \implies \frac{p_0m}{\rho_0 T_0} = \frac{p_{\text{a}} m}{\rho T_2}\\
+  \implies \rho = \frac{\rho_0T_0 \cdot p_{\text{a}} }{p_0 \cdot T_2}
+\end{gather*}
+
+\begin{table}
+  \caption{Mechanische Kompressorleistung zu verschiedenen Zeitpunkten.}
+  \begin{tabular}{S[table-format=3.0]
+                  S[table-format=3.2]}
+    \toprule
+    {$t \mathbin{/} \si{\second}$}&{$N_{\text{mech}} \mathbin{/} \si{\watt}$}\\
+    \midrule
+    60& 152.08\\
+    120& 163.83 \\
+    180&  182.19\\
+    240& 179.84 \\
+    \bottomrule    
+  \end{tabular}
+\end{table}
