@@ -1,7 +1,14 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+Die genutzten Bauteile haben jeweils eine gewisse Toleranz aus denen sich auch ein Fehler berechnen lässt. 
+Dieser Fehler ist im folgenden durch diese Formel entstanden: 
+\begin{gather*}
+    F = x \cdot y \\
+    \frac{\Delta F}{F} = \sqrt{\biggl(\frac{\Delta x}{x}\biggr)² + \biggl(\frac{\Delta y}{y}\biggr)²}
+\end{gather*}
 
 \subsection{Wheatstonesche Brücke}
+Die Toleranzen der Bauteile sind als $\SI{0.2}{\percent}$ für den Widerstand und $\SI{0.5}{\percent}$ für das Potentiometer bestimmt.
 \begin{table}
   \label{tab:wheatstone}
   \centering
@@ -21,7 +28,7 @@
       {$R_2 \mathbin{/} \si{\ohm}$} &
       {$R_3 \mathbin{/} \si{\ohm}$} &
       {$R_4 \mathbin{/} \si{\ohm}$} \\
-      \midrule
+      \cmidrule(lr){1-3} \cmidrule(lr){4-6}
       332 & 594 & 406 & 332  & 539 & 461 \\
       664 & 422 & 578 & 664  & 368 & 632 \\
       1000& 327 & 673 & 1000 & 279 & 721 \\
@@ -30,10 +37,14 @@
 \end{table}
 Es ergeben sich für die unbekannten Widerstände:
 \begin{align*}
-  \text{für Wert 11:}\, R_x = \SI{485.47 \pm 0.28}{\ohm}\\
-  \text{für Wert 12:}\, R_x = \SI{387.26 \pm 0.38}{\ohm}
+  \text{für Wert 11:}\, R_x &= \SI{485.47 \pm 0.28}{\ohm}\\
+  \text{für Wert 12:}\, R_x &= \SI{387.26 \pm 0.38}{\ohm}
 \end{align*}
-Die Fehler aus den Toleranzen 
+Die Fehler aus den Toleranzen errechnet sich zu:
+\begin{align*}
+  \text{Wert 11:}\, \Delta R_x &= \SI{2.614}{\ohm}\\
+  \text{Wert 12:}\, \Delta R_x &= \SI{2.085}{\ohm}
+\end{align*} 
 
 \subsection{Kapazitätsmessbrücke}
 \begin{table}
@@ -60,8 +71,13 @@ Aus den zwei verschiedenen Messungen berechnen sich die Unbekannten zu:
   R_{\text{x}} &= \SI{565.10 \pm 0.48}{\ohm}\\
   C_{\text{x}} &= \SI{295.04 \pm 1.01}{\nano\farad} 
 \end{align*} 
-Die Fehler, die aus den Toleranzen der Bauteilen beruhen, ergeben sich zu:
-
+Die Fehler, die auf den Toleranzen der Bauteilen beruhen, ergeben sich zu:
+\begin{align*}
+  \Delta  R_{\text{x}} &= \SI{17.187}{\ohm}\\
+  \Delta  C_{\text{x}} &= \SI{1.591}{\nano\farad}
+\end{align*}
+Das Referenzbauteil, der Kondensator, hat eine Toleranz von $\SI{0.2}{\percent}$, das Potentiometer eine von $\SI{0.5}{\percent}$.
+Der verstellbare Widerstand $R_2$ hat eine Toleranz von $\SI{3}{\percent}$.
 
 \subsection{Induktivitätsmessbrücke}
 Mit dieser Brücke haben wir die Bauteile Wert 16 und Wert 19 gemessen. Da nur eine Induktivität vorhanden war, konnten wir nur eine Messung pro Wert durchführen.
@@ -88,10 +104,18 @@ Mit dieser Brücke haben wir die Bauteile Wert 16 und Wert 19 gemessen. Da nur e
 \end{table}
 Dabei errechnet sich dann:
 \begin{align*}
-  \text{bei Wert 16:}\, R_{\text{x}} &= \SI{443.94}{\ohm} & L_{\text{x}} &= \SI{139.42}{\milli\henry}\\
-  \text{bei Wert 19:}\, R_{\text{x}} &= \SI{103.40}{\ohm} & L_{\text{x}} &= \SI{26.64}{\milli\henry}
+  \text{bei Wert 16}\, &: & \text{bei Wert 19}\,&: \\
+  R_{\text{x}} &= \SI{443.94}{\ohm} & R_{\text{x}} &= \SI{103.40}{\ohm} \\
+  L_{\text{x}} &= \SI{139.42}{\milli\henry} & L_{\text{x}} &= \SI{26.64}{\milli\henry}
 \end{align*}
-Fehler aus den Toleranzen:
+Das Potentiometer und der verstellbare Widerstand haben die gleiche Toleranz wie oben, $\SI{0.5}{\percent}$ und $\SI{3}{\percent}$.
+Die Induktivität $L_2$ hat eine Toleranz von $\SI{0.2}{\percent}$.
+Damit ergibt sich :
+\begin{align*}
+  \text{bei Wert 16}\, &: & \text{bei Wert 19}\,&: \\
+  \Delta R_{\text{x}} &= \SI{13.502}{\ohm} & \Delta R_{\text{x}} &= \SI{3.144}{\ohm} \\
+  \Delta L_{\text{x}} &= \SI{0.751}{\milli\henry} & \Delta L_{\text{x}} &= \SI{0.143}{\milli\henry}
+\end{align*}
 
 \subsection{Wien-Robinson-Brücke}
 Da wir keine zwei gleichgroßen Kapazitäten zur Verfügung hatten, haben wir zwei ähnliche genommen.
