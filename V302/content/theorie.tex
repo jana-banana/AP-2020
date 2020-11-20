@@ -40,7 +40,7 @@ Mithilfe der Kirchhoffschen Regeln kann die Brückenspannung $U_{AB}$ berechnen.
 
 Daraus folgt:
 \begin{equation}
-    U = frac{R_2 \cdot R_3 - R_1 \cdot R_4}{(R_3 + R_4) \cdot (R_1 + R_2)} \cdot U_S .
+    U = \frac{R_2 \cdot R_3 - R_1 \cdot R_4}{(R_3 + R_4) \cdot (R_1 + R_2)} \cdot U_S .
 \end{equation}
 
 Dabei ist $U_S$ die Speisespannung.
@@ -63,8 +63,8 @@ Die Wheatstonesche Brücke kann mit Gleich- oder Wechselstrom betrieben werden, 
 Drei davon sind bekannt.
 Der unbekannte Widerstand $R_x$ kann durch \eqref{eq:Abgleichbedingung} ermittelt werden, indem die Formel nach $R_x$ umgestellt wird.
 $R_1$ wird in diesem Fall durch $R_x$ ersetzt.
-\begin{equation}
-    R_x = R_2 \cdot frac{R_3}{R_4}
+\begin{equation}\label{eqn:wheatstone}
+    R_x = R_2 \cdot \frac{R_3}{R_4}
 \end{equation}
 Da $R_x$ vom Verhältnis $R_3$ und $R_4$ abhängt, wird ein Potentiometer verwendet.
 
@@ -82,12 +82,12 @@ Da ein realer Kondensator einen Teil der elektrischen Energie in Wärme umwandel
 Um die von $R_x$ verursachte Phasenverschiebung zu kompensierern, wird der ohmsche Widerstand $R_2$ vom zweiten realen Kondensator veränderlich sein.
 
 Es folgt:
-\begin{equation}
-    R_x = R_2 \cdot frac{R_3}{R_4}
+\begin{equation} \label{eqn:kapazität1}
+    R_x = R_2 \cdot \frac{R_3}{R_4}
 \end{equation}
 und
-\begin{equation}
-    C_x = C_2 \cdot frac{R_4}{R_3} .
+\begin{equation} \label{eqn:kapazität2}
+    C_x = C_2 \cdot \frac{R_4}{R_3} .
 \end{equation}
 
 \begin{figure}
@@ -99,17 +99,17 @@ und
 \subsection{Induktivitätsmessbrücke}
 \label{sec:Induktivität}
 
-Der Aufbau einer Induktivitätsmessbrücke ist änlich wie bei \ref{sec:Kapazität} 
+Der Aufbau einer Induktivitätsmessbrücke ist ähnlich wie bei \ref{sec:Kapazität} 
 Da reale Induktivitäten einen Teil der magnetischen Feldenergie in Wärme umwandeln, ist auch das Ersatzschaltbild analog zu einem realen Kondensator aufgebaut.
 Anstelle eines Kondensators wird eine Induktivität mit einem ohmschen Widerstand in Reihe geschaltet.
 
 Es gilt:
-\begin{equation}
-    R_x = R_2 \cdot frac{R_3}{R_4}
+\begin{equation} \label{eqn:induktivität_r}
+    R_x = R_2 \cdot \frac{R_3}{R_4}
 \end{equation}
 und
-\begin{equation}
-    L_x = L_2 \cdot frac{R_3}{R_4} .
+\begin{equation} \label{eqn:induktivität_l}
+    L_x = L_2 \cdot \frac{R_3}{R_4} .
 \end{equation}
 
 \begin{figure}
@@ -139,7 +139,7 @@ Der Aufbau dieser Schaltung ist in \ref{fig:Maxwell} abgebildet.
 
 Es gelten folgende Abgleichbedingungen:
 \begin{equation}
-    R_x = frac{R_2 \cdot R_3}{R_4}
+    R_x = \frac{R_2 \cdot R_3}{R_4}
 \end{equation}
 und
 \begin{equation}
@@ -162,22 +162,22 @@ Die Brückenspannung $U_{Br}$ soll in Abhängigkeit von der Frequenz ermittelt w
 Für den Betrag des Verhältnisses zwischen Brücken- $U_{Br}$ und Speisespannung $U_S$ gilt:
 \begin{equation}
     \label{eq:U_br durch U_s}
-    \lvert{frac{U_{Br}}{U_S}}\rvert^2 = frac{(\omega^2 \cdot R^2 \cdot C^2 - 1)^2}{9 \cdot \{(1 - \omega^2 \cdot R^2 \cdot C^2)^2 + 9 \cdot \omega^2 \cdot R^2 \cdot C^2\}} .
+    \lvert{\frac{U_{Br}}{U_S}}\rvert^2 = \frac{(\omega^2 \cdot R^2 \cdot C^2 - 1)^2}{9 \cdot \{(1 - \omega^2 \cdot R^2 \cdot C^2)^2 + 9 \cdot \omega^2 \cdot R^2 \cdot C^2\}} .
 \end{equation}
 
 Bei 
 \begin{equation}
-    \omega_0 = frac{1}{R \cdot C}
+    \omega_0 = \frac{1}{R \cdot C}
 \end{equation}
 verschwindet die Brückenspannung.
 Wird nun
 \begin{equation}
-    \Omega = frac{\omega}{\omega_0}
+    \Omega = \frac{\omega}{\omega_0}
 \end{equation}
 in \eqref{eq:U_br durch U_s} eingeführt, folgt für das Verhältnis der Spannungen:
 \begin{equation}
     \label{eq:Verhältnis U mit Verhältnis omega}
-    \lvert{frac{U_{Br}}{U_S}}\rvert^2 = frac{1}{9} \cdot frac{(\Omega^2 - 1)^2}{(1 - \Omega^2)^2 + 9 \cdot \Omega^2} .
+    \lvert{\frac{U_{Br}}{U_S}}\rvert^2 = \frac{1}{9} \cdot \frac{(\Omega^2 - 1)^2}{(1 - \Omega^2)^2 + 9 \cdot \Omega^2} .
 \end{equation}
 An \eqref{eq:Verhältnis U mit Verhältnis omega} sieht man deutlich, dass Frequenzen in der Nähe von $\omega_0$ auch stark abgeschwächt werden.
 

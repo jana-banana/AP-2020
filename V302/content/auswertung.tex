@@ -6,9 +6,10 @@ Dieser Fehler ist im folgenden durch diese Formel entstanden:
     F = x \cdot y \\
     \frac{\Delta F}{F} = \sqrt{\biggl(\frac{\Delta x}{x}\biggr)² + \biggl(\frac{\Delta y}{y}\biggr)²}
 \end{gather*}
+Die einzelnen Bauteile haben eine Toleranz von $\SI{0.2}{\percent}$.
+Die Toleranz des Potentiometers liegt bei $\SI{0.5}{\percent}$ , die der verstellbaren Widerstände bei $\SI{3}{\percent}$.
 
 \subsection{Wheatstonesche Brücke}
-Die Toleranzen der Bauteile sind als $\SI{0.2}{\percent}$ für den Widerstand und $\SI{0.5}{\percent}$ für das Potentiometer bestimmt.
 \begin{table}
   \label{tab:wheatstone}
   \centering
@@ -35,7 +36,7 @@ Die Toleranzen der Bauteile sind als $\SI{0.2}{\percent}$ für den Widerstand un
       \bottomrule
   \end{tabular}  
 \end{table}
-Es ergeben sich für die unbekannten Widerstände:
+Es ergeben sich für die unbekannten Widerstände nach \eqref{eqn:wheatstone}:
 \begin{align*}
   \text{für Wert 11:}\, R_x &= \SI{485.47 \pm 0.28}{\ohm}\\
   \text{für Wert 12:}\, R_x &= \SI{387.26 \pm 0.38}{\ohm}
@@ -47,6 +48,7 @@ Die Fehler aus den Toleranzen errechnet sich zu:
 \end{align*} 
 
 \subsection{Kapazitätsmessbrücke}
+\label{sec:ausw_kap}
 \begin{table}
   \centering
   \label{tab:kapazitat}
@@ -66,7 +68,7 @@ Die Fehler aus den Toleranzen errechnet sich zu:
   \bottomrule
   \end{tabular}
 \end{table}
-Aus den zwei verschiedenen Messungen berechnen sich die Unbekannten zu:
+Aus den zwei verschiedenen Messungen berechnen sich mit den Gleichungen \eqref{eqn:kapazität1} und \eqref{eqn:kapazität2} die Unbekannten zu:
 \begin{align*}
   R_{\text{x}} &= \SI{565.10 \pm 0.48}{\ohm}\\
   C_{\text{x}} &= \SI{295.04 \pm 1.01}{\nano\farad} 
@@ -76,8 +78,6 @@ Die Fehler, die auf den Toleranzen der Bauteilen beruhen, ergeben sich zu:
   \Delta  R_{\text{x}} &= \SI{17.187}{\ohm}\\
   \Delta  C_{\text{x}} &= \SI{1.591}{\nano\farad}
 \end{align*}
-Das Referenzbauteil, der Kondensator, hat eine Toleranz von $\SI{0.2}{\percent}$, das Potentiometer eine von $\SI{0.5}{\percent}$.
-Der verstellbare Widerstand $R_2$ hat eine Toleranz von $\SI{3}{\percent}$.
 
 \subsection{Induktivitätsmessbrücke}
 Mit dieser Brücke haben wir die Bauteile Wert 16 und Wert 19 gemessen. Da nur eine Induktivität vorhanden war, konnten wir nur eine Messung pro Wert durchführen.
@@ -102,7 +102,7 @@ Mit dieser Brücke haben wir die Bauteile Wert 16 und Wert 19 gemessen. Da nur e
     \bottomrule
   \end{tabular}
 \end{table}
-Dabei errechnet sich dann:
+Dabei errechnet sich dann aus \eqref{eqn:induktivität_r} und \eqref{eqn:induktivität_l}:
 \begin{align*}
   \text{bei Wert 16}\, &: & \text{bei Wert 19}\,&: \\
   R_{\text{x}} &= \SI{443.94}{\ohm} & R_{\text{x}} &= \SI{103.40}{\ohm} \\
@@ -119,7 +119,7 @@ Damit ergibt sich :
 
 \subsection{Wien-Robinson-Brücke}
 Da wir keine zwei gleichgroßen Kapazitäten zur Verfügung hatten, haben wir zwei ähnliche genommen.
-Die Bauteile haben folgende Größen mit jeweils $\SI{2}{\percent}$ Toleranz:
+Die Bauteile haben folgende Größen:
 \begin{align*}
   2R' &= \SI{664}{\ohm} & C_1 &= \SI{399}{\nano\farad}\\
   R' &= \SI{332}{\ohm} & C_2 &= \SI{419.85}{\nano\farad}\\
@@ -180,20 +180,20 @@ Diese Frequenz bererechnet sich bei unserer Schaltung zu:
     5000   &10.4  &   3.16  \\
     10000  & 10.4 &    3.12 \\
     15000  & 10.2 &    2.88 \\
-    20000  & 18.6 &    2.48 \\
+    20000  &  9.3 &    2.48 \\
     25000  &  7.65&    2.1   \\
     30000  &  6.15&    1.67  \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-Zum Vergleich mit der Theoriekurve, die sich aus  %\eqref{eqn:}
+Zum Vergleich mit der Theoriekurve, die sich aus \eqref{eq:U_br durch U_s}
 ergibt, wird der Quotient aus $\frac{U_{\text{S}}}{U_{\text{Br}}}$ gebildet und gegen das Verhältnis $\Omega = \frac{\nu}{\nu_0}$ aufgetragen.\\
 \begin{figure}
   \centering
-  \label{fig:auswplot}
   \caption{Das Verglich der Messdaten mit der Theoriekurve}
   \includegraphics[width = \textwidth]{plot.pdf}
+  \label{fig:auswplot}
 \end{figure}
 Die Kurven in der Abbildung zeigen gerade um den Bereich der Frequenz $\nu_0$ große Ähnlichkeit auf.
 Für höhere Frequenzen ab ca liegen die Messdaten unterhalb der Theoriekurve.\\
