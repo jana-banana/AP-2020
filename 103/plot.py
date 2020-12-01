@@ -26,12 +26,11 @@ b = popt[1]
 plt.plot(x_curve, a*x_curve + b, 'b-', label='Ausgleichsgerade')
 
 plt.grid()
-plt.tight_layout()
 plt.legend()
 
 plt.xlabel(r'$ L\cdot x^2- \frac{x^3}{3} \mathbin{/} \SI{e-3}{\metre\tothe{3}}$')
 plt.ylabel(r'$ D \mathbin{/} \si{\milli\metre}$')
-
+plt.tight_layout()
 plt.savefig('build/plotm1.pdf')
 
 
@@ -59,12 +58,12 @@ b = popt[1]
 plt.plot(x_curve, a*x_curve + b, 'm-', label='Ausgleichsgerade')
 
 plt.grid()
-plt.tight_layout()
 plt.legend()
+plt.gcf().subplots_adjust(bottom=0.25)
 
 plt.xlabel(r'$L \cdot x^2 - \frac{x^3}{3} \mathbin{/} \SI{e-3}{\metre\tothe{3}}$')
 plt.ylabel(r'$D \mathbin{/} \si{\milli\metre}$')
-
+plt.tight_layout()
 plt.savefig('build/plotk.pdf')
 
 
@@ -95,8 +94,8 @@ plt.legend()
 
 plt.xlabel(r'$(3L^2x - 4x^3) \mathbin{/} \SI{e-3}{\metre\tothe{3}}$')
 plt.ylabel(r'$D \mathbin{/} \si{\milli\metre}$')
-
-plt.savefig('plot2.pdf')
+plt.tight_layout()
+plt.savefig('build/plot2.pdf')
 
 # zweiter plot
 plt.clf()
@@ -121,9 +120,9 @@ b2 = popt2[1]
 plt.plot(x_curve2, a2*x_curve2 + b2, 'r-', label='Ausgleichsgerade')
 
 plt.grid()
-plt.tight_layout()
 plt.legend()
 
 plt.xlabel(r'$(4x^3 - 12 L x^2 + 9L^2x - L^3) \mathbin{/} \SI{e-3}{\metre\tothe{3}}$')
 plt.ylabel(r'$D \mathbin{/} \si{\milli\metre}$')
-plt.savefig('plot22.pdf')
+plt.tight_layout()
+plt.savefig('build/plot22.pdf')
