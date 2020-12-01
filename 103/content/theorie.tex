@@ -7,7 +7,7 @@ Diese unterscheiden sich in Gestalt, Metall und Legierung.
 \label{Theorie}
 Wenn Spannungen bzw. Druck auf eine Oberfläche wirken, kommt es zu Oberflächen- und/oder Volumenänderungen.
 Die Normalspannung $\sigma$ ist die senkrechte Komponente dieser Spannung zur Oberfläche.
-Wenn die Längenänderung $\Delte L$ zur Körperdimension $L$ relativ klein ist, kann der Zusammenhang zwischen $\frac{\Delta L}{L}$ und der Spannung $\sigma$ als linear angesehen werden, auch als Hookschens Gesetz bekannt:
+Wenn die Längenänderung $\Delta L$ zur Körperdimension $L$ relativ klein ist, kann der Zusammenhang zwischen $\frac{\Delta L}{L}$ und der Spannung $\sigma$ als linear angesehen werden, auch als Hookschens Gesetz bekannt:
 
 \begin{equation}
     \sigma = E  \cdot \frac{\Delta L}{L} .
@@ -30,13 +30,13 @@ Dieser Gleichgewichtszustand ist über das äußere Drehmoment $M_F$ und das inn
     M_F = F \cdot (L - x) ,
 \end{equation}
 \begin{equation}
-    M_\sigma = \int_{Q}^{} y \cdot \sigma(y)\, dq .
+    M_\sigma = \int_{Q} y \cdot \sigma(y)\, dq .
 \end{equation}
 
 $y$ ist der Abstand des Flächenelementes $dq$ von der neutralen Faser $x$.
 
 Bei einer einseitigen Einspannung ergibt sich für die Dehnung $D$ in Abhängigkeit vom Abstand $x$ von der Einspannung:
-\begin{equation}
+\begin{equation}\label{eqn:einseitig}
     D(x) = \frac{F}{2 \cdot E \cdot I} \cdot (L \cdot x^2 - \frac{x^3}{3}) .
 \end{equation}
 $I$ steht für das Flächenträgheitsmoment des Querschnitts $Q$.
@@ -44,10 +44,10 @@ $I$ steht für das Flächenträgheitsmoment des Querschnitts $Q$.
 Bei einer zweiseitigen Auflage des Stabes gelten folgende Gleichungen.
 
 Für $0 \leq x \leq \frac{L}{2}$ gilt 
-\begin{equation}
+\begin{equation}\label{eqn:beidseitig1}
     D(x) = \frac{F}{48 \cdot E \cdot I} \cdot (3 \cdot L^2 \cdot x - 4 \cdot x^3)
 \end{equation}
 und für $\frac{L}{2} \leq x \leq L$
-\begin{equation}
+\begin{equation}\label{eqn:beidseitig2}
     D(x) = \frac{F}{48 \cdot E \cdot I} \cdot (4 \cdot x^3 - 12 \cdot L \cdot x^2 + 9 \cdot L^2 \cdot x - L^3) .
 \end{equation}
