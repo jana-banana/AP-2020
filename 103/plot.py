@@ -102,7 +102,7 @@ plt.clf()
 x2, D_02, D2, deltaD2 = np.genfromtxt('data2m2.txt', unpack=True)
 L_e = 600.3
 
-x_plot2 = (4* x2**3 - 12*L_e * x2**2 + 9*(L_e**2)*x2 - L_e**3)*10**(-6)
+x_plot2 = (4*(x2**3) - 12*L_e * x2**2 + 9*(L_e**2)*x2 - L_e**3)*10**(-6)
 plt.plot(x_plot2, deltaD2, 'k.', label='Messwerte')
 
 #curve-fit
@@ -122,7 +122,7 @@ plt.plot(x_curve2, a2*x_curve2 + b2, 'r-', label='Ausgleichsgerade')
 plt.grid()
 plt.legend()
 
-plt.xlabel(r'$(4x^3 - 12 L x^2 + 9L^2x - L^3) \mathbin{/} \SI{e-3}{\metre\tothe{3}}$')
+plt.xlabel(r'$(4x^3 - 12L x^2 + 9L^2x - L^3) \mathbin{/} \SI{e-3}{\metre\tothe{3}}$')
 plt.ylabel(r'$D \mathbin{/} \si{\milli\metre}$')
 plt.tight_layout()
 plt.savefig('build/plot22.pdf')

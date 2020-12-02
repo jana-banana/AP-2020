@@ -3,7 +3,7 @@
 
 \subsection{Einseitige Einspannung}
 \subsubsection{Eckiger Stab}
-Die Daten des eckigen Stabes, Länge $L$, Breite $b$ und Höhe $d$ ergeben sich zu:
+Die Daten des eckigen Stabes, Länge $L$, Breite $b$ und Höhe $d$, ergeben sich zu:
 \begin{align*}
   L &= \SI{60.04\pm 0.01}{\centi\metre}\\
   b &= \SI{1.036\pm 0.003}{\centi\metre}\\
@@ -15,7 +15,7 @@ Das Gewicht, welches benutzt wurde, wiegt:
 \end{equation*}
 \begin{table}
   \centering
-  \caption*{Die einzelnen Messungen des eckigen Stabes}
+  \caption{Die einzelnen Messungen des eckigen Stabes}
   \label{tab:5mess_eckig}
   \begin{tabular}{
     S[table-format=2.2] %länge
@@ -94,7 +94,7 @@ und der Ausgleichsrechnung folgt, dass sich das Elastizitätsmodul so berechnen 
 \end{equation*}
 Für $F$ gilt $F = m \cdot g$ mit $g=\SI{9.81}{\metre\per\second\squared}$, das Flächenträgheitsmoment $I$ errechnet sich zu:
 \begin{equation*}
-  I = \frac{b\cdot d}{12} (b^2 + d^2) = \SI{0.923(7)e-9}{\metre\tothe{4}}
+  I = \frac{b\cdot d}{12} (b^2 + d^2) = \SI{0.923(70)e-9}{\metre\tothe{4}}
 \end{equation*}
 Somit ergibt sich für das Elastizitätsmodul des eckigen Stabes:
 \begin{equation*}
@@ -112,7 +112,7 @@ Die Länge und der Radius des runden Stabes ergeben sich zu
 \end{align*}
 die Masse des Gewichtes zu 
 \begin{equation*}
-  m = \SI{599.6}{\gram}
+  m = \SI{599.6}{\gram}.
 \end{equation*}
 \begin{table}
   \centering
@@ -181,8 +181,8 @@ Für die Funktionskonstanten ergeben sich:
 
 \begin{figure}
   \centering
+  \caption{Der runde Stab unter einseitiger Einspannung.}
   \includegraphics[width=\textwidth]{build/plotm1.pdf}
-  \caption{Der runde Stab unter der einseitigen Einspannung.}
   \label{fig:plot1m}
 \end{figure}
 Das Elastizitätsmodul $E$ lässt sich nach \eqref{eqn:einseitig}
@@ -213,7 +213,7 @@ Es wurde ein Gewicht der Masse
 \begin{equation*}
   m = \SI{1099.5}{\gram}
 \end{equation*}
-benutzt. Dieses lag ca bei $x = \SI{275}{\milli\metre}$ auf.
+benutzt. Dieses lag bei etwa $x = \SI{275}{\milli\metre}$ auf.
 
 \begin{table}
   \centering
@@ -246,7 +246,7 @@ benutzt. Dieses lag ca bei $x = \SI{275}{\milli\metre}$ auf.
   {$4x^3 - 12Lx^2 + 9L^2x - L^3 \mathbin{/} \SI{e-3}{\metre\tothe{3}}$}\\
   \midrule
   300  &   0.53  &  1.36  &  0.83 &   216.32\\
-  320  &   0.52  &  1.32  &  0.80 &   214.94\\
+  325  &   0.52  &  1.32  &  0.80 &   214.16\\
   350  &   0.39  &  1.27  &  0.88 &   207.87\\
   400  &   0.30  &  1.20  &  0.90 &   184.40\\
   450  &   0.29  &  1.08  &  0.79 &   148.91\\
@@ -260,13 +260,11 @@ Die eigentliche Auslenkung $ \Delta D$ wird im folgenden $D$ genannt und in eine
 Mit ipython wird eine Ausgleichsrechnung der Form $D(y) = a \cdot y + c$ gemacht. \\
 Für $0 \leq x \leq \frac{L}{2}$ ist $y= 3L^2x - 4x^3$ und die Funktionskonstanten:
 \begin{align*}
-  a_1 &= \SI{3.5(4)e-3}{\per\metre\squared}\\
-  c_1 &= \SI{-0.14 \pm 0.06}{\milli\meter}\\
+  a_1 &= \SI{3.5(4)e-3}{\per\metre\squared} & c_1 &= \SI{-0.14 \pm 0.06}{\milli\meter}
 \end{align*}
 Für $\frac{L}{2} \leq x \leq L$ ist $y = 4x^3 -12Lx^2 + 9L^2x -L^3$ und die Funktionskonstanten ergeben sich zu:
 \begin{align*}
-  a_2 &= \SI{2.0(12)e-3}{\per\metre\squared}\\
-  c_2 &= \SI{0.44 \pm 0.21}{\milli\meter}\\
+  a_2 &= \SI{2.0(12)e-3}{\per\metre\squared} & c_2 &= \SI{0.44 \pm 0.21}{\milli\meter}
 \end{align*}
 \begin{figure}
   \caption{Der runde Stab unter beidseitiger Einspannung für $0 \leq x \leq \frac{L}{2}$.}
@@ -274,8 +272,8 @@ Für $\frac{L}{2} \leq x \leq L$ ist $y = 4x^3 -12Lx^2 + 9L^2x -L^3$ und die Fun
 \end{figure}
 \begin{figure}
   \centering
-  \includegraphics[width= \textwidth]{plot22.pdf}
   \caption{Der runde Stab unter beidseitiger Einspannung für $\frac{L}{2} \leq x \leq L$.}
+  \includegraphics[width= \textwidth]{plot22.pdf}
   \label{fig:rund_beid2}
 \end{figure}
 Aus den Gleichungen \eqref{eqn:beidseitig1} und \eqref{eqn:beidseitig2} folgt, dass sich das Elastizitätsmodul wie folgt berechnen lässt:
