@@ -10,6 +10,7 @@ build/main.pdf: build/stat_plot.pdf
 				build/plot_messing.pdf
 				build/plot_aluminium.pdf
 				build/plot_edelstahl.pdf
+				platine.pdf
 
 
 build/main.pdf: FORCE | build
