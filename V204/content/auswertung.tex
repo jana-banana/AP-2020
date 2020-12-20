@@ -30,8 +30,8 @@ Die Temperatur der jeweiligen Stäbe zum Zeitpunkt $t=\SI{700}{\second}$ lassen 
   \text{für den Edelstahlstab:} \: T&= \SI{34.21}{\celsius}& T&=\SI{307.36}{\kelvin}
 \end{align*}
 
-Nach der Gleichung \ref lässt sich der Wärmestrom $\frac{\Delta Q}{\Delta t}$ für die verschiedenen Metallstäbe errechnen (siehe Tabelle \ref{tab:Wärmestrom}).
-Dabei wird für das $\kappa $ der Wert aus der Literatur genommen (siehe Vorbereitung \ref) und der Abstand $x$ der Tempertaurmessstellen wurde zu $x = \SI{0.03}{\metre}$ nachgemessen.
+Nach der Gleichung \eqref{eqn:Wärmemenge} lässt sich der Wärmestrom $\frac{\Delta Q}{\Delta t}$ für die verschiedenen Metallstäbe errechnen (siehe Tabelle \ref{tab:Wärmestrom}).
+Dabei wird für das $\kappa $ der Wert aus der Literatur genommen (siehe Vorbereitung \ref{tab:} und der Abstand $x$ der Tempertaurmessstellen wurde zu $x = \SI{0.03}{\metre}$ nachgemessen.
 \begin{table}
   \centering
   \caption{Der Wärmestrom der verschiedenen Metallstäben zu 5 verschiedenen Zeitpunkten.}
@@ -58,7 +58,7 @@ Dabei wird für das $\kappa $ der Wert aus der Literatur genommen (siehe Vorbere
 Abschließend werden die Temperaturdifferenzen zwischen den Temperaturmessstellen eines Stabes für den breiten Messingstab und den Edelstahlstab in einem $t$-$T$- Diagramm aufgetragen.
 \begin{figure}[H]
   \centering
-  \includegraphics{build/plot_diff.pdf}
+  \includegraphics[width=\textwidth]{build/plot_diff.pdf}
   \caption{Die Temperaturdifferenzen zwischen den Messstellen auf einem Stab.}
   \label{fig:plot_diff}
 \end{figure}
@@ -75,7 +75,6 @@ Es wurden alle $\SI{2}{\second}$ die Temperatur jedes Stabes an zwei Stellen mit
 
 
 \subsubsection{Messingstab (breit)}
-
 Es wird zuerst der breite Messingstab betrachtet. 
 In der Abbildung \ref{fig:messing_dyn} sind die beiden Temperaturverläufe der einzelnen Messstellen gegen die Zeit aufgetragen.
 \begin{figure}[H]
@@ -123,17 +122,13 @@ Es ergibt sich aus den Werten der Mittelwert:
   \bottomrule
   \end{tabular}
 \end{table}
-Nach der Gleichung \refeq{}
+Nach der Gleichung \eqref{eqn:kappa}
 kann nun die Wärmeleitfähigikeit berechnet werden:
 \begin{equation*}
   \kappa = \SI{117.264 \pm 0.937}{\watt\per\metre\kelvin}
 \end{equation*}
 Für die Temperaturwelle lassen sich daraus die Frequenz $f$ und die Wellenlänge $\lambda $ berechnen.
-Es wurde der Zusammenhang 
-\begin{equation*}
-  k = \sqrt{\frac{\omega \rho c}{2 \kappa}} = \frac{2 \pi}{\lambda}
-\end{equation*}
-benutzt, wobei $\omega = \frac{2\pi}{T}$ ist.
+Es wurde die Formel in \eqref{eqn:lambda} benutzt.
 \begin{align*}
   f &= \frac{1}{T} = \SI{0.0125}{\hertz}\\
   \lambda &= \SI{0.189 \pm 0.003}{\metre}
@@ -188,11 +183,11 @@ Aus den Daten in der Tabelle \ref{tab:aluminium_dyn} sind die folgende Werte fes
   \log(\frac{A_{\text{nah}}}{A_{\text{fern}}}) &= \num{0.611 \pm 0.009}\\
   \Delta t &= \SI{8.0 \pm 0.233}{\second}
 \end{align*}
-Nach der Gleichung \eqref{} lässt sich nun die Wärmeleitfähigkeit $\kappa $ berechnen:
+Nach der Gleichung \eqref{eqn:kappa} lässt sich nun die Wärmeleitfähigkeit $\kappa $ berechnen:
 \begin{equation*}
   \kappa = \SI{231.646 \pm 3.763}{\watt\per\metre\kelvin}
 \end{equation*}
-Die Frequenz $f$ und die Wellenlänge $\lambda$ ergeben sich schließlich zu:
+Die Frequenz $f$ und die Wellenlänge $\lambda$ ergeben sich nach \eqref{eqn:lambda} schließlich zu:
 \begin{align*}
   f &= \SI{0.0125}{\hertz}\\
   \lambda &= \SI{0.315 \pm 0.003}{\metre}
@@ -239,11 +234,11 @@ Aus den Daten in \ref{tab:edelstahl_dyn} ergeben sich folgende Mittelwerte:
   ln(\frac{A_{\text{nah}}}{A_{\text{fern}}}) &= \num{1.389 \pm 0.036}\\
   \Delta t &= \SI{65.0 \pm 1.82}{\second}
 \end{align*}
-Letztlich berechnet sich die Wärmeleitfähigkeit nach der Gleichung \eqref{} für Edelstahl zu:
+Letztlich berechnet sich die Wärmeleitfähigkeit nach der Gleichung \eqref{eqn:kappa} für Edelstahl zu:
 \begin{equation*}
   \kappa = \SI{16.145 \pm 0.056}{\watt\per\metre\kelvin}
 \end{equation*}
-Die Temperaturwelle hat demnach die Frequenz $f$ und die Wellenlänge $\lambda$ mit den Werten:
+Die Temperaturwelle hat demnach, berechnet mit \eqref{eqn:lambda} die Frequenz $f$ und die Wellenlänge $\lambda$ mit den Werten:
 \begin{align*}
   f &= \SI{0.005}{\hertz}\\
   \lambda &= \SI{7.122(12)e-2}{\metre}
