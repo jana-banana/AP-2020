@@ -84,7 +84,7 @@ Es ergeben sich:
 \begin{figure}
   \centering
   \caption{Der eckige Stab unter einseitiger Einspannung.}
-  \includegraphics{build/plotk.pdf}
+  \includegraphics[width=\textwidth]{build/plotk.pdf}
   \label{fig:eckig}
 \end{figure}
 Nach Vergleich von \eqref{eqn:einseitig}
@@ -100,7 +100,7 @@ Somit ergibt sich für das Elastizitätsmodul des eckigen Stabes:
 \begin{equation*}
   E = \SI{122.2(13)e9}{\newton\per\metre\squared}
 \end{equation*}
-Vermutlich handelt es sich bei dem eckigen Stab um einen Kupferstab. Der Literaturwert lautet nach %\cite{quelle}
+Vermutlich handelt es sich bei dem eckigen Stab um einen Kupferstab. Der Literaturwert lautet nach \cite{chemie.de}
 $E_{\text{Cu}} = \SI{120}{\kilo\newton\per\milli\metre\squared} = \SI{120e9}{\newton\per\metre\squared}$. 
 Die Abweichung ergibt sich zu $\SI{1.83}{\percent}$.  
 
@@ -181,7 +181,7 @@ Für die Funktionskonstanten ergeben sich:
 
 \begin{figure}
   \centering
-  \includegraphics{build/plotm1.pdf}
+  \includegraphics[width=\textwidth]{build/plotm1.pdf}
   \caption{Der runde Stab unter der einseitigen Einspannung.}
   \label{fig:plot1m}
 \end{figure}
@@ -200,7 +200,8 @@ Somit ist
   E = \SI{75.9(9)e9}{\newton\per\metre\squared}
 \end{equation*}
 Es wird davon ausgegangen, dass es sich bei dem runden Stab um Messing handelt.
-Der Literaturwert des Elastizitätsmodul für Messing.
+Der Literaturwert des Elastizitätsmodul für Messing wird in \cite{chemie.de} als Bereich von $\num{78}$ bis $\SI{123}{\kilo\newton\per\milli\metre\squared}$ angegeben.
+Der hier errechnete Wert liegt somit knapp unterhalb des Bereiches.
 
 \subsection{Beidseitige Einspannung}
 In dieser Methode wurde nur der runde Stab gemessen. Die Daten des Stabes lauten:
@@ -269,7 +270,7 @@ Für $\frac{L}{2} \leq x \leq L$ ist $y = 4x^3 -12Lx^2 + 9L^2x -L^3$ und die Fun
 \end{align*}
 \begin{figure}
   \caption{Der runde Stab unter beidseitiger Einspannung für $0 \leq x \leq \frac{L}{2}$.}
-  \includegraphics{build/plot2.pdf}
+  \includegraphics[width=\textwidth]{build/plot2.pdf}
 \end{figure}
 \begin{figure}
   \centering
@@ -286,4 +287,5 @@ Dabei ist $F = m\cdot g$ und $I$ aus \eqref{eqn:Trägheitsmoment_rund} bekannt.
   E_1 &= \SI{93(10)e9}{\newton\per\metre\squared}\\
   E_2 &= \SI{160(90)e9}{\newton\per\metre\squared}
 \end{align*}
-Der Literaturwert
+Der Literaturwert vom Elastizitätsmodul von Messing kann laut \cite{chemie.de} $\num{78}$ bis $\SI{123}{\kilo\newton\per\milli\metre\squared}$ betragen. 
+Der errechnete Wert $E_1$ liegt in diesem Bereich, der Wert von $E_2$ deutlich oberhalb des Bereiches. 
