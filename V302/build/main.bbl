@@ -1,0 +1,46 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{anleitung}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=ad600a56b0ce23fc84b3c2d71665eb9d}{%
+           family={Fakultät\bibnamedelima Physik},
+           familyi={F\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={TU\bibnamedelima Dortmund},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad600a56b0ce23fc84b3c2d71665eb9d}
+      \strng{fullhash}{ad600a56b0ce23fc84b3c2d71665eb9d}
+      \strng{bibnamehash}{ad600a56b0ce23fc84b3c2d71665eb9d}
+      \strng{authorbibnamehash}{ad600a56b0ce23fc84b3c2d71665eb9d}
+      \strng{authornamehash}{ad600a56b0ce23fc84b3c2d71665eb9d}
+      \strng{authorfullhash}{ad600a56b0ce23fc84b3c2d71665eb9d}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Versuchsanleitung zum Experiment V302 - Brückenschaltungen}
+      \field{year}{2020}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

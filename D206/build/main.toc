@@ -1,0 +1,17 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Arbeitsweise einer Wärmepumpe}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Die Güteziffer}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Der Massendurchsatz}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Die mechanische Kompressorleistung}{5}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Durchführung}{7}{section.3}%
+\contentsline {section}{\numberline {4}Auswertung}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Messdaten und Diagramm}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Bestimmung der Güteziffer}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Bestimmung des Massendurchsatzes}{10}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Bestimmung der mechanischen Kompressionsleistung $N_{\text {mech}}$}{12}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Diskussion}{12}{section.5}%
+\contentsline {section}{\nonumberline Literatur}{12}{section*.11}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

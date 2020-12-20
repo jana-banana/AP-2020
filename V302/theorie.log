@@ -1,0 +1,1394 @@
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.9)  17 NOV 2020 22:47
+ restricted system commands enabled.
+**theorie.tex
+(./theorie.tex
+LaTeX2e <2020-10-01>
+Lua module: luaotfload-main 2020-09-02 3.15 luaotfload entry point
+Lua module: luaotfload-init 2020-09-02 3.15 luaotfload submodule / initializatio
+n
+Lua module: lualibs 2020-08-31 2.72 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2020-08-31 2.72 ConTeXt Lua libraries -- extended c
+ollection.
+Lua module: luaotfload-log 2020-09-02 3.15 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2020-09-02 3.15 luaotfload submodule / parsers
+Lua module: luaotfload-configuration 2020-09-02 3.15 luaotfload submodule / conf
+ig file reader
+luaotfload | conf : Root cache directory is "/home/sonia/.local/texlive/2020/tex
+mf-var/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2020-08-31.lua" from kpse-res
+olved path "/home/sonia/.local/texlive/2020/texmf-dist/tex/luatex/luaotfload/fon
+tloader-2020-08-31.lua".
+Lua-only attribute luaotfload@noligature = 1
+Lua-only attribute luaotfload@syllabe = 2
+luaotfload | init : Context OpenType loader version 0x1.8e353f7ced917p+1
+Lua module: luaotfload-fallback 2020-09-02 3.15 luaotfload submodule / fallback
+Lua module: luaotfload-multiscript 2020-09-02 3.15 luaotfload submodule / multis
+cript
+Lua module: luaotfload-script 2020-09-02 3.15 luaotfload submodule / Script help
+ers
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Lua module: luaotfload-loaders 2020-09-02 3.15 luaotfload submodule / callback h
+andling
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua module: luaotfload-database 2020-09-02 3.15 luaotfload submodule / database
+Lua module: luaotfload-unicode 2020-09-02 3.15 luaotfload submodule / Unicode he
+lpers
+Lua module: luaotfload-colors 2020-09-02 3.15 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 3
+Lua module: luaotfload-resolvers 2020-09-02 3.15 luaotfload submodule / resolver
+s
+luaotfload | conf : Root cache directory is "/home/sonia/.local/texlive/2020/tex
+mf-var/luatex-cache/generic/names".
+Lua module: luaotfload-features 2020-09-02 3.15 luaotfload submodule / features
+Lua module: luaotfload-harf-define 2020-09-02 3.15 luaotfload submodule / HarfBu
+zz font loading
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Lua module: luaotfload-harf-plug 2020-09-02 3.15 luaotfload submodule / HarfBuzz
+ shaping
+Inserting `Harf pre_output_filter callback' at position 1 in `pre_output_filter'
+.
+Inserting `Harf wrapup_run callback' at position 1 in `wrapup_run'.
+Inserting `Harf finish_pdffile callback' at position 1 in `finish_pdffile'.
+Inserting `Harf glyph_info callback' at position 1 in `glyph_info'.
+Lua module: luaotfload-letterspace 2020-09-02 3.15 luaotfload submodule / letter
+spacing
+Lua module: luaotfload-embolden 2020-09-02 3.15 luaotfload submodule / embolden
+Lua module: luaotfload-notdef 2020-09-02 3.15 luaotfload submodule / notdef
+Lua module: luaotfload-suppress 2020-09-02 3.15 luaotfload submodule / suppress
+Lua module: luaotfload-szss 2020-09-02 3.15 luaotfload submodule / Special featu
+re handling
+Lua module: luaotfload-auxiliary 2020-09-02 3.15 luaotfload submodule / auxiliar
+y functions
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Lua module: luaotfload-tounicode 2020-09-02 3.15 luaotfload submodule / tounicod
+e
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2020-10-05> xparse <2020-03-03>
+! Undefined control sequence.
+l.1 \section
+          {Zielsetzung}
+? q
+OK, entering \batchmode...
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \section{Z
+            ielsetzung}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.5 \section
+          {Theorie}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--9
+[]Zielsetzung
+ []
+
+! Undefined control sequence.
+l.10 \subsection
+              {Allgemeiner Aufbau einer Brückenschaltung}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \subsection{A
+                llgemeiner Aufbau einer Brückenschaltung}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \begin{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.13     \includegraphics
+                       [width=\textwidth]{BrückAllg.pdf}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+]
+l.13     \includegraphics[width=\textwidth]
+                                         {BrückAllg.pdf}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+]
+l.13     \includegraphics[width=\textwidth]
+                                         {BrückAllg.pdf}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15     \caption
+               {Allgemeiner Aufbau einer Brückenschaltung.\cite[1]{anleitung}}
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{anleitung}
+luaotfload | db : Font names database loaded from /home/sonia/.local/texlive/202
+0/texmf-var/luatex-cache/generic/names/luaotfload-names.luc
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.15 ... einer Brückenschaltung.\cite[1]{anleitung}
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `anleitung' on page  undefined on input line 15.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \end{figure}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 10--17
+[]Allgemeiner
+ []
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 10--17
+Brückenschaltung.[[],
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 A
+    llgemein sieht eine Brückenschaltung aus wie in \ref{fig:BrückAllg}.
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<write> ...g: Reference `fig:BrückAllg' on page \thepage 
+                                                  \space undefined\on@line .
+l.18 ...kenschaltung aus wie in \ref{fig:BrückAllg}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `fig:BrückAllg' on page  undefined on input line 18.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 18--22
+[]Allgemein
+ []
+
+
+Overfull \hbox (10.85999pt too wide) in paragraph at lines 18--22
+[].
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 M
+    ithilfe der Kirchhoffschen Regeln kann die Brückenspannung $U_{AB}$ ber...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 23.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 23.
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 23--24
+[]Mithilfe
+ []
+
+
+Overfull \hbox (19.72469pt too wide) in paragraph at lines 23--24
+\OML/cmm/m/it/10 U[]$
+ []
+
+
+Overfull \hbox (15.73605pt too wide) in paragraph at lines 27--28
+($\OML/cmm/m/it/10 I >
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 27--28
+\OT1/cmr/m/n/10 0$\nullfont )
+ []
+
+
+Overfull \hbox (15.73605pt too wide) in paragraph at lines 27--28
+($\OML/cmm/m/it/10 I <
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 27--28
+\OT1/cmr/m/n/10 0$\nullfont )an
+ []
+
+
+Overfull \hbox (42.16946pt too wide) detected at line 30
+[] \OT1/cmr/m/n/10 = 0
+ []
+
+
+Overfull \hbox (44.6014pt too wide) detected at line 38
+[] \OT1/cmr/m/n/10 = 0
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 41--42
+[]Daraus
+ []
+
+
+Overfull \hbox (230.32333pt too wide) detected at line 44
+\OML/cmm/m/it/10 U \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 frac[][] \OMS/cmsy/m/n/10
+  \OML/cmm/m/it/10 U[]:
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 46--49
+[]Dabei
+ []
+
+
+Overfull \hbox (12.62085pt too wide) in paragraph at lines 46--49
+\OML/cmm/m/it/10 U[]$
+ []
+
+
+Overfull \hbox (69.98268pt too wide) detected at line 52
+[]\OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 
+= \OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 R[]:
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 57--60
+[]Bei
+ []
+
+
+Overfull \hbox (82.92932pt too wide) detected at line 62
+\OML/cmm/m/it/10 Z[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 frac
+i[];
+ []
+
+
+Overfull \hbox (48.53535pt too wide) detected at line 66
+\OML/cmm/m/it/10 Z[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 i \OMS/cmsy/m/n/10  \O
+ML/cmm/m/it/10 ! \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 L
+ []
+
+
+Overfull \hbox (37.16765pt too wide) detected at line 70
+\OML/cmm/m/it/10 Z[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R:
+ []
+
+! Undefined control sequence.
+<write> ...rence `eqn:Abgleichbedingung' on page \thepage 
+                                                  \space undefined\on@line .
+l.72 ...bgleichbedingung \ref{eqn:Abgleichbedingung}
+                                                   und der Tatsache, dass je...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `eqn:Abgleichbedingung' on page  undefined on input lin
+e 72.
+
+
+Overfull \hbox (3.44513pt too wide) in paragraph at lines 70--73
+$\OML/cmm/m/it/10 i$
+ []
+
+
+Overfull \hbox (6.58331pt too wide) in paragraph at lines 70--73
+\OML/cmm/m/it/10 !$
+ []
+
+
+Overfull \hbox (10.85999pt too wide) in paragraph at lines 70--73
+[]
+ []
+
+
+Overfull \hbox (5.28589pt too wide) in paragraph at lines 70--73
+\OML/cmm/m/it/10 a$
+ []
+
+
+Overfull \hbox (4.29166pt too wide) in paragraph at lines 70--73
+\OML/cmm/m/it/10 b$
+ []
+
+
+Overfull \hbox (114.19919pt too wide) detected at line 75
+\OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10 ^^
+@ \OML/cmm/m/it/10 b[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 b[] \OT1/cmr/m/n/10 
+= \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10
+ ^^@ \OML/cmm/m/it/10 b[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 b[]
+ []
+
+
+Overfull \hbox (116.97697pt too wide) detected at line 79
+\OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 b[] \OT1/cmr/m/n/10 + 
+\OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 b[] \OT1/cmr/m/n/10 = 
+\OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 b[] \OT1/cmr/m/n/10 + 
+\OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 b[]:
+ []
+
+! Undefined control sequence.
+l.81 \subsection
+              {Wheatstonesche Brücke}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 81--82
+[]Wheatstonesche
+ []
+
+! Undefined control sequence.
+l.85 ...nbekannte Widerstand $R_x$ kann durch \eqref
+                                                  {eqn:Abgeleichbedingung} e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 83--87
+[]Die
+ []
+
+
+Overfull \hbox (12.62762pt too wide) in paragraph at lines 83--87
+\OML/cmm/m/it/10 R[]$
+ []
+
+
+Overfull \hbox (12.62762pt too wide) in paragraph at lines 83--87
+\OML/cmm/m/it/10 R[]$
+ []
+
+
+Overfull \hbox (12.07903pt too wide) in paragraph at lines 83--87
+\OML/cmm/m/it/10 R[]$
+ []
+
+
+Overfull \hbox (12.62762pt too wide) in paragraph at lines 83--87
+\OML/cmm/m/it/10 R[]$
+ []
+
+
+Overfull \hbox (85.35078pt too wide) detected at line 89
+\OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10  
+\OML/cmm/m/it/10 frac[][]
+ []
+
+
+Overfull \hbox (12.62762pt too wide) in paragraph at lines 89--91
+\OML/cmm/m/it/10 R[]$
+ []
+
+
+Overfull \hbox (12.07903pt too wide) in paragraph at lines 89--91
+\OML/cmm/m/it/10 R[]$
+ []
+
+
+Overfull \hbox (12.07903pt too wide) in paragraph at lines 89--91
+\OML/cmm/m/it/10 R[]$
+ []
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 \begin{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.94     \includegraphics
+                       [width=\textwidth]{wheatBruecke.pdf}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+]
+l.94     \includegraphics[width=\textwidth]
+                                         {wheatBruecke.pdf}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+]
+l.94     \includegraphics[width=\textwidth]
+                                         {wheatBruecke.pdf}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95     \caption
+               {Aufbau einer Wheatstonesche Brücke.\cite[4]{anleitung}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{anleitung}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.95 ...r Wheatstonesche Brücke.\cite[4]{anleitung}
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `anleitung' on page  undefined on input line 95.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 \end{figure}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 94--97
+Brücke.[[],
+ []
+
+! Undefined control sequence.
+l.98 \subsection
+              {Kapazitätsmessbrücke}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 98--100
+[]Kapazitätsmessbrücke
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 101--104
+[]Diese
+ []
+
+
+Overfull \hbox (12.62762pt too wide) in paragraph at lines 101--104
+\OML/cmm/m/it/10 R[]$
+ []
+
+
+Overfull \hbox (12.07903pt too wide) in paragraph at lines 101--104
+\OML/cmm/m/it/10 R[]$
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 105--106
+[]Es
+ []
+
+
+Overfull \hbox (85.35078pt too wide) detected at line 108
+\OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10  
+\OML/cmm/m/it/10 frac[][]
+ []
+
+
+Overfull \hbox (87.23721pt too wide) detected at line 112
+\OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 C[] \OMS/cmsy/m/n/10  
+\OML/cmm/m/it/10 frac[][]:
+ []
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 \begin{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.116     \includegraphics
+                        [width=\textwidth]{KapBruecke.pdf}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+]
+l.116     \includegraphics[width=\textwidth]
+                                          {KapBruecke.pdf}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+]
+l.116     \includegraphics[width=\textwidth]
+                                          {KapBruecke.pdf}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117     \caption
+                {Aufbau einer Kapazitätsmessbrücke mit Ersatzschaltbild re...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{[5]anleitung}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.117 ...ld realer Kondensatoren.\cite{[5]anleitung}
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `[5]anleitung' on page  undefined on input line 117.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 \end{figure}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 116--119
+Kondensatoren.[[]]
+ []
+
+! Undefined control sequence.
+l.120 \subsection
+               {Induktivitätsmessbrücke}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 120--122
+[]Induktivitätsmessbrücke
+ []
+
+! Undefined control sequence.
+<write> ...g: Reference `sec:Kapazität' on page \thepage 
+                                                  \space undefined\on@line .
+l.123 ...ke ist änlich wie bei \ref{sec:Kapazität}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `sec:Kapazität' on page  undefined on input line 123.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 123--126
+[]Der
+ []
+
+
+Overfull \hbox (10.85999pt too wide) in paragraph at lines 123--126
+[].
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 127--128
+[]Es
+ []
+
+
+Overfull \hbox (85.35078pt too wide) detected at line 130
+\OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10  
+\OML/cmm/m/it/10 frac[][]
+ []
+
+
+Overfull \hbox (86.55392pt too wide) detected at line 134
+\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 L[] \OMS/cmsy/m/n/10  
+\OML/cmm/m/it/10 frac[][]:
+ []
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \begin{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.138     \includegraphics
+                        [width=\textwidth]{InduBruecke.pdf}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+]
+l.138     \includegraphics[width=\textwidth]
+                                          {InduBruecke.pdf}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+]
+l.138     \includegraphics[width=\textwidth]
+                                          {InduBruecke.pdf}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139     \caption
+                {Aufbau einer Induktivitätsmessbrücke mit Ersatzschaltbild...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{anleitung}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.139 ...realer Induktivitäten. \cite[6]{anleitung}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `anleitung' on page  undefined on input line 139.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.140 \end{figure}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.140 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 138--141
+[[],
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 142--145
+[]Der
+ []
+
+
+Overfull \hbox (11.2917pt too wide) in paragraph at lines 142--145
+\OML/cmm/m/it/10 L[]$
+ []
+
+
+Overfull \hbox (12.07903pt too wide) in paragraph at lines 142--145
+\OML/cmm/m/it/10 R[]$
+ []
+
+! Undefined control sequence.
+l.146 \subsection
+               {Maxwell-Brücke}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 146--147
+[]Maxwell-
+ []
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.148 \begin{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.150     \includegraphics
+                        [width=\textwidth]{MaxwellBruecke.pdf}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+]
+l.150     \includegraphics[width=\textwidth]
+                                          {MaxwellBruecke.pdf}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+]
+l.150     \includegraphics[width=\textwidth]
+                                          {MaxwellBruecke.pdf}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151     \caption
+                {Aufbau einer Maxwell-Brücke. \cite[7]{anleitung}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{anleitung}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.151 ... einer Maxwell-Brücke. \cite[7]{anleitung}
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `anleitung' on page  undefined on input line 151.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \end{figure}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 150--154
+[[],
+ []
+
+! Undefined control sequence.
+<write> ...Reference `sec:Induktivität' on page \thepage 
+                                                  \space undefined\on@line .
+l.156 ...ktivität $L_2$ aus \ref{sec:Induktivität}
+                                                   eine Kapazität verwendet...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `sec:Induktivität' on page  undefined on input line 15
+6.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 155--158
+[]Mithilfe
+ []
+
+
+Overfull \hbox (11.2917pt too wide) in paragraph at lines 155--158
+\OML/cmm/m/it/10 L[]$
+ []
+
+
+Overfull \hbox (10.85999pt too wide) in paragraph at lines 155--158
+[]
+ []
+
+
+Overfull \hbox (11.63335pt too wide) in paragraph at lines 155--158
+\OML/cmm/m/it/10 C[]$
+ []
+
+! Undefined control sequence.
+<write> ...ning: Reference `fig:Maxwell' on page \thepage 
+                                                  \space undefined\on@line .
+l.159 ...u dieser Schaltung ist in \ref{fig:Maxwell}
+                                                   abgebildet.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `fig:Maxwell' on page  undefined on input line 159.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 159--160
+[]Der
+ []
+
+
+Overfull \hbox (10.85999pt too wide) in paragraph at lines 159--160
+[]
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 161--162
+[]Es
+ []
+
+
+Overfull \hbox (89.79512pt too wide) detected at line 164
+\OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 frac[][]
+ []
+
+
+Overfull \hbox (69.29828pt too wide) detected at line 168
+\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10  
+\OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 C[]:
+ []
+
+! Undefined control sequence.
+l.170 \subsection
+               {Wien-Robinson-Brücke}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 170--171
+[]Wien-
+ []
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.172 \begin{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.174     \includegraphics
+                        [width=\textwidth]{WienRobinBruecke.pdf}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+]
+l.174     \includegraphics[width=\textwidth]
+                                          {WienRobinBruecke.pdf}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+]
+l.174     \includegraphics[width=\textwidth]
+                                          {WienRobinBruecke.pdf}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175     \caption
+                {Aufbau einer Wien-Robinson-Brücke. \cite[8]{anleitung}}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{anleitung}
+! Undefined control sequence.
+<write> ... Warning: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.175 ... Wien-Robinson-Brücke. \cite[8]{anleitung}
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `anleitung' on page  undefined on input line 175.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176 \end{figure}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (5.43pt too wide) in paragraph at lines 174--177
+[[],
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 178--182
+[]Die
+ []
+
+
+Overfull \hbox (10.71066pt too wide) in paragraph at lines 178--182
+\OML/cmm/m/it/10 ![]$
+ []
+
+
+Overfull \hbox (17.63902pt too wide) in paragraph at lines 178--182
+\OML/cmm/m/it/10 U[]$
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 183--184
+[]Für
+ []
+
+
+Overfull \hbox (17.63902pt too wide) in paragraph at lines 183--184
+\OML/cmm/m/it/10 U[]$
+ []
+
+
+Overfull \hbox (12.62085pt too wide) in paragraph at lines 183--184
+\OML/cmm/m/it/10 U[]$
+ []
+
+! Undefined control sequence.
+l.186     \lvert
+              {frac{U_{Br}}{U_S}}\rvert^2 = frac{(\omega^2 \cdot R^2 \cdot C...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.186     \lvert{frac{U_{Br}}{U_S}}\rvert
+                                       ^2 = frac{(\omega^2 \cdot R^2 \cdot C...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (347.30153pt too wide) detected at line 187
+[][][] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 frac[][]:
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 189--190
+[]Bei 
+ []
+
+
+Overfull \hbox (72.17374pt too wide) detected at line 192
+\OML/cmm/m/it/10 ![] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 frac\OT1/cmr/m/n/10 1[]
+
+ []
+
+
+Overfull \hbox (58.2245pt too wide) detected at line 197
+\OT1/cmr/m/n/10 
+ = \OML/cmm/m/it/10 frac![]
+ []
+
+! Undefined control sequence.
+l.198 in \eqref
+             {eqn:U_br durch U_s} eingeführt, folgt für das Verhältnis de...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.198 in \eqref{eqn:U_
+                    br durch U_s} eingeführt, folgt für das Verhältnis de...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.198 in \eqref{eqn:U_br durch U_s}
+                                  eingeführt, folgt für das Verhältnis de...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \endgroup inserted.
+<inserted text> 
+\endgroup 
+l.199 \begin{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no ü (U+00FC) in font cmmi10!
+Missing character: There is no ü (U+00FC) in font cmmi10!
+Missing character: There is no ü (U+00FC) in font cmmi10!
+Missing character: There is no ü (U+00FC) in font cmmi10!
+Missing character: There is no ä (U+00E4) in font cmmi10!
+Missing character: There is no ä (U+00E4) in font cmmi10!
+! Undefined control sequence.
+l.201     \lvert
+              {frac{U_{Br}}{U_S}}\rvert^2 = frac{1}{9} \cdot frac{(\Omega^2 ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.201     \lvert{frac{U_{Br}}{U_S}}\rvert
+                                       ^2 = frac{1}{9} \cdot frac{(\Omega^2 ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\eqno' in math mode.
+\endequation ->\eqno 
+                     \hbox {\@eqnnum }$$\@ignoretrue 
+l.202 \end{equation}
+                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: \begin{document} ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.202 \end{equation}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.202 \end{equation}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.202 \end{equation}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+          
+l.202 \end{equation}
+                  
+Things are pretty mixed up, but I think the worst is over.
+
+! Undefined control sequence.
+l.203 An \eqref
+             {Verhältnis U mit Verhältnis omega} sieht man deutlich, dass ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (329.47899pt too wide) in paragraph at lines 197--204
+eqn:U$[][]\OML/cmm/m/it/10 rdurchU[]eingefhrt; folgtfrdasVerhltnisderSpannungen \OT1/cmr/m/n/10 :$$[][][] =
+ []
+
+
+Overfull \hbox (33.1529pt too wide) in paragraph at lines 197--204
+\OML/cmm/m/it/10 frac\OT1/cmr/m/n/10 19 \OMS/cmsy/m/n/10 
+ []
+
+
+Overfull \hbox (159.47438pt too wide) in paragraph at lines 197--204
+\OML/cmm/m/it/10 frac[][]:[]$$$\nullfont An
+ []
+
+
+Overfull \hbox (10.71066pt too wide) in paragraph at lines 197--204
+\OML/cmm/m/it/10 ![]$
+ []
+
+)
+! Emergency stop.
+<*> theorie.tex
+            
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 32 strings out of 479058
+ 100000,383344 words of node,token memory allocated 51776 words of node memory still in use:
+   402 hlist, 2 vlist, 13 disc, 46 local_par, 1 dir, 37 math, 1171 glue, 88 kern
+, 163 penalty, 5279 glyph, 272 attribute, 39 glue_spec, 272 attribute_list, 1 te
+mp, 9 write nodes
+   avail lists: 3:50,4:69,5:2,8:55,9:1,10:68
+ 19584 multiletter control sequences out of 65536+600000
+ 36 fonts using 4012019 bytes
+ 18i,4n,20p,222b,136s stack positions out of 5000i,500n,10000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
