@@ -12,10 +12,10 @@ soll zur Vorbereitung die Wärmeleitfähigkeit $\kappa$ für Aluminium, Messing 
       \toprule
       {Material}  &  {Abmessung [cm] \cite{anleitung}}  &  {$\rho$ $[\si{\kilo\gram\per\meter\cubic}]$\cite{anleitung}}   &   {$c$ $[\si{\joule\per\kilo\gram\per\kelvin}]$\cite{anleitung}}  &   {$\kappa$ $[\si{\watt\per\meter\per\kelvin}]$\cite{chemie.de}}\\
       \midrule
-      Messing (breit) & 9 x 1.2 x 0.4  & 8520   & 385 & 237\\
+      Messing (breit) & 9 x 1.2 x 0.4  & 8520   & 385 & 120\\
       Messing (schmal) & 9 x 0.7 x 0.4  & 8520  & 385 & 120\\
-      Aluminium (breit) & 9 x 1.2 x 0.4 & 2800  & 830 & 15 bis 21\\
-      Edelstahl (breit) &  9 x 1.2 x 0.4  & 8000    & 400& 0.6\\
+      Aluminium (breit) & 9 x 1.2 x 0.4 & 2800  & 830 & 237\\
+      Edelstahl (breit) &  9 x 1.2 x 0.4  & 8000  & 400& 15 bis 21\\
       \bottomrule
     \end{tabular}
   \end{table}
@@ -34,7 +34,7 @@ Aluminium, Edelstahl (stainless steel) und Messing (brass), wobei Messing zwei M
 Die Messstellen sind die Thermoelemente T1 bis T8.
 T1 und T2 nimmt die Temperatur für Messing (breit) auf, T3 und T4 für Messing (schmal), T5 und T6 für Aluminium.
 Die Temperatur für Edelstahl wird von T7 und T8 aufgenommen.
-Der Abstand zwischen eines Thermoelementpaares beträgt $3\si{\centi\meter}$.
+Der Abstand zwischen eines Thermoelementpaares beträgt $\SI{3}{\centi\metre}$.
 Mit dem Schalter HEAT/COOL werden über das Peltierelement die Stäbe simultan geheizt bzw. gekühlt.
 Über das Temperatur Array werden die Temperaturen an den Thermoelementen gespeichert.
 Dafür wird das Xplorer GLX verwendet.
@@ -60,9 +60,9 @@ Dazu wird zunächst die Abtastrate $\Delta t_\text{GLX}$ auf $2\si{\second}$ ges
 Die Eingangsspannung wird auf $8\si{\volt}$ eingestellt.
 
 Im ersten Messdurchgang werden die Stäbe mit einer Periode von $80\si{\second}$ geheizt.
-Somit wird mithilfe einer Stoppuhr der Schalter alle $40\si{\second}$ umgelegt, um zwischen heizen und kühlen zu wechseln.
+Somit wird mithilfe einer Stoppuhr der Schalter alle $40\si{\second}$ umgelegt, um zwischen Heizen und Kühlen zu wechseln.
 Nach 12 Perioden wird die Messung beendet.
 
 Im zweiten Messdurchgang soll die Periodendauer $200\si{\second}$ betragen.
 Der Schalter wird alle $100\si{\second}$ umgelegt, hier wird auch eine Stoppuhr verwendet.
-Die Messung wird beendet, sobald eines der Thermoselemente eine Temperatur von $80\si{\celsius}$ anzeigt.
+Die Messung wird beendet, sobald eines der Thermoelemente eine Temperatur von $80\si{\celsius}$ anzeigt.

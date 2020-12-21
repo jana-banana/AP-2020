@@ -24,14 +24,14 @@ Die Temperatur des Edelstahlstabes steigt noch schneller, gegen Ende der Zeitmes
 
 Die Temperatur der jeweiligen Stäbe zum Zeitpunkt $t=\SI{700}{\second}$ lassen sich in den Messdaten ablesen und ergeben sich zu:
 \begin{align*}
-  \text{für den breiten Messingstab:} \: T&= \SI{45.76}{\celsius} & T&=\SI{318.91}{\kelvin}\\ 
-  \text{für den schmalen Messingstab:} \: T&= \SI{43.16}{\celsius}& T&=\SI{316.31}{\kelvin}\\ 
-  \text{für den Aluminiumstab:} \: T&= \SI{48.46}{\celsius}& T&=\SI{321.61}{\kelvin}\\ 
-  \text{für den Edelstahlstab:} \: T&= \SI{34.21}{\celsius}& T&=\SI{307.36}{\kelvin}
+  \text{für den breiten Messingstab:} \: T&= \SI{45.76}{\celsius}\, =\SI{318.91}{\kelvin}\\ 
+  \text{für den schmalen Messingstab:} \: T&= \SI{43.16}{\celsius}\, =\SI{316.31}{\kelvin}\\ 
+  \text{für den Aluminiumstab:} \: T&= \SI{48.46}{\celsius}\, =\SI{321.61}{\kelvin}\\ 
+  \text{für den Edelstahlstab:} \: T&= \SI{34.21}{\celsius}\, =\SI{307.36}{\kelvin}
 \end{align*}
 
 Nach der Gleichung \eqref{eqn:Wärmemenge} lässt sich der Wärmestrom $\frac{\Delta Q}{\Delta t}$ für die verschiedenen Metallstäbe errechnen (siehe Tabelle \ref{tab:Wärmestrom}).
-Dabei wird für das $\kappa $ der Wert aus der Literatur genommen (siehe Vorbereitung \ref{tab:}) und der Abstand $x$ der Tempertaurmessstellen wurde zu $x = \SI{0.03}{\metre}$ nachgemessen.
+Dabei wird für das $\kappa $ der Wert aus der Literatur genommen (siehe Vorbereitung \ref{tab:}) und der Abstand $x$ der Tempertaurmessstellen wurde zu $x = \SI{3}{\centi\metre}$ nachgemessen.
 \begin{table}
   \centering
   \caption{Der Wärmestrom der verschiedenen Metallstäben zu 5 verschiedenen Zeitpunkten.}
@@ -43,9 +43,9 @@ Dabei wird für das $\kappa $ der Wert aus der Literatur genommen (siehe Vorbere
                   S[table-format=1.3] %Edelstahl
                   }
   \toprule
-  &\multicolumn{4}{c}{$\frac{\Delta Q}{\Delta t} \mathbin{/} \si{\joule\per\second}$}\\
+  &\multicolumn{4}{c}{$\frac{\Delta Q}{\Delta t} [\si{\joule\per\second}]$}\\
   \cmidrule(lr){2-5}
-  {$ t \mathbin{/} \si{\second}$}&{Messing (breit)}&{Messing (schmal)}&{Aluminium}&{Edelstahl}\\
+  {$ t [\si{\second}]$}&{Messing (breit)}&{Messing (schmal)}&{Aluminium}&{Edelstahl}\\
   \midrule
   100 & 1.150 & 0.794 & 1.422 & 0.286 \\
   200 & 0.726 & 0.548 & 0.838 & 0.285 \\
@@ -103,10 +103,10 @@ Es ergibt sich aus den Werten der Mittelwert:
                   S[table-format=1.3] % ln
                   S[table-format=2]}
   \toprule
-  {$ A_{\text{nah}} \mathbin{/} \si{\kelvin} $}&
-  {$ A_{\text{fern}} \mathbin{/} \si{\kelvin} $}&
+  {$ A_{\text{nah}} [\si{\kelvin}] $}&
+  {$ A_{\text{fern}} [\si{\kelvin}] $}&
   {$ \log(\frac{A_{\text{nah}}}{A_{\text{fern}}})$} &
-  {$ \Delta t \mathbin{/} \si{\second}$}\\
+  {$ \Delta t [\si{\second}]$}\\
   \midrule
   19.81  &10.93 & 0.595& 22\\
   16.07  &  8.01 & 0.696& 16\\
@@ -159,10 +159,10 @@ Die Amplituden der Temperaturverläufe und die Phasendifferenz $\Delta t$ werden
     S[table-format=1.3] % ln
     S[table-format=2]}
   \toprule
-  {$ A_{\text{nah}} \mathbin{/} \si{\kelvin} $}&
-  {$ A_{\text{fern}} \mathbin{/} \si{\kelvin} $}&
+  {$ A_{\text{nah}} [\si{\kelvin}] $}&
+  {$ A_{\text{fern}}[\si{\kelvin}] $}&
   {$ \log(\frac{A_{\text{nah}}}{A_{\text{fern}}})$} &
-  {$ \Delta t \mathbin{/} \si{\second}$}\\
+  {$ \Delta t [\si{\second}]$}\\
   \midrule
   23.96 & 16.91  & 0.348  & 12\\
   19.19 & 11.49  & 0.513  & 8\\
@@ -195,7 +195,7 @@ Die Frequenz $f$ und die Wellenlänge $\lambda$ ergeben sich nach \eqref{eqn:lam
 
 \subsubsection{Edelstahlstab}
 Für die Auswertung des Edelstahlstabes werden Messdaten von einer anderen dynamischen Messung mit einer Periode von $T = \SI{200}{\second}$ betrachtet.
-Es wurden wieder die Temperaturen an zwei verschiedenen Messstellen des Edelstahlstabes mit Abstand $\Delta x = \SI{0.03}{\metre}$ alle $ \SI{2}{\second}$ gemessen.\\
+Es wurden wieder die Temperaturen an zwei verschiedenen Messstellen des Edelstahlstabes mit Abstand $\Delta x = \SI{3}{\centi\metre}$ alle $ \SI{2}{\second}$ gemessen.\\
 \\
 Die Temperaturverläufe werde in einem $t$-$T$- Diagramm abgebildet. 
 In der \autoref{fig:edelstahl_dyn} sind die periodischen Veränderungen der Temperaturen deutlich zu erkennen.
@@ -217,10 +217,10 @@ Die verschiedenen Amplitudenausschläge und deren Phasendifferenz $\Delta t$ sin
                   S[table-format=1.3]
                   S[table-format=2]}
   \toprule
-  {$ A_{\text{nah}} \mathbin{/} \si{\kelvin} $}&
-  {$ A_{\text{fern}} \mathbin{/} \si{\kelvin} $}&
+  {$ A_{\text{nah}} [\si{\kelvin}] $}&
+  {$ A_{\text{fern}} [\si{\kelvin}] $}&
   {$ \log(\frac{A_{\text{nah}}}{A_{\text{fern}}})$} &
-  {$ \Delta t \mathbin{/} \si{\second}$}\\
+  {$ \Delta t [\si{\second}]$}\\
   \midrule
   25.97 & 8.02 & 1.175 & 76\\
   22.58 & 5.85 & 1.351 & 66\\
