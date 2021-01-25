@@ -1,11 +1,11 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
 \subsection{Zählrohr-Charakteristik}
 \label{subsec:Zählrohr-Charakteristik}
-Die Charakteristik des Zählrohres wird anhand der Messergebnisse in die Abbildung \ref{fig:Charakteristik} aufgenommen.
-Der Plateau-Bereich wird von 390 bis 610 $\si{\volt}$ angenommen, somit ist der Bereich 280 $\si{\volt}$ lang.
-Mithilfe von ipython wird eine lineare Ausgleichsrechnung für den Plateau-Bereich durchgeführt, für die Ausgleichgerade ergibt sich:
+Die Charakteristik des Zählrohres wird anhand der Messergebnisse (siehe Tabelle \ref{tab:Messwerte}) in die Abbildung \ref{fig:Charakteristik} aufgenommen.
+Der Plateau-Bereich wird von 390 bis 610 $\si{\volt}$ angenommen, somit ist der Bereich $\SI{280}{\volt}$ lang.
+Mithilfe von ipython wird eine lineare Ausgleichsrechnung für den Plateau-Bereich durchgeführt.
+Für die Ausgleichgerade ergibt sich:
 \begin{equation*}
   N = (1.169 \pm 0.325)U + (9575.69 \pm 163.72)
 \end{equation*}
@@ -20,19 +20,67 @@ Eine geeignete Zählrohrspannung ist $\SI{400}{\volt}$, da diese etwas über der
 
 \subsection{Zeitlicher Abstand zwischen Primär- und Nachentladungsimpuls}
 \label{subsec:Primär_Nachentladung}
+Die Erholzeit kann nicht aus der Abbildung \ref{fig:Momentaufnahme} entnommen werden.
+Dadurch entfällt diese Aufgabe.
 
 \subsection{Bestimmung der Totzeit}
 \label{subsec:Totzeit}
 
 \subsubsection{Oszilloskop}
-Anhand einer Momentaufnahme der Anzeige des Oszilloskops soll die Totzeit bestimmt werden.
-Die Zeit zwischen dem ersten und zweitem Puls wird abgelesen und auf $\SI{100}{\mu\second}$ geschätzt.
+Anhand der Abbildung \ref{fig:Momentaufnahme} soll die Totzeit bestimmt werden.
+Die Zeit zwischen dem ersten und zweitem Puls wird abgelesen und auf $\SI{100}{\micro\second}$ geschätzt.
+
+\begin{figure}
+  \centering
+  \includegraphics{Momentaufnahme.pdf}
+  \caption{Momentaufnahme der Anzeige des Oszilloskops.\cite{anleitung}}
+  \label{fig:Momentaufnahme}
+\end{figure}
 
 \subsubsection{Zwei-Quellen-Methode}
 Mit der Formel \eqref{eqn:totzeit} wird die Totzeit mit den folgenden Zählraten ermittelt:
 \begin{align*}
-  N_1 &= \frac{96041}{120} \text{Imp/s}
-  N_{1+2} &= \frac{158479}{120} \text{Imp/s}
-  N_2 &= \frac{76518}{120} \text{Imp/s}
+  N_1 &= \frac{96041}{120} \text{Imp/s} \\
+  N_{1+2} &= \frac{158479}{120} \text{Imp/s} \\
+  N_2 &= \frac{76518}{120} \text{Imp/s} \\
 \end{align*}
+Für diese Messwerte wurde die Messzeit auf $\SI{120}{\second}$ erhöht, um eine genauere Messung durchzuführen.
 Mit der Fehlerfortpflanzung nach Gauß folgt insgesamt für die Totzeit $T = \SI{115 \pm 0.047}{\micro\second}$.
+
+\subsection{Freigesetzte Ladung pro einfallendem Teilchen}
+\label{subsec:LadungProTeilchen}
+Aus den Messwerten aus Tabelle \ref{tab:Messwerte} und der Formel \ref{eqn:Ladung} werden die Ladungen pro Teilchen bestimmt.
+Die Ergebnisse sind in Tabelle \ref{tab:Ladungen} festgehalten.
+
+\begin{table}
+  \label{tab:Ladungen}
+  \centering
+  \caption{Ergebnisse der freigesetzten Ladungen pro Teilchen.}
+  \begin{tabular}{c c c c c c}
+    \toprule
+    {U [$\si{\volt}$]} & {I [$\si{\micro\ampere}$]} & {Z []} & {$\increment$Z []} & {Q []} & {$\increment$Q []}
+    \midrule
+    350 &0.3 & $3.05 \cdot 10^-5$ & 0.0055& 590220& 106877092.36 \\
+    400 &0.4 & $4.002 \cdot 10^-5$& 0.0063& 599700& 94797187.45 \\
+    450 &0.7 & $6.82 \cdot 10^-5$ & 0.0082& 615840& 74572241.17 \\
+    500 &0.8 & $7.88 \cdot 10^-5$ & 0.0089& 609060& 68607168.93 \\
+    550 &1.0 & $9.82 \cdot 10^-5$ & 0.0099& 611040& 61663594.40 \\
+    600 &1.3 & 0.00013            & 0.0113& 615180& 54633120.92 \\
+    650 &1.4 & 0.00013            & 0.0116& 629580& 54505049.93 \\
+    700 &1.8 & 0.00016            & 0.0125& 692820& 55490513.86 \\
+  \end{tabular}
+\end{table}
+
+\subsection{Messergebnisse}
+\begin{table}
+  \label{tab:Messwerte}
+  \centering
+  \caption{Messwerte zur Aufnahme der Geiger-Müller Charakteristik.}
+  \begin{tabular}{c c c}
+      \toprule
+      {U [$si{\volt}$]} & {N [Imp/$\si{\second}$]} & {I [$\si{\micro\ampere}$]}
+      \midrule
+      \include{Messwerte.tex}
+      \bottomrule
+    \end{tabular}
+\end{table}

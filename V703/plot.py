@@ -14,6 +14,8 @@ plt.plot(U,N, '.',label='Messpunkte')
 plt.tight_layout()
 plt.savefig('Zählrohrcharakteristik.pdf')
 
+plt.clf()
+
 #Ausgleichsrechnung vom Plateau
 U_Plateau, N_Plateau=[],[]
 for i in range (23):
@@ -30,7 +32,15 @@ print("b =", popt[1])
 print("a fehler =",errors[0])
 print("b fehler=",errors[1])
 
-plt.plot(U, line(U, popt[0], popt[1]), 'r-', label='Ausgleichgerade des Plateau-Bereichs')
+plt.errorbar(U, N ,yerr=N_err, fmt ='.')
+plt.xlabel('Spannung U [V]')
+plt.ylabel('registrierte Teilchenanzahl N [Imp/60s]')
+plt.plot(U,N, '.',label='Messpunkte')
+plt.tight_layout()
+plt.savefig('Zählrohrcharakteristik.pdf')
+
+
+plt.plot(U, line(U, popt[0], popt[1]), label='Ausgleichgerade des Plateau-Bereichs')
 plt.tight_layout()
 plt.legend()
 plt.savefig('Plateau_Gerade.pdf')
@@ -44,6 +54,7 @@ print('Steigung auf 100V:', f2/f1)
 
 plt.clf()
 #Aufgabe b Primär- und Nachentladungsimpulsen
+#können wir net machen
 
 #Aufgabe c Totzeit
 
@@ -73,10 +84,10 @@ I_fehler= 0.05 *10**(-6)
 print( 'Zahl Z der freigesetzten Ladungen pro eingefallenen Teilchen')
 Z, Z_fehler_quad, Z_fehler= [], [], []
 for i in range(8):
-    zahl = I_Z[i]/(N[3+(5*i)])
+    zahl = I_Z[i]/(N[4+(5*i)])
     Z.append(zahl)
     print('Strom I:', I_Z[i], '; ',zahl, '1/e')
-    x = (1/(N[3+(5*i)]))**2 *(I_fehler)**2 + (I_Z[i]/(N[3+(5*i)])**2 ) * (N[3+(5*i)])
+    x = (1/(N[4+(5*i)]))**2 *(I_fehler)**2 + (I_Z[i]/(N[4+(5*i)])**2 ) * (N[4+(5*i)])
     Z_fehler_quad.append(x)
     
 print('Fehler von Z^2')
@@ -97,3 +108,34 @@ plt.plot(I_Z,Z, '.')
 plt.tight_layout()
 plt.savefig('Aufgabe_Bestimmung_des_Zaehlrohrstroms.pdf')
 
+
+#Aufgabe d freigesetzte Ladung pro einfallendem Teilchen
+print('Aufgabe d freigesetzte Ladung pro einfallendem Teilchen')
+d_t = 60 #sekunden
+
+print('n von den ladungen')
+N_ladung = []
+for i in range(8):
+    N_ladung.append(N[4+(5*i)])
+    print(N_ladung[i])
+
+print('Z= I/N  (mal 1/e)') #hat einheit: mA/60s * 1/e
+Zahl = []
+for i in range(8):       #eig das gleiche wie aufgabe 3 dadrüber
+    Zahl.append(I_Z[i]/N_ladung[i])
+    print(Zahl[i])
+
+print('d_Q = I * d_t / Z') #hier dann einheit: mA*s/ (mA/60s * 1/e) lol
+Q=[]
+for i in range(8):
+    x = (I_Z[i] * d_t )/Zahl[i]
+    Q.append(x)
+    print(Q[i])
+
+#fehler von Q
+print('fehler von Q')
+Q_fehler =[]
+for i in range (8):
+    x = (d_t/Zahl[i])**2 * I_fehler + ((d_t * I_Z[i])/(Zahl[i]**2))**2 * Z_fehler_quad[i]
+    Q_fehler.append(np.sqrt(x))
+    print(Q_fehler[i])
