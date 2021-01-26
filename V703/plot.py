@@ -102,14 +102,6 @@ for i in range(8):
     Z_fehler.append(x)
     print(Z_fehler[i])
 
-#plt.errorbar(I_Z, Z ,yerr=Z_fehler, fmt ='.')
-plt.xlabel('Zählerstrom I [ $\mu$A]')
-plt.ylabel('Zahl Z der freigesetzten Ladungen pro eingefallenen Teilchen')
-plt.plot(I_Z,Z, '.')
-plt.tight_layout()
-plt.savefig('Aufgabe_Bestimmung_des_Zaehlrohrstroms.pdf')
-
-
 #Aufgabe d freigesetzte Ladung pro einfallendem Teilchen
 print('Aufgabe d freigesetzte Ladung pro einfallendem Teilchen')
 d_t = 60 #sekunden
@@ -120,13 +112,13 @@ for i in range(8):
     N_ladung.append(N[4+(5*i)])
     print(N_ladung[i])
 
-print('Z= I/N  (mal 1/e)') #hat einheit: mA/60s * 1/e
+print('Z= I/N  (mal 1/e)') #hat einheit: mA*60s * 1/e
 Zahl = []
 for i in range(8):       #eig das gleiche wie aufgabe 3 dadrüber
     Zahl.append(I_Z[i]/N_ladung[i])
     print(Zahl[i])
 
-print('d_Q = I * d_t / Z') #hier dann einheit: mA*s/ (mA/60s * 1/e) lol
+print('d_Q = I * d_t / Z') #hier dann einheit: mA*s/ (mA*60s * 1/e) = e/60
 Q=[]
 for i in range(8):
     x = (I_Z[i] * d_t )/Zahl[i]
@@ -149,5 +141,16 @@ print('Q=', N0*60)
 I = np.array([0.3, 0.4, 0.7, 0.8, 1.0, 1.3, 1.4, 1.8])
 I_err = np.array([0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05])
 I0 = unp.uarray(I, I_err)
-Z = I0 / N0 
+Z = (I0 / N0)*60 
 print('Z=', Z)
+
+
+Z_f= [0.000306,0.000301,0.000295,0.000299,0.000300,0.000302,0.000296,0.000274]
+Z_n=[0.0018298261665141812,  0.0024012006003001503,0.004091971940763835, 0.004728598167668211,0.0058915946582875104,0.007607529503559934,0.00800533689126084, 0.009353078721745909]
+
+plt.errorbar(I, Z_f ,yerr=Z.s, fmt ='.')
+plt.xlabel('Zählerstrom I [ $\mu$A]')
+plt.ylabel('Z [$\mu$As/e]')
+plt.plot(I,Z_n, '.')
+plt.tight_layout()
+plt.savefig('Aufgabe_Bestimmung_des_Zaehlrohrstroms.pdf')
