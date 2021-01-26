@@ -119,13 +119,13 @@ for i in range(8):
     N_ladung.append(N[4+(5*i)])
     print(N_ladung[i])
 
-print('Z= I/N  (mal 1/e)') #hat einheit: mA/60s * 1/e
+print('Z= I/N  (mal 1/e)') #hat einheit: mA*60s * 1/e
 Zahl = []
 for i in range(8):       #eig das gleiche wie aufgabe 3 dadrüber
     Zahl.append(I_Z[i]/N_ladung[i])
     print(Zahl[i])
 
-print('d_Q = I * d_t / Z') #hier dann einheit: mA*s/ (mA/60s * 1/e) lol
+print('d_Q = I * d_t / Z') #hier dann einheit: mA*s/ (mA*60s * 1/e) = e/60
 Q=[]
 for i in range(8):
     x = (I_Z[i] * d_t )/Zahl[i]
@@ -139,3 +139,6 @@ for i in range (8):
     x = (d_t/Zahl[i])**2 * I_fehler + ((d_t * I_Z[i])/(Zahl[i]**2))**2 * Z_fehler_quad[i]
     Q_fehler.append(np.sqrt(x))
     print(Q_fehler[i])
+
+
+#e * N/60s *60s = Q
