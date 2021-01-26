@@ -36,10 +36,7 @@ print("b fehler=",errors[1])
 plt.errorbar(U, N ,yerr=N_err, fmt ='.')
 plt.xlabel('Spannung U [V]')
 plt.ylabel('registrierte Teilchenanzahl N [Imp/60s]')
-plt.plot(U,N, '.',label='Messpunkte')
-plt.tight_layout()
-plt.savefig('Zählrohrcharakteristik.pdf')
-
+plt.plot(U,N, 'k.',label='Messpunkte')
 
 plt.plot(U, line(U, popt[0], popt[1]), label='Ausgleichgerade des Plateau-Bereichs')
 plt.tight_layout()
