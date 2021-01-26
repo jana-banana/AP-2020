@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
+import uncertainties.unumpy as unp 
 
 #Aufgabe a Zählrohr-Charakteristik
 
@@ -139,3 +140,14 @@ for i in range (8):
     x = (d_t/Zahl[i])**2 * I_fehler + ((d_t * I_Z[i])/(Zahl[i]**2))**2 * Z_fehler_quad[i]
     Q_fehler.append(np.sqrt(x))
     print(Q_fehler[i])
+
+N = np.array([9837, 9995, 10264, 10151, 10184, 10253, 10493, 11547])
+N_err = np.sqrt(N)
+N0 = unp.uarray(N, N_err)
+
+print('Q=', N0*60)
+I = np.array([0.3, 0.4, 0.7, 0.8, 1.0, 1.3, 1.4, 1.8])
+I_err = np.array([0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05])
+I0 = unp.uarray(I, I_err)
+Z = I0 / N0 
+print('Z=', Z)
