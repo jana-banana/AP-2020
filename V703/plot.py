@@ -11,7 +11,7 @@ N_err = np.sqrt(N)
 plt.errorbar(U, N ,yerr=N_err, fmt ='.')
 plt.xlabel('Spannung U [V]')
 plt.ylabel('registrierte Teilchenanzahl N [Imp/60s]')
-plt.plot(U,N, '.',label='Messpunkte')
+plt.plot(U,N, '.',label='Messpunkte' , 'b')
 plt.tight_layout()
 plt.savefig('Zählrohrcharakteristik.pdf')
 
@@ -36,9 +36,9 @@ print("b fehler=",errors[1])
 plt.errorbar(U, N ,yerr=N_err, fmt ='.')
 plt.xlabel('Spannung U [V]')
 plt.ylabel('registrierte Teilchenanzahl N [Imp/60s]')
-plt.plot(U,N, '.',label='Messpunkte')
+plt.plot(U,N, '.',label='Messpunkte', 'b')
 plt.tight_layout()
-plt.savefig('Zählrohrcharakteristik.pdf')
+#plt.savefig('Zählrohrcharakteristik.pdf')
 
 
 plt.plot(U, line(U, popt[0], popt[1]), label='Ausgleichgerade des Plateau-Bereichs')
@@ -148,7 +148,7 @@ print('Z=', Z)
 Z_f= [0.000306,0.000301,0.000295,0.000299,0.000300,0.000302,0.000296,0.000274]
 Z_n=[0.0018298261665141812,  0.0024012006003001503,0.004091971940763835, 0.004728598167668211,0.0058915946582875104,0.007607529503559934,0.00800533689126084, 0.009353078721745909]
 
-plt.errorbar(I, Z_f ,yerr=Z.s, fmt ='.')
+plt.errorbar(I, Z_n ,yerr=Z.f, fmt ='.')
 plt.xlabel('Zählerstrom I [ $\mu$A]')
 plt.ylabel('Z [$\mu$As/e]')
 plt.plot(I,Z_n, '.')
