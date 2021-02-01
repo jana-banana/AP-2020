@@ -70,8 +70,10 @@ print('c=', c)
 
 umrechnung = np.log10(np.exp(1))
 Steigung = a / umrechnung #steigung in ln
+ce = c / umrechnung
 halbwertszeit = np.log(2)/(-Steigung)
 print('ae', Steigung)
+print('ce', ce)
 print('Halbwertszeit', halbwertszeit)
 
 plt.errorbar(dt, unp.nominal_values(N), yerr=unp.std_devs(N), fmt='k.', label='Messwerte')
@@ -118,11 +120,13 @@ print('c_lang=', c)
 
 umrechnung = np.log10(np.exp(1))
 Steigung = a / umrechnung #steigung in ln
+ce = c / umrechnung
 halbwertszeit = np.log(2)/(-Steigung)
 print('ae_lang', Steigung)
+print('ce_lang', ce)
 print('Halbwertszeit_lang', halbwertszeit)
 
-N_lang = unp.exp(c)*(1-unp.exp(-Steigung*15))
+N_lang = unp.exp(ce)*(1-unp.exp(-Steigung*15))
 print('N_lang', N_lang)
 
 plt.errorbar(dt, unp.nominal_values(N), yerr=unp.std_devs(N), fmt='k.', label='Messwerte')
@@ -144,7 +148,7 @@ dtk, Ngesnk = np.genfromtxt('rhodium_kurz.txt', unpack=True)
 Ngesk = unp.uarray(Ngesnk, np.sqrt(Ngesnk))
 Nk = Ngesk - Nu15
 def Nlf(t):
-    return -0.36*np.exp(-0.0033*t)
+    return -4.7*np.exp(-0.0033*t)
 tdl = np.array([15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210])
 Ndl = Nlf(tdl)
 #print('N_lang(t)', Ndl)
@@ -166,8 +170,10 @@ print('c_kurz=', c)
 
 umrechnung = np.log10(np.exp(1))
 Steigung = a / umrechnung #steigung in ln
+ce = c / umrechnung
 halbwertszeit = np.log(2)/(-Steigung)
 print('ae_kurz', Steigung)
+print('ce_kurz', ce)
 print('Halbwertszeit_kurz', halbwertszeit)
 
 plt.errorbar(dtk, unp.nominal_values(Nkk), yerr=unp.std_devs(Nkk), fmt='k.', label='Messwerte')
@@ -187,10 +193,11 @@ t_plot = np.linspace(10, 680)
 plt.errorbar(dt, unp.nominal_values(N), yerr=unp.std_devs(N), fmt='k.', label='Messwerte')
 plt.plot(t_plot, 10**(poptk[0]*t_plot + poptk[1]), label='Ausgleichsgerade für kurzlebigen Zerfall')
 plt.plot(t_plot, 10**(poptl[0]*t_plot + poptl[1]), label='Ausgleichsgerade für langlebigen Zerfall')
-plt.plot(t_plot, 10**(t_plot*(poptk[0]+poptl[0])+poptk[1]+poptl[1]), label='Summe aus beiden Ausgleichsgeraden')
+plt.plot(t_plot, 10**(poptl[0]*t_plot + poptl[1]) + 10**(poptk[0]*t_plot + poptk[1]) , label='Summe aus beiden Ausgleichsgeraden')
 plt.xlabel(r'$t [\text{s}]$')
 plt.ylabel('Anzahl der Impulse')
 plt.yscale('log')
+plt.ylim(10**(0.5), 10**3)
 
 plt.grid()
 plt.legend()

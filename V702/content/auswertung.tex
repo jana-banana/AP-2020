@@ -9,7 +9,6 @@ Die Untergrundrate für  dieses Messintervall ergibt sich zu:
 \begin{equation*}
   N_{\text{U}, \SI{30}{\second}} = \num{13.9 \pm 0.4}
 \end{equation*}
-
 \begin{figure}
   \centering
   \includegraphics{build/vanadium.pdf}
@@ -28,7 +27,7 @@ Damit die Halbwertszeit ausgerechent werden kann, müssen die Parameter von der 
 In der natürlichen Basis lauten diese dann:
 \begin{align*}
   a &= \SI{-3.17(16)e-3}{\per\second}\\
-  c &= \num{2.25 \pm 0.06}
+  c &= \num{5.19 \pm 0.13}
 \end{align*}
 Mit \eqref{eqn:halbwertszeit} ergibt sich die Halbwertszeit von Vanadium zu:
 \begin{equation*}
@@ -36,7 +35,7 @@ Mit \eqref{eqn:halbwertszeit} ergibt sich die Halbwertszeit von Vanadium zu:
 \end{equation*}
 \\
 Da die letzten Zeitintervalle geringe Zählraten haben, werden die Messwerte von Vanadium bis $t=\SI{450}{\second}$ nochmale geplottet und mit einer Funktion der Form $\log(N) = a\cdot t +c $ genähert.
-Die Ausgleichsrechnung erfolgt mit phython und ergibt in der dekadisch logarithmischen Darstellung:
+Die Ausgleichsrechnung erfolgt mit python und ergibt in der dekadisch logarithmischen Darstellung:
 \begin{align*}
   a &= \SI{-1.67(13)e-3}{\per\second}\\
   c &= \num{2.35 \pm 0.04}
@@ -48,9 +47,9 @@ Dies ist in geplottet in der \autoref{fig:vana2}.
   \caption{Die Messwerte der Vanadiumprobe bis zur vorher ausgerechneten doppelten Halbwertszeit in einem halblogarithmischen Diagramm.}
   \label{fig:vana2}
 \end{figure}
-Nach der Umrechnung in die natürliche Basis folgt für die Ausgeleichsrechnung:
+Nach der Umrechnung in die natürliche Basis folgt für die Ausgleichsrechnung:
 \begin{equation*}
-  \ln(N) = (\SI{-3.85(31)e-3}{\per\second}) \cdot t +\num{2.35 \pm 0.04}
+  \ln(N) = (\SI{-3.85(31)e-3}{\per\second}) \cdot t + (\num{5.42 \pm 0.08})
 \end{equation*}
 Somit errechnet sich die Halbwertszeit nach \eqref{eqn:halbwertszeit} bei dieser Auswahl der Messwert zu:
 \begin{equation*}
@@ -72,7 +71,7 @@ Anschließend wurden die Messwerte halblogarithmisch in ein Diagramm aufgetragen
   \label{fig:rhodium}
 \end{figure}
 Da Rhodium in $\ce{^{104\text{i}}Rh}$ und $\ce{^{104}Rh}$ zerfällt, wird zuerst der langlebige Zerfall betrachten.
-Der Zeitpunkt, in dem nur noch der langlebiger Zerfall vorliegt, wurde in \autoref{fig:rhodium} zu $t* = \SI{240}{\second}$ bestimmt. 
+Der Zeitpunkt, in dem nur noch der langlebiger Zerfall vorliegt, wurde in \autoref{fig:rhodium} zu $t^* = \SI{240}{\second}$ bestimmt. 
 Für die darauf folgenden Werte wurde eine Ausgleichsrechnung der Form $\log(N) = a \cdot t + c $ mit python druchgeführt. 
 Die Parameter ergeben sich zu: 
 \begin{align*}
@@ -80,20 +79,20 @@ Die Parameter ergeben sich zu:
   c &= \num{1.97 \pm 0.08}
 \end{align*}
 Nachdem die Steigung in die die natürliche Basis umgerechnet wurde, lautet die lineare Abbildung
-\begin{equation*}
-  \ln(N) = \SI{-3.3(4)e-3}{\per\second} \cdot t + \num{1.97 \pm 0.08}
-\end{equation*}
+\begin{equation} \label{eqn:ln_rho_lang}
+  \ln(N) = \SI{-3.3(4)e-3}{\per\second} \cdot t + (\num{4.55 \pm 0.19})
+\end{equation}
 und die Halbwertszeit für den langlebigen Zerfall berechnet sich nach \eqref{eqn:halbwertszeit} zu:
 \begin{equation*}
   T_{\text{H}, l} = \SI{212 \pm 26}{\second}
 \end{equation*}
 Die Zerfallsrate für den langlebige Zerfall von Rhodium lautet somit:
 \begin{equation*}
-  N_{\increment \text{t}, \text{lang}}(t) = (\num{-0.36 \pm 0.05})\cdot \exp((\num{0.0033 \pm 0.0004})t)
+  N_{\increment \text{t}, \text{lang}}(t) = (\num{-4.7 \pm 1.1})\cdot \exp((\num{0.0033 \pm 0.0004})t)
 \end{equation*}
 \\
 Zur Betrachtung des kurzlebigen Zerfalls wird nun die Zerfallsrate des langlebigen Zerfalls von der Gesamtanzahl für Zeiten bis $t = \SI{210}{\second}$ abgezogen.
-Diese Werte wurden halblogarithmisch in ein Diagramm getragen (siehe \autoref{fig:rhodium_kurz}) und mit einer Funktion der Form $\log(N) = a \cdot +c$ angenähert.
+Diese Werte wurden halblogarithmisch in ein Diagramm getragen (siehe \autoref{fig:rhodium_kurz}) und mit einer Funktion der Form $\log(N) = a \cdot t + c$ angenähert.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/rhodium_kurz.pdf}
@@ -102,17 +101,24 @@ Diese Werte wurden halblogarithmisch in ein Diagramm getragen (siehe \autoref{fi
 \end{figure}
 Die Ausgleichsgerade wurde mit python ermittelt und lautet in dekadisch logarithmischer Darstellung:
 \begin{align*}
-  a &= \SI{-5.32(11)e-3}{\per\second}\\
-  c &= \num{2.892 \pm 0.014}
+  a &= \SI{-5.26(11)e-3}{\per\second}\\
+  c &= \num{2.893 \pm 0.014}
 \end{align*}
 In der natürlichen Basis lässt sich die Ausgleichsgerade so schreiben:
-\begin{equation*}
-  \ln(N) = (\SI{-0.01224\pm 0.00025}{\per\second})\cdot t + \num{2.892\pm 0.014}
-\end{equation*}
+\begin{equation} \label{eqn:ln_rho_kurz}
+  \ln(N) = (\SI{-0.01210\pm 0.00025}{\per\second})\cdot t + (\num{6.661\pm 0.032})
+\end{equation}
 Damit berechnet sich die Halbwertszeit des kurzlebigen Zerfalls nach \eqref{eqn:halbwertszeit} zu:
 \begin{equation*}
-  T_{\text{H},\text{k}}= \SI{56.6\pm 1.2}{\second}
+  T_{\text{H},\text{k}}= \SI{57.3\pm 1.2}{\second}
 \end{equation*}
+Abschließend sind in der \autoref{fig:rhodium_ges} die Messwerte der Rhodiumprobe neben der Ausgleichsgeraden für den langlebigen Zerfall \eqref{eqn:ln_rho_lang}, für den kurzlebigen Zerfall \eqref{eqn:ln_rho_kurz} und deren Summe in einem halblogarithmischen $t$-$N$-Diagramm abgebildet.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{rhodium_ges.pdf}
+  \caption{Die Messwerte der Rhodiumprobe sowie die einzelnen Ausgleichsgeraden und deren Summe in einem halblogrithmischen Diagramm.}
+  \label{fig:rhodium_ges}  
+\end{figure}
 
 \subsection{Messwerte}
 Die Messwerte der einzelnen Proben sind jeweils angegeben und zusätzlich die mit der Untergrundrate bereinigten Impulszahl inklusive der Messunsicherheit.
@@ -123,7 +129,7 @@ Die Messwerte der einzelnen Proben sind jeweils angegeben und zusätzlich die mi
   \begin{tabular}{S[table-format=4]
                   S[table-format=3]}
   \toprule
-  {$t [\si{second}]$}&{$N_{\text{U}}$}\\
+  {$t [\si{\second}]$}&{$N_{\text{U}}$}\\
   \midrule
   300 & 129 \\
   600 & 143 \\
