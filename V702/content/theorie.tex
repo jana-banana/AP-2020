@@ -22,7 +22,7 @@ Dadurch geht dieser Kern in einen stabilenn Zustand über.
 Die restliche Masse wandelt sich nach Einsteinschen Beziehung in kinetische Energie um.
 \begin{align*}
     \ce{^{m}_{z}A -> ^{1}_0n -> ^{m{+1}}_{z}{A^{*}} -> ^{m{+1}}_{z}A + \gamma}\\
-    \ce{^{m{+1}}_{z}A -> ^{m{+1}}_{z{+1}}C + \beta^{-} + E_{\text{kin}} + \overline{\nu}}
+    \ce{^{m{+1}}_{z}A -> ^{m{+1}}_{z{+1}}C + \beta ^{-} + E_{\text{kin}} + \overline{\nu}}
 \end{align*}
 \subsection{Wirkungsquerschnitt}
 \label{subsec:Wirkungsquerschnitt}
@@ -34,9 +34,11 @@ Er wird beschrieben durch:
 wobei D die Dicke , K die Atome [\si{\centi\meter}], n die Neutronen pro Sekunde und u die Einfänge ist.
 Die Einheit von $\sigma$ ist $\SI{e-24}{\centi\metre\squared} = \SI{1}{\barn}$.
 Dieser Querschnitt hängt stark von der Geschwindigkeit des Neutrons ab.
-
-LOl do i need this. I DONT THINK SO .. ja eig nicht ne.
-maybe wegen wenig geschwindigkeit?
+Genaugenommen besteht ein umgekehrt proportionaler Zusammenhang zwischen dem Wirkungsquerschnitt $\sigma$ und der Neutronengeschwindigkeit $v$:
+\begin{equation*}
+    \sigma \sim \frac{1}{v}
+\end{equation*}
+Ein Neutron mit kleiner Geschwindigkeit bewegt sich somit länger in der Einwirkungsspähre des Kerns und wird dadurch wahrscheinlicher von diesem Kern eingefangen.
 
 \subsection{Erzeugung Niederenergetischer Neutronen}
 \label{subsec:NeutronenHerstellen}
@@ -59,7 +61,7 @@ Seine Energie beträgt dann bei einer Temperatur $T = \SI{290}{\kelvin}$ etwa $\
 \end{figure}
 
 \subsection{Untersuchung des Zerfalls instabiler Isotope}
-Die Halbwertszeiten von Rhodium und Venedium sollen ermittelt werden.
+Die Halbwertszeiten von Rhodium und Vanadium sollen ermittelt werden.
 Dazu werden Proben, die die Nuklide enthalten, in die Aktivierungsschächte der Neutronenquelle eingelegt.
 Durch $\beta^-$-Zerfall gehen die instabilen Isotope in stabile über.
 Zur Bestimmung der Halbwertszeit wird die Funktion des radioaktiven Zerfalls benötigt:
@@ -93,6 +95,14 @@ Zusätzlich weist Rhodium eine Besonderheit auf.
 Wird Rhodium aus 100\% Isotop $\ce{^{103}Rh}$ aktiviert, geht dieser mit 90\% Wahrscheinlichkeit in das instabile Isotop $\ce{^{104}Rh}$ über.
 Mit 10\% Wahrscheinlichkeit entsteht das instabile Isotop $\ce{^{104i}Rh}$, das ein $\gamma$-Quant aussendet und dann in $\ce{^{104}Rh}$ übergeht.
 Diese Zerfälle laufen parallel mit unterschiedlichen Halbwertszeiten ab.
+
+Die Erzeugung und der Zerfall der zu untersuchenden Isotope ist in Abbildung \ref{fig:RhodiumVanadiumFormel} zu sehen.
+\begin{figure}
+    \includegraphics[width=\textwidth]{content/RhodiumVanadiumFormel.pdf}
+    \caption{Erzeugung und Zerfall von Rhodium und Vanadium. \cite{anleitung}}
+    \label{fig:RhodiumVanadiumFormel}
+\end{figure}
+
 \subsection{Messapparatur}
 In der Abbildung \ref{fig:AufbauSkizze} ist der Aufbau der Messapparatur zu sehen.
 Mithilfe eines Geiger-Müller-Zählrohrs können die ausgesondeten $\beta$- und $\gamma$-Teilchen nachgewiesen werden.
