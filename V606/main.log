@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.3)  12 MAR 2021 22:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.3)  14 APR 2021 09:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/jana/Dokumente/AP-2020/D206/main.tex
-(/home/jana/Dokumente/AP-2020/D206/main.tex
+**/home/jana/Dokumente/AP-2020/V606/main.tex
+(/home/jana/Dokumente/AP-2020/V606/main.tex
 LaTeX2e <2020-10-01>
-L3 programming layer <2020-09-24> xparse <2020-03-03> (/home/jana/Dokumente/AP-2020/D206/header.tex (/home/jana/.local/texlive/2020/texmf-dist/tex/latex/koma-script/scrartcl.cls
+L3 programming layer <2020-09-24> xparse <2020-03-03> (/home/jana/Dokumente/AP-2020/V606/header.tex (/home/jana/.local/texlive/2020/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2020/09/21 v3.32 KOMA-Script document class (article)
 (/home/jana/.local/texlive/2020/texmf-dist/tex/latex/koma-script/scrkbase.sty
 Package: scrkbase 2020/09/21 v3.32 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)

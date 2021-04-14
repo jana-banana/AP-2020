@@ -1,21 +1,15 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+f, U_A = np.genfromtxt('data_selektiv.txt', unpack=True)
 
-plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-plt.legend(loc='best')
+U = U_A/(1000)
+plt.plot(f,U, label='Messwerte')
+#plt.xlabel(r'$\nu \:/\: \si{\kilo\hertz}$')
+#plt.ylabel(r'$\frac{U_{\text{A}}}{U_{\text{E}}}$')
+plt.legend()
 
-plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-plt.legend(loc='best')
 
 # in matplotlibrc leider (noch) nicht möglich
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plot.pdf')
+plt.tight_layout()
+plt.savefig('filterkurve.pdf')
