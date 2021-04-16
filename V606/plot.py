@@ -5,8 +5,8 @@ from scipy.optimize import curve_fit
 
 f, U_A = np.genfromtxt('data_selektiv.txt', unpack=True)
 plt.plot(f, U_A/1000,'.', label ='Messwerte')
-plt.xlabel('Frequenz')
-plt.ylabel('U_A/ U_E')
+plt.xlabel(r'Frequenz $\nu$')
+plt.ylabel(r'Spannungsverhältnis $\frac{U_A}{U_B}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()

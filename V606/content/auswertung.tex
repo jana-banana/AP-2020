@@ -28,7 +28,7 @@ Weitere Aussagen können aus den Messergebnissen nicht getroffen werden.
 \end{figure}
 
 Die Suszeptibilitäten $\chi$ der beiden Stoffe sollen mithilfe der Messwerte aus Tabelle \ref{tab:Messwerte} bestimmt werden.
-Dabei werden die Formeln verwendet.
+Dabei werden die Formeln \ref{eqn:chi_r} und \ref{eqn:chi_u} verwendet.
 In der Tabelle \ref{tab:Suszeptibilität_Praxis} sind die Ergebnisse zu finden.
 
 \begin{table}
@@ -39,10 +39,10 @@ In der Tabelle \ref{tab:Suszeptibilität_Praxis} sind die Ergebnisse zu finden.
     \toprule
     {Stoff} & {$U_{\text{Br ohne}}$ [$\si{\milli\volt}$]} & {$U_{\text{Br mit}}$ [$\si{\milli\volt}$]} & {$R_{3 ohne}$ [$\si{\milli\ohm$]} &{$R_{3 mit}$ [$\si{\milli\ohm$]}\\
     \midrule
-    $Dy_2O_3$ & 0.9 & 3.7 & 2964.5 & 1690.0\\
+    $\ce{Dy2O3}$ & 0.9 & 3.7 & 2964.5 & 1690.0\\
               &1.3 & 3.92 & 2981.0 & 1530.0\\
               &1.2 & 4.2 & 3059.0 & 1485.5 \\
-    $Gd_2O_3$ &2.0 & 4.05 & 3136.5 & 2360.0 \\
+    $\ce{Gd2O3}$ &2.0 & 4.05 & 3136.5 & 2360.0 \\
               &2.15 & 4.07 & 3157.5 & 2398.0 \\
               &2.1 & 3.85 & 3137.0 & 2381.0 \\
     \bottomrule
@@ -57,15 +57,16 @@ In der Tabelle \ref{tab:Suszeptibilität_Praxis} sind die Ergebnisse zu finden.
     \toprule
     {Stoff} & {$\chi_U$} & {$\chi_R$} \\
     \midrule
-    $Dy_2O_3$ & -7.3832 $\pm$ 0.5442 & 0.1219 $\pm$ 0.00633 \\
-    $Gd_2O_3$ & -3.8715 $\pm$ 0.05117 & -3.8715 $\pm$ 0.05117 \\
+    $\ce{Dy2O3}$ & -7.3832 $\pm$ 0.5442 & 0.1219 $\pm$ 0.00633 \\
+    $\ce{Gd2O3}$ & -3.8715 $\pm$ 0.05117 & -3.8715 $\pm$ 0.05117 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-Die Suszeptibilitäten aus den Messergebnissen werden mit den Theoriewerten verglichen.
-Dafür wurden folgende Werte verwendet.
-In Tabelle \ref{tab:Proben} ist jeweils die Dichte $\rho$, Masse $m$, Länge $l$, molare Masse $M$ und der reale Querschnitt $Q$ der beiden Proben zu finden.
+Die Suszeptibilitäten aus den Messergebnissen werden mit dem Theoriewert verglichen.
+Dieser wird mithilfe der Formel \ref{eqn:sus_theo} bestimmt.
+In Tabelle \ref{tab:Proben} ist jeweils die Dichte $\rho$, Masse $m$, Länge $l$, molare Masse $M$ und der reale Querschnitt $Q$ der beiden Proben zu finden, die für die Berechnung benötigt werden.
+Der reale Querschnitt $Q$ wird mit der Formel \ref{eqn:qreal} ermittelt.
 
 \begin{table}
   \centering
@@ -75,12 +76,11 @@ In Tabelle \ref{tab:Proben} ist jeweils die Dichte $\rho$, Masse $m$, Länge $l$
     \toprule
     {Stoff} & {$\rho$ [$\si{\gram\per\centimetrecubed}$]} & {$m$ [$\si{\gram}$]} & {$l$ [$\si{\centimetre}$]} & {$M$ [$\si{\gram\per\mole}$]} & {$Q$ [$\si{\centimetresquared}$]}\\
     \midrule
-    $Dy_2O_3$ & 7.8 & 15.1 & 17.3 & 372.9982 & 0.1119\\
-    $Gd_2O_3$ & 7.4 & 14.08 & 17.5 & 2.0 & 362.4982 & 0.1087\\
+    $\ce{Dy2O3}$ & 7.8 & 15.1 & 17.3 & 372.9982 & 0.1119\\
+    $\ce{Gd2O3}$ & 7.4 & 14.08 & 17.5 & 2.0 & 362.4982 & 0.1087\\
     \bottomrule
   \end{tabular}
 \end{table}
-
 
 \begin{table}
   \centering
@@ -89,8 +89,8 @@ In Tabelle \ref{tab:Proben} ist jeweils die Dichte $\rho$, Masse $m$, Länge $l$
     \toprule
     {Stoff} & {$L$} & {$S$} & {$J$} & {$g_J$}\\
     \midrule
-    $Dy_2O_3$ & 5 & 2.5 & 7.5 & 1.33\\
-    $Gd_2O_3$ & 0 & 3.5 & 3.5 & 2.0\\
+    $\ce{Dy2O3}$ & 5 & 2.5 & 7.5 & 1.33\\
+    $\ce{Gd2O3}$ & 0 & 3.5 & 3.5 & 2.0\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -100,10 +100,10 @@ In Tabelle \ref{tab:Proben} ist jeweils die Dichte $\rho$, Masse $m$, Länge $l$
   \caption{Vergleich der Suszeptibilitäten.}
   \begin{tabular}{c c c c c c}
     \toprule
-    {Stoff} & {$\chi_T$} &{$\chi_U$} & {x_t -x_u /x_t} & {$\chi_R$} & {x_t -x_r /x_t}\\
+    {Stoff} & {$\chi_T$} &{$\chi_U$} & {$\frac{\chi_T - \chi_U}{\chi_T}$} & {$\chi_R$} & {$\frac{\chi_T - \chi_R}{\chi_T}$}\\
     \midrule
-    $Dy_2O_3$ & 2.1327 & -7.3832 $\pm$ 0.5442 &  &0.1219 $\pm$ 0.00633 &  \\
-    $Gd_2O_3$ & 1.1573 & -3.8715 $\pm$ 0.05117 &  &-3.8715 $\pm$ 0.05117 &  \\
+    $\ce{Dy2O3}$ & 2.1327 & -7.3832 $\pm$ 0.5442 &  &0.1219 $\pm$ 0.00633 &  \\
+    $\ce{Gd2O3}$ & 1.1573 & -3.8715 $\pm$ 0.05117 &  &-3.8715 $\pm$ 0.05117 &  \\
     \bottomrule
   \end{tabular}
 \end{table}

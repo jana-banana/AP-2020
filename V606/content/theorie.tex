@@ -94,9 +94,44 @@ Um die Suszeptibilität im Experiment zu ermitteln, wird eine Brückenschaltung 
 \end{figure}
 Wird die Brücke ohne Probe abgeglichen und die Brückenspannung mit einer Probe in einer der Spulen gemessen, kann die Suszeptibilität errechnet werden.
 Durch die beschränkte Betrachtung von großen Frequenzen (falls $\omega^2L^2 \ll R^2$) lässt sich der Zusammenhang
-\begin{equation}
-    \chi(\omega\to\infty) = 4 \frac{F}{Q}\frac{U_{\text{Br}}}{U_{\text{Sp}}}
+\begin{equation}\label{eqn:chi_u}
+    \chi_{\text{U}}(\omega\to\infty) = 4 \frac{F}{Q}\frac{U_{\text{Br}}}{U_{\text{Sp}}}
 \end{equation}
 zeigen, wobei $F$ der Querschnitt der Spule, $Q$ der Querschnitt der Probe und $U_{\text{Sp}}$ die Speisespannung der Brückenschaltung.\\
 \\
+Die Suszeptibiltät kann auch errechnet werden, wenn die Brückenschaltung mit Probe wieder abgeglichen wird und die Änderung der Widerstände notiert wird.
+Aus der neuen Abgleichbedingung lässt dich die Formel 
+\begin{equation}\label{eqn:chi_r}
+    \chi_{\text{R}} = 2 \frac{\increment R}{R_3} \frac{F}{Q}
+\end{equation}
+ableiten.
+Hier steht $\increment R$ für die Änderung der Widerstandes $R_3$ von den beiden abgeglichenen Zuständen.\\
+Da im Experiment staubförmiges Material benutzt wird, muss der Querschnitt $Q_{\text{real}}$ ermittelt werden, welcher den Querschnitt eines Einkristalles angibt.
+Aus den Formeln 
+\begin{align*}
+    Q_{\text{real}} &= Q \frac{\rho_{\text{p}}}{\rho_{\text{w}}}\\
+    \rho_{\text{p}} &= \frac{M_{\text{p}}}{QL}
+\end{align*}
+lässt sich der Zusammenhang 
+\begin{equation}\label{eqn:qreal}
+    Q_{\text{real}} = \frac{M_{\text{p}}}{L \rho_{\text{w}}}
+\end{equation}
+angeben.
+Hierbei beschreibt $M_{\text{p}}$ die Masse der Probe, $L$ ihre Länge und $\rho_{\text{x}}$ die Dichte der Probe ($x=p$) und des Einkristalles ($x=w$).
 
+\subsection{Selektivverstärker}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{filterkurve.png}
+    \caption{Die Filterkurve eines Selektivversstärkers.\cite{anleitung}}
+    \label{fig:selektiv}
+\end{figure}
+Damit die Brückenspannung nicht unter den Störungen an den Ausgangsklemmen der Brückenschaltung verloren geht, wird das Signal verstärkt und gefiltert.
+Da die Eingangsspannung der Brücke monofrequent ist, kann ein Selektivverstärker benutzt werden. 
+Dies ist ein Gerät mit glockenförmiger Filterkurve, wie in der \autoref{fig:selektiv} zu sehen ist.
+Die Güte $Q$ eines Selektivverstärkers ist ein Maß seiner Qualität, welche über 
+\begin{equation*}
+    Q = \frac{\nu_0}{\nu_+ - \nu_-}
+\end{equation*}
+gegeben ist, wobei $\nu_+$ bzw $\nu_-$ die Frequenzen beschreiben, wo das Verhältnis $\frac{U_{\text{A}}}{U_{\text{E}}} $ = $\frac{1}{\sqrt{2}}$ ist.
+$\nu_0$ beschreibt die sogenannte Durchlassfrequenz, also die Frequenz, die am wenigsten unterdrückt wird.
