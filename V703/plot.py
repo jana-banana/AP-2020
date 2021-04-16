@@ -11,11 +11,11 @@ N_err = np.sqrt(N)
 plt.errorbar(U, N ,yerr=N_err, fmt ='.')
 plt.xlabel('Spannung U [V]')
 plt.ylabel('registrierte Teilchenanzahl N [Imp/60s]')
-plt.plot(U,N, '.',label='Messpunkte' , 'b')
-plt.tight_layout()
-plt.savefig('Zählrohrcharakteristik.pdf')
+plt.plot(U,N, '.',label='Messpunkte')
+#plt.tight_layout()
+#plt.savefig('Zählrohrcharakteristik.pdf')
 
-plt.clf()
+#plt.clf()
 
 #Ausgleichsrechnung vom Plateau
 U_Plateau, N_Plateau=[],[]
@@ -33,15 +33,8 @@ print("b =", popt[1])
 print("a fehler =",errors[0])
 print("b fehler=",errors[1])
 
-plt.errorbar(U, N ,yerr=N_err, fmt ='.')
-plt.xlabel('Spannung U [V]')
-plt.ylabel('registrierte Teilchenanzahl N [Imp/60s]')
-plt.plot(U,N, '.',label='Messpunkte', 'b')
-plt.tight_layout()
-#plt.savefig('Zählrohrcharakteristik.pdf')
 
-
-plt.plot(U, line(U, popt[0], popt[1]), label='Ausgleichgerade des Plateau-Bereichs')
+plt.plot(U, line(U, popt[0], popt[1]),'r-', label='Ausgleichgerade des Plateau-Bereichs')
 plt.tight_layout()
 plt.legend()
 plt.savefig('Plateau_Gerade.pdf')

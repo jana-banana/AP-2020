@@ -1,0 +1,5 @@
+## U_Br in mV   R3 in 5 m Ohm
+##U_Br ohne     U_Br mit       R3 ohne      R3 mit
+2       4.05    627.3   472
+2.15    4.07    631.5   479.6
+2.1     3.85    627.4   476.2
