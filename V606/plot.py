@@ -10,7 +10,7 @@ plt.ylabel(r'Spannungsverhältnis $\frac{U_A}{U_B}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
-plt.savefig('content/filterkurve.pdf')
+plt.savefig('content/filterkurvePLOT.pdf')
 
 U_Br_ohne, U_Br_mit, R3_ohne, R3_mit = np.genfromtxt('daten_Dy2O3.txt', unpack=True)
 
