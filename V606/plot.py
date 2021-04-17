@@ -35,7 +35,7 @@ print('STANDARDABWEICHUNG', np.std(x_Widerstand))
 print('Suszep. mit Brückenspannung')
 x_Spannung=[]
 for i in range(3):
-    x_Spannung.append(4* (F/Q)* U_Br_mit[i]/1000)
+    x_Spannung.append(4* (F/Q)* (U_Br_mit[i] - U_Br_ohne[i])/1000)
     print(x_Spannung[i])
 print('MITTELWERT',np.mean(x_Spannung))
 print('STANDARDABWEICHUNG', np.std(x_Spannung))
@@ -60,7 +60,7 @@ print('STANDARDABWEICHUNG', np.std(x_Widerstand))
 print('Suszep. mit Brückenspannung')
 x_Spannung=[]
 for i in range(3):
-    x_Spannung.append(4* (F/Q)* U_Br_mit[i]/1000)
+    x_Spannung.append(4* (F/Q)* (U_Br_mit[i] - U_Br_ohne[i])/1000)
     print(x_Spannung[i])
 print('MITTELWERT',np.mean(x_Spannung))
 print('STANDARDABWEICHUNG', np.std(x_Spannung))
