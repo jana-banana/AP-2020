@@ -26,7 +26,7 @@ print('Dy2O3')
 print('Suszep. mit Widerstand')
 x_Widerstand=[]
 for i in range(3):
-    x_Widerstand.append(2* (R3_mit[i] - R3_ohne[i]) /R3_ohne[i] *(F/Q) )
+    x_Widerstand.append(2* (R3_ohne[i] - R3_mit[i]) /R3_ohne[i] *(F/Q) )
     print(x_Widerstand[i])
 print('MITTELWERT',np.mean(x_Widerstand))
 print('STANDARDABWEICHUNG', np.std(x_Widerstand))
@@ -51,7 +51,7 @@ Q = 14.08/(7.4*17.5)
 print('Suszep. mit Widerstand')
 x_Widerstand=[]
 for i in range(3):
-    x_Widerstand.append(2* (R3_mit[i] - R3_ohne[i]) /R3_ohne[i] *(F/Q) )
+    x_Widerstand.append(2* (R3_ohne[i] - R3_mit[i]) /R3_ohne[i] *(F/Q) )
     print(x_Widerstand[i])
 print('MITTELWERT',np.mean(x_Widerstand))
 print('STANDARDABWEICHUNG', np.std(x_Widerstand))
@@ -62,5 +62,5 @@ x_Spannung=[]
 for i in range(3):
     x_Spannung.append(4* (F/Q)* U_Br_mit[i]/1000)
     print(x_Spannung[i])
-print('MITTELWERT',np.mean(x_Widerstand))
-print('STANDARDABWEICHUNG', np.std(x_Widerstand))
+print('MITTELWERT',np.mean(x_Spannung))
+print('STANDARDABWEICHUNG', np.std(x_Spannung))
