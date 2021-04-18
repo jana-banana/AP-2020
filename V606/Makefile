@@ -6,6 +6,7 @@ build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/main.pdf: build/plot.pdf
+				content/index.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \

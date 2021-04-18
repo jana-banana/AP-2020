@@ -59,8 +59,26 @@ Das Konzept der Richtungsquantelung aus der Quantenmechanik besagt, dass nur Win
     \mu_{\text{J},\text{Z}} = - \mu_{\text{B}} g_{\text{J}} m 
 \end{equation*}
 Das $m$ bezeichnet die Orientierungsquantenzahl, welche nur Werte von $-J$ bis $J$ annehmen kann. 
-Zu jeder dieser $2J+1$ Einstellungen gibt es eine potentielle Energie über die die Magnetisierung errechnet werden kann. 
-%% erklärung wie man magnetisierung bekommt
+Zu jeder dieser $2J+1$ Einstellungen gibt es eine potentielle Energie über die die Magnetisierung errechnet werden kann.
+Die Häufigkeit mit der die magnetischen Momente einer Einstellung auftreten; ist durch die Boltzmann-Verteilung gegeben $Z(E,T)= \exp(\frac{-E}{k_{\text{B}} T})$, wobei für die Energie $E$ im Paramagnetismus gilt:
+\begin{equation*}
+    E = \mu_{\text{B}} g_{\text{J}} m B
+\end{equation*}
+Wird nun über alle $2J+1$ Einstellungen summiert und durch die Gesamthäufigkeit aller Einstellungen geteilt, ergibt sich das mittlere magnetische Moment $\bar{\mu}$.
+Aus dem Zusammenhang
+\begin{equation*}
+    M = \mu_0 N \bar{\mu}
+\end{equation*}
+lässt sich schließlich die Magnetisierung errechnen.
+Durch Nutzen der Näherung
+\begin{equation*}
+    \frac{\mu_{\text{B}} g_{\text{J}} m B}{k_{\text{B}} T} m \ll 1,
+\end{equation*}
+welche bei Zimmertemperatur und Magnetfeldern bis $\SI{1}{\tesla}$ annehmbar ist.
+Damit ergibt sich für die Magnetisierung:
+\begin{equation*}
+    M = \frac{1}{3} \mu_0 \mu_{\text{B}}^2 g_{\text{J}}^2 N \frac{J(J+1)B}{k_{\text{B}} T}
+\end{equation*}
 Mit Hilfe der Gleichung \eqref{eqn:magnetisierung} ist nun ein Ausdruck für die Suszeptibilität gegeben:
 \begin{equation} \label{eqn:sus_theo}
     \chi = \frac{\mu_0 \mu_{\text{B}}^2 g_{\text{J}}^2 N J (J+1)}{3 k_{\text{B}} T}
