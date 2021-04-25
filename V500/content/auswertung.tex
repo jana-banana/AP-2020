@@ -29,8 +29,8 @@ Für die Bestrahlung mit rotem Licht lautet die Grenzspannung $U_{\text{g}}$:
 \end{equation*}
 
 \subsubsection{Grün}
-Bei der Untersuchung des Photoeffektes mit grünem Licht ist bei Messung ein plötzlicher Einbruch des gemessenen Photostroms aufgefallen.
-Dieser ist in der Tabelle der Messwerte \autoref{tab:gruneslicht} durch eine weitere Mittellinie gekennzeichnet.
+Bei der Untersuchung des Photoeffektes mit grünem Licht ist bei der Messung ein plötzlicher Einbruch des gemessenen Photostroms aufgefallen.
+Dieser ist in der \autoref{tab:gruneslicht} der Messwerte durch eine weitere Mittellinie gekennzeichnet.
 In dem Plot \autoref{fig:grun} sind die verschiedenen Messungen durch verschiedene Farben markiert.
 \begin{figure}[H]
   \centering
@@ -47,7 +47,7 @@ Für die Ausgleichsrechnungen der Form $\sqrt{I} = a \cdot U_{\text{Br}} + c $ b
   a_{\text{grün},2} &= \SI{-15.8 \pm 0.9}{\volt\per\sqrt{\pico\ampere}}\\
   c_{\text{grün},2} &= \SI{0.2 \pm 0.4}{\sqrt{\pico\ampere}}
 \end{align*}
-Die jeweiligen Grenzspannungen $U_{\text{g}}$ berechnen sich nach \eqref{eqn:U_G} nach:
+Die jeweiligen Grenzspannungen $U_{\text{g}}$ berechnen sich nach \eqref{eqn:U_G} zu:
 \begin{align*}
   U_{\text{g},\text{grün},1} &= \SI{2.16 \pm 0.14}{\volt}\\
   U_{\text{g},\text{grün},2} &= \SI{0.014 \pm 0.028}{\volt}\\
@@ -87,8 +87,8 @@ Für die Bestrahlung mit gelben Licht wurde eine größere Messreihe genommen, w
 \end{figure}
 \noindent
 Wie in der \autoref{fig:gelba} zu sehen ist, bildet sich bei einer so langen Messreihe Richtung $-\infty$ eine Abflachung der Messwerte.
-Da kaum eines der ausgelösten Elektronen nicht an der Elektrode ankommen, sorgt mehr Beschleunigungsspannung nicht linear für mehr 
-Für die Ausgleichsrechung der Form $\sqrt{I} = a \cdot U_{\text{Br}} + c $ wurden die Werte zu 
+Da diese Messwerte den linearen Zusammenhang nicht wiederspiegeln, werden sie in der Ausgleichsrechnung der Form $\sqrt{I} = a \cdot U_{\text{Br}} + c $ nicht beachtet.
+Es wurden die Werte zu 
 \begin{align*}
   a_{\text{gelb}} &= \SI{-13.3 \pm 0.9}{\volt\per\sqrt{\pico\ampere}}\\
   c_{\text{gelb}} &= \SI{3.4 \pm 1.9}{\sqrt{\pico\ampere}}
@@ -107,7 +107,7 @@ Die Frequenzen und Wellenlängen der Farben lassen sich in der \autoref{tab:nu} 
   \label{tab:nu}
   \begin{tabular}{S[table-format=7] S[table-format=3] S[table-format=1.2]}
     \toprule
-    & $\lambda [\si{\nano\metre}]$ & $\nu [\SI{1e14}{\hertz}]$\\
+    & $\lambda [\si{\nano\metre}]$ & $\nu [\SI{e14}{\hertz}]$\\
     \midrule
     \text{rot}    & 615 & 4.87\\
     \text{grün}   & 546 & 5.49\\
@@ -160,9 +160,9 @@ Da die Energie der Elektronen in der Photokathode unterschiedlich sein kann, gib
 Jedoch wird ab einer gewissen Spannung fast jedes ausgelöste Elektron gemessen.
 Bei einer Photozelle, welche alle aus der Kathode ausgelösten Elektronen wahrnimmt,  kann der Photostrom bereits bei endlichen Beschleunigungsspannungen seinen Sättigungswert erreichen.\\
 \\
-Die Elektronen in der Photokathode haben verschiedene Energien, wie in \ref{sec:Theorie} beschrieben.
+Die Elektronen in der Photokathode haben bereits verschiedene kinetische Energien, welche ,wie in der Theorie \ref{sec:Theorie} beschrieben, durch die Fermi-Dirac-Verteilung gegeben ist.
 Werden sie aus der Kathode ausgelöst, so haben die gelösten Elektronen dann auch verschieden hohe Energien.
-Somit können bei bestimmten Gegenspannungen oder aucg Beschleunignungsspannungen nicht alle ausgelösten Elektronen die Anode erreichen.
+Somit können bei bestimmten Gegenspannungen oder auch Beschleunignungsspannungen nicht alle ausgelösten Elektronen die Anode erreichen.
 Daher beginnt der Photostrom schon vor Erreichen der Grenzspannung $U_{\text{g}}$ zu sinken. \\
 \\
 Die Photokathode besteht aus einem Material, welches bei Raumtemperatur verdampft.
