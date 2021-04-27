@@ -88,16 +88,16 @@ In der Tabelle \ref{tab:Suszeptibilität_Praxis} sind die Ergebnisse zu finden.
   \centering
   \caption{Messergebnisse zur Bestimmung der Suszeptibilitäten.}
   \label{tab:Messwerte}
-  \begin{tabular}{c c c c c}
+  \begin{tabular}{c c c c c c}
     \toprule
-    {Stoff} & {$U_{\text{Br ohne}}$ [$\si{\milli\volt}$]} & {$U_{\text{Br mit}}$ [$\si{\milli\volt}$]} & {$R_{3 \text{ohne}}$ [$\si{\milli\ohm}$]} &{$R_{3 \text{mit}}$ [$\si{\milli\ohm}$]}\\
+    {Stoff} & {$U_{\text{Br ohne}}$ [$\si{\milli\volt}$]} & {$U_{\text{Br mit}}$ [$\si{\milli\volt}$]} & {$R_{3 \text{ohne}}$ [$\si{\milli\ohm}$]} &{$R_{3 \text{mit}}$ [$\si{\milli\ohm}$]} & {$\increment R_3$ [$\si{\milli\ohm}$]}\\
     \midrule
-    $\ce{Dy2O3}$ & 0.9 & 3.7 & 2964.5 & 1690.0\\
-              &1.3 & 3.92 & 2981.0 & 1530.0\\
-              &1.2 & 4.2 & 3059.0 & 1485.5 \\
-    $\ce{Gd2O3}$ &2.0 & 4.05 & 3136.5 & 2360.0 \\
-              &2.15 & 4.07 & 3157.5 & 2398.0 \\
-              &2.1 & 3.85 & 3137.0 & 2381.0 \\
+    $\ce{Dy2O3}$ & 0.09 & 0.37 & 2964.5 & 1690.0 & 1274.5\\
+              &0.13 & 0.392 & 2981.0 & 1530.0 & 1451\\
+              &0.12 & 0.42 & 3059.0 & 1485.5 & 1574\\
+    $\ce{Gd2O3}$ &0.20 & 0.405 & 3136.5 & 2360.0 & 776.5\\
+              &0.215 & 0.407 & 3157.5 & 2398.0 & 759.5\\
+              &0.21 & 0.385 & 3137.0 & 2381.0 & 756\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -110,8 +110,8 @@ In der Tabelle \ref{tab:Suszeptibilität_Praxis} sind die Ergebnisse zu finden.
     \toprule
     {Stoff} & {$\chi_U$} & {$\chi_R$} \\
     \midrule
-    $\ce{Dy2O3}$ & -7.3832 $\pm$ 0.5442 & 0.1219 $\pm$ 0.00633 \\
-    $\ce{Gd2O3}$ & -3.8715 $\pm$ 0.05117 & -3.8715 $\pm$ 0.05117 \\
+    $\ce{Dy2O3}$ & 0.00867 $\pm$ 0.00029 & 0.02218 $\pm$ 0.00110 \\
+    $\ce{Gd2O3}$ & 0.00607 $\pm$ 0.00023 & 0.01217 $\pm$ 0.00008 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -151,12 +151,13 @@ Der reale Querschnitt $Q$ wird mit der Formel \eqref{eqn:qreal} ermittelt.
 \begin{table}
   \centering
   \caption{Vergleich der Suszeptibilitäten.}
+  \label{tab:vergleich}
   \begin{tabular}{c c c c c c}
     \toprule
     {Stoff} & {$\chi_T$} &{$\chi_U$} & {$\frac{\chi_T - \chi_U}{\chi_T}$} & {$\chi_R$} & {$\frac{\chi_T - \chi_R}{\chi_T}$}\\
     \midrule
-    $\ce{Dy2O3}$ & 2.1327 & 0.08688 $\pm$ 0.0048 & 0.9593 & 7.3832 $\pm$ 0.5442&  -2,4619\\
-    $\ce{Gd2O3}$ & 1.1573 &  0.06075 $\pm$  0.00391 & 0.9475 &3.8715 $\pm$ 0.05117 & -2.3453 \\
+    $\ce{Dy2O3}$ & 0.02569 & 0.00867 $\pm$ 0.00029 & 0.6625 & 0.02218 $\pm$ 0.00110 & 0.1364 \\
+    $\ce{Gd2O3}$ & 0.01394 & 0.00607 $\pm$ 0.00023 & 0.5641 & 0.01217 $\pm$ 0.00008 & 0.1269 \\
     \bottomrule
   \end{tabular}
 \end{table}
