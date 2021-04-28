@@ -4,77 +4,83 @@
 \label{subsec:Selektivverstäarker}
 Der Selektivverstärkers soll zunächst untersucht werden.
 Dazu wird die Frequenz und die dazugehörige Ausgangsspannung $U_A$ im Frequenzbereich von 20 bis 40 $\si{\kilo\hertz}$ aufgenommen.
-Die Messpaare sind in der Tabelle \ref{tab:Messergebnisse} zu finden.
-Zudem ist die Filterkurve in Abbildung \ref{fig:filterkurvePLOT} zu sehen.
-Aus der Abbildung \ref{fig:filterkurvePLOT} ist ein Spannungshoch im Frequenzbereich von 22.5 und 25 $\si{\kilo\hertz}$ zu erkennen.
+Die Messpaare sind in der \autoref{tab:Messergebnisse} zu finden.
+Zudem ist die Filterkurve in \autoref{fig:filterkurvePLOT} zu sehen.
+Aus der \autoref{fig:filterkurvePLOT} ist ein Spannungshoch im Frequenzbereich von 22.5 und 25 $\si{\kilo\hertz}$ zu erkennen.
 Weitere Aussagen können aus den Messergebnissen nicht getroffen werden.
 
 \begin{table}
   \centering
-  \caption{Messergebnisse für die Filterkurve des Selektivverstärkers.}
   \label{tab:Messergebnisse}
-  \begin{tabular}{c c}
-    \toprule
-    {$U_A$ [$\si{\milli\volt}$]} & {$\nu$ [$\si{\micro\ampere}$]}\\
+  \begin{tabular}{ll}
+    \begin{tabular}{cc}
+      \toprule
+    {$\nu$ [$\si{\micro\ampere}$]} & {$U_A$ [$\si{\milli\volt}$]}\\
     \midrule
-      20.6   & 84 \\
-      21.2   & 84 \\
-      21.8   & 94 \\
-      22.7   & 91 \\
-      22.9   & 98 \\
-      22.9   & 82 \\
-      22.9   & 98 \\
-      23.0   & 96 \\
-      23.3   & 84 \\
-      23.3   & 96 \\
-      23.6   & 100 \\
-      23.8   & 81 \\
-      23.9   & 82 \\
-      23.9   & 84 \\
-      23.9   & 99 \\
-      23.9   & 100 \\
-      24.0   & 82 \\
-      24.0   & 95 \\
-      24.9   & 100 \\
-      25.0   & 76 \\
-      25.4   & 70 \\
-      25.4   & 81 \\
-      25.5   & 78 \\
-      25.7   & 90 \\
-      25.9   & 69 \\
-      26.0   & 72 \\
-      26.8   & 63 \\
-      27.0   & 65 \\
-      27.5   & 63 \\
-      27.9   & 67 \\
-      28.6   & 60 \\
-      28.6   & 62 \\
-      30.5   & 57 \\
-      30.6   & 56 \\
-      30.7   & 57 \\
-      31.9   & 69 \\
-      32.2   & 52 \\
-      32.3   & 60 \\
-      33.4   & 50 \\
-      33.7   & 55 \\
-      35.1   & 51 \\
-      35.5   & 48 \\
-      36.6   & 46 \\
-      37.1   & 45 \\
-      37.7   & 50 \\
-      38.6   & 43 \\
-      39.1   & 42 \\
-      39.7   & 41 \\
-      40.2   & 50 \\
+    41  &   39.7\\
+    42  &   39.1\\
+    43  &   38.6\\
+    45  &   37.1\\
+    46  &   36.6\\
+    48  &   35.5\\
+    50  &   33.4\\
+    50  &   37.7\\
+    50  &   40.2\\
+    51  &   35.1\\
+    52  &   32.2\\
+    55  &   33.7\\
+    56  &   30.6\\  
+    57  &   30.5\\
+    57  &   30.7\\
+    60  &   28.6\\
+    60  &   32.3\\
+    62  &   28.6\\
+    63  &   26.8\\
+    63  &   27.5\\
+    65  &   27.0\\
+    67  &   27.9\\
+    69  &   25.9\\
+    69  &   31.9\\
+    70  & 25.4\\
+    \end{tabular}
+    &
+    \begin{tabular}{cc}
+    \midrule
+    72  & 26.0\\
+    76  & 25.0\\
+    78  & 25.5\\
+    81  & 23.8\\
+    81  & 25.4\\
+    82  & 22.9\\
+    82  & 23.9\\
+    82  & 24.0\\
+    84  & 20.6\\
+    84  & 21.2\\
+    84  & 23.3\\
+    84  & 23.9\\
+    90  & 25.7\\
+    91  & 22.7\\
+    94  & 21.8\\
+    95  & 24.0\\
+    96  & 23.0\\
+    96  & 23.3\\
+    98  & 22.9\\
+    98  & 22.9\\
+    99  & 23.9\\
+    100 & 23.6\\
+    100 & 23.9\\    
+    100 & 24.9\\
     \bottomrule
-  \end{tabular}
+    \end{tabular}
+    \end{tabular}    
+    \caption{Messergebnisse für die Filterkurve des Selektivverstärkers.}
 \end{table}
 
 \begin{figure}
   \centering
-  \caption{Filterkurve des Selektivverstärkers.}
   \label{fig:filterkurvePLOT}
   \includegraphics{content/filterkurvePLOT.pdf}
+  \caption{Filterkurve des Selektivverstärkers.}
 \end{figure}
 
 \subsection{Bestimmung der Suszeptibilitäten}
@@ -86,7 +92,6 @@ In der Tabelle \ref{tab:Suszeptibilität_Praxis} sind die Ergebnisse zu finden.
 
 \begin{table}
   \centering
-  \caption{Messergebnisse zur Bestimmung der Suszeptibilitäten.}
   \label{tab:Messwerte}
   \begin{tabular}{c c c c c c}
     \toprule
@@ -100,11 +105,11 @@ In der Tabelle \ref{tab:Suszeptibilität_Praxis} sind die Ergebnisse zu finden.
               &0.21 & 0.385 & 3137.0 & 2381.0 & 756.0\\
     \bottomrule
   \end{tabular}
+  \caption{Messergebnisse zur Bestimmung der Suszeptibilitäten.}
 \end{table}
 
 \begin{table}
   \centering
-  \caption{Suszeptibilitäten aus den Messergebnissen.}
   \label{tab:Suszeptibilität_Praxis}
   \begin{tabular}{c c c}
     \toprule
@@ -114,6 +119,7 @@ In der Tabelle \ref{tab:Suszeptibilität_Praxis} sind die Ergebnisse zu finden.
     $\ce{Gd2O3}$ & 0.00607 $\pm$ 0.00023 & 0.01217 $\pm$ 0.00008 \\
     \bottomrule
   \end{tabular}
+  \caption{Suszeptibilitäten aus den Messergebnissen.}
 \end{table}
 \noindent
 Die Suszeptibilitäten aus den Messergebnissen werden mit dem Theoriewert verglichen.
@@ -128,7 +134,6 @@ Der reale Querschnitt $Q$ wird mit der Formel \eqref{eqn:qreal} ermittelt.
 
 \begin{table}
   \centering
-  \caption{Werte der Proben.}
   \label{tab:Proben}
   \begin{tabular}{c c c c c c }
     \toprule
@@ -138,11 +143,11 @@ Der reale Querschnitt $Q$ wird mit der Formel \eqref{eqn:qreal} ermittelt.
     $\ce{Gd2O3}$ & 7.4 & 14.08 & 17.5 & 362.4982 & 0.1087\\
     \bottomrule
   \end{tabular}
+  \caption{Werte der Proben.}
 \end{table}
 
 \begin{table}
   \centering
-  \caption{Quantenzahlen und Landé-Faktoren.}
   \begin{tabular}{c c c c c }
     \toprule
     {Stoff} & {$L$} & {$S$} & {$J$} & {$g_J$}\\
@@ -151,11 +156,11 @@ Der reale Querschnitt $Q$ wird mit der Formel \eqref{eqn:qreal} ermittelt.
     $\ce{Gd2O3}$ & 0 & 3.5 & 3.5 & 2.0\\
     \bottomrule
   \end{tabular}
+  \caption{Quantenzahlen und Landé-Faktoren.}
 \end{table}
 
 \begin{table}
   \centering
-  \caption{Vergleich der Suszeptibilitäten.}
   \label{tab:vergleich}
   \begin{tabular}{c c c c c c}
     \toprule
@@ -165,4 +170,5 @@ Der reale Querschnitt $Q$ wird mit der Formel \eqref{eqn:qreal} ermittelt.
     $\ce{Gd2O3}$ & 0.01394 & 0.00607 $\pm$ 0.00023 & 0.5641 & 0.01217 $\pm$ 0.00008 & 0.1269 \\
     \bottomrule
   \end{tabular}
+  \caption{Vergleich der Suszeptibilitäten.}
 \end{table}
