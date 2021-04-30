@@ -4,7 +4,7 @@
 Im folgenden sind die Wurzeln der Photoströme gegen die Bremsspannung aufgetragen. 
 Eine negative Bremsspannung steht hierbei für eine beschleunigende Spannung.
 \subsubsection{Rot}
-Die Werte der Messreihen für rotes Licht sind in der \autoref{tab:roteslicht} zu finden.
+Die Werte der Messreihen für rotes Licht sind in der \autoref{tab:roteslicht} zu finden. 
 \begin{figure}[H]
   \centering
   \includegraphics{build/rot.pdf}
@@ -14,6 +14,7 @@ Die Werte der Messreihen für rotes Licht sind in der \autoref{tab:roteslicht} z
 \noindent
 In der \autoref{fig:rot} ist die Wurzel des Photostroms, welcher bei rotem Licht aufgetreten ist, gegen die angelegte Bremsspannung aufgetragen.
 Mithilfe von Python wurde eine Ausgleichsrechnung der Form $\sqrt{I} = a \cdot U_{\text{Br}} + c $ gemacht.
+Für die Ausgleichsrechnugn wurden nur die Werte bis zu einer Gegenspannung von $\SI{1}{\volt}$ betrachtet.
 Die Werte ergeben sich zu:
 \begin{align*}
   a_{\text{rot}} &= \SI{-3.4 \pm 0.1}{\volt\per\sqrt{\pico\ampere}}\\
@@ -47,6 +48,7 @@ Für die Ausgleichsrechnungen der Form $\sqrt{I} = a \cdot U_{\text{Br}} + c $ b
   a_{\text{grün},2} &= \SI{-15.8 \pm 0.9}{\volt\per\sqrt{\pico\ampere}}\\
   c_{\text{grün},2} &= \SI{0.2 \pm 0.4}{\sqrt{\pico\ampere}}
 \end{align*}
+Hier wurde für die Rechnung alle der schwarz markierten Messwerte genommen, bei den blau markierten Messwerten wurden in der Ausgleichsrechung nur die Werte bis zu einer Gegenspannung von $\SI{0.25}{\volt}$ berücksichtigt.
 Die jeweiligen Grenzspannungen $U_{\text{g}}$ berechnen sich nach \eqref{eqn:U_G} zu:
 \begin{align*}
   U_{\text{g},\text{grün},1} &= \SI{2.16 \pm 0.14}{\volt}\\
@@ -67,6 +69,7 @@ Es wurde der Messvorgang mit violettem Licht wiederholt.
 \noindent
 In der \autoref{fig:violett} ist neben den Messwerten aus \autoref{tab:violicht}, wobei von dem Strom die Wurzel $\sqrt{I}$ aufgetragen wurde, 
 eine Ausgleichsgerade der Form $\sqrt{I} = a \cdot U_{\text{Br}} + c $ abgebildet.
+Hierfür wurden die Messwerte bis zu einer Gegenspannung von $\SI{1}{\volt}$ betrachtet.
 Die Parameter wurden von Python zu
 \begin{align*}
   a_{\text{violett}} &= \SI{-19.6\pm 0.9}{\volt\per\sqrt{\pico\ampere}}\\
@@ -88,6 +91,7 @@ Für die Bestrahlung mit gelben Licht wurde eine größere Messreihe genommen, w
 \noindent
 Wie in der \autoref{fig:gelba} zu sehen ist, bildet sich bei einer so langen Messreihe Richtung $-\infty$ eine Abflachung der Messwerte.
 Da diese Messwerte den linearen Zusammenhang nicht wiederspiegeln, werden sie in der Ausgleichsrechnung der Form $\sqrt{I} = a \cdot U_{\text{Br}} + c $ nicht beachtet.
+Die Messwerte von $\SI{-10}{\volt}$ bis $\SI{-0.01}{\volt}$ wurden in der Ausgleichsrechnung berücksichtigt.
 Es wurden die Werte zu 
 \begin{align*}
   a_{\text{gelb}} &= \SI{-13.3 \pm 0.9}{\volt\per\sqrt{\pico\ampere}}\\
