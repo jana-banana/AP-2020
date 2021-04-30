@@ -45,7 +45,7 @@ N_rot = - c_rot / a_rot
 print('N', N_rot)
 
 #grün
-params , ma = np.polyfit(U_gr1 ,I_gr1, deg =1, cov = True)
+params , ma = np.polyfit(U_gr1[2:17] ,I_gr1[2:17], deg =1, cov = True)
 errors = np.sqrt(np.diag(ma))
 a_gr1 = ufloat(params[0], errors[0])
 c_gr1 = ufloat(params[1], errors[1])
@@ -177,13 +177,13 @@ params , ma = np.polyfit(nu ,U_g, deg =1, cov = True)
 errors = np.sqrt(np.diag(ma))
 a = ufloat(params[0], errors[0])
 c = ufloat(params[1], errors[1])
-print('a', a)
+print('a', a.n, '+-', a.s)
 print('c', c)
 
 A_k = c*const.e
 print('A_k', A_k, 'J', c, 'eV')
 print('h/e0', const.h/const.e)
-print('diff', 1 - (a*const.e/const.h))
+print('diff', (1 - (a*const.e/const.h)).n,'+-' ,(1 - (a*const.e/const.h)).s )
 
 plt.figure()
 plt.plot(nu_ro, N_rot.n, 'r.', label='Grenzspannung von Rot')
