@@ -3,9 +3,10 @@
 \subsection{Teil a)}
 Im folgenden sind die Wurzeln der Photoströme gegen die Bremsspannung aufgetragen. 
 Eine negative Bremsspannung steht hierbei für eine beschleunigende Spannung.
+
 \subsubsection{Rot}
 Die Werte der Messreihen für rotes Licht sind in der \autoref{tab:roteslicht} zu finden. 
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics{build/rot.pdf}
   \caption{Die Wurzel des Photostroms in Abhängigkeit der angelegten Bremsspannung bei der Bestrahlung mit rotem Licht.}
@@ -33,7 +34,7 @@ Für die Bestrahlung mit rotem Licht lautet die Grenzspannung $U_{\text{g}}$:
 Bei der Untersuchung des Photoeffektes mit grünem Licht ist bei der Messung ein plötzlicher Einbruch des gemessenen Photostroms aufgefallen.
 Dieser ist in der \autoref{tab:gruneslicht} der Messwerte durch eine weitere Mittellinie gekennzeichnet.
 In dem Plot \autoref{fig:grun} sind die verschiedenen Messungen durch verschiedene Farben markiert.
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics{build/grun.pdf}
   \caption{Die Wurzel des Photostroms in Abhängigkeit der angelegten Bremsspannung bei der Bestrahlung mit grünem Licht.}
@@ -42,26 +43,26 @@ In dem Plot \autoref{fig:grun} sind die verschiedenen Messungen durch verschiede
 \noindent
 Für die Ausgleichsrechnungen der Form $\sqrt{I} = a \cdot U_{\text{Br}} + c $ berechneten sich folgende Werte:
 \begin{align*}
-  a_{\text{grün},1} &= \SI{-14.0 \pm 0.6}{\volt\per\sqrt{\pico\ampere}}\\
-  c_{\text{grün},1} &= \SI{30.4 \pm 1.5}{\sqrt{\pico\ampere}}\\
+  a_{\text{grün},1} &= \SI{-15.1 \pm 0.6}{\volt\per\sqrt{\pico\ampere}}\\
+  c_{\text{grün},1} &= \SI{29.3 \pm 1.4}{\sqrt{\pico\ampere}}\\
   \intertext{und}\\
   a_{\text{grün},2} &= \SI{-15.8 \pm 0.9}{\volt\per\sqrt{\pico\ampere}}\\
   c_{\text{grün},2} &= \SI{0.2 \pm 0.4}{\sqrt{\pico\ampere}}
 \end{align*}
-Hier wurde für die Rechnung alle der schwarz markierten Messwerte genommen, bei den blau markierten Messwerten wurden in der Ausgleichsrechung nur die Werte bis zu einer Gegenspannung von $\SI{0.25}{\volt}$ berücksichtigt.
+Hier wurde für die Rechnung alle der schwarz markierten Messwerte ab $\SI{-4}{\volt}$ genommen, bei den blau markierten Messwerten wurden in der Ausgleichsrechung nur die Werte bis zu einer Gegenspannung von $\SI{0.25}{\volt}$ berücksichtigt.
 Die jeweiligen Grenzspannungen $U_{\text{g}}$ berechnen sich nach \eqref{eqn:U_G} zu:
 \begin{align*}
-  U_{\text{g},\text{grün},1} &= \SI{2.16 \pm 0.14}{\volt}\\
+  U_{\text{g},\text{grün},1} &= \SI{1.94 \pm 0.12}{\volt}\\
   U_{\text{g},\text{grün},2} &= \SI{0.014 \pm 0.028}{\volt}\\
 \end{align*}
 Hier wurde von den beiden Nullstellen der Mittelwert gebildet, mit welchem dann auch im weiteren gerechnet wurde.
 \begin{equation*}
-  U_{\text{g},\text{grün}} = \SI{1.09 \pm 0.07}{\volt}
+  U_{\text{g},\text{grün}} = \SI{0.97 \pm 0.06}{\volt}
 \end{equation*}
 
 \subsubsection{Violett}
 Es wurde der Messvorgang mit violettem Licht wiederholt.
-\begin{figure}[H]
+\begin{figure}
   \includegraphics{build/violett.pdf}
   \caption{Die Wurzel des Photostroms in Abhängigkeit der angelegten Bremsspannung bei der Bestrahlung mit violettem Licht.}
   \label{fig:violett}
@@ -132,8 +133,8 @@ In der \autoref{fig:b} sind diese Punkte abgebildet.
 Zusätzlich wurde eine lineare Ausgleichsrechnung durchgeführt, welche die Form $U_{\text{g}} = a\cdot \nu - c$ hat.
 Für die Parameter ergeben sich die Werte: 
 \begin{align*}
-  a_{\text{b}} &= \SI{3.5(24)e-15}{\volt\second}\\
-  c_{\text{b}} &= \SI{-1.2 \pm 1.4}{\volt}
+  a_{\text{b}} &= \SI{3.5(21)e-15}{\volt\second}\\
+  c_{\text{b}} &= \SI{-1.2 \pm 1.2}{\volt}
 \end{align*}
 Nach Vergleich mit der Formel \eqref{eqn:furb} folgen die Zusammenhänge
 \begin{align*}
@@ -142,8 +143,8 @@ Nach Vergleich mit der Formel \eqref{eqn:furb} folgen die Zusammenhänge
 \end{align*}
 sodass für die im Experiment gemessenen Werte gilt:
 \begin{align*}
-  \frac{\symup{h}}{\symup{e}_0} &= \SI{3.5(24)e-15}{\volt\second}\\
-  A_{\text{k}} &= \SI{1.2 \pm 1.4}{\electronvolt}
+  \frac{\symup{h}}{\symup{e}_0} &= \SI{3.5(21)e-15}{\volt\second}\\
+  A_{\text{k}} &= \SI{1.2 \pm 1.2}{\electronvolt}
 \end{align*}
 
 \subsection{Teil c)}
