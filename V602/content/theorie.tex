@@ -71,18 +71,18 @@ Hier beschreibt $\alpha$ die Sommerfeldsche Feinstruckturkonstante, $\symup{n}$ 
 Mit der Gleichung \eqref{eqn:sommerfeld} kann die Abschirmkonstante $\sigma_\text{K,abs}$ eines Elektrons aus der K-Schale bestimmt werden:
 
 \begin{equation}\label{eqn:absorptionskoeff}
-    \sigma_K = Z - \sqrt{\frac{E_K}{R_\infty} - \frac{\alpha^2 \cdot Z^4}{4}}
+    \sigma_K = z - \sqrt{\frac{E_K}{R_\infty} - \frac{\alpha^2 \cdot Z^4}{4}}
 \end{equation}
 
 Die Abschirmkonstante $\sigma_\text{L}$ kann mithilfe der Energiedifferenz $\increment E_\text{L} = E_\text{L}_{II} -E_\text{L}_{III}$ bestimmt werden.
 Es gilt:
 
 \begin{equation}
-    \sigma_L = Z -\Biggl( \frac{4}{\alpha} \cdot \sqrt{\frac{\increment E_L}{R_\infty} - \frac{5 \cdot \increment E_L}{R_\infty}} \Biggr)^{\frac{1}{2}}
+    \sigma_L = z -\Biggl( \frac{4}{\alpha} \cdot \sqrt{\frac{\increment E_L}{R_\infty} - \frac{5 \cdot \increment E_L}{R_\infty}} \Biggr)^{\frac{1}{2}}
                 \cdot \Biggl(1 + \frac{19}{32} \cdot \alpha^2 \cdot \frac{\increment E_L}{R_\infty} \Biggr)^{\frac{1}{2}}
 \end{equation}
 
-Dabei ist $Z$ die Ordungszahl.
+Dabei ist $z$ die Ordungszahl.
 Wird nun der Drehimpuls vernachlässigt, können die Abschirmkonstanten $\sigma_1, \sigma_2, \sigma_3$ für Kupfer wie folgt abgeschätzt werden:
 
 \begin{align}
@@ -104,4 +104,20 @@ die Wellenlänge $\lambda$ der Röntgenstrahlung und somit die Energie $E$ besti
 \begin{equation}
     \label{eqn:BraggBedingung}
     2 \cdot d \cdot \sin\theta = n \cdot \lambda
+\end{equation}
+
+\subsection{Moseley'sches Gesetz}
+\label{subsec:moseley}
+Um die Rydbergenergie $R_\infty$ zu bestimmen, wird das Moseley'sche Gesetz genutzt.
+Demnach ist die Energie der $K_\alpha$-Strahlung proportional zu $z^2$, wobei $z$ die Kernladung ist.
+Für $n = 1$ gilt:
+\begin{equation}
+    \label{eqn:moseley}
+    E_K = R \cdot \symbol{h} \cdot (z - \sigma)^2
+\end{equation}
+$R$ ist hier die sogenannte Rydbergfrequenz.
+Daraus folgt für die Rydbergenergie
+\begin{equation}
+    \label{eqn:rydbergenergie}
+    R_\infty = R \cdot \symup{h}.
 \end{equation}
