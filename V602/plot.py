@@ -264,7 +264,7 @@ print('dif', 1 - 13.6/Ryd.n)
 ##PLOTS
 plt.figure()
 plt.plot(Ek_plot, Ord, 'k.', label='Errechnete Punkte')
-plt.plot(xplot, a_ryd.n * xplot + c_ryd.n, 'g-', label='Ausgleichsgerade')
+plt.plot(xplot, a_ryd.n * xplot + c_ryd.n, 'r-', label='Ausgleichsgerade')
 plt.ylabel(r'$Z$')
 plt.xlabel(r'$ \sqrt{E_{\text{K}}} \quad [\si{\electronvolt}^{1/2}]$')
 plt.grid()
