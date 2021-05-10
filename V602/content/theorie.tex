@@ -17,7 +17,7 @@ der spezifischen Röntgenstrahlen des Anodenmaterials.
 Bei der Abbremsung eines Elektrons im Coulombfeld des Atomkerns wird ein Photon bzw. Röntgenquant emittiert.
 Die Energie dieses Photons ist gleich die, des abgebremsten Elektrons.
 Dabei kann die Energie des Elektrons, sowie seine kinetische Energie an das Photon abgegeben werden.
-Es folgt ein kontinuierliches Spektrum, das Bremsspektrum, siehe \autoref{}.
+Es folgt ein kontinuierliches Spektrum, das Bremsspektrum, siehe \autoref{fig:bremsspektrum}.
 Kommt es zur vollständigen Abbremsung des Elektrons, wird die gesamte kinetische Energie in Strahlungsenergie umgewandelt.
 Somit hat das Photon die größtmögliche Energie.
 
@@ -27,6 +27,13 @@ Ein Elektron aus einer äußeren Schale kann nach emittieren eines Photons in di
 Das Photon besitzt hierbei genau die Energiedifferenz zwischen den beiden Energienniveaus.
 Somit wird das spezifische Spektrum mit scharfen Linien beschrieben.
 Diese Energien sind dabei charakteristisch für das Anodenmaterial.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{content/bremsspektrum.pdf}
+    \caption{Das kontinuierliche Bremsspektrum.\cite{anleitung}}
+    \label{fig:bremsspektrum}
+\end{figure}
 
 \subsection{Abschirmungskonstante}
 \label{subsec:Abschirmungskonstante}
@@ -57,7 +64,7 @@ Unter Betrachtung der Feinstrucktur, wird die Bindungsenergie $E_\text{n,j}$ ein
 
 \begin{equation}
     \label{eqn:sommerfeld}
-    E_\text{n,j} = -R_\infty \cdot ( z^2_{\text{eff},1} \cdot \frac{1}{n^2} + \alpha^2 \cdot z^4_{\text{eff},2} \cdot \frac{1}{n^3} \cdot (\frac{1}{j + \frac{1}{2}} - \frac{3}{4 \cdot n})).
+    E_\text{n,j} = -R_\infty \cdot \Biggl( z^2_{\text{eff},1} \cdot \frac{1}{n^2} + \alpha^2 \cdot z^4_{\text{eff},2} \cdot \frac{1}{n^3} \cdot \Biggl(\frac{1}{j + \frac{1}{2}} - \frac{3}{4 \cdot n} \Biggr)\Biggr).
 \end{equation}
 
 Hier beschreibt $\alpha$ die Sommerfeldsche Feinstruckturkonstante, $\symup{n}$ die Hauptquantenzahl und $\symup{j}$ den Gesamdrehimpuls des Elektrons.
@@ -71,11 +78,18 @@ Die Abschirmkonstante $\sigma_\text{L}$ kann mithilfe der Energiedifferenz $\inc
 Es gilt:
 
 \begin{equation}
-    \sigma_L = Z -( \frac{4}{\alpha} \cdot \sqrt{\frac{\increment E_L}{R_\infty} - \frac{5 \cdot \increment E_L}{R_\infty}})^{\frac{1}{2}}
-                \cdot (1 + \frac{19}{32} \cdot \alpha^2 \cdot \frac{\increment E_L}{R_\infty})^{\frac{1}{2}}
+    \sigma_L = Z -\Biggl( \frac{4}{\alpha} \cdot \sqrt{\frac{\increment E_L}{R_\infty} - \frac{5 \cdot \increment E_L}{R_\infty}} \Biggr)^{\frac{1}{2}}
+                \cdot \Biggl(1 + \frac{19}{32} \cdot \alpha^2 \cdot \frac{\increment E_L}{R_\infty} \Biggr)^{\frac{1}{2}}
 \end{equation}
 
 Dabei ist $Z$ die Ordungszahl.
+Wird nun der Drehimpuls vernachlässigt, können die Abschirmkonstanten $\sigma_1, \sigma_2, \sigma_3$ für Kupfer wie folgt abgeschätzt werden:
+
+\begin{align}
+    \sigma_1 &= z - \sqrt{\frac{E_{K,\text{abs}}}{R_\infty}} \label{eq:sigma1} \\
+    \sigma_2 &= z - 2 \cdot \sqrt{\frac{E_{K,\text{abs}} - E_{K, \alpha}}{R_\infty}} \label{eq:sigma2} \\
+    \sigma_3 &= z - 3 \cdot \sqrt{\frac{E_{K,\text{abs}} - E_{K, \beta}}{R_\infty}} \label{eq:sigma3} \\
+\end{align}
 
 \subsection{Bragg'sche Reflexion}
 \label{subsec:Bragg}
