@@ -106,26 +106,26 @@ print('s3', s3)
 
 
 plt.figure()
-plt.plot(t, N, 'kx', label='Messwerte Emissionsspektrum')
+plt.plot(t, N, 'k.', label='Messwerte Emissionsspektrum')
 plt.hlines(y= 799.5, xmin= b_min.n, xmax= b_max.n ,linewidth=1, color='b', label=r'FWHM für $K_{\beta}$')
 plt.vlines(x= b_min.n, ymin= 0, ymax= 799.5 ,linewidth=1, color='b')
 plt.vlines(x= b_max.n, ymin= 0, ymax= 799.5 ,linewidth=1, color='b')
 plt.hlines(y= 2525, xmin=a_min.n, xmax=a_max.n ,linewidth=1, color='g', label=r'FWHM für $K_{\alpha}$')
 plt.vlines(x= a_min.n , ymin= 0, ymax= 2525 ,linewidth=1, color='g')
 plt.vlines(x= a_max.n , ymin= 0, ymax= 2525 ,linewidth=1, color='g')
-plt.xlabel(r'$ \a_{\text{GM}} \quad [\si{\degree}]$')
+plt.xlabel(r'$ \alpha_{\text{GM}} \quad [\si{\degree}]$')
 plt.ylabel(r'$ N \quad [\text{Imp} / \si{\second}]$')
-plt.scatter([11.1], [420.0], s=20, marker='o', color='red')
+plt.scatter([11.1], [420.0], s=20, marker='x', color='red')
 plt.annotate(r'Bremsberg', 
             xy = (11.1, 420.0), xycoords='data', xytext=(-10, 20),
             textcoords='offset points', fontsize=12, 
             arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=.2"))
-plt.scatter([t_b.n], [1599.0], s=20, marker='o', color='red')
+plt.scatter([t_b.n], [1599.0], s=20, marker='x', color='red')
 plt.annotate(r'$K_{\beta}$',
             xy = (t_b.n, 1599.0), xycoords='data', xytext=(-50, -25),
             textcoords='offset points', fontsize=12,
             arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=.2"))
-plt.scatter([t_a.n], [5050.0], s=20, marker='o', color='red')
+plt.scatter([t_a.n], [5050.0], s=20, marker='x', color='red')
 plt.annotate(r'$K_{\alpha}$',
             xy = (t_a.n, 5050.0), xycoords='data', xytext=(+10, -2),
             textcoords='offset points', fontsize=12,
@@ -266,7 +266,7 @@ plt.figure()
 plt.plot(Ek_plot, Ord, 'k.', label='Errechnete Punkte')
 plt.plot(xplot, a_ryd.n * xplot + c_ryd.n, 'g-', label='Ausgleichsgerade')
 plt.ylabel(r'$Z$')
-plt.xlabel(r'$ \sqrt{E_{\text{K}}}S \quad [\si{\electronvolt}^{1/2}]$')
+plt.xlabel(r'$ \sqrt{E_{\text{K}}} \quad [\si{\electronvolt}^{1/2}]$')
 plt.grid()
 plt.legend()
 plt.tight_layout()

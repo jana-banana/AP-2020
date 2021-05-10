@@ -1,6 +1,5 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Alle Messungen werden mit einer Beschleunigungsspannung von $U_{\text{B}} = \SI{35}{\volt}$ und einem Strom von $I = \SI{1}{\milli\ampere}$ durchgeführt.
 
 \subsection{Überprüfung der Bragg-Bedingung}
 
@@ -14,7 +13,10 @@ einer Integrationszeit von $\increment t = \SI{5}{\second}$ aufgenommen werden, 
   \label{tab:Bragg}
   \begin{tabular}{S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=3.1]}
     \toprule
-    $\alpha_{\text{GM} \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ & $\alpha_{\text{GM} \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$\\
+    $\alpha_{\text{GM}} [\si{\degree}]$ & $ N [\si{Imp\per\second}]$ &
+    $\alpha_{\text{GM}} [\si{\degree}]$ & $ N [\si{Imp\per\second}]$ \\
+    %$\alpha_{\text{GM}} \, [\si{\degree}]$ & $ N \, [\text{Imp}/ \si{\second}]$ & 
+    %$\alpha_{\text{GM}} \, [\si{\degree}]$ & $ N \, [\text{Imp}/ \si{\second}]$ \\
     \midrule
     26.0 &	56.0  &    28.1 &	215.0 \\
     26.1 &	58.0  &    28.2 &	218.0 \\
@@ -69,11 +71,11 @@ aufgenommen, die Messwerte sind in der \autoref{tab:emissionsspektrum} zu finden
   \label{tab:emissionsspektrum}
   \begin{tabular}{S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=4.1] S[table-format=2.1] S[table-format=4.1]}
     \toprule
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ & 
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ &
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ &
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ &
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
+    $ \theta \, [\si{\degree}]$ & $ N \, [\si{Imp\per\second}]$ & 
+    $ \theta \, [\si{\degree}]$ & $ N \, [\si{Imp\per\second}]$ &
+    $ \theta \, [\si{\degree}]$ & $ N \, [\si{Imp\per\second}]$ &
+    $ \theta \, [\si{\degree}]$ & $ N \, [\si{Imp\per\second}]$ &
+    $ \theta \, [\si{\degree}]$ & $ N \, [\si{Imp\per\second}]$ \\
     \midrule
     8.0 	&	323.0 &    11.5	&	406.0 &    14.9	&	248.0 &     18.3	&	166.0  &      21.7	&	164.0 \\   
     8.1 	&	316.0 &    11.6	&	404.0 &    15.0	&	253.0 &     18.4	&	173.0  &      21.8	&	180.0 \\   
@@ -124,25 +126,24 @@ aufgenommen, die Messwerte sind in der \autoref{tab:emissionsspektrum} zu finden
 \noindent
 Die Messwerte aus der \autoref{tab:emissionsspektrum} sind in die \autoref{fig:emissionsspektrum} eingetragen. Es sind der höchste Wert des Bremsberges markiert,
 sowie die Peaks der $K_{\alpha}$ und der $K_{\beta}$ Linie. Außerdem sind auch die Halbwertsbreiten eingezeichnet.
-Die minimale Wellenlänge, also die maximale Energie des Bremsberges lässt sich aus den Daten nicht entnehmen, da %why thoo ?
 Die markanten Stellen lauten:
 \begin{align*}
-  \text{für} \quad K_{\alpha}: \theta &= \SI{22.50(10)}{\degree} & N &= \SI{5050.0}{Imp\per\second} \\
+  \text{für} \, K_{\alpha}: \theta &= \SI{22.50(10)}{\degree} & N &= \SI{5050.0}{Imp\per\second} \\
               \theta_{\text{FWHM}, 1} &= \SI{22.35(20)}{\degree} & N_{\text{FWHM}} &= \SI{2525.0}{Imp\per\second} \\
               \theta_{\text{FWHM}, 2} &= \SI{22.85(20)}{\degree}  \\
-  \text{für} \quad K_{\beta}: \theta &= \SI{20.20(10)}{\degree} & N &= \SI{1599.0}{Imp\per\second} \\
-              \theta_{\text{FWHM}, 1} &= \SI{20.16(20)}{\degree} & N_{\text{FWHM}} &= \SI{799.5.0}{Imp\per\second} \\
+  \text{für} \, K_{\beta}: \theta &= \SI{20.20(10)}{\degree} & N &= \SI{1599.0}{Imp\per\second} \\
+              \theta_{\text{FWHM}, 1} &= \SI{20.16(20)}{\degree} & N_{\text{FWHM}} &= \SI{799.5}{Imp\per\second} \\
               \theta_{\text{FWHM}, 2} &= \SI{20.57(20)}{\degree}  
 \end{align*}
-Nun lassen sich die entsprechenden Energien nach der Bragg-Bedingung \eqref{eqn:BraggBedingung} und mit $E = \frac{\h \cdot \c}{\lambda} $ berechnen. 
+Nun lassen sich die entsprechenden Energien nach der Bragg-Bedingung \eqref{eqn:BraggBedingung} und mit $E = \frac{\symup{h} \cdot \symup{c}}{\lambda} $ berechnen. 
 \begin{align*}
   E_{\text{K}, \alpha} &= \SI{8043(34)}{\electronvolt} & \increment E_{\text{FWHM}, \alpha } &= \SI{170(100)}{\electronvolt}\\
   E_{\text{K}, \beta} &= \SI{8910(40)}{\electronvolt}  & \increment E_{\text{FWHM}, \beta } &= \SI{170(120)}{\electronvolt}
 \end{align*}
 Das Auflösungsvermögen $A = \frac{E_{\text{K}}}{\increment E_{\text{FWHM}}}$ ergibt sich somit zu:
 \begin{align*}
-  \text{für} \quad K_{\alpha}: A&= \num{48(27)}\\
-  \text{für} \quad K_{\beta}: A&= \num{52(35)}
+  \text{für} \, K_{\alpha}: A&= \num{48(27)}\\
+  \text{für} \, K_{\beta}: A&= \num{52(35)}
 \end{align*}
 Mit der Absoprtionsenergie $E_{\text{abs}} = \SI{8980.47}{\electronvolt}$ \cite{E_abs} und den Energien der $K_{\alpha}$ und $K_{\beta}$ Linie sind die 
 Absorptionskoeffizienten $\sigma_1, \sigma_2$ und $\sigma_3$ nach den Formeln \eqref{eq:sigma1}, \eqref{eq:sigma2} und \eqref{eq:sigma3} zu berechnen.
@@ -150,7 +151,7 @@ Es folgt:
 \begin{align*}
   \sigma_1 &= \num{3.30}\\
   \sigma_2 &= \num{12.40(30)}\\
-  \simga_3 &= \num{22.40(210)}
+  \sigma_3 &= \num{22.40(210)}
 \end{align*}
 
 
@@ -168,7 +169,7 @@ Die Werte von der Messung mit Zink, welches eine Ordnungszahl von $Z=\num{30}$ b
   \label{tab:zink}
   \begin{tabular}{S[table-format=2.1] S[table-format=3.1]}
     \toprule
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
+    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
     \midrule
     18.0  &	58.0  \\
     18.1  &	54.0  \\
@@ -216,7 +217,7 @@ aufgetragen.
   \label{tab:gallium}
   \begin{tabular}{S[table-format=2.1] S[table-format=3.1]}
     \toprule
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
+    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
     \midrule
     17.0	&   66.0  \\
     17.1	&   66.0  \\
@@ -266,7 +267,7 @@ Diagramm abgebildet. Brom hat eine Ordnungszahl von $Z=\num{35}$.
   \label{tab:brom}
   \begin{tabular}{S[table-format=2.1] S[table-format=2.1]}
     \toprule
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
+    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
     \midrule
     12.8	&   10.0  \\
     12.9	&   12.0  \\
@@ -303,7 +304,7 @@ Der Winkel $\theta_{\text{Br}} $ wird zu $\SI{13.20(10)}{\degree}$ abgelesen, so
 \end{align*} 
 aus den Formeln \eqref{eqn:BraggBedingung} und \eqref{eqn:absorptionskoeff} berechnen lassen.
 
-\subsection{Rubidium}
+\subsubsection{Rubidium}
 Rubidium, welches die Ordnungszahl $Z = \num{37}$ hat, wird als Absorber benutzt. Die Daten sind in der \autoref{tab:rubidium} zu finden und in der \autoref{fig:rubidium}
 aufgetragen zu sehen.
 \begin{table}
@@ -312,7 +313,7 @@ aufgetragen zu sehen.
   \label{tab:rubidium}
   \begin{tabular}{S[table-format=2.1] S[table-format=2.1]}
     \toprule
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
+    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
     \midrule
     11.2	&   11.0  \\
     11.3	&   10.0  \\
@@ -356,7 +357,7 @@ Ordnungszahl von $Z=\num{38}$.
   \label{tab:strontium}
   \begin{tabular}{S[table-format=2.1] S[table-format=2.1]}
     \toprule
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
+    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
     \midrule
     11.2	&   11.0  \\
     11.3	&   10.0  \\
@@ -376,7 +377,7 @@ Ordnungszahl von $Z=\num{38}$.
   \end{tabular}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/strontium.pdf}
   \caption{Die Messung zum Strontiumabsorber.}
@@ -399,7 +400,7 @@ Außerdem sind sie in der \autoref{fig:zirkonium} aufgetragen worden, zudem wurd
   \label{tab:zirkonium}
   \begin{tabular}{S[table-format=2.1] S[table-format=3.1]}
     \toprule
-    $ \theta \, [\si[{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
+    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
     \midrule
     9.5	  &   112.0 \\
     9.6	  &   120.0 \\
@@ -421,7 +422,7 @@ Außerdem sind sie in der \autoref{fig:zirkonium} aufgetragen worden, zudem wurd
   \end{tabular}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/zirkonium.pdf}
   \caption{Die Messung zum Absorber aus Zirkonium.}
@@ -442,9 +443,9 @@ lassen sich die Energie und die Abschirmkonstante ermitteln.
 Die im Abschnitt \ref{sec:Analyse Absorptionsspektrum} ermittelten Werte der Absorptionsenergie $E_{\text{K}}$ der verschiedenen Absorbermaterialien werden
 in  einem $Z$-$\sqrt{E_{\text{K}}}$ Diagramm eingetragen, wobei $Z$ die Ordnungszahl beschreibt.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
-  includegraphics[width=\textwidth]{build/rydberg.pdf}
+  \includegraphics[width=\textwidth]{build/rydberg.pdf}
   \caption{Die Wurzel der ermittelten Absorptionsenergien aufgetragen gegen die Ordnungszahl $Z$.}
   \label{fig:rydberg}
 \end{figure}
@@ -453,7 +454,7 @@ in  einem $Z$-$\sqrt{E_{\text{K}}}$ Diagramm eingetragen, wobei $Z$ die Ordnungs
 In \autoref{fig:rydberg} sind eben genannte Daten und eine über diese Daten ausgeführte Ausgleichsrechnung der Form $y = a \cdot x + c $ zu sehen.
 Die Fit-Parameter ergeben sich zu:
 \begin{align*}
-  a &= \SI{0.2815 \pm 0.0015}{\per\sqrt{\electronvolt}}\\
+  a &= \SI{0.2815 \pm 0.0015}{1\per\sqrt{\electronvolt}}\\
   c &= \num{2.37 \pm 0.18}
 \end{align*}
 Nach Vergleich mit dem Moseley'schen Gesetz \eqref{eqn:moseley}, folgt für den Fit-Parameter $a$:
