@@ -23,7 +23,7 @@ print("b fehler=",errors[1])
 plt.plot(t , U_c , '.', label = 'Messwerte')
 plt.yscale('log')
 plt.xlabel('Zeit t [s]')           #EINHEIT
-plt.ylabel('Kondensatorspannung log U_c [V]') #EINHEIT
+plt.ylabel('Kondensatorspannung $U_c$ [V]') #EINHEIT
 
 plt.plot(t, line_a(t, popt[0], popt[1]),'r-', label='Ausgleichgerade')
 plt.grid()
@@ -38,7 +38,7 @@ print('AUFGABE B')
 
 f, U_a= np.genfromtxt('data/data_b.txt', unpack=True)
 
-U_0 = 6.2 # aus messung. keine ahnung was U_0 ist. oder ausgleichsgerade?
+U_0 = 6.2 # aus messung. keine ahnung was U_0 ist.
 A = U_a / U_0
 
 def line_b(f, RC):
@@ -51,8 +51,8 @@ print("RC fehler =",errors[0])
 
 plt.plot(f , A , '.', label = 'Messwerte')
 plt.xscale('log')
-plt.xlabel('log frequenz f [Hz]')        #EINHEIT
-plt.ylabel('U_a/ U_0 [V]')          #EINHEIT
+plt.xlabel('Frequenz f [Hz]')        #EINHEIT
+plt.ylabel('$U_a / U_0$ [V]')          #EINHEIT
 
 plt.plot(f, line_b(f, popt[0]),'r-', label='Ausgleichgerade')
 plt.grid()
@@ -66,14 +66,15 @@ print('AUFGABE C')
 
 f, a, b= np.genfromtxt('data/data_c.txt', unpack=True)
 phi = (a/b) * 2* np.pi
+print('PHASENVERSCHIEBUNG  ', phi)
 
 def line_c(f, RC):
     return np.arctan(-2* np.pi* f* RC)
 
 plt.plot(f , phi , '.', label = 'Messwerte')
 plt.xscale('log')
-plt.xlabel('log frequenz f [Hz]')        #EINHEIT
-plt.ylabel('phasenverschiebung phi')          #EINHEIT
+plt.xlabel('Frequenz f [Hz]')        #EINHEIT
+plt.ylabel('Phasenverschiebung φ')          #EINHEIT
 
 popt, pcov = curve_fit(line_c, f, phi)
 errors = np.sqrt(np.diag(pcov))
@@ -108,7 +109,7 @@ def AU(fr, ph, RC):
 AK = 1/ (np.sqrt(1+((2*np.pi*f)**2)*(RC**2)))
 
 plt.figure()
-plt.polar(phi, AK, '.', label = 'Messdaten')
+plt.polar(phi, AK, '.', label = 'Messwerte')
 
 x = np.linspace(0, 100000, 10000)
 phi = np.arcsin(((x*-RC)/(np.sqrt(1+x**2*(-RC)**2)))) #-RC weil wert negativ

@@ -9,19 +9,23 @@ Diese werden in ein halblogarithmischem Diagramm dargestellt, siehe \autoref{fig
 Dabei werden die letzten beiden Wertepaare aus \autoref{tab:data_a} nicht mitaufgezeichnet, da der Logarithmus für 0 nicht definiert ist.
 Mithilfe von python wird eine lineare Ausgleichsrechnung durchgeführt.
 Über die Steigung wird die Zeitkonstante $RC$ ermittelt.
-Dafür wurd die Gleichung \eqref{eqn:AufgabeA} betrachtet.
+Dafür wurde die Gleichung \eqref{eqn:AufgabeA} betrachtet.
+Die Ausgleichsgerade hat somit die Form:
+\begin{equation*}
+  \ln U_C = RC \cdot t + b
+\end{equation*}
 
 \noindent
 Aus der Ausgleichsrechung folgt:
 \begin{align*}
-  RC &= (1.05 \pm 0.04) \cdot 10^{-3} \si{\second},
+  RC &= (1.05 \pm 0.04) \cdot 10^{-3} \si{\second}, \\
   b  &= (6.24 \pm 0.14) \cdot 10^{-3} \si{\second}.
 \end{align*}
 
 \begin{table}
   \centering
   \caption{Aufgenommene Messwerte: Die Kondensatorspannung $U_C$ in Abhängigkeit von der Zeit.
-  Die letzten beiden Wertepaare wurden nicht in den halblogarithmischem Diagramm aufgenommen.}
+  Die letzten beiden Wertepaare wurden nicht in das halblogarithmische Diagramm aufgenommen.}
   \label{tab:data_a}
   \begin{tabular}{c c}
     \toprule
@@ -57,6 +61,7 @@ Aus der Ausgleichsrechung folgt:
 Nach dem Anlegen einer Sinusspannung, wird die Amplitude $U_A$ in Abhängigkeit von der Frequenz $f$ aufgenommen.
 Die Messpaare sind in \autoref{tab:data_b} zu finden.
 Die Werte werden in ein halblogarithmischem Diagramm eingetragen, siehe \autoref{fig:data_b} und eine nicht-lineare Ausgleichsrechnung wird nach Gleichung \eqref{eqn:amplitude} durchgeführt.
+Durch eine einmalige Messung ist $U_0 = \SI{6.2}{\volt}$.
 
 \noindent
 Aus dieser Rechung ergibt sich für 
@@ -102,38 +107,38 @@ Aus dieser Rechung ergibt sich für
 
 \subsection{Bestimmung der Zeitkonstante durch die Phasenverschiebung}
 \label{subsec:Aufgabe_C}
-Die nach \autoref{} aufgenommenen Messwerte sind in \autoref{tab:data_c} zu finden.
-Mithilfe der Gleichung \autoref{} wird die Phasenverschiebung $\phi$ ermittelt, welche auch in \autoref{tab:data_c} zu sehen sind.
+Die nach \autoref{subsec:Phasenverschiebung} aufgenommenen Messwerte sind in \autoref{tab:data_c} zu finden.
+Mithilfe der Gleichung \eqref{eqn:phi} wird die Phasenverschiebung $\varphi$ ermittelt, welche auch in \autoref{tab:data_c} zu sehen ist.
 Es folgt eine Aufnahme der Phasenverschiebung in Abhängigkeit von der Frequenz $f$ in einem halblogarithmischen Diagramm, siehe \autoref{fig:data_c}.
 Durch eine Ausgleichsrechnung nach Gleichung \eqref{eqn:phasenverschiebung} folgt für die Zeitkonstante
 \begin{equation*}
-  RC = (-0.92 \pm 0.14) \cdot 10^{-3}.
+  RC = (-0.92 \pm 0.14) \cdot 10^{-3} \si{\second}.
 \end{equation*}
 
 \begin{table}
   \centering
-  \caption{Aufgenommene Messwerte: Der zeitliche  Abstand $a$ und die Wellenlänge $b$ in Abhängigkeit der Frequenz $f$, sowie die daraus resultierende Phasenverschiebung $\phi$.}
+  \caption{Aufgenommene Messwerte: Der zeitliche  Abstand $a$ und die Wellenlänge $b$ in Abhängigkeit der Frequenz $f$, sowie die daraus resultierende Phasenverschiebung $\varphi$.}
   \label{tab:data_c}
   \begin{tabular}{c c c c}
     \toprule
-    $f [\si{\hertz}]$ & $a [\si{\milli\second}]$ & $b [\si{\milli\second}]$ & $\phi$ \\
+    $f [\si{\hertz}]$ & $a [\si{\milli\second}]$ & $b [\si{\milli\second}]$ & $\varphi$ \\
     \midrule
-    10.41       &     1.000     &   98.00   &   \\
-    30.07       &     1.000     &   33.00   &   \\
-    50.00       &     1.000     &   19.50   &   \\
-    100.00      &     0.800     &   10.00   &   \\
-    150.00      &     0.800     &    6.80   &   \\
-    200.10      &     0.700     &    5.00   &   \\
-    300.00      &     0.500     &    3.30   &   \\
-    500.00      &     0.400     &    2.00   &   \\
-    750.00      &     0.280     &    1.30   &   \\
-    1000.00     &     0.200     &    1.00   &   \\
-    1500.00     &     0.160     &    0.66   &   \\
-    2001.00     &     0.110     &    0.49   &   \\
-    3005.00     &     0.100     &    0.32   &   \\
-    5003.00     &     0.045     &    0.20   &   \\
-    7500.00     &     0.030     &    0.13   &   \\
-    10000.00    &     0.030     &    0.10   &   \\
+    10.41       &     1.000     &   98.00   &   0.06\\
+    30.07       &     1.000     &   33.00   &   0.19\\
+    50.00       &     1.000     &   19.50   &   0.32\\
+    100.00      &     0.800     &   10.00   &   0.50\\
+    150.00      &     0.800     &    6.80   &   0.74\\
+    200.10      &     0.700     &    5.00   &   0.88\\
+    300.00      &     0.500     &    3.30   &   0.95\\
+    500.00      &     0.400     &    2.00   &   1.26\\
+    750.00      &     0.280     &    1.30   &   1.35\\
+    1000.00     &     0.200     &    1.00   &   1.26\\
+    1500.00     &     0.160     &    0.66   &   1.52\\
+    2001.00     &     0.110     &    0.49   &   1.41\\
+    3005.00     &     0.100     &    0.32   &   1.96\\
+    5003.00     &     0.045     &    0.20   &   1.41\\
+    7500.00     &     0.030     &    0.13   &   1.45\\
+    10000.00    &     0.030     &    0.10   &   1.88\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -141,13 +146,13 @@ Durch eine Ausgleichsrechnung nach Gleichung \eqref{eqn:phasenverschiebung} folg
 \begin{figure}
   \centering
   \includegraphics{content/data_c_ausgleich.pdf}
-  \caption{Die Phasenverschiebung $\phi$ in Abhängigkeit von der Frequenz $f$ und die dazugehörige Ausgleichskurve.}
+  \caption{Die Phasenverschiebung $\varphi$ in Abhängigkeit von der Frequenz $f$ und die dazugehörige Ausgleichskurve.}
   \label{fig:data_c}
 \end{figure}
 
 \subsection{RC-Kreis als Integrator}
 \label{Aufgabe_d}
-Mithilfe der Gleichung \eqref{eqn:AufgabeD} soll die Relativamplitude $\sfrac{A(\omega)}{U_0}$ der Phase $\phi$ in ein Polarkoodinatensystem eingetragen werden.
+Mithilfe der Gleichung \eqref{eqn:AufgabeD} soll die Relativamplitude $\sfrac{A(\omega)}{U_0}$ der Phase $\varphi$ in ein Polarkoodinatensystem eingetragen werden.
 Dafür wird die Zeitkonstante $RC$ aus \autoref{subsec:Aufgabe_C} verwendet.
 In der \autoref{fig:data_d} werden zusätzlich einige Messwerte eingetragen.
 

@@ -1,6 +1,6 @@
 \section{Zielsetzung}
 
-In diesem Versuch werden Relaxationsphänomene am Beispiel eines RC-Kreises näher betrachtet. Hierbei wird die Relaxationszeitkonstante des $RC$-Kreises einmal
+In diesem Versuch werden Relaxationsphänomene am Beispiel eines $RC$-Kreises näher betrachtet. Hierbei wird die Relaxationszeitkonstante des $RC$-Kreises einmal
 über die Betrachtung eines Ent- oder Aufladevorgangs eines Kondensators über einen Widerstand, einmal durch die Veränderung der Amplitude bei hohen Frequenzen 
 und einmal durch die auftretende Phasenverschiebung zwischen Kondensator- und Speisespannung bei hohen Frequenzen ermittelt.
 \section{Theorie}
@@ -17,11 +17,11 @@ und einmal durch die auftretende Phasenverschiebung zwischen Kondensator- und Sp
     \begin{equation*}
         \int_{A(0)}^{A(t)} \frac{\symup{d}A'}{A' - A(\infty)} = \int_0^t c \,\symup{d}t' \implies \text{ln} \frac{A(t) - A(\infty)}{A(0) - A(\infty)} = ct,
     \end{equation*}
-    sodass sich als Funktion schließllich
+    sodass sich als Funktion schließlich
     \begin{equation*}
         A(t) = A(\infty) + [A(0) - A(\infty)] \text{e}^{ct}
     \end{equation*}
-    ergibt. Hier muss $c<0$ gelten, da $A$ sonst nicht beschränkt sein würde. Die Relaxationszeitkonstante ist durch den Ausduck $\frac{1}{c}$ gegeben.
+    ergibt. Hier muss $c<0$ gelten, da $A$ sonst nicht beschränkt sein würde. Die Relaxationszeitkonstante ist durch den Ausduck $\sfrac{1}{c}$ gegeben.
 
 
 \subsection{Entlade- und Aufladevorgang eines RC-Kreises}
@@ -48,16 +48,17 @@ und einmal durch die auftretende Phasenverschiebung zwischen Kondensator- und Sp
     \end{equation*}
     Diese Gleichung zeigt große Ähnlichkeit zu der allgemeinen Relaxationsgleichung \eqref{eq:relaxation} auf. Es gilt $Q(\infty) = 0$, da der Kondensator nach 
     unendlicher Zeit vollständig entladen ist. Somit kann für den Entladevorgang direkt gefolgert werden:
-    \begin{equation*}
+    \begin{equation}
+        \label{eqn:AufgabeA}
         Q(t) = Q(0) \text{exp}(-t/RC)
-    \end{equation*}
+    \end{equation}
     Analog kann für den Aufladevorgang die Gleichung
     \begin{equation*}
         Q(t) = CU_0(1- \text{exp}(-t/RC))
     \end{equation*}
-    hergeleitet werden, wobei die Speisespannung mit $U_O$ bezeichnet wird und für die Ladung $Q(0)= 0 $ und $Q(\infty) = CU_0 $ gilt.
+    hergeleitet werden, wobei die Speisespannung mit $U_0$ bezeichnet wird und für die Ladung $Q(0)= 0 $ und $Q(\infty) = CU_0 $ gilt.
     Die Zeitkonstante des Relaxationsvorganges ist in diesem Fall gegeben durch $RC$. Sie gibt den Zeitraum an, in dem sich hier die Ladung auf dem Kondensator 
-    um den Faktor $\frac{1}{\symup{e}}$ verändert.
+    um den Faktor $\sfrac{1}{\symup{e}}$ verändert.
 
 \subsection{Relaxation bei periodischer Auslenkung aus Gleichgewichtslage}
 
@@ -102,9 +103,10 @@ und einmal durch die auftretende Phasenverschiebung zwischen Kondensator- und Sp
     \noindent Um einen Ausdruck für die Veränderung der Amplitude zu bekommen, wird der Ausdruck $\omega t + \varphi = \frac{\pi}{2}$ gesetzt und in die Gleichung
     \eqref{eqn:kirchhoff_eingesetzt} eingesetzt. Dies ist möglich, da die Gleichung \eqref{eqn:kirchhoff_eingesetzt} für alle Werte von $t$ gelten muss.
     Es ergibt sich:
-    \begin{equation*}
+    \begin{equation}
+        \label{eqn:AufgabeD}
         U_0 \cos(\frac{\pi}{2} - \varphi) = -A \omega RC  \iff A(\omega) = - \frac{\sin(\varphi)}{\omega RC }U_0
-    \end{equation*}
+    \end{equation}
     Mithilfe des trigonometrischen Pythagoras lässt sich aus der Formel \eqref{eqn:phasenverschiebung} 
     \begin{equation*}
         \sin(\varphi) = \frac{\omega RC}{\sqrt{1 + \omega^2 R^2 C^2}}
@@ -119,7 +121,7 @@ und einmal durch die auftretende Phasenverschiebung zwischen Kondensator- und Sp
 
 \subsection{RC-Kreis als Integrator}
 
-    Es ist möglich, dass eine zeitlich veränderliche  angelegte Spannung in einem $RC$-Kreis integriert wird. Mithilfe des Kirchhoff'schen Gesetz, dem Ohm'schen 
+    Es ist möglich, dass eine zeitlich veränderliche angelegte Spannung in einem $RC$-Kreis integriert wird. Mithilfe des Kirchhoff'schen Gesetz, dem Ohm'schen 
     Gesetz und der Relation $\frac{\symup{d}Q}{\symup{d}t} = I$ , kann folgende Formel aufgestellt werden:
     \begin{equation*}
         U(t) = U_{\text{R}}(t) + U_{\text{C}}(t) = I(t)R + U_{\text{C}}(t) = RC \cdot \frac{\symup{d}U_{\text{C}}}{\symup{d}t} + U_{\text{C}} 
