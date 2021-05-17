@@ -52,7 +52,7 @@ print("RC fehler =",errors[0])
 plt.plot(f , A , '.', label = 'Messwerte')
 plt.xscale('log')
 plt.xlabel('Frequenz f [Hz]')        #EINHEIT
-plt.ylabel('$U_a / U_0$ [V]')          #EINHEIT
+plt.ylabel('$U_a / U_0$')          #EINHEIT
 
 plt.plot(f, line_b(f, popt[0]),'r-', label='Ausgleichgerade')
 plt.grid()
