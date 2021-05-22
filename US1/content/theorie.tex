@@ -35,9 +35,9 @@ und transversalen Anteil der Welle.
 Ähnlich wie die elektromagnetische Welle kann die Schallwelle reflektiert oder gebrochen werden.
 Unteranderem wird ein Teil der Energie bei Ausbreitung der Welle absorbiert.
 Für die Abnahme der Intensität $I_0$ über die Strecke $x$ gilt:
-\begin{equation*}
+\begin{equation} \label{eqn:absorptionkoeff}
     I(x) = I_0 \cdot \symup{e}^{-\alpha \cdot x}.
-\end{equation*}
+\end{equation}
 Hier ist $\alpha$ der Absorptionskoeffizient.
 Bei Auftreffen der Welle auf eine Grenzfläche wird ein Teil reflektiert.
 Dieser Reflexionskoeffzient kann dann über die akustischen Impedanzen $Z$ der beiden Materialen ausgedrückt werden:
@@ -86,6 +86,10 @@ Genauere Aussagen über Position und Größe der Fehlstelle können nicht getrof
 Hier ist der Ultraschallsender auch gleichzeitig der Empfänger.
 Der kurze Impuls wird bei einer Grenzfläche reflektiert und wieder aufgenommen.
 Aussagen über die Fehlstellen wie ihre Größe oder ihre Position können mithilfe der Höhe des Echos, der Schallgeschwindigkeit und der Laufzeit $t$ gemacht werden.
+Es ergibt sich der Zusammenhang: 
+\begin{equation} \label{eqn:schallgeschw}
+    s = \frac{1}{2} c \cdot t
+\end{equation}
 In \autoref{fig:impuls-echo} wird dieses Prinzip der Reflexion anschaulich skizziert.
 
 \begin{figure}
