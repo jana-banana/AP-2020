@@ -12,7 +12,7 @@ if os.path.exists("build") == False:
 
 
 ###Schallgeschwindigkeit ausrechnen
-Nr, t, A, y = np.genfromtxt('schall_unten.txt', unpack=True)
+Nr, t, A, y = np.genfromtxt('data/schall.txt', unpack=True)
 t_plot = np.linspace(0, 5e-5, 1000)
 
 y*=1e-3
