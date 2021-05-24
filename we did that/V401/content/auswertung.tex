@@ -1,0 +1,81 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+\subsection{Bestimmung der Wellenlänge des Lasers}
+\label{subsec:Wellenlänge}
+
+Mithilfe der Gleichung \eqref{eqn:forlambda} wird die Wellenlänge des Lasers bestimmt.
+Da die Verschiebung des Spiegels $\increment d$ nicht genau der Mikrometerschraube entspricht, wird die Formel \eqref{eqn:forlambda} um $\sfrac{1}{\text{Ü}}$ erweitert.
+Hierbei ist $\text{Ü}$ die Hebelübersetzung und beträgt $5.046$.
+Die aufgenommenen und verwendeten Messwerte sowie die Ergebnisse sind in \autoref{tab:Messwerte und Wellenlänge} zu finden.
+
+\begin{table}
+  \centering
+  \caption{Die aufgenommenen Messwerte und die daraus bestimmte Wellenlänge.}
+  \label{tab:Messwerte und Wellenlänge}
+  \begin{tabular}{c c c}
+    \toprule
+    {$\increment d$ [$\si{\milli\metre}$]} & {$z$} & {$\lambda$ [$\si{\nano\metre}$]} \\
+    \midrule
+    5.0     &       3016 $\pm$ 4    &   657.0848 $\pm$ 0.8715\\
+    5.0     &       2972 $\pm$ 4    &   666.8128 $\pm$ 0.8975\\
+    5.0     &       2976 $\pm$ 4    &   665.9166 $\pm$ 0.8950\\
+    5.0     &       2963 $\pm$ 4    &   668.8383 $\pm$ 0.9029\\
+    5.1     &       2988 $\pm$ 4    &   676.5071 $\pm$ 0.9056\\
+    4.9     &       2964 $\pm$ 4    &   655.2403 $\pm$ 0.8843\\
+    5.1     &       2987 $\pm$ 4    &   676.7335 $\pm$ 0.9062\\
+    5.1     &       2974 $\pm$ 4    &   679.6917 $\pm$ 0.9142\\
+    5.1     &       2967 $\pm$ 4    &   681.2953 $\pm$ 0.9185\\
+    4.9     &       2967 $\pm$ 4    &   654.5778 $\pm$ 0.8825\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\noindent
+Durch eine Mittlung ergibt sich für die Wellenlänge
+\begin{equation*}
+  \lambda = \SI{668.27 \pm 0.28}{\nano\metre}.
+\end{equation*}
+
+\subsection{Bestimmung des Brechungsindexes von Luft}
+\label{Brechungsindex}
+
+Nach der Formel \eqref{eqn:forindex} kann der Brechungsindex von Luft bestimmt werden.
+Hierzu werden folgende Werte benötigt:
+
+\begin{align*}
+  \text{Größe der Messzelle :}&   &b &= \SI{50e-3}{\metre} \\
+  \text{Umgebungstemperatur :}&   &T &= \SI{293.15}{\kelvin} \\
+  \\
+  \text{Normalbedingungen} & \\
+  \text{Normaldruck :}&           &p_0 &= \SI{1.0132}{\bar} \\
+  \text{Normaltemperatur :}&      &T_0 &= \SI{273.15}{\kelvin}
+\end{align*}
+\noindent
+Die Messwerte sowie den dazu berechneten Brechungsindex sind in \autoref{tab:Messwerte und Brechungsindex} zu finden.
+
+\begin{table}
+  \centering
+  \caption{Messwerte und die daraus bestimmten Brechungsindex.}
+  \label{tab:Messwerte und Brechungsindex}
+  \begin{tabular}{c c c}
+    \toprule
+    {$\increment p$ [$\si{\bar}$]} & {$z$} & {$n$} \\
+    \midrule
+    600     &   22  &  1.1999 $\pm$ 0.03634\\
+    600     &   33  &  1.2998 $\pm$ 0.03634\\
+    600     &   52  &  1.4724 $\pm$ 0.03634\\
+    600     &   45  &  1.4088 $\pm$ 0.03634\\
+    520     &   54  &  1.5660 $\pm$ 0.04193\\
+    600     &   43  &  1.3906 $\pm$ 0.03634\\
+    600     &   56  &  1.5087 $\pm$ 0.03634\\
+    600     &   34  &  1.3089 $\pm$ 0.03634\\
+    600     &   44  &  1.3997 $\pm$ 0.03634\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\noindent
+Durch eine Mittlung ergibt sich für den Brechungsindex von Luft:
+\begin{equation*}
+  n = 1.395 \pm 0.012.
+\end{equation*}
