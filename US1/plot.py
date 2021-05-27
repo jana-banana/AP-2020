@@ -41,6 +41,11 @@ plt.legend()
 plt.tight_layout()
 plt.savefig('build/schallgeschwindigkeit.pdf')
 
+s = c_theo * t /2
+print('s', s)
+print('diff', s-y)
+print('prozente',(1 - s/y)*10**2 )
+
 
 ###Absorptionskoeffizient
 

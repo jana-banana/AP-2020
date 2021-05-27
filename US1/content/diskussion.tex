@@ -19,6 +19,43 @@ Das Ergebnis für die Schallgeschwindigkeit ist recht genau für die Art der Mes
 genau den Abstand von der ihren äußersten Stellen zu nehmen. Zu der Aufnahmen der Messpunkte von dem Ultraschallechoskop ist zu sagen, dass auf einem 
 Computerbildschirm zwei Cusor nach Augenmaß gelegt werden, welche dann den Punkt bestimmen. 
 
+\begin{table} 
+    \centering
+    \caption{Die Werte von den Messungen mit Ultraschall und Schieblehre im Vergleich.}
+    \label{tab:vergleich}
+    \begin{tabular}{S[table-format=2]   S[table-format=2.1] S[table-format=1.3] S[table-format=2.1] S[table-format=2.3] S[table-format=3.2] 
+                                        S[table-format=2.1] S[table-format=1.3] S[table-format=2.1] S[table-format=2.3] S[table-format=3.2]}
+      \toprule
+      & \multicolumn{5}{c}{Oberseite} & \multicolumn{5}{c}{Unterseite}\\
+      \cmidrule(lr){2-6} \cmidrule(lr){7-11}
+      Nr & $t \mathbin{/} \si{\micro\second}$ & $ s_{\text{t}} \mathbin{/} \si{\milli\metre}$ & $ s \mathbin{/} \si{\milli\metre}$ & $ \increment s \mathbin{/} \si{\milli\metre}$ & $\increment s \mathbin{/} \si{\percent}$ 
+         & $t \mathbin{/} \si{\micro\second}$ & $ s_{\text{t}} \mathbin{/} \si{\milli\metre}$ & $ s \mathbin{/} \si{\milli\metre}$ & $ \increment s \mathbin{/} \si{\milli\metre}$ & $\increment s \mathbin{/} \si{\percent}$ \\
+      \midrule
+      1     & 15.2   & 20.748   & 19.2  &  1.548 & - 8.06        & 44.0   &  60.060  & 60.4 &  0.340 &  0.56 \\
+      2     & 13.9   & 18.973   & 17.5  &  1.473 & - 8.42        & 45.1   &  61.561  & 62.1 & -0.538 &  0.86 \\
+      3     & 45.1   & 61.561   & 60.2  &  1.361 & - 2.26        & 10.7   &  14.605  & 13.4 &  1.205 & -8.99 \\
+      4     & 39.6   & 54.054   & 52.9  &  1.154 & - 2.18        & 16.8   &  22.932  & 21.8 &  1.132 & -5.19 \\
+      5     & 34.1   & 46.546   & 45.3  &  1.246 & - 2.75        & 23.0   &  31.395  & 30.3 &  1.095 & -3.61 \\
+      6     & 28.6   & 39.039   & 37.1  &  1.939 & - 5.23        & 29.1   &  39.721  & 38.6 &  1.121 & -2.90 \\
+      7     & 22.9   & 31.258   & 30.3  &  0.958 & - 3.16        & 35.0   &  47.775  & 46.6 &  1.175 & -2.52 \\
+      8     & 17.0   & 23.205   & 22.3  &  0.905 & - 4.06        & 40.9   &  55.828  & 54.7 &  1.128 & -2.06 \\
+      9     & 11.2   & 15.288   & 13.8  &  1.488 & -10.78        & 46.6   &  63.609  & 62.7 &  0.909 & -1.45 \\
+      10    & 5.4    &  7.371   &  6.8  &  0.571 & - 8.39        &        &          & 72.8 &        &       \\
+      11    & 40.6   & 55.419   & 55.9  & -0.481 &   0.86        & 12.2   &  16.653  & 15.4 &  1.253 & -8.14 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+\noindent In der \autoref{tab:vergleich} sind für die jeweilige Messung pro Störstelle die gemessene Laufzeit, die daraus resultierende Strecke $s_{\text{t}}$ und 
+die mit der Schieblehre gemessene Strecke $s$ aufgetragen. Die Strecke $s_{\text{t}}$ wird über die Gleichung \eqref{eqn:schallgeschw} mit dem Theoriewert für 
+die Schallgeschwindigkeit in Acryl errechnet. Zusätzlich ist auch der Vergleich dieser Werte $ \increment s = s_{\text{t}} - s $ , sowie die 
+prozentuale ABweichung mit $ \increment s = (1-\frac{s_{\text{t}}}{s})$ eingetragen.
+Es ist zu sehen, dass die prozentuale Abweichung für einige Werte recht hoch ist, wie beispielsweise bei der Messung von der Störstelle $9$ von der Oberseite.
+Dies ist damit zu erklären, dass das Messen mit der Schieblehre bei den kleinen Durchmessern der Störstellen dieser schwierig zu messen war. 
+Die Abweichung von $\SI{-8.14}{\percent}$ bei der Messung von der Unterseite von Störstelle $11$ ist mit der Überdeckung der Störstelle durch die Störstelle $10$ 
+zu erklären. Das Ultraschallechoskop kann somit nicht den kürzesten Abstand zur Außenkante messen, sondern nur einen Punkt auf dem Umfang von der Störstelle. \\
+\\
+
 
 \noindent Die Untersuchung des Augenmodell stellte die Herausforderung einer gewölbten Oberfläche, sodass bidestilliertes Wasser nicht als Kontaktmittel benutzt 
 werden konnte, da es abfloß. Stattdessen wurde Ultraschallgel benutzt. Die gewölbte Fläche brachte auch die Schwierigkeit, dass die Ultraschallsonde sehr ruhig 
