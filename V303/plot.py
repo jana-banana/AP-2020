@@ -36,7 +36,7 @@ plt.plot(x_plot,U(x_plot, *par) , 'r-', label="Nicht-Lineare Regression")
 plt.grid()
 plt.tight_layout()
 plt.legend()
-plt.savefig('content/abbildungen/plot1.pdf')
+#plt.savefig('content/abbildungen/plot1.pdf')
 
 plt.clf()
 
@@ -49,7 +49,7 @@ plt.ylabel('Spannung $U$ [V]')
 plt.grid()
 plt.tight_layout()
 plt.legend()
-plt.savefig('content/abbildungen/plot2.pdf')
+#plt.savefig('content/abbildungen/plot2.pdf')
 
 plt.clf()
 
