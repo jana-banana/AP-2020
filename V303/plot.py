@@ -1,21 +1,70 @@
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
+import uncertainties.unumpy as unp
+from scipy.optimize import curve_fit
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+#AUFGABE 1 ohne Noise generator
+print('AUFGABE 1')
 
-plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-plt.legend(loc='best')
+phi, A_ohne, A_mit= np.genfromtxt('data/data_ohne_mit.txt', unpack=True)
 
-plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \:/\: \si{\ohm}$')
-plt.ylabel(r'$y \:/\: \si{\micro\joule}$')
-plt.legend(loc='best')
+phi *= np.pi/180
 
-# in matplotlibrc leider (noch) nicht möglich
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plot.pdf')
+def U(phi, U0, B):
+    return 2/np.pi* U0 * np.cos(phi+B)
+
+par, covm = curve_fit(
+    U,
+    phi,
+    A_ohne,
+    sigma=None,
+    absolute_sigma=True,
+    p0=[10, 1]
+    )
+err = np.sqrt(np.diag(covm))
+
+plt.plot(phi , A_ohne , '.', label = 'Messwerte ohne')
+x_plot = np.linspace(0, 2*np.pi, 1000)
+plt.xlabel('$\phi$')
+plt.ylabel('Spannung $U$ [V]')
+
+plt.plot(x_plot,U(x_plot, *par) , 'r-', label="Nicht-Lineare Regression")
+#plt.plot(phi, line(phi,),'r-', label='Ausgleichgerade')
+plt.grid()
+plt.tight_layout()
+plt.legend()
+plt.savefig('content/abbildungen/plot1.pdf')
+
+plt.clf()
+
+#AUFGABE 1 mit Noise generator
+
+plt.plot(phi , A_mit , '.', label = 'Messwerte mit')
+plt.xlabel('$\phi$')
+plt.ylabel('Spannung $U$ [V]')
+
+plt.grid()
+plt.tight_layout()
+plt.legend()
+plt.savefig('content/abbildungen/plot2.pdf')
+
+plt.clf()
+
+#AUFGABE 2 
+
+r, A_dioden= np.genfromtxt('data/dioden.txt', unpack=True)
+
+#r = np.array([r_1])
+#A_dioden = np.array([A_dioden_1])
+
+plt.plot(r[1:], A_dioden[1:],'.', label='Messwerte')
+#plt.plot(phi , A_dioden , '.', label = 'Messwerte')
+plt.xlabel('r /cm')
+plt.ylabel('Spannung $U$ [V]')
+
+plt.grid()
+plt.tight_layout()
+plt.legend()
+plt.savefig('content/abbildungen/plot3.pdf')
+
+plt.clf()
