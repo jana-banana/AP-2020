@@ -27,7 +27,7 @@
     proportional zur Eingangsspannung und zum Kosinus der Phasenverschiebung zwischen Signal- und Referenzspannung ist.
 
     \begin{equation*}
-        u-{\text{out}} \propto U_0 \cdot \cos(\phi)
+        U_{\text{out}} \propto U_0 \cdot \cos(\phi)
     \end{equation*}
 
     \noindent Im Gegensatz zu einem Bandpass, welcher Güten von Q $= \num{1000}$ erreicht, kann ein Lock-In-Verstärker Güten von Q$= \num{100000}$ erreichen. Dies liegt an dem 
@@ -62,10 +62,12 @@
         U_{\text{sig}} \times U_{\text{ref}} = \frac{2}{\pi} U_0 \left(1 - \frac{2}{3} \cos(2 \omega t) - \frac{2}{15} \cos(4 \omega t) - \frac{2}{35} \cos(6 \omega t) + \dots \right) 
     \end{equation*}
     Dieses Produkt besteht aus den geraden Oberwellen der Grundfrequenz $\omega$. Mit dem Tiefpass werden diese Oberwellen dann unterdrückt, dass eine Gleichspannung
-    \begin{equation*}
+    \begin{equation}
+        \label{eqn:U_out}
         U_{\text{out}} = \frac{2}{\pi} U_0, 
-    \end{equation*}
+    \end{equation}
     die proportional zur Signalspannung ist, herauskommt. In diesem Fall ist $\phi = 0$, welches auch der Fall der maximalen Ausgangsspannung ist, jedoch gilt im Allgemeinen:
-    \begin{equation*}
+    \begin{equation}
+        \label{eqn:Kosinus}
         U_{\text{out}} = \frac{2}{\pi} \cos(\phi)
-    \end{equation*}
+    \end{equation}

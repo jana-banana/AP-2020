@@ -4,68 +4,122 @@
 \subsection{Verifizierung der Funktionsweise eines Lock-In-Verstärkers}
 \label{subsec:Verifizierung}
 Die Spannungen werden für 7 Phasenverschiebungen in 60° Abständen aufgenommen.
-Die entsprechenden Bilder des Oszilloskop sind in \autoref{fig:ohne} zu finden.
+Die entsprechenden Bilder des Oszilloskop ohne Rauschen sind in \autoref{fig:ohne} zu finden, die mit in \autoref{fig:mit}.
+Die aufgenommenen Messwerte für die Untersuchung mit und ohne Noise Generator sind in \autoref{tab:data_ohne_mit} zu sehen.
+Für beide Messvorgänge werden die Werte in Diagrammen veranschaulicht (siehe \autoref{fig:versuch_1_cosinus}) und mithilfe von python eine Ausgleichskurve nach Gleichung \eqref{eqn:Kosinus} bestimmt.
+Die zu ermittelnde Gleichung lautet:
+\begin{equation*}
+  U = a * \cos(\phi)
+\end{equation*}
+Durch die Ausgleichsrechnung folgt:
+\begin{align*}
+  \text{ohne Noise Generator:}&  &a_\text{ohne} &= \SI{17 \pm 4}{\volt}, \\
+  \text{mit Noise Generator:}&   &a_\text{mit}  &= \SI{10.7 \pm 2.9}{\volt}.
+\end{align*}
+Nach Gleichung \eqref{eqn:U_out} gilt für $a = \sfrac{2 \cdot U_0}{\pi}$, somit ergeben sich für $U_0$ folgende Werte:
+\begin{align*}
+  \text{ohne Noise Generator:}&  &U_0_\text{ohne} &= \SI{26.70 \pm 16.80}{\volt}, \\
+  \text{mit Noise Generator:}&   &U_0_\text{mit}  &= \SI{ 6.28 \pm 4.56}{\volt}.
+\end{align*}
 
 \begin{figure}
+  \label{fig:ohne}
   \begin{subfigure}{0.48\textwidth}
       \centering
       \includegraphics[height=5cm]{content/abbildungen/ohne/0.pdf}}
-      \caption{Spannung bei $\phi = 0°$.}
-      \label{fig:ohne_0}
+      \caption{Spannung bei $\phi = 0°$ ohne Rauschen.}
   \end{subfigure}
 \hfill 
   \begin{subfigure}{0.48\textwidth}
       \centering
       \includegraphics[height=5cm]{content/abbildungen/ohne/60.pdf}
-      \caption{Spannung bei $\phi = 60°$.}
-      \label{fig:ohne_60}
+      \caption{Spannung bei $\phi = 60°$ ohne Rauschen.}
   \end{subfigure}
 \hfill 
   \begin{subfigure}{0.48\textwidth}
       \centering
       \includegraphics[height=5cm]{content/abbildungen/ohne/120.pdf}
-      \caption{Spannung bei $\phi = 120°$.}
-      \label{fig:ohne_120}
+      \caption{Spannung bei $\phi = 120°$ ohne Rauschen.}
   \end{subfigure}
 \hfill 
   \begin{subfigure}{0.48\textwidth}
       \centering
       \includegraphics[height=5cm]{content/abbildungen/ohne/180.pdf}
-      \caption{Spannung bei $\phi = 180°$.}
-      \label{fig:ohne_180}
+      \caption{Spannung bei $\phi = 180°$ ohne Rauschen.}
   \end{subfigure}
 \hfill 
   \begin{subfigure}{0.48\textwidth}
       \centering
       \includegraphics[height=5cm]{content/abbildungen/ohne/240.pdf}
-      \caption{Spannung bei $\phi = 240°$.}
-      \label{fig:ohne_240}
-  \end{subfigure}
+      \caption{Spannung bei $\phi = 240°$ ohne Rauschen.}
+      \end{subfigure}
 \hfill 
   \begin{subfigure}{0.48\textwidth}
       \centering
       \includegraphics[height=5cm]{content/abbildungen/ohne/300.pdf}
-      \caption{Spannung bei $\phi = 300°$.}
-      \label{fig:ohne_300}
-  \end{subfigure}
+      \caption{Spannung bei $\phi = 300°$ ohne Rauschen.}
+      \end{subfigure}
 \hfill 
   \begin{subfigure}{0.48\textwidth}
       \centering
       \includegraphics[height=5cm]{content/abbildungen/ohne/360.pdf}
-      \caption{Spannung bei $\phi = 360°$.}
-      \label{fig:ohne_360}
-  \end{subfigure}
-\caption{Die Spannungen bei verschiedenen Phasenverschiebungen $\phi$.}
-\label{fig:ohne}
+      \caption{Spannung bei $\phi = 360°$ ohne Rauschen.}
+      \end{subfigure}
+\caption{Die Spannungen bei verschiedenen Phasenverschiebungen $\phi$ ohne Noise Generator.}
 \end{figure}
 
-\begin{table}
+\begin{figure}
+  \label{fig:mit}
+  \begin{subfigure}{0.48\textwidth}
+      \centering
+      \includegraphics[height=5cm]{content/abbildungen/mit/0.pdf}}
+      \caption{Spannung bei $\phi = 0°$ mit Rauschen.}
+  \end{subfigure}
+\hfill 
+  \begin{subfigure}{0.48\textwidth}
+      \centering
+      \includegraphics[height=5cm]{content/abbildungen/mit/60.pdf}
+      \caption{Spannung bei $\phi = 60°$ mit Rauschen.}
+  \end{subfigure}
+\hfill 
+  \begin{subfigure}{0.48\textwidth}
+      \centering
+      \includegraphics[height=5cm]{content/abbildungen/mit/120.pdf}
+      \caption{Spannung bei $\phi = 120°$ mit Rauschen.}
+  \end{subfigure}
+\hfill 
+  \begin{subfigure}{0.48\textwidth}
+      \centering
+      \includegraphics[height=5cm]{content/abbildungen/mit/180.pdf}
+      \caption{Spannung bei $\phi = 180°$ mit Rauschen.}
+  \end{subfigure}
+\hfill 
+  \begin{subfigure}{0.48\textwidth}
+      \centering
+      \includegraphics[height=5cm]{content/abbildungen/mit/240.pdf}
+      \caption{Spannung bei $\phi = 240°$ mit Rauschen.}
+  \end{subfigure}
+\hfill 
+  \begin{subfigure}{0.48\textwidth}
+      \centering
+      \includegraphics[height=5cm]{content/abbildungen/mit/300.pdf}
+      \caption{Spannung bei $\phi = 300°$ mit Rauschen.}
+  \end{subfigure}
+\hfill 
+  \begin{subfigure}{0.48\textwidth}
+      \centering
+      \includegraphics[height=5cm]{content/abbildungen/mit/360.pdf}
+      \caption{Spannung bei $\phi = 360°$ mit Rauschen.}
+  \end{subfigure}
+\caption{Die Spannungen bei verschiedenen Phasenverschiebungen $\phi$ mit Noise Generator.}
+\end{figure}
+
+\begin{table} \label{tab:data_ohne_mit}
   \centering
   \caption{Die aufgenommenen Messergebnisse. Die Spannung in Abhängigkeit von der Phasenverschiebung $\phi$, mit und ohne Noise Generator. } 
-  \label{tab:data_ohne_mit}
   \begin{tabular}{c c c}
     \toprule
-    $\increment \phi /°$ & $A_\text{ohne Noise} [\si{\volt}]$ & $A_\text{mit Noise} [\si{\volt}]$ \\
+    $\increment \phi /°$ & $U_\text{ohne Noise} [\si{\volt}]$ & $U_\text{mit Noise} [\si{\volt}]$ \\
     \midrule
     0    &   8.4   &  5.85  \\
     60   &   9.5   &  3.72  \\
@@ -78,9 +132,53 @@ Die entsprechenden Bilder des Oszilloskop sind in \autoref{fig:ohne} zu finden.
   \end{tabular}
 \end{table}
 
+\begin{figure} \label{fig:versuch_1_cosinus}
+  \begin{subfigure}{0.56\textwidth}
+      \centering
+      \includegraphics[height=4cm]{content/abbildungen/phasen_sonia.pdf}
+      \caption{Die aufgenommenen Messwerte zum Versuchsdurchlauf ohne Noise Generator und die dazugehörige Ausgleichskurve.}
+      \label{fig:ohne_noise}
+  \end{subfigure}
+\hfill
+  \begin{subfigure}{0.40\textwidth}
+      \centering
+      \includegraphics[height=3cm]{content/abbildungen/phasen_noise_sonia.pdf}
+      \caption{Die aufgenommenen Messwerte zum Versuchsdurchlauf mit Noise Generator und die dazugehörige Ausgleichskurve.}
+      \label{fig:mit_noise}
+  \end{subfigure}
+\end{figure}
+
+\subsection{Untersuchung mit Photodiode}
+\label{subsec:Photodiode}
+
+Die aufgenommenen Messwerte sind in \autoref{tab:data_dioden} zu finden.
+Mithilfe von ipython wird eine Ausgleichsrechnung nach der Form:
+\begin{equation*}
+  A = a \cdot \frac{1}{r} + b
+\end{equation*}
+durchgeführt.
+Dabei ergeben sich folgende Parameter:
+\begin{align*}
+  a &= (84.59 \pm 1.85) \si{\volt\centimeter}\\
+  b &= (-1.07 \pm 0.16) \si{\volt}
+\end{align*}
+
+Die Messwerte und die dazugehörige Ausgleichskurve ist in \autoref{fig:plot3} zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{content/abbildungen/plot3.pdf}
+  \caption{Die aufgenommenen Messwerte und die Ausgleichskurve.}
+  \label{fig:plot3}
+\end{figure}
+
+\noindent
+Da die Spannung und somit die Intensität mit $\sfrac{1}{r}$ abfällt, wurde ab einem Abstand von $\SI{40}{\centimetre}$ eine Spannung im
+$\si{\milli\volt}$ Bereich aufgenommen, eine genaue Nullspannung wurde nicht gemessen.
+Der größte aufgenommene Abstand beträgt $\SI{100}{\centimetre}$, die dazugehörige Spannung $\SI{126}{\milli\volt}$.
+
 \begin{table}
   \centering
-  \caption{Die aufgenommenen Messergebnisse. Die Spannung in Abhängigkeit von der r. } 
+  \caption{Die aufgenommenen Messwerte. Die Spannung in Abhängigkeit vom Abstand $r$ zwischen den beiden Dioden. } 
   \label{tab:data_dioden}
   \begin{tabular}{c c}
     \toprule
