@@ -13,10 +13,10 @@ einer Integrationszeit von $\increment t = \SI{5}{\second}$ aufgenommen werden, 
   \label{tab:Bragg}
   \begin{tabular}{S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=3.1]}
     \toprule
-    $\alpha_{\text{GM}} [\si{\degree}]$ & $ N [\si{Imp\per\second}]$ &
-    $\alpha_{\text{GM}} [\si{\degree}]$ & $ N [\si{Imp\per\second}]$ \\
-    %$\alpha_{\text{GM}} \, [\si{\degree}]$ & $ N \, [\text{Imp}/ \si{\second}]$ & 
-    %$\alpha_{\text{GM}} \, [\si{\degree}]$ & $ N \, [\text{Imp}/ \si{\second}]$ \\
+    $\alpha_{\text{GM}} \mathbin{/} \si{\degree}$ & $ N \mathbin{/} \si{Imp\per\second}$ &
+    $\alpha_{\text{GM}} \mathbin{/} \si{\degree}$ & $ N \mathbin{/} \si{Imp\per\second}$ \\
+    %$\alpha_{\text{GM}} \, \mathbin{/} \si{\degree}$ & $ N \, [\text{Imp}/ \si{\second}$ & 
+    %$\alpha_{\text{GM}} \, \mathbin{/} \si{\degree}$ & $ N \, [\text{Imp}/ \si{\second}$ \\
     \midrule
     26.0 &	56.0  &    28.1 &	215.0 \\
     26.1 &	58.0  &    28.2 &	218.0 \\
@@ -62,406 +62,490 @@ Die Abweichung vom Theoriewert beträgt $\SI{0.7}{\percent}$.
 
 \subsection{Analyse des Emissionsspektrums der Cu-Röntgenröhre}
 
-Das Emissionsspektrums der Kupfer-Röntgenröhre wird bei einer Integrationszeit von $\increment t = \SI{10}{\second}$ in Schritten von $\increment \theta = \SI{0.1}{\degree}$
-aufgenommen, die Messwerte sind in der \autoref{tab:emissionsspektrum} zu finden. 
+  Das Emissionsspektrums der Kupfer-Röntgenröhre wird bei einer Integrationszeit von $\increment t = \SI{10}{\second}$ in Schritten von $\increment \theta = \SI{0.1}{\degree}$
+  aufgenommen, die Messwerte sind in der \autoref{tab:emissionsspektrum} zu finden. 
 
-\begin{table}
-  \centering
-  \caption{Die Messwerte des Emissionsspektrum der Kupfer-Röntgenröhre.}
-  \label{tab:emissionsspektrum}
-  \begin{tabular}{S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=4.1] S[table-format=2.1] S[table-format=4.1]}
-    \toprule
-    $ \theta \, [\si{\degree}]$ & $ N \, [\si{Imp\per\second}]$ & 
-    $ \theta \, [\si{\degree}]$ & $ N \, [\si{Imp\per\second}]$ &
-    $ \theta \, [\si{\degree}]$ & $ N \, [\si{Imp\per\second}]$ &
-    $ \theta \, [\si{\degree}]$ & $ N \, [\si{Imp\per\second}]$ &
-    $ \theta \, [\si{\degree}]$ & $ N \, [\si{Imp\per\second}]$ \\
-    \midrule
-    8.0 	&	323.0 &    11.5	&	406.0 &    14.9	&	248.0 &     18.3	&	166.0  &      21.7	&	164.0 \\   
-    8.1 	&	316.0 &    11.6	&	404.0 &    15.0	&	253.0 &     18.4	&	173.0  &      21.8	&	180.0 \\   
-    8.2 	&	326.0 &    11.7	&	405.0 &    15.1	&	257.0 &     18.5	&	167.0  &      21.9	&	179.0 \\   
-    8.3 	&	340.0 &    11.8	&	400.0 &    15.2	&	248.0 &     18.6	&	169.0  &      22.0	&	191.0 \\   
-    8.4 	&	335.0 &    11.9	&	383.0 &    15.3	&	242.0 &     18.7	&	160.0  &      22.1	&	232.0 \\   
-    8.5 	&	343.0 &    12.0	&	389.0 &    15.4	&	249.0 &     18.8	&	159.0  &      22.2	&	300.0 \\   
-    8.6 	&	350.0 &    12.1	&	382.0 &    15.5	&	246.0 &     18.9	&	157.0  &      22.3	&	536.0 \\   
-    8.7 	&	350.0 &    12.2	&	372.0 &    15.6	&	252.0 &     19.0	&	149.0  &      22.4	&	4128.0\\    
-    8.8 	&	366.0 &    12.3	&	376.0 &    15.7	&	236.0 &     19.1	&	153.0  &      22.5	&	5050.0\\    
-    8.9 	&	357.0 &    12.4	&	385.0 &    15.8	&	234.0 &     19.2	&	150.0  &      22.6	&	4750.0\\    
-    9.0 	&	371.0 &    12.5	&	384.0 &    15.9	&	231.0 &     19.3	&	147.0  &      22.7	&	4571.0\\    
-    9.1 	&	371.0 &    12.6	&	382.0 &    16.0	&	215.0 &     19.4	&	150.0  &      22.8	&	4097.0\\    
-    9.2 	&	372.0 &    12.7	&	373.0 &    16.1	&	217.0 &     19.5	&	148.0  &      22.9	&	901.0 \\   
-    9.3 	&	364.0 &    12.8	&	376.0 &    16.2	&	227.0 &     19.6	&	149.0  &      23.0	&	244.0 \\   
-    9.4 	&	381.0 &    12.9	&	373.0 &    16.3	&	214.0 &     19.7	&	143.0  &      23.1	&	179.0 \\   
-    9.5 	&	379.0 &    13.0	&	375.0 &    16.4	&	217.0 &     19.8	&	153.0  &      23.2	&	151.0 \\   
-    9.6 	&	393.0 &    13.1	&	366.0 &    16.5	&	210.0 &     19.9	&	182.0  &      23.3	&	145.0 \\   
-    9.7 	&	375.0 &    13.2	&	354.0 &    16.6	&	211.0 &     20.0	&	291.0  &      23.4	&	130.0 \\   
-    9.8 	&	391.0 &    13.3	&	341.0 &    16.7	&	206.0 &     20.1	&	1127.0 &      23.5	&	121.0 \\    
-    9.9 	&	395.0 &    13.4	&	326.0 &    16.8	&	205.0 &     20.2	&	1599.0 &      23.6	&	126.0 \\    
-    10.0	&	402.0 &    13.5	&	318.0 &    16.9	&	198.0 &     20.3	&	1533.0 &      23.7	&	117.0 \\    
-    10.1	&	405.0 &    13.6	&	305.0 &    17.0	&	203.0 &     20.4	&	1430.0 &      23.8	&	112.0 \\    
-    10.2	&	390.0 &    13.7	&	296.0 &    17.1	&	199.0 &     20.5	&	1267.0 &      23.9	&	110.0 \\    
-    10.3	&	398.0 &    13.8	&	286.0 &    17.2	&	198.0 &     20.6	&	425.0  &      24.0	&	105.0 \\   
-    10.4	&	400.0 &    13.9	&	285.0 &    17.3	&	191.0 &     20.7	&	241.0  &      24.1	&	106.0 \\   
-    10.5	&	418.0 &    14.0	&	274.0 &    17.4	&	192.0 &     20.8	&	225.0  &      24.2	&	107.0 \\   
-    10.6	&	401.0 &    14.1	&	264.0 &    17.5	&	184.0 &     20.9	&	192.0  &      24.3	&	95.0  \\  
-    10.7	&	410.0 &    14.2	&	266.0 &    17.6	&	191.0 &     21.0	&	188.0  &      24.4	&	94.0  \\  
-    10.8	&	408.0 &    14.3	&	270.0 &    17.7	&	188.0 &     21.1	&	172.0  &      24.5	&	100.0 \\   
-    10.9	&	409.0 &    14.4	&	255.0 &    17.8	&	181.0 &     21.2	&	168.0  &      24.6	&	91.0  \\  
-    11.0	&	414.0 &    14.5	&	255.0 &    17.9	&	185.0 &     21.3	&	169.0  &      24.7	&	85.0  \\  
-    11.1	&	420.0 &    14.6	&	260.0 &    18.0	&	184.0 &     21.4	&	166.0  &      24.8	&	88.0  \\  
-    11.2	&	417.0 &    14.7	&	251.0 &    18.1	&	179.0 &     21.5	&	170.0  &      24.9	&	83.0  \\  
-    11.3	&	417.0 &    14.8	&	250.0 &    18.2	& 180.0 &     21.6	&	174.0  &      25.0	&	85.0  \\  
-    11.4	&	409.0 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+  \begin{table}
+    \centering
+    \caption{Die Messwerte des Emissionsspektrum der Kupfer-Röntgenröhre.}
+    \label{tab:emissionsspektrum}
+    \begin{tabular}{S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=3.1] S[table-format=2.1] S[table-format=4.1] S[table-format=2.1] S[table-format=4.1]}
+      \toprule
+      $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ & 
+      $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ &
+      $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ &
+      $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ &
+      $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ \\
+      \midrule
+      8.0 	&	323.0 &    11.5	&	406.0 &    14.9	&	248.0 &     18.3	&	166.0  &      21.7	&	164.0 \\   
+      8.1 	&	316.0 &    11.6	&	404.0 &    15.0	&	253.0 &     18.4	&	173.0  &      21.8	&	180.0 \\   
+      8.2 	&	326.0 &    11.7	&	405.0 &    15.1	&	257.0 &     18.5	&	167.0  &      21.9	&	179.0 \\   
+      8.3 	&	340.0 &    11.8	&	400.0 &    15.2	&	248.0 &     18.6	&	169.0  &      22.0	&	191.0 \\   
+      8.4 	&	335.0 &    11.9	&	383.0 &    15.3	&	242.0 &     18.7	&	160.0  &      22.1	&	232.0 \\   
+      8.5 	&	343.0 &    12.0	&	389.0 &    15.4	&	249.0 &     18.8	&	159.0  &      22.2	&	300.0 \\   
+      8.6 	&	350.0 &    12.1	&	382.0 &    15.5	&	246.0 &     18.9	&	157.0  &      22.3	&	536.0 \\   
+      8.7 	&	350.0 &    12.2	&	372.0 &    15.6	&	252.0 &     19.0	&	149.0  &      22.4	&	4128.0\\    
+      8.8 	&	366.0 &    12.3	&	376.0 &    15.7	&	236.0 &     19.1	&	153.0  &      22.5	&	5050.0\\    
+      8.9 	&	357.0 &    12.4	&	385.0 &    15.8	&	234.0 &     19.2	&	150.0  &      22.6	&	4750.0\\    
+      9.0 	&	371.0 &    12.5	&	384.0 &    15.9	&	231.0 &     19.3	&	147.0  &      22.7	&	4571.0\\    
+      9.1 	&	371.0 &    12.6	&	382.0 &    16.0	&	215.0 &     19.4	&	150.0  &      22.8	&	4097.0\\    
+      9.2 	&	372.0 &    12.7	&	373.0 &    16.1	&	217.0 &     19.5	&	148.0  &      22.9	&	901.0 \\   
+      9.3 	&	364.0 &    12.8	&	376.0 &    16.2	&	227.0 &     19.6	&	149.0  &      23.0	&	244.0 \\   
+      9.4 	&	381.0 &    12.9	&	373.0 &    16.3	&	214.0 &     19.7	&	143.0  &      23.1	&	179.0 \\   
+      9.5 	&	379.0 &    13.0	&	375.0 &    16.4	&	217.0 &     19.8	&	153.0  &      23.2	&	151.0 \\   
+      9.6 	&	393.0 &    13.1	&	366.0 &    16.5	&	210.0 &     19.9	&	182.0  &      23.3	&	145.0 \\   
+      9.7 	&	375.0 &    13.2	&	354.0 &    16.6	&	211.0 &     20.0	&	291.0  &      23.4	&	130.0 \\   
+      9.8 	&	391.0 &    13.3	&	341.0 &    16.7	&	206.0 &     20.1	&	1127.0 &      23.5	&	121.0 \\    
+      9.9 	&	395.0 &    13.4	&	326.0 &    16.8	&	205.0 &     20.2	&	1599.0 &      23.6	&	126.0 \\    
+      10.0	&	402.0 &    13.5	&	318.0 &    16.9	&	198.0 &     20.3	&	1533.0 &      23.7	&	117.0 \\    
+      10.1	&	405.0 &    13.6	&	305.0 &    17.0	&	203.0 &     20.4	&	1430.0 &      23.8	&	112.0 \\    
+      10.2	&	390.0 &    13.7	&	296.0 &    17.1	&	199.0 &     20.5	&	1267.0 &      23.9	&	110.0 \\    
+      10.3	&	398.0 &    13.8	&	286.0 &    17.2	&	198.0 &     20.6	&	425.0  &      24.0	&	105.0 \\   
+      10.4	&	400.0 &    13.9	&	285.0 &    17.3	&	191.0 &     20.7	&	241.0  &      24.1	&	106.0 \\   
+      10.5	&	418.0 &    14.0	&	274.0 &    17.4	&	192.0 &     20.8	&	225.0  &      24.2	&	107.0 \\   
+      10.6	&	401.0 &    14.1	&	264.0 &    17.5	&	184.0 &     20.9	&	192.0  &      24.3	&	95.0  \\  
+      10.7	&	410.0 &    14.2	&	266.0 &    17.6	&	191.0 &     21.0	&	188.0  &      24.4	&	94.0  \\  
+      10.8	&	408.0 &    14.3	&	270.0 &    17.7	&	188.0 &     21.1	&	172.0  &      24.5	&	100.0 \\   
+      10.9	&	409.0 &    14.4	&	255.0 &    17.8	&	181.0 &     21.2	&	168.0  &      24.6	&	91.0  \\  
+      11.0	&	414.0 &    14.5	&	255.0 &    17.9	&	185.0 &     21.3	&	169.0  &      24.7	&	85.0  \\  
+      11.1	&	420.0 &    14.6	&	260.0 &    18.0	&	184.0 &     21.4	&	166.0  &      24.8	&	88.0  \\  
+      11.2	&	417.0 &    14.7	&	251.0 &    18.1	&	179.0 &     21.5	&	170.0  &      24.9	&	83.0  \\  
+      11.3	&	417.0 &    14.8	&	250.0 &    18.2	& 180.0 &     21.6	&	174.0  &      25.0	&	85.0  \\  
+      11.4	&	409.0 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{build/emissionsspektrum.pdf}
-  \caption{Das Emissionsspektrum einer Kupfer-Röntgenröhre.}
-  \label{fig:emissionsspektrum}
-\end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{build/emissionsspektrum.pdf}
+    \caption{Das Emissionsspektrum einer Kupfer-Röntgenröhre.}
+    \label{fig:emissionsspektrum}
+  \end{figure}
 
-\noindent
-Die Messwerte aus der \autoref{tab:emissionsspektrum} sind in die \autoref{fig:emissionsspektrum} eingetragen. Es sind der höchste Wert des Bremsberges markiert,
-sowie die Peaks der $K_{\alpha}$ und der $K_{\beta}$ Linie. Außerdem sind auch die Halbwertsbreiten eingezeichnet.
-Die markanten Stellen lauten:
-\begin{align*}
-  \text{für} \, K_{\alpha}: \theta &= \SI{22.50(10)}{\degree} & N &= \SI{5050.0}{Imp\per\second} \\
-              \theta_{\text{FWHM}, 1} &= \SI{22.35(20)}{\degree} & N_{\text{FWHM}} &= \SI{2525.0}{Imp\per\second} \\
-              \theta_{\text{FWHM}, 2} &= \SI{22.85(20)}{\degree}  \\
-  \text{für} \, K_{\beta}: \theta &= \SI{20.20(10)}{\degree} & N &= \SI{1599.0}{Imp\per\second} \\
-              \theta_{\text{FWHM}, 1} &= \SI{20.16(20)}{\degree} & N_{\text{FWHM}} &= \SI{799.5}{Imp\per\second} \\
-              \theta_{\text{FWHM}, 2} &= \SI{20.57(20)}{\degree}  
-\end{align*}
-Nun lassen sich die entsprechenden Energien nach der Bragg-Bedingung \eqref{eqn:BraggBedingung} und mit $E = \frac{\symup{h} \cdot \symup{c}}{\lambda} $ berechnen. 
-\begin{align*}
-  E_{\text{K}, \alpha} &= \SI{8043(34)}{\electronvolt} & \increment E_{\text{FWHM}, \alpha } &= \SI{170(100)}{\electronvolt}\\
-  E_{\text{K}, \beta} &= \SI{8910(40)}{\electronvolt}  & \increment E_{\text{FWHM}, \beta } &= \SI{170(120)}{\electronvolt}
-\end{align*}
-Das Auflösungsvermögen $A = \frac{E_{\text{K}}}{\increment E_{\text{FWHM}}}$ ergibt sich somit zu:
-\begin{align*}
-  \text{für} \, K_{\alpha}: A&= \num{48(27)}\\
-  \text{für} \, K_{\beta}: A&= \num{52(35)}
-\end{align*}
-Mit der Absoprtionsenergie $E_{\text{abs}} = \SI{8980.47}{\electronvolt}$ \cite{E_abs} und den Energien der $K_{\alpha}$ und $K_{\beta}$ Linie sind die 
-Absorptionskoeffizienten $\sigma_1, \sigma_2$ und $\sigma_3$ nach den Formeln \eqref{eq:sigma1}, \eqref{eq:sigma2} und \eqref{eq:sigma3} zu berechnen.
-Es folgt:
-\begin{align*}
-  \sigma_1 &= \num{3.30}\\
-  \sigma_2 &= \num{12.40(30)}\\
-  \sigma_3 &= \num{22.40(210)}
-\end{align*}
+  \noindent
+  Die Messwerte aus der \autoref{tab:emissionsspektrum} sind in die \autoref{fig:emissionsspektrum} eingetragen. Es sind der höchste Wert des Bremsberges markiert,
+  sowie die Peaks der $K_{\alpha}$ und der $K_{\beta}$ Linie. Außerdem sind auch die Halbwertsbreiten eingezeichnet. Die Peaks sowie der höchste Wert des Bremsspektrum
+  , den Bremsberg, werden aus des Messwerten direkt bestimmt. Anschließend werden für den Wert der halben Höhe des Peaks die Daten durch 
+  Die markanten Stellen lauten:
+  \begin{align*}
+    \text{für} \, K_{\alpha}: &&\theta &= \SI{22.50(10)}{\degree} \\ 
+                                  && N &= \SI{5050.0}{Imp\per\second} \\
+                                  \\
+                \theta_{\text{FWHM}, 1} &= \SI{22.35(20)}{\degree} &  N_{\text{FWHM}} &= \SI{2525.0}{Imp\per\second} \\
+                \theta_{\text{FWHM}, 2} &= \SI{22.85(20)}{\degree}  \\
+                 \\
+    \text{für} \, K_{\beta}: && \theta &= \SI{20.20(10)}{\degree} \\
+                            && N &= \SI{1599.0}{Imp\per\second} \\
+                            \\
+                 \theta_{\text{FWHM}, 1} &= \SI{20.16(20)}{\degree} & N_{\text{FWHM}} &= \SI{799.5}{Imp\per\second} \\
+                 \theta_{\text{FWHM}, 2} &= \SI{20.57(20)}{\degree}  \\
+  \end{align*}
+  Nun lassen sich die entsprechenden Energien nach der Bragg-Bedingung \eqref{eqn:BraggBedingung} und mit $E = \frac{\symup{h} \cdot \symup{c}}{\lambda} $ berechnen. 
+  \begin{align*}
+    E_{\text{K}, \alpha} &= \SI{8043(34)}{\electronvolt} & \increment E_{\text{FWHM}, \alpha } &= \SI{170(100)}{\electronvolt}\\
+    E_{\text{K}, \beta} &= \SI{8910(40)}{\electronvolt}  & \increment E_{\text{FWHM}, \beta } &= \SI{170(120)}{\electronvolt}
+  \end{align*}
+  Das Auflösungsvermögen $A = \frac{E_{\text{K}}}{\increment E_{\text{FWHM}}}$ ergibt sich somit zu:
+  \begin{align*}
+    \text{für} \, K_{\alpha}: A&= \num{48(27)}\\
+    \text{für} \, K_{\beta}: A&= \num{52(35)}
+  \end{align*}
+  Mit der Absoprtionsenergie $E_{\text{abs}} = \SI{8980.47}{\electronvolt}$ \cite{E_abs} und den Energien der $K_{\alpha}$ und $K_{\beta}$ Linie sind die 
+  Absorptionskoeffizienten $\sigma_1, \sigma_2$ und $\sigma_3$ nach den Formeln \eqref{eq:sigma1}, \eqref{eq:sigma2} und \eqref{eq:sigma3} zu berechnen.
+  Es folgt:
+  \begin{align*}
+    \sigma_1 &= \num{3.30}\\
+    \sigma_2 &= \num{12.40(30)}\\
+    \sigma_3 &= \num{22.40(210)}
+  \end{align*}
 
 
 \subsection{Analyse der Absorptionsspektren}\label{sec:Analyse Absorptionsspektrum}
 
-Es werden Absorber verschiedener Materialien vor das Geiger-Müller-Zählrohr positioniert. In Schritten von $\increment \theta = \SI{0.1}{\degree}$ werden die Messungen
-mit einer Integrationszeit von $\increment t = \SI{20}{\second}$ durchgeführt.
+  Es werden Absorber verschiedener Materialien vor das Geiger-Müller-Zählrohr positioniert. In Schritten von $\increment \theta = \SI{0.1}{\degree}$ werden die Messungen
+  mit einer Integrationszeit von $\increment t = \SI{20}{\second}$ durchgeführt.
 
-\subsubsection{Zink}
-Die Werte von der Messung mit Zink, welches eine Ordnungszahl von $Z=\num{30}$ besitzt,  sind in der \autoref{tab:zink} zu finden. 
+  \noindent Für alle Absorbermaterialien werden aus den aufgenommenen Daten das Intentitätsminimum $I_{\text{min}}$ und das Intensitätsmaximum $I_{\text{max}}$ 
+  ermittelt. Nach 
+  \begin{equation*}
+    I_{\text{K}} = I_{\text{min}} + \frac{I_{\text{max}} - I_{\text{min}}}{2}
+  \end{equation*}
+  wird die Intesität an der Mitte der Kante errechnet. Mithilfe einer linearen Interpolation zwischen den nächst gelegenen Punkten lässt sich ein Wert für
+  den entsprechenden Winkel $\theta$ ermitteln. Es wird eine Funktion der Form $y = m \cdot x + n$ genutzt. Dann ist der Winkel über 
+  die folgende Formel zu berechnen: 
+  \begin{equation*}
+   \theta_{\text{K}} = \frac{I_{\text{K}} - n}{m} 
+  \end{equation*}
+  Aus diesem Winkel werden dann nach der Bragg-Bedingung \eqref{eqn:BraggBedingung} die Energie und nach der Formel 
+  \eqref{eqn:absorptionskoeff} die Abschirmkonstante berechnet. 
 
-\begin{table}
-  \centering
-  \caption{Die Werte der Messung mit einem Zinkabsorber.}
-  \label{tab:zink}
-  \begin{tabular}{S[table-format=2.1] S[table-format=3.1]}
-    \toprule
-    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
-    \midrule
-    18.0  &	58.0  \\
-    18.1  &	54.0  \\
-    18.2  &	55.0  \\
-    18.3  &	54.0  \\
-    18.4  &	54.0  \\
-    18.5  &	55.0  \\
-    18.6  &	65.0  \\
-    18.7  &	84.0  \\
-    18.8  &	91.0  \\
-    18.9  &	100.0 \\
-    19.0  &	102.0 \\
-    19.1  &	100.0 \\
-    19.2  &	98.0  \\
-    19.3  &	100.0 \\
-    19.4  &	95.0  \\
-    19.5  &	98.0  \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+  \subsubsection{Zink}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{build/zink.pdf}
-  \caption{Die Messung zum Zinkabsorber.}
-  \label{fig:zink}
-\end{figure}
+    Die Werte von der Messung mit Zink, welches eine Ordnungszahl von $Z=\num{30}$ besitzt,  sind in der \autoref{tab:zink} zu finden. 
 
-\noindent
-In der \autoref{fig:zink} sind die Daten aus der \autoref{tab:zink} aufgetragen. Zusätzlich sind der Minimalwert und der Maximalwert markiert.
-Der Winkel der Mitte der $K$-Kante wird zu $\theta_{\text{Zn}} = \SI{18.65(10)}{\degree}$ abgelesen. 
-Damit berechnet sich die Energie aus der Bragg-Bedingung \eqref{eqn:BraggBedingung} und die Abschirmkonstante $\sigma$ aus \eqref{eqn:absorptionskoeff} zu:
-\begin{align*}
-  E_{\text{Zn}} &= \SI{9.63(5)}{\kilo\electronvolt}\\
-  \sigma_{\text{Zn}} &= \num{3.60(7)}
-\end{align*}
+    \begin{table}
+      \centering
+      \caption{Die Werte der Messung mit einem Zinkabsorber.}
+      \label{tab:zink}
+      \begin{tabular}{S[table-format=2.1] S[table-format=3.1]}
+        \toprule
+        $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ \\
+        \midrule
+        18.0  &	58.0  \\
+        18.1  &	54.0  \\
+        18.2  &	55.0  \\
+        18.3  &	54.0  \\
+        18.4  &	54.0  \\
+        18.5  &	55.0  \\
+        18.6  &	65.0  \\
+        18.7  &	84.0  \\
+        18.8  &	91.0  \\
+        18.9  &	100.0 \\
+        19.0  &	102.0 \\
+        19.1  &	100.0 \\
+        19.2  &	98.0  \\
+        19.3  &	100.0 \\
+        19.4  &	95.0  \\
+        19.5  &	98.0  \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
 
-\subsubsection{Gallium}
-Gallium hat eine Ordnungszahl von $Z = \num{31}$.
-Die Messdaten aus der Messung mit einem Gallium-Absorber sind in der \autoref{tab:gallium} zu finden und in der \autoref{fig:gallium} in einem $\theta$-$N$-Diagramm
-aufgetragen.
-\begin{table}
-  \centering
-  \caption{Die Werte der Messung mit einem Absorber aus Gallium.}
-  \label{tab:gallium}
-  \begin{tabular}{S[table-format=2.1] S[table-format=3.1]}
-    \toprule
-    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
-    \midrule
-    17.0	&   66.0  \\
-    17.1	&   66.0  \\
-    17.2	&   78.0  \\
-    17.3	&   88.0  \\
-    17.4	&   102.0 \\
-    17.5	&   116.0 \\
-    17.6	&   121.0 \\
-    17.7	&   121.0 \\
-    17.8	&   122.0 \\
-    17.9	&   122.0 \\
-    18.0	&   119.0 \\
-    18.1	&   114.0 \\
-    18.2	&   110.0 \\
-    18.3	&   108.0 \\
-    18.4	&   104.0 \\
-    18.5	&   110.0 \\
-    18.6	&   110.0 \\
-    18.7	&   109.0 \\
-    18.8	&   99.0  \\
-    18.9	&   100.0 \\
-    19.0	&   98.0  \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{build/zink.pdf}
+      \caption{Die Messung zum Zinkabsorber.}
+      \label{fig:zink}
+    \end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{build/gallium.pdf}
-  \caption{Die Messung zum Absorber aus Gallium.}
-  \label{fig:gallium}
-\end{figure}
+    \noindent
+    In der \autoref{fig:zink} sind die Daten aus der \autoref{tab:zink} aufgetragen. Zusätzlich sind der Minimalwert und der Maximalwert markiert.
+    \begin{align*}
+      I_{\text{min}} &= \SI{54}{Imp\per\second}\\
+      I_{\text{max}} &= \SI{102}{Imp\per\second}
+    \end{align*}
+    Die Parameter der linearen Interpolation sind:
+    \begin{align*}
+      m & = \SI{189.99}{Imp\per\second\degree}\\
+      n & = \SI{-3468.99}{Imp\per\second}
+    \end{align*}
+    Der Winkel der Mitte der $K$-Kante ($I_{\text{K}} = \SI{78}{Imp\per\second}$) wird zu $\theta_{\text{Zn}} = \SI{18.67(5)}{\degree}$ ermittelt. 
+    Damit berechnet sich die Energie aus der Bragg-Bedingung \eqref{eqn:BraggBedingung} und die Abschirmkonstante $\sigma$ aus \eqref{eqn:absorptionskoeff} zu:
+    \begin{align*}
+      E_{\text{Zn}} &= \SI{9.616(25)}{\kilo\electronvolt}\\
+      \sigma_{\text{Zn}} &= \num{3.613(35)}
+    \end{align*}
 
-\noindent
-Die Mitte der Kante wird an dem Winkel $\theta_{\text{Ga}} = \SI{17.35(10)}{\degree}$ vermutet, womit sich nach \eqref{eqn:BraggBedingung} und \eqref{eqn:absorptionskoeff} ergibt:
-\begin{align*}
-  E_{\text{Ga}} &= \SI{10.32(6)}{\kilo\electronvolt}\\
-  \sigma_{\text{Ga}} &= \num{3.67(8)}
-\end{align*} 
+  \subsubsection{Gallium}
+    Gallium hat eine Ordnungszahl von $Z = \num{31}$.Die Messdaten aus der Messung mit einem Gallium-Absorber sind in der \autoref{tab:gallium} zu finden und 
+    in der \autoref{fig:gallium} in einem $\theta$-$N$-Diagramm aufgetragen.
+    \begin{table}
+      \centering
+      \caption{Die Werte der Messung mit einem Absorber aus Gallium.}
+      \label{tab:gallium}
+      \begin{tabular}{S[table-format=2.1] S[table-format=3.1]}
+        \toprule
+        $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ \\
+        \midrule
+        17.0	&   66.0  \\
+        17.1	&   66.0  \\
+        17.2	&   78.0  \\
+        17.3	&   88.0  \\
+        17.4	&   102.0 \\
+        17.5	&   116.0 \\
+        17.6	&   121.0 \\
+        17.7	&   121.0 \\
+        17.8	&   122.0 \\
+        17.9	&   122.0 \\
+        18.0	&   119.0 \\
+        18.1	&   114.0 \\
+        18.2	&   110.0 \\
+        18.3	&   108.0 \\
+        18.4	&   104.0 \\
+        18.5	&   110.0 \\
+        18.6	&   110.0 \\
+        18.7	&   109.0 \\
+        18.8	&   99.0  \\
+        18.9	&   100.0 \\
+        19.0	&   98.0  \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
 
-\subsubsection{Brom}
-Die aufgenommenen Werte von der Messung mit dem Bromabsorber sind in der \autoref{tab:brom} aufgeschrieben. Außerdem sind sie in der \autoref{fig:brom} in einem
-Diagramm abgebildet. Brom hat eine Ordnungszahl von $Z=\num{35}$.
-\begin{table}
-  \centering
-  \caption{Die Werte der Messung mit einem Bromabsorber.}
-  \label{tab:brom}
-  \begin{tabular}{S[table-format=2.1] S[table-format=2.1]}
-    \toprule
-    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
-    \midrule
-    12.8	&   10.0  \\
-    12.9	&   12.0  \\
-    13.0	&   9.0   \\
-    13.1	&   13.0  \\
-    13.2	&   18.0  \\
-    13.3	&   21.0  \\
-    13.4	&   25.0  \\
-    13.5	&   27.0  \\
-    13.6	&   27.0  \\
-    13.7	&   22.0  \\
-    13.8	&   25.0  \\
-    13.9	&   21.0  \\
-    14.0	&   23.0  \\
-    14.1	&   20.0  \\
-    14.2	&   21.0  \\
-    14.3	&   19.0  \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{build/gallium.pdf}
+      \caption{Die Messung zum Absorber aus Gallium.}
+      \label{fig:gallium}
+    \end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{build/brom.pdf}
-  \caption{Die Messung zum Bromabsorber.}
-  \label{fig:brom}
-\end{figure}
+    \noindent Die markierte Intensitätsextrema haben den Wert:
+    \begin{align*}
+      I_{\text{min}} &= \SI{66}{Imp\per\second}\\
+      I_{\text{max}} &= \SI{122}{Imp\per\second}
+    \end{align*}
+    Die Interpolationsgerade hat folgende Parameter:
+    \begin{align*}
+      m & = \SI{140.00}{Imp\per\second\degree}\\
+      n & = \SI{-2334.00}{Imp\per\second}
+    \end{align*}
+    Die Mitte der Kante befindet sich bei $\theta_{\text{Ga}} = \SI{17.45(5)}{\degree}$ mit $I_{\text{K}} = \SI{94}{Imp\per\second}$ , womit sich ergibt:
+    \begin{align*}
+      E_{\text{Ga}} &= \SI{10.326(29)}{\kilo\electronvolt}\\
+      \sigma_{\text{Ga}} &= \num{3.67(4)}
+    \end{align*} 
 
-\noindent
-Der Winkel $\theta_{\text{Br}} $ wird zu $\SI{13.20(10)}{\degree}$ abgelesen, sodass sich 
-\begin{align*}
-  E_{\text{Br}} &= \SI{13.48(10)}{\kilo\electronvolt}\\
-  \sigma_{\text{Br}} &= \num{3.84(12)}
-\end{align*} 
-aus den Formeln \eqref{eqn:BraggBedingung} und \eqref{eqn:absorptionskoeff} berechnen lassen.
+  \subsubsection{Brom}
+    Die aufgenommenen Werte von der Messung mit dem Bromabsorber sind in der \autoref{tab:brom} aufgeschrieben. Außerdem sind sie in der \autoref{fig:brom} in einem
+    Diagramm abgebildet. Brom hat eine Ordnungszahl von $Z=\num{35}$.
+    \begin{table}
+      \centering
+      \caption{Die Werte der Messung mit einem Bromabsorber.}
+      \label{tab:brom}
+      \begin{tabular}{S[table-format=2.1] S[table-format=2.1]}
+        \toprule
+        $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ \\
+        \midrule
+        12.8	&   10.0  \\
+        12.9	&   12.0  \\
+        13.0	&   9.0   \\
+        13.1	&   13.0  \\
+        13.2	&   18.0  \\
+        13.3	&   21.0  \\
+        13.4	&   25.0  \\
+        13.5	&   27.0  \\
+        13.6	&   27.0  \\
+        13.7	&   22.0  \\
+        13.8	&   25.0  \\
+        13.9	&   21.0  \\
+        14.0	&   23.0  \\
+        14.1	&   20.0  \\
+        14.2	&   21.0  \\
+        14.3	&   19.0  \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
 
-\subsubsection{Rubidium}
-Rubidium, welches die Ordnungszahl $Z = \num{37}$ hat, wird als Absorber benutzt. Die Daten sind in der \autoref{tab:rubidium} zu finden und in der \autoref{fig:rubidium}
-aufgetragen zu sehen.
-\begin{table}
-  \centering
-  \caption{Die Werte der Messung mit einem Absorber aus Rubidium.}
-  \label{tab:rubidium}
-  \begin{tabular}{S[table-format=2.1] S[table-format=2.1]}
-    \toprule
-    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
-    \midrule
-    11.2	&   11.0  \\
-    11.3	&   10.0  \\
-    11.4	&   10.0  \\
-    11.5	&   12.0  \\
-    11.6	&   17.0  \\
-    11.7	&   32.0  \\
-    11.8	&   39.0  \\
-    11.9	&   47.0  \\
-    12.0	&   57.0  \\
-    12.1	&   64.0  \\
-    12.2	&   61.0  \\
-    12.3	&   57.0  \\
-    12.4	&   54.0  \\
-    12.5	&   54.0  \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{build/brom.pdf}
+      \caption{Die Messung zum Bromabsorber.}
+      \label{fig:brom}
+    \end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{build/rubidium.pdf}
-  \caption{Die Messung zum Absorber aus Rubidium.}
-  \label{fig:rubidium}
-\end{figure}
+    \noindent Die markierte Intensitätsextrema haben den Wert:
+    \begin{align*}
+      I_{\text{min}} &= \SI{9}{Imp\per\second}\\
+      I_{\text{max}} &= \SI{27}{Imp\per\second}
+    \end{align*}
+    Die Interpolationsgerade hat folgende Parameter:
+    \begin{align*}
+      m & = \SI{40.00}{Imp\per\second\degree}\\
+      n & = \SI{-511.00}{Imp\per\second}
+    \end{align*}
 
-\noindent
-Es wird nach \eqref{eqn:BraggBedingung} und \eqref{eqn:absorptionskoeff} 
-\begin{align*}
-  E_{\text{Rb}} &= \SI{13.48(10)}{\kilo\electronvolt}\\
-  \sigma_{\text{Rb}} &= \num{3.84(12)}
-\end{align*} 
-gerechnet, wobei der Winkel zu $\theta_{\text{Rb}} = \SI{11.75(10)}{\degree}$ bestimmt wird.
+    \noindent Der Winkel $\theta_{\text{Br}} $ wird zu $\SI{13.23(5)}{\degree}$ bestimmt, $I_{\text{K}} = \SI{18}{Imp\per\second}$, sodass sich 
+    \begin{align*}
+      E_{\text{Br}} &= \SI{13.45(5)}{\kilo\electronvolt}\\
+      \sigma_{\text{Br}} &= \num{3.87(6)}
+    \end{align*} 
+    aus den Formeln \eqref{eqn:BraggBedingung} und \eqref{eqn:absorptionskoeff} berechnen lassen.
 
-\subsubsection{Strontium}
-In der \autoref{tab:strontium} sind die Messdaten der Strontium-Messung zu sehen. Diese Daten sind in die \autoref{fig:strontium} eingetragen. Strontium hat eine
-Ordnungszahl von $Z=\num{38}$.
-\begin{table}
-  \centering
-  \caption{Die Werte der Messung mit einem Strontiumabsorber.}
-  \label{tab:strontium}
-  \begin{tabular}{S[table-format=2.1] S[table-format=2.1]}
-    \toprule
-    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
-    \midrule
-    11.2	&   11.0  \\
-    11.3	&   10.0  \\
-    11.4	&   10.0  \\
-    11.5	&   12.0  \\
-    11.6	&   17.0  \\
-    11.7	&   32.0  \\
-    11.8	&   39.0  \\
-    11.9	&   47.0  \\
-    12.0	&   57.0  \\
-    12.1	&   64.0  \\
-    12.2	&   61.0  \\
-    12.3	&   57.0  \\
-    12.4	&   54.0  \\
-    12.5	&   54.0  \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+  \subsubsection{Rubidium}
+    Rubidium, welches die Ordnungszahl $Z = \num{37}$ hat, wird als Absorber benutzt. Die Daten sind in der \autoref{tab:rubidium} zu finden und in der \autoref{fig:rubidium}
+    aufgetragen zu sehen.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{build/strontium.pdf}
-  \caption{Die Messung zum Strontiumabsorber.}
-  \label{fig:strontium}
-\end{figure}
+    \begin{table}
+      \centering
+      \caption{Die Werte der Messung mit einem Absorber aus Rubidium.}
+      \label{tab:rubidium}
+      \begin{tabular}{S[table-format=2.1] S[table-format=2.1]}
+        \toprule
+        $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ \\
+        \midrule
+        11.2	&   11.0  \\
+        11.3	&   10.0  \\
+        11.4	&   10.0  \\
+        11.5	&   12.0  \\
+        11.6	&   17.0  \\
+        11.7	&   32.0  \\
+        11.8	&   39.0  \\
+        11.9	&   47.0  \\
+        12.0	&   57.0  \\
+        12.1	&   64.0  \\
+        12.2	&   61.0  \\
+        12.3	&   57.0  \\
+        12.4	&   54.0  \\
+        12.5	&   54.0  \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
 
-\noindent
-Der Winkel $\theta_{\text{Sr}}$ wurde zu $\SI{11.05(10)}{\degree}$ abgelesen. Damit ergibt sich nach \eqref{eqn:BraggBedingung} und \eqref{eqn:absorptionskoeff}:
-\begin{align*}
-  E_{\text{Sr}} &= \SI{16.06(14)}{\kilo\electronvolt}\\
-  \sigma_{\text{Sr}} &= \num{4.04(16)}
-\end{align*} 
+    \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{build/rubidium.pdf}
+      \caption{Die Messung zum Absorber aus Rubidium.}
+      \label{fig:rubidium}
+    \end{figure}
 
-\subsubsection{Zirkonium}
-Zirkonium hat eine Ordnungszahl von $Z = \num{40}$. Die Daten der Messung mit einem Absorber aus diesem Material sind in \autoref{tab:zirkonium} zu finden.
-Außerdem sind sie in der \autoref{fig:zirkonium} aufgetragen worden, zudem wurde der Minimal- und der Maximalwert markiert.
-\begin{table}
-  \centering
-  \caption{Die Werte der Messung mit einem Absorber aus Zirkunium.}
-  \label{tab:zirkonium}
-  \begin{tabular}{S[table-format=2.1] S[table-format=3.1]}
-    \toprule
-    $ \theta \, [\si{\degree}]$ & $ N \, [\text{Imp}/\si{\second}]$ \\
-    \midrule
-    9.5	  &   112.0 \\
-    9.6	  &   120.0 \\
-    9.7	  &   126.0 \\
-    9.8	  &   147.0 \\
-    9.9	  &   180.0 \\
-    10.0	&   225.0 \\
-    10.1	&   266.0 \\
-    10.2	&   282.0 \\
-    10.3	&   290.0 \\
-    10.4	&   301.0 \\
-    10.5	&   295.0 \\
-    10.6	&   283.0 \\
-    10.7	&   296.0 \\
-    10.8	&   283.0 \\
-    10.9	&   286.0 \\
-    11.0	&   286.0 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+    \noindent Die markierte Intensitätsextrema haben den Wert:
+    \begin{align*}
+      I_{\text{min}} &= \SI{10}{Imp\per\second}\\
+      I_{\text{max}} &= \SI{64}{Imp\per\second}
+    \end{align*}
+    Die Interpolationsgerade hat folgende Parameter:
+    \begin{align*}
+      m & = \SI{70.00}{Imp\per\second\degree}\\
+      n & = \SI{-787.00}{Imp\per\second}
+    \end{align*}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{build/zirkonium.pdf}
-  \caption{Die Messung zum Absorber aus Zirkonium.}
-  \label{fig:zirkonium}
-\end{figure}
+    \noindent
+    Es wird nach \eqref{eqn:BraggBedingung} und \eqref{eqn:absorptionskoeff} 
+    \begin{align*}
+      E_{\text{Rb}} &= \SI{15.09(6)}{\kilo\electronvolt}\\
+      \sigma_{\text{Rb}} &= \num{4.07(7)}
+    \end{align*} 
+    gerechnet, wobei für $I_{\text{K}} = \SI{37}{Imp\per\second}$ der Winkel zu $\theta_{\text{Rb}} = \SI{11.77(5)}{\degree}$ bestimmt wird.
 
-\noindent
-Der Winkel wird zu $\theta_{\text{Zr}} = \SI{9.95(10)}{\degree}$ abgelesen. Durch anwenden der Formeln \eqref{eqn:BraggBedingung} und \eqref{eqn:absorptionskoeff}
-lassen sich die Energie und die Abschirmkonstante ermitteln.
-\begin{align*}
-  E_{\text{Zr}} &= \SI{17.81(18)}{\kilo\electronvolt}\\
-  \sigma_{\text{Zr}} &= \num{4.28(18)}
-\end{align*} 
+  \subsubsection{Strontium}
+    In der \autoref{tab:strontium} sind die Messdaten der Strontium-Messung zu sehen. Diese Daten sind in die \autoref{fig:strontium} eingetragen. Strontium hat eine
+    Ordnungszahl von $Z=\num{38}$.
+    \begin{table}
+      \centering
+      \caption{Die Werte der Messung mit einem Strontiumabsorber.}
+      \label{tab:strontium}
+      \begin{tabular}{S[table-format=2.1] S[table-format=2.1]}
+        \toprule
+        $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ \\
+        \midrule
+        11.2	&   11.0  \\
+        11.3	&   10.0  \\
+        11.4	&   10.0  \\
+        11.5	&   12.0  \\
+        11.6	&   17.0  \\
+        11.7	&   32.0  \\
+        11.8	&   39.0  \\
+        11.9	&   47.0  \\
+        12.0	&   57.0  \\
+        12.1	&   64.0  \\
+        12.2	&   61.0  \\
+        12.3	&   57.0  \\
+        12.4	&   54.0  \\
+        12.5	&   54.0  \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\textwidth]{build/strontium.pdf}
+      \caption{Die Messung zum Strontiumabsorber.}
+      \label{fig:strontium}
+    \end{figure}
+
+    \noindent Die markierte Intensitätsextrema haben den Wert:
+    \begin{align*}
+      I_{\text{min}} &= \SI{40}{Imp\per\second} \\
+      I_{\text{max}} &= \SI{196}{Imp\per\second}
+    \end{align*}
+    Die Interpolationsgerade hat folgende Parameter:
+    \begin{align*}
+      m & = \SI{310.00}{Imp\per\second\degree}\\
+      n & = \SI{-3321.00}{Imp\per\second}
+    \end{align*}
+
+    \noindent Der Winkel $\theta_{\text{Sr}}$ wurde zu $\SI{11.09(5)}{\degree}$ ermittelt, die Intensität ist $I_{\text{K}} = \SI{118}{Imp\per\second}$. Damit ergibt sich nach \eqref{eqn:BraggBedingung} und
+     \eqref{eqn:absorptionskoeff}
+    \begin{align*}
+      E_{\text{Sr}} &= \SI{16.00(7)}{\kilo\electronvolt}\\
+      \sigma_{\text{Sr}} &= \num{4.11(8)}
+    \end{align*} 
+
+
+  \subsubsection{Zirkonium}
+
+    Zirkonium hat eine Ordnungszahl von $Z = \num{40}$. Die Daten der Messung mit einem Absorber aus diesem Material sind in \autoref{tab:zirkonium} zu finden.
+    Außerdem sind sie in der \autoref{fig:zirkonium} aufgetragen worden, zudem wurde der Minimal- und der Maximalwert markiert.
+    
+    \begin{table}
+      \centering
+      \caption{Die Werte der Messung mit einem Absorber aus Zirkunium.}
+      \label{tab:zirkonium}
+      \begin{tabular}{S[table-format=2.1] S[table-format=3.1]}
+        \toprule
+        $ \theta \, \mathbin{/} \si{\degree}$ & $ N \, \mathbin{/} \si{Imp\per\second}$ \\
+        \midrule
+        9.5	  &   112.0 \\
+        9.6	  &   120.0 \\
+        9.7	  &   126.0 \\
+        9.8	  &   147.0 \\
+        9.9	  &   180.0 \\
+        10.0	&   225.0 \\
+        10.1	&   266.0 \\
+        10.2	&   282.0 \\
+        10.3	&   290.0 \\
+        10.4	&   301.0 \\
+        10.5	&   295.0 \\
+        10.6	&   283.0 \\
+        10.7	&   296.0 \\
+        10.8	&   283.0 \\
+        10.9	&   286.0 \\
+        11.0	&   286.0 \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\textwidth]{build/zirkonium.pdf}
+      \caption{Die Messung zum Absorber aus Zirkonium.}
+      \label{fig:zirkonium}
+    \end{figure}
+
+    \noindent Die markierte Intensitätsextrema haben den Wert:
+    \begin{align*}
+      I_{\text{min}} &= \SI{112}{Imp\per\second}\\
+      I_{\text{max}} &= \SI{301}{Imp\per\second}
+    \end{align*}
+    Die Interpolationsgerade hat folgende Parameter:
+    \begin{align*}
+      m & = \SI{449.99}{Imp\per\second\degree}\\
+      n & = \SI{-4274.99}{Imp\per\second}
+    \end{align*}
+
+    \noindent Der Winkel wird zu $\theta_{\text{Zr}} = \SI{9.96(5)}{\degree}$ errechnet für die Intensität $I_{\text{K}} = \SI{206.5}{Imp\per\second}$. Durch anwenden der Formeln \eqref{eqn:BraggBedingung} und \eqref{eqn:absorptionskoeff}
+    lassen sich die Energie und die Abschirmkonstante ermitteln.
+    \begin{align*}
+      E_{\text{Zr}} &= \SI{17.80(9)}{\kilo\electronvolt}\\
+      \sigma_{\text{Zr}} &= \num{4.30(9)}
+    \end{align*} 
+
 
 
 \subsection{Ermittlung der Rydbergenergie}
 
-Die im Abschnitt \ref{sec:Analyse Absorptionsspektrum} ermittelten Werte der Absorptionsenergie $E_{\text{K}}$ der verschiedenen Absorbermaterialien werden
-in  einem $Z$-$\sqrt{E_{\text{K}}}$ Diagramm eingetragen, wobei $Z$ die Ordnungszahl beschreibt.
+  Die im Abschnitt \ref{sec:Analyse Absorptionsspektrum} ermittelten Werte der Absorptionsenergie $E_{\text{K}}$ der verschiedenen Absorbermaterialien werden
+  in  einem $Z$-$\sqrt{E_{\text{K}}}$ Diagramm eingetragen, wobei $Z$ die Ordnungszahl beschreibt.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{build/rydberg.pdf}
-  \caption{Die Wurzel der ermittelten Absorptionsenergien aufgetragen gegen die Ordnungszahl $Z$.}
-  \label{fig:rydberg}
-\end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{build/rydberg.pdf}
+    \caption{Die Wurzel der ermittelten Absorptionsenergien aufgetragen gegen die Ordnungszahl $Z$.}
+    \label{fig:rydberg}
+  \end{figure}
 
-\noindent
-In \autoref{fig:rydberg} sind eben genannte Daten und eine über diese Daten ausgeführte Ausgleichsrechnung der Form $y = a \cdot x + c $ zu sehen.
-Die Fit-Parameter ergeben sich zu:
-\begin{align*}
-  a &= \SI{0.2815 \pm 0.0015}{1\per\sqrt{\electronvolt}}\\
-  c &= \num{2.37 \pm 0.18}
-\end{align*}
-Nach Vergleich mit dem Moseley'schen Gesetz \eqref{eqn:moseley}, folgt für den Fit-Parameter $a$:
-\begin{equation*}
-  a = \frac{1}{\sqrt{R\cdot h}} \implies R \cdot h = \frac{1}{a^2}
-\end{equation*}
-Somit ergibt sich die Rydbergenergie, welche durch $R \cdot h $ gegeben ist, zu:
-\begin{equation*}
-  R_{\infty} = \SI{12.62(14)}{\electronvolt}
-\end{equation*}
+  \noindent In \autoref{fig:rydberg} sind eben genannte Daten und eine über diese Daten ausgeführte Ausgleichsrechnung der Form $y = a \cdot x + c $ zu sehen.
+  Die Fit-Parameter ergeben sich zu:
+  \begin{align*}
+    a &= \SI{0.2826 \pm 0.0010}{1\per\sqrt{\electronvolt}}\\
+    c &= \num{2.28 \pm 0.12}
+  \end{align*}
+  Nach Vergleich mit dem Moseley'schen Gesetz \eqref{eqn:moseley}, folgt für den Fit-Parameter $a$:
+  \begin{equation*}
+    a = \frac{1}{\sqrt{R\cdot h}} \implies R \cdot h = \frac{1}{a^2}
+  \end{equation*}
+  Somit ergibt sich die Rydbergenergie, welche durch $R \cdot h $ gegeben ist, zu:
+  \begin{equation*}
+    R_{\infty} = \SI{12.52(9)}{\electronvolt}
+  \end{equation*}

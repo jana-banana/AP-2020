@@ -27,6 +27,9 @@ def s(E,Z):
      print(w)
      return Z - unp.sqrt(w)
 
+def rvsline(Ik, m, n):
+    return (Ik - n ) / m
+
 
 ### 1.Überprüfung der Bragg-Bedingung
 print('Überprüfung der Bragg Bedingung')
@@ -48,8 +51,8 @@ plt.figure()
 plt.plot(a, N, 'k.', label='Messwerte Bragg-Bedingung')
 plt.vlines(x= 28, ymin= 50, ymax= 220 ,linewidth=1, color='r', label='Sollwinkel')
 plt.scatter([28.2], [218.0], s=20, marker='x', color='blue', label='Maximum')
-plt.xlabel(r'$ \alpha_{\text{GM}} \quad [\si{\degree}]$')
-plt.ylabel(r'$ N \quad [\text{Imp} / \si{\second}]$')
+plt.xlabel(r'$ \alpha_{\text{GM}} \quad \mathbin{/} \si{\degree}$')
+plt.ylabel(r'$ N \quad \mathbin{/} \si{Imp\per\second}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
@@ -113,8 +116,8 @@ plt.vlines(x= b_max.n, ymin= 0, ymax= 799.5 ,linewidth=1, color='b')
 plt.hlines(y= 2525, xmin=a_min.n, xmax=a_max.n ,linewidth=1, color='g', label=r'FWHM für $K_{\alpha}$')
 plt.vlines(x= a_min.n , ymin= 0, ymax= 2525 ,linewidth=1, color='g')
 plt.vlines(x= a_max.n , ymin= 0, ymax= 2525 ,linewidth=1, color='g')
-plt.xlabel(r'$ \alpha_{\text{GM}} \quad [\si{\degree}]$')
-plt.ylabel(r'$ N \quad [\text{Imp} / \si{\second}]$')
+plt.xlabel(r'$ \alpha_{\text{GM}} \quad \mathbin{/} \si{\degree}$')
+plt.ylabel(r'$ N \quad \mathbin{/} \si{Imp\per\second}$')
 plt.scatter([11.1], [420.0], s=20, marker='x', color='red')
 plt.annotate(r'Bremsberg', 
             xy = (11.1, 420.0), xycoords='data', xytext=(-10, 20),
@@ -144,19 +147,35 @@ print('Absorptionsspektrum')
 #Zink
 t_zink, N_zink = np.genfromtxt('zink.txt', unpack=True)
 
-N_zinkmax =  np.amax(N_zink)
-N_zinkmin =  np.amin(N_zink)
+N_zinkmax = np.amax(N_zink)
+N_zinkmin = np.amin(N_zink)
 I_zink = N_zinkmin + (N_zinkmax - N_zinkmin)/2
 print('Zink', 'min', N_zinkmin, 'max', N_zinkmax)
 print('I_zink', I_zink)
 
-tzink = ufloat(18.65, 0.1)
-print('t_zink', tzink)
-print('E_zink', E(tzink))
+###correction
+#curve-fit
+x_zink = np.array([t_zink[6],t_zink[7]])
+y_zink = np.array([N_zink[6], N_zink[7]])
+zinkplot = np.linspace(t_zink[6], t_zink[7], 1000)
+
+params = np.polyfit( x_zink, y_zink, deg =1, cov = False)
+
+m_zink = params[0]
+n_zink = params[1]
+print('m_zink', m_zink)
+print('n_zink', n_zink)
+
+# print(rvsline(I_zink[1], m_zink, n_zink))
+tzink = ufloat(rvsline(I_zink, m_zink, n_zink), 0.05)    
 Ezink = E(tzink)
 Sigma_zink = s(Ezink,30)
+
+print('t_zink', tzink)
+print('E_zink', E(tzink))
 print('Sigma_zink', Sigma_zink)
 print('dif', 1 - 3.56/Sigma_zink.n)
+
 
 #Gallium
 t_gallium, N_gallium = np.genfromtxt('gallium.txt', unpack=True)
@@ -167,13 +186,28 @@ I_gallium = N_galliummin + (N_galliummax - N_galliummin)/2
 print('Gallium', 'min', N_galliummin, 'max', N_galliummax)
 print('I_gallium', I_gallium)
 
-tgallium = ufloat(17.35, 0.1)
-print('t_gallium', tgallium)
-print('E_gallium', E(tgallium))
+#curve-fit
+x_gallium = np.array([t_gallium[3], t_gallium[4]])
+y_gallium = np.array([N_gallium[3], N_gallium[4]])
+galliumplot = np.linspace(t_gallium[3], t_gallium[4], 1000)
+
+params = np.polyfit( x_gallium, y_gallium, deg =1, cov = False)
+
+m_gallium = params[0]
+n_gallium = params[1]
+
+print('m_gallium', m_gallium)
+print('n_gallium', n_gallium)
+
+# print(rvsline(I_gallium[1], m_gallium, n_gallium))
+tgallium = ufloat(rvsline(I_gallium, m_gallium, n_gallium), 0.05)
 Egallium = E(tgallium)
 Sigma_gallium = s(Egallium,31)
+
+print('t_gallium', tgallium)
+print('E_gallium', E(tgallium))
 print('Sigma_gallium', Sigma_gallium)
-print('dif', 1 - 3.56/Sigma_gallium.n)
+print('dif', 1 - 3.62/Sigma_gallium.n)
 
 #brom
 t_brom, N_brom = np.genfromtxt('brom.txt', unpack=True)
@@ -184,13 +218,28 @@ I_brom = N_brommin + (N_brommax - N_brommin)/2
 print('brom', 'min', N_brommin, 'max', N_brommax)
 print('I_brom', I_brom)
 
-tbrom = ufloat(13.2, 0.1)
-print('t_brom', tbrom)
-print('E_brom', E(tbrom))
+#curve-fit
+x_brom = np.array([t_brom[3], t_brom[5]])
+y_brom = np.array([N_brom[3], N_brom[5]])
+bromplot = np.linspace(t_brom[3], t_brom[5], 1000)
+
+params = np.polyfit( x_brom, y_brom, deg =1, cov = False)
+
+m_brom = params[0]
+n_brom = params[1]
+
+print('m_brom', m_brom)
+print('n_brom', n_brom)
+
+# print(rvsline(I_brom[1], m_brom, n_brom))
+tbrom = ufloat(rvsline(I_brom, m_brom, n_brom), 0.05)
 Ebrom = E(tbrom)
 Sigma_brom = s(Ebrom,35)
+
+print('t_brom', tbrom)
+print('E_brom', E(tbrom))
 print('Sigma_brom', Sigma_brom)
-print('dif', 1 - 3.62/Sigma_brom.n)
+print('dif', 1 - 3.84/Sigma_brom.n)
 
 #rubidium
 t_rubidium, N_rubidium = np.genfromtxt('rubidium.txt', unpack=True)
@@ -201,11 +250,26 @@ I_rubidium = N_rubidiummin + (N_rubidiummax - N_rubidiummin)/2
 print('rubidium', 'min', N_rubidiummin, 'max', N_rubidiummax)
 print('I_rubidium', I_rubidium)
 
-trubidium = ufloat(11.75, 0.1)
-print('t_rubidium', trubidium)
-print('E_rubidium', E(trubidium))
+#curve-fit
+x_rubidium = np.array([t_rubidium[5], t_rubidium[6]])
+y_rubidium = np.array([N_rubidium[5], N_rubidium[6]])
+rubidiumplot = np.linspace(t_rubidium[5], t_rubidium[6], 1000)
+
+params = np.polyfit( x_rubidium, y_rubidium, deg =1, cov = False)
+
+m_rubidium = params[0]
+n_rubidium = params[1]
+
+print('m_rubidium', m_rubidium)
+print('n_rubidium', n_rubidium)
+
+# print(rvsline(I_rubidium[1], m_rubidium, n_rubidium))
+trubidium = ufloat(rvsline(I_rubidium, m_rubidium, n_rubidium), 0.05)
 Erubidium = E(trubidium)
 Sigma_rubidium = s(Erubidium,37)
+
+print('t_rubidium', trubidium)
+print('E_rubidium', E(trubidium))
 print('Sigma_rubidium', Sigma_rubidium)
 print('dif', 1 - 3.95/Sigma_rubidium.n)
 
@@ -218,11 +282,25 @@ I_strontium = N_strontiummin + (N_strontiummax - N_strontiummin)/2
 print('strontium', 'min', N_strontiummin, 'max', N_strontiummax)
 print('I_strontium', I_strontium)
 
-tstrontium = ufloat(11.05, 0.1)
-print('t_strontium', tstrontium)
-print('E_strontium', E(tstrontium))
+#curve-fit
+x_strontium = np.array([t_strontium[5], t_strontium[6]])
+y_strontium = np.array([N_strontium[5], N_strontium[6]])
+strontiumplot = np.linspace(t_strontium[5], t_strontium[6], 1000)
+
+params = np.polyfit( x_strontium, y_strontium, deg =1, cov = False)
+
+m_strontium = params[0]
+n_strontium = params[1]
+
+print('m_strontium', m_strontium)
+print('n_strontium', n_strontium)
+
+# print(rvsline(I_strontium[1], m_strontium, n_strontium))
+tstrontium = ufloat(rvsline(I_strontium, m_strontium, n_strontium), 0.05)
 Estrontium = E(tstrontium)
 Sigma_strontium = s(Estrontium,38)
+print('t_strontium', tstrontium)
+print('E_strontium', E(tstrontium))
 print('Sigma_strontium', Sigma_strontium)
 print('dif', 1 - 3.99/Sigma_strontium.n)
 
@@ -235,13 +313,28 @@ I_zirkonium = N_zirkoniummin + (N_zirkoniummax - N_zirkoniummin)/2
 print('zirkonium', 'min', N_zirkoniummin, 'max', N_zirkoniummax)
 print('I_zirkonium', I_zirkonium)
 
-tzirkonium = ufloat(9.95, 0.1)
-print('t_zirkonium', tzirkonium)
-print('E_zirkonium', E(tzirkonium))
+#curve-fit
+x_zirkonium = np.array([t_zirkonium[4], t_zirkonium[5]])
+y_zirkonium = np.array([N_zirkonium[4], N_zirkonium[5]])
+zirkoniumplot = np.linspace(t_zirkonium[4], t_zirkonium[5], 1000)
+
+params = np.polyfit( x_zirkonium, y_zirkonium, deg =1, cov = False)
+
+m_zirkonium = params[0]
+n_zirkonium = params[1]
+
+print('m_zirkonium', m_zirkonium)
+print('n_zirkonium', n_zirkonium)
+
+# print(rvsline(I_zirkonium[1], m_zirkonium, n_zirkonium))
+tzirkonium = ufloat(rvsline(I_zirkonium, m_zirkonium, n_zirkonium), 0.05)
 Ezirkonium = E(tzirkonium)
 Sigma_zirkonium = s(Ezirkonium,40)
+print('t_zirkonium', tzirkonium)
+print('E_zirkonium', E(tzirkonium))
 print('Sigma_zirkonium', Sigma_zirkonium)
 print('dif', 1 - 4.39/Sigma_zirkonium.n)
+
 
 #Bestimmung der Rydbergenergie
 print('Bestimmung der Rydbergenergie')
@@ -266,7 +359,7 @@ plt.figure()
 plt.plot(Ek_plot, Ord, 'k.', label='Errechnete Punkte')
 plt.plot(xplot, a_ryd.n * xplot + c_ryd.n, 'r-', label='Ausgleichsgerade')
 plt.ylabel(r'$Z$')
-plt.xlabel(r'$ \sqrt{E_{\text{K}}} \quad [\si{\electronvolt}^{1/2}]$')
+plt.xlabel(r'$ \sqrt{E_{\text{K}}} \quad \mathbin{/} \si{\electronvolt}^{1/2}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
@@ -274,66 +367,78 @@ plt.savefig('build/rydberg.pdf')
 
 
 plt.figure()
-plt.plot(t_zink, N_zink, 'k.', label='Messwerte')
-plt.scatter([18.4], [N_zinkmin], s=20, marker='x', color='blue', label=r'$I_{\text{min}}$')
+plt.scatter([18.27], [N_zinkmin], s=20, marker='x', color='orange', label=r'$I_{\text{min}}$')
 plt.scatter([19.0], [N_zinkmax], s=20, marker='x', color='green', label=r'$I_{\text{max}}$')
-plt.xlabel(r'$ \theta \quad [\si{\degree}]$')
-plt.ylabel(r'$ N \quad [\text{Imp} / \si{\second}]$')
+plt.scatter([tzink.n], [I_zink], s=20, marker='x', color='red', label=r'$I_{\text{K}}$')
+plt.plot(zinkplot, m_zink * zinkplot + n_zink, '-b', label='lineare Interpolation')
+plt.plot(t_zink, N_zink, 'k.', label='Messwerte')
+plt.xlabel(r'$ \theta \quad \mathbin{/} \si{\degree}$')
+plt.ylabel(r'$ N \quad \mathbin{/} \si{Imp\per\second}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
 plt.savefig('build/zink.pdf')
 
 plt.figure()
+plt.scatter([17.05], [N_galliummin], s=20, marker='x', color='orange', label=r'$I_{\text{min}}$')
+plt.scatter([17.85], [N_galliummax], s=20, marker='x', color='green', label=r'$I_{\text{max}}$')
+plt.scatter([tgallium.n], [I_gallium], s=20, marker='x', color='red', label=r'$I_{\text{K}}$')
+plt.plot(galliumplot, m_gallium * galliumplot + n_gallium, '-b', label='lineare Interpolation')
 plt.plot(t_gallium, N_gallium, 'k.', label='Messwerte')
-plt.scatter([17.0], [N_galliummin], s=20, marker='x', color='blue', label=r'$I_{\text{min}}$')
-plt.scatter([17.8], [N_galliummax], s=20, marker='x', color='green', label=r'$I_{\text{max}}$')
-plt.xlabel(r'$ \theta \quad [\si{\degree}]$')
-plt.ylabel(r'$ N \quad [\text{Imp} / \si{\second}]$')
+plt.xlabel(r'$ \theta \quad \mathbin{/} \si{\degree}$')
+plt.ylabel(r'$ N \quad \mathbin{/} \si{Imp\per\second}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
 plt.savefig('build/gallium.pdf')
 
 plt.figure()
+plt.scatter([13.0], [N_brommin], s=20, marker='x', color='orange', label=r'$I_{\text{min}}$')
+plt.scatter([13.55], [N_brommax], s=20, marker='x', color='green', label=r'$I_{\text{max}}$')
+plt.scatter([tbrom.n], [I_brom], s=20, marker='x', color='red', label=r'$I_{\text{K}}$')
+plt.plot(bromplot, m_brom * bromplot + n_brom, '-b', label='lineare Interpolation')
 plt.plot(t_brom, N_brom, 'k.', label='Messwerte')
-plt.scatter([13.0], [N_brommin], s=20, marker='x', color='blue', label=r'$I_{\text{min}}$')
-plt.scatter([13.5], [N_brommax], s=20, marker='x', color='green', label=r'$I_{\text{max}}$')
-plt.xlabel(r'$ \theta \quad [\si{\degree}]$')
-plt.ylabel(r'$ N \quad [\text{Imp} / \si{\second}]$')
+plt.xlabel(r'$ \theta \quad \mathbin{/} \si{\degree}$')
+plt.ylabel(r'$ N \quad \mathbin{/} \si{Imp\per\second}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
 plt.savefig('build/brom.pdf')
 
 plt.figure()
-plt.plot(t_rubidium, N_rubidium, 'k.', label='Messwerte')
-plt.scatter([11.3], [N_rubidiummin], s=20, marker='x', color='blue', label=r'$I_{\text{min}}$')
+plt.scatter([11.35], [N_rubidiummin], s=20, marker='x', color='orange', label=r'$I_{\text{min}}$')
 plt.scatter([12.1], [N_rubidiummax], s=20, marker='x', color='green', label=r'$I_{\text{max}}$')
-plt.xlabel(r'$ \theta \quad [\si{\degree}]$')
-plt.ylabel(r'$ N \quad [\text{Imp} / \si{\second}]$')
+plt.scatter([trubidium.n], [I_rubidium], s=20, marker='x', color='red', label=r'$I_{\text{K}}$')
+plt.plot(rubidiumplot, m_rubidium * rubidiumplot + n_rubidium, '-b', label='lineare Interpolation')
+plt.plot(t_rubidium, N_rubidium, 'k.', label='Messwerte')
+plt.xlabel(r'$ \theta \quad \mathbin{/} \si{\degree}$')
+plt.ylabel(r'$ N \quad \mathbin{/} \si{Imp\per\second}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
 plt.savefig('build/rubidium.pdf')
 
 plt.figure()
-plt.plot(t_strontium, N_strontium, 'k.', label='Messwerte')
-plt.scatter([10.7], [N_strontiummin], s=20, marker='x', color='blue' , label=r'$I_{\text{min}}$')
+plt.scatter([10.7], [N_strontiummin], s=20, marker='x', color='orange' , label=r'$I_{\text{min}}$')
 plt.scatter([11.6], [N_strontiummax], s=20, marker='x', color='green', label=r'$I_{\text{max}}$')
-plt.xlabel(r'$ \theta \quad [\si{\degree}]$')
-plt.ylabel(r'$ N \quad [\text{Imp} / \si{\second}]$')
+plt.scatter([tstrontium.n], [I_strontium], s=20, marker='x', color='red', label=r'$I_{\text{K}}$')
+plt.plot(strontiumplot, m_strontium * strontiumplot + n_strontium, '-b', label='lineare Interpolation')
+plt.plot(t_strontium, N_strontium, 'k.', label='Messwerte')
+plt.xlabel(r'$ \theta \quad \mathbin{/} \si{\degree}$')
+plt.ylabel(r'$ N \quad \mathbin{/} \si{Imp\per\second}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
 plt.savefig('build/strontium.pdf')
 
 plt.figure()
-plt.plot(t_zirkonium, N_zirkonium, 'k.', label='Messwerte')
-plt.scatter([9.5], [N_zirkoniummin], s=20, marker='x', color='blue'  , label=r'$I_{\text{min}}$')
+plt.scatter([9.5], [N_zirkoniummin], s=20, marker='x', color='orange'  , label=r'$I_{\text{min}}$')
 plt.scatter([10.4], [N_zirkoniummax], s=20, marker='x', color='green', label=r'$I_{\text{max}}$')
-plt.xlabel(r'$ \theta \quad [\si{\degree}]$')
-plt.ylabel(r'$ N \quad [\text{Imp} / \si{\second}]$')
+plt.scatter([tzirkonium.n], [I_zirkonium], s=20, marker='x', color='red', label=r'$I_{\text{K}}$')
+plt.plot(zirkoniumplot, m_zirkonium * zirkoniumplot + n_zirkonium, '-b', label='lineare Interpolation')
+plt.plot(t_zirkonium, N_zirkonium, 'k.', label='Messwerte')
+plt.xlabel(r'$ \theta \quad \mathbin{/} \si{\degree}$')
+plt.ylabel(r'$ N \quad \mathbin{/} \si{Imp\per\second}$')
 plt.grid()
 plt.legend()
 plt.tight_layout()
