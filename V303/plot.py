@@ -82,7 +82,7 @@ r, A_dioden= np.genfromtxt('data/dioden.txt', unpack=True)
 #r = np.array([r_1])
 #A_dioden = np.array([A_dioden_1])
 
-plt.plot(r[1:], A_dioden[1:],'+', label='Messwerte')
+plt.plot(r[1:], A_dioden[1:],'.', label='Messwerte')
 #plt.plot(phi , A_dioden , '.', label = 'Messwerte')
 plt.xlabel('r /cm')
 plt.ylabel('Spannung $U$ [V]')
@@ -99,7 +99,7 @@ print("b fehler=",errors[1])
 
 plt.plot(r, line_dioden(r, popt[0], popt[1]),'r-', label='Fit')
 
-#plt.grid()
+plt.grid()
 plt.tight_layout()
 plt.legend()
 plt.savefig('content/abbildungen/plot3.pdf')
