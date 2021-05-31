@@ -18,15 +18,15 @@ Durch die Ausgleichsrechnung folgt:
 \end{align*}
 Nach Gleichung \eqref{eqn:U_out} gilt für $a = \sfrac{2 \cdot U_0}{\pi}$, somit ergeben sich für $U_0$ folgende Werte:
 \begin{align*}
-  \text{ohne Noise Generator:}&  &U_0_\text{ohne} &= \SI{26.70 \pm 16.80}{\volt}, \\
-  \text{mit Noise Generator:}&   &U_0_\text{mit}  &= \SI{ 6.28 \pm 4.56}{\volt}.
+  \text{ohne Noise Generator:}&  &U_{0,\text{ohne}} &= \SI{26.70 \pm 16.80}{\volt}, \\
+  \text{mit Noise Generator:}&   &U_{0,\text{mit}}  &= \SI{ 6.28 \pm 4.56}{\volt}.
 \end{align*}
 
 \begin{figure}
   \label{fig:ohne}
   \begin{subfigure}{0.48\textwidth}
       \centering
-      \includegraphics[height=5cm]{content/abbildungen/ohne/0.pdf}}
+      \includegraphics[height=5cm]{content/abbildungen/ohne/0.pdf}
       \caption{Spannung bei $\phi = 0°$ ohne Rauschen.}
   \end{subfigure}
 \hfill 
@@ -72,7 +72,7 @@ Nach Gleichung \eqref{eqn:U_out} gilt für $a = \sfrac{2 \cdot U_0}{\pi}$, somit
   \label{fig:mit}
   \begin{subfigure}{0.48\textwidth}
       \centering
-      \includegraphics[height=5cm]{content/abbildungen/mit/0.pdf}}
+      \includegraphics[height=5cm]{content/abbildungen/mit/0.pdf}
       \caption{Spannung bei $\phi = 0°$ mit Rauschen.}
   \end{subfigure}
 \hfill 
@@ -159,7 +159,7 @@ Mithilfe von ipython wird eine Ausgleichsrechnung nach der Form:
 durchgeführt.
 Dabei ergeben sich folgende Parameter:
 \begin{align*}
-  a &= (84.59 \pm 1.85) \si{\volt\centimeter}\\
+  a &= (84.59 \pm 1.85) \si{\volt\centi\metre}\\
   b &= (-1.07 \pm 0.16) \si{\volt}
 \end{align*}
 
@@ -172,9 +172,9 @@ Die Messwerte und die dazugehörige Ausgleichskurve ist in \autoref{fig:plot3} z
 \end{figure}
 
 \noindent
-Da die Spannung und somit die Intensität mit $\sfrac{1}{r}$ abfällt, wurde ab einem Abstand von $\SI{40}{\centimetre}$ eine Spannung im
+Da die Spannung und somit die Intensität mit $\frac{1}{r}$ abfällt, wurde ab einem Abstand von $\SI{40}{\centi\metre}$ eine Spannung im
 $\si{\milli\volt}$ Bereich aufgenommen, eine genaue Nullspannung wurde nicht gemessen.
-Der größte aufgenommene Abstand beträgt $\SI{100}{\centimetre}$, die dazugehörige Spannung $\SI{126}{\milli\volt}$.
+Der größte aufgenommene Abstand beträgt $\SI{100}{\centi\metre}$, die dazugehörige Spannung $\SI{126}{\milli\volt}$.
 
 \begin{table}
   \centering
@@ -182,7 +182,7 @@ Der größte aufgenommene Abstand beträgt $\SI{100}{\centimetre}$, die dazugeh�
   \label{tab:data_dioden}
   \begin{tabular}{c c}
     \toprule
-    $r / \si{\centimetre}$ & $A [\si{\volt}]$\\
+    $r / \si{\centi\metre}$ & $A [\si{\volt}]$\\
     \midrule
     4.5    &   16.6  \\
   6.0    &   13.0  \\
