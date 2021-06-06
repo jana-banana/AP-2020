@@ -1,0 +1,14 @@
+###länge 102 cm
+#gekoppelt:schwingungsdauer*2[s]      gekoppelt:schwebungsdauer[s]
+#sonia
+3.46    26.33
+3.79    26.52
+3.70    26.51
+3.85    26.20
+3.92    26.37
+#jana
+3.86    25.72
+3.55    27.57
+3.35    26.58
+3.41    25.26
+3.54    26.10
