@@ -8,7 +8,7 @@ Zunächst wird ein einzelnes Fadenpendel, mit Länge $l$ und Masse $m$ betrachte
 welches reibungsfrei Schwingen soll.
 Bei einer Auslenkung wirkt die Gewichtskraft $F = m \cdot a$ entgegen der Bewegungsrichtung.
 Dadurch entsteht ein Drehmoment $M = D_p \cdot \phi$, wobei $\phi$ den Auslenkwinkel und $D_p$ die Winkelrichtgröße beschreibt.
-Die Bewegungsgleichung kann für kleine Auslenkwinkel ($\phi <= 10°$) mit $\sin(\phi)= \phi$ vereinfacht werden.
+Die Bewegungsgleichung kann für kleine Auslenkwinkel ($\phi \leq 10°$) mit $\sin(\phi)= \phi$ vereinfacht werden.
 Für die Bewegungsgleichung folgt:
 \begin{equation*}
     J \cdot \phi zweite ableitung + D_p \cdot \phi = 0.
@@ -46,9 +46,9 @@ Die Schwingungsfrequenz ist gleich der Eigenfrequenz der einzelnen Pendel und ka
     \omega_+ = \sqrt{\frac{g}{l}}.
 \end{equation*}
 Für die Schwingungsdauer gilt somit:
-\begin{equation*}
+\begin{equation} \label{eqn:Tplus}
     T_+ = 2 \cdot \pi \sqrt{\frac{l}{g}}.
-\end{equation*}
+\end{equation}
 
 \subsection{Gegensinnige Schwingung}
 Bei der gegensinnigen Schwingung sind die zwei identischen, gekoppelten Pendeln um den gleichen Winkel entgegengesetzt ausgelenkt, $\alpha_1 = - \alpha_2$.
@@ -58,28 +58,28 @@ Für die Schwingungsfrequenz gilt:
     \omega_- = \sqrt{\frac{g}{l} + \frac{2 \cdot K}{l}},
 \end{equation*}
 somit folgt für die Schwingungsdauer:
-\begin{equation*}
+\begin{equation} \label{eqn:Tminus}
     T_- =2 \cdot \pi \cdot \sqrt{\frac{l}{g + 2 \cdot K}}.
-\end{equation*}
+\end{equation}
 Die Kopplungskonstante der Feder wird mit $K$ beschrieben.
 
 \subsection{Gekoppelte Schwingung}
 Hierbei sind wieder zwei identische Pendel über eine Kopplungsfeder gekoppelt.
-Ein Pendel soll zunächst ruhen, $\alpha_1 = 0$ und das andere wird ausgelenkt, $\alpha_2 ungleich 0$.
+Ein Pendel soll zunächst ruhen, $\alpha_1 = 0$ und das andere wird ausgelenkt, $\alpha_2 \neq 0$.
 Sobald das zweite Pendel beginnt zu schwingen, überträgt es seine Energie an das erste Pendel.
 während das zweite Pendel immer langsamer wird bis es zur Ruhe kommt, nimmt das erste Pendel immer größere Amplituden auf bis es das Maximum erreicht.
 Die gerade beschriebene Bewegung bzw. der Energieübertrag widerholt sich.
 Die sogenannte Schwebung beschreibt die Zeit zwischen zwei Stillständen eines Pendels.
 Für die Schwebungsdauer $T_S$ gilt:
-\begin{equation*}
+\begin{equation}\label{eqn:Ts}
     T_S = \frac{T_+ \cdot T_-}{T_+ - T_-},
-\end{equation*}
+\end{equation}
 und für die Schwebungsfrequenz $\omega_S$:
-\begin{equation*}
+\begin{equation} \label{eqn:ws}
     \omega_S = \omega_+ - \omega_-.
-\end{equation*}
+\end{equation}
 Die Schwingungsdauer $T_+$ wird aus der gleichsinnigen und $T_-$ aus der gegensinnigen Schwingung ermittelt.
 Die Kopplungskonstante $K$ kann somit wie folgt bestimmt werden:
-\begin{equation*}
-    K = \frac{\omega_-^2 - \omega_+^2}{\omega_-^2 - \omega_+^2} = \frac{T_+^2 - T_-^2}{T_+^2 + T_-^2}.
-\end{equation*}
+\begin{equation} \label{eqn:kappa}
+    \kappa = \frac{\omega_-^2 - \omega_+^2}{\omega_-^2 - \omega_+^2} = \frac{T_+^2 - T_-^2}{T_+^2 + T_-^2}.
+\end{equation}
