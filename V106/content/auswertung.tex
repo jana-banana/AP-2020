@@ -1,12 +1,239 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+Es werden die gleichen Auswertungschritte für die verschiedenen Längen des Pendels durchgeführt. 
+ 
+\subsection{Kurze Pendellänge}
 
+  Das Pendel hat die Länge von $l = \SI{35}{\centi\metre}$. In der \autoref{tab:35cm} lassen sich die Messdaten finden. Es werden bei der Untersuchung der einzelnen
+  Schwingungen sowie bei der gegensinnigen Schwingung $\num{5}$ Schwingungen gemessen, bei der gekoppelten Schwingung $\num{2}$ Schwingungsdauer und eine 
+  Schwebungsdauer. Die Schwingungsdauern werden von beiden Praktikanten gleichzeitig gemessen, welches auch in der \autoref{tab:35cm} zu sehen ist. 
 
-Siehe \autoref{fig:plot}!
+  \begin{table}
+    \centering
+    \caption{Die Messdaten von der Messung der Pendellänge $l = \SI{35}{\centi\metre}$.}
+    \label{tab:35cm}
+    \begin{tabular}{c c c c c}
+      \toprule
+      $ 5 \cdot T_{\text{rechts}} \mathbin{/} \si{\second} $ & $ 5 \cdot T_{\text{links}} \mathbin{/} \si{\second} $ & $ 5 \cdot T_{\text{gegen}} \mathbin{/} \si{\second} $ &
+      $ 2 \cdot T_{\text{schwing}} \mathbin{/} \si{\second} $ & $ T_{\text{schweb}} \mathbin{/} \si{\second} $\\
+      \midrule
+      \multicolumn{5}{l}{Messdaten von Sonia}\\
+      \midrule
+      6.09 &  6.87 &   5.40 &   2.73 &   9.23   \\
+      6.02 &  6.13 &   5.50 &   2.20 &   8.40   \\
+      6.32 &  6.35 &   5.57 &   2.65 &   8.46   \\
+      6.59 &  6.29 &   5.47 &   2.42 &   8.00   \\
+      6.36 &  6.47 &   5.86 &   2.35 &   8.89   \\
+      6.20 &  6.39 &   5.53 &        &          \\
+      6.33 &  6.37 &   5.50 &        &          \\
+      6.50 &  6.40 &   5.39 &        &          \\
+      6.49 &  6.40 &   5.59 &        &          \\
+      6.19 &  6.33 &   5.46 &        &          \\
+      \midrule
+      \multicolumn{5}{l}{Messdaten von Jana}\\
+      \midrule
+      6.58 &  6.45 &   5.36 &   2.40 &   8.86   \\
+      6.36 &  6.16 &   5.16 &   2.53 &   8.02   \\
+      6.22 &  6.13 &   5.32 &   2.26 &   8.23   \\
+      6.10 &  6.18 &   5.38 &   2.23 &   7.93   \\
+      6.46 &  6.01 &   5.56 &   2.30 &   9.00   \\
+      6.23 &  6.13 &   5.30 &        &          \\
+      6.20 &  6.13 &   5.35 &        &          \\
+      6.22 &  6.18 &   5.32 &        &          \\
+      6.22 &  6.32 &   5.32 &        &          \\
+      6.22 &  6.49 &   5.36 &        &          \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \noindent Im folgen werden aus den aufgenommenen Daten die Mittelwerte $\bar{T} \pm \increment T$ für die jeweilige Schwingungsmessung gebildet. 
+  Dies erfolgt über die Formeln
+  \begin{align}  
+    \bar{T} &= \frac{1}{N} \sum_{k=1}^{N} T_{\text{k}} \label{eqn:mittel}\\
+    \increment T &= \frac{\sigma}{\sqrt{N}} , \label{eqn:fehlermittel} 
+  \end{align}
+  wobei $\sigma$ die Standardabweichung beschreibt. \\ \\
+
+  \noindent Für die Schwingungsdauer der gleichsinnigen Schwingung wird erstmal die Schwingungsdauer der einzelnen Pendel als Mittelwert der gemessenen Zeiten
+  genommen, aus diesen zwei Werten wird dann nochmal das Mittel gebildet. Für das rechte Pendel ergibt sich eine Schwingungsdauer von 
+  \begin{equation*}
+    \bar{T}_{\text{rechts}} = \SI{1.259(7)}{\second}, 
+  \end{equation*}
+  für das linke Pendel eine von 
+  \begin{equation*}
+    \bar{T}_{\text{links}} = \SI{1.262(8)}{\second}. 
+  \end{equation*}
+  Damit ist die experimentell ermittelte Schwingungsdauer der gleichsinnigen Schwingung $ T_{+} = \SI{1.260(5)}{\second}$. 
+  
+  \noindent Der Theoriewert der gleichsinnigen Schwingung berechnet sich durch die Formel \eqref{eqn:Tplus}. Der Wert ergibt sich zu 
+  \begin{equation*}
+    T_{\text{theo, +}} = \SI{1.187}{\second}.
+  \end{equation*} \\ \\
+
+  \noindent Die Dauer der gegensinnigen Schwingung wird über den Mittelwert $\bar{T}_{\text{gegen}}$ zu 
+  \begin{equation*}
+    T_{-} = \bar{T}_{\text{gegen}} = \SI{1.087(6)}{\second}
+  \end{equation*} 
+  bestimmt.
+
+  \noindent Mit den Werten $T_{+}$ und $T_{-}$ lässt sich nun die Kopplungskonstante $\kappa$ über die Gleichung \eqref{eqn:kappa} berechnen. Der Fehler ergibt sich über die 
+  Gauss'sche Fehlerfortpflanzung, welche für eine beliebige Funktion $f(x,y) $ 
+  \begin{equation} \label{eqn:gauss}
+    \increment f = \sqrt{(\increment x)^2 \cdot \left(\frac{\partial f}{\partial x}\right)^2 + (\increment y)^2 \cdot \left(\frac{\partial f}{\partial y}\right)^2}
+  \end{equation}
+  lautet. Für $\kappa $ folgt dementsprechend 
+  \begin{equation} \label{eqn:fehlerk}
+    \increment \kappa = \sqrt{(\increment T_{+})^2 \cdot \left( \frac{4 T_{+} T_{-}^2}{(T_{+}^2 + T_{-}^2)^2}\right)^2
+                           (\increment T_{-})^2 \cdot \left( \frac{-4 T_{-} T_{+}^2}{(T_{+}^2 + T_{-}^2)^2}\right)^2 }. 
+  \end{equation} 
+  Somit ist die Kopplungskonstante 
+  \begin{equation*}
+    \kappa = \num{0.147(7)}.
+  \end{equation*}
+
+  \noindent Nun lässt sich der Theoriewert der gegensinnigen Schwingung nach der Formel \eqref{} berechnen. Er ergibt sich zu 
+  \begin{equation*}
+    T_{\text{theo, -}} = \SI{1.1696(8)}{\second}, 
+  \end{equation*} 
+  wobei sich die Unsicherheit hier durch $\increment T_{-} = \increment \kappa \cdot 2 \pi \sqrt{\frac{l}{g + 2\kappa }^2} $ berechnet. \\ \\
+
+  \noindent Bei der gekoppelten Schwingung werden die Schwingungdauer und die Schwebungsdauer gemessen. Die Werte berechnen sich als Mittelwert von zehn Messwerten.
+  Es ergibt sich
+  \begin{equation*}
+    \bar{T}_{\text{schwing}} = \SI{1.204(27)}{\second}
+  \end{equation*} 
+  und
+  \begin{equation*}
+    \bar{T}_{\text{schweb}} = \SI{8.50(14)}{\second}.
+  \end{equation*}
+
+  \noindent Der Theoriewert der Schwebungsdauer berechnet sich über die Gleichung \eqref{eqn:Ts} $T_{\text{s}} = \frac{T_{+} \cdot T_{-}}{T_{+} - T_{-}}$, es werden
+  die Theoriewerte genutzt. Der Fehler ergibt durch den Fehler des Theoriewertes der gegensinnigen Schwingung. Nach der Gauss'schen Fehlerfortpflanzung \eqref{eqn:gauss}
+  errechnet sich der Fehler durch 
+  \begin{equation}\label{eqn:fehlerts}
+    \increment T_{\text{s}} = \increment T_{\text{theo, -}} \cdot \left(\frac{T_{+}^2}{(T_{+} - T_{-})^2}\right).
+  \end{equation}
+  Somit lautet der Theoriewert der Schwebungsdauer
+  \begin{equation*}
+    T_ {\text{theo, s}} = \SI{80(4)}{\second}. 
+  \end{equation*} \\ \\
+
+  \noindent Die Kreisfrequenzen $\omega$ berechnen sich aus den jeweiligen Schwingungsdauern, es ergibt sich der Fehler nach der Gauss'schen Fehlerrechnung 
+  \eqref{eqn:gauss}. Es gilt somit
+  \begin{equation} \label{eqn:omega}
+    \omega = \frac{2 \pi}{T} \pm \increment  T \cdot \frac{2 \pi}{T^2}. 
+  \end{equation}
+  Dementsprechend lauten die Werte: 
+  \begin{align*}
+    \omega_{+} &= \SI{4.985(22)}{\hertz} &         \omega_{\text{theo}, +} &= \SI{5.293}{\hertz}  \\
+    \omega_{-} &= \SI{5.780(34)}{\hertz} &         \omega_{\text{theo}, -} &= \SI{5.372(4)}{\hertz} \\
+    \omega_{\text{s}} &= \SI{0.739(12)}{\hertz} &  \omega_{\text{theo, s}} &= \SI{-0.079(4)}{\hertz} 
+  \end{align*}
+  Da die Kreisfrequenz von der Schwebung über $\omega_{+} - \omega_{-} $ \eqref{eqn:ws} berechnet wird, ist hier der Fehler durch die Formel 
+  \begin{equation} \label{eqn:fehlerws}
+    \increment \omega_{\text{s}} = \sqrt{ (\increment \omega_{+} )^2 + (\increment \omega_{-} )^2 }
+  \end{equation}
+  zu rechnen. 
+
+\subsection{Lange Pendellänge}
+
+  Es wird eine Pendellänge von $l = \SI{1.02}{\metre}$ genutzt. Es wurde analog zur kurzen Pendellänge für die einzelnen Pendel und die 
+  gegensinnige Schwingung jeweils $5$ Schwingungsdauern gemessen, zwei Schwingungsdauern beim gekoppelten Pendel und eine Schwebungsdauer. 
+  Die Messdaten werden in der \autoref{tab:102cm} eintragen. 
+
+  \begin{table}
+    \centering
+    \caption{Die Messdaten von der Messung der Pendellänge $l = \SI{102}{\centi\metre}$.}
+    \label{tab:102cm}
+    \begin{tabular}{c c c c c}
+      \toprule
+      $ 5 \cdot T_{\text{rechts}} \mathbin{/} \si{\second} $ & $ 5 \cdot T_{\text{links}} \mathbin{/} \si{\second} $ & $ 5 \cdot T_{\text{gegen}} \mathbin{/} \si{\second} $ &
+      $ 2 \cdot T_{\text{schwing}} \mathbin{/} \si{\second} $ & $ T_{\text{schweb}} \mathbin{/} \si{\second} $\\
+      \midrule
+      \multicolumn{5}{l}{Messdaten von Sonia}\\
+      \midrule
+      9.66  &   10.06 &  9.44 &   3.46 &   26.33  \\
+      10.02 &   9.99  &  9.46 &   3.79 &   26.52  \\
+      9.69  &   9.49  &  9.37 &   3.70 &   26.51  \\
+      9.40  &   9.73  &  9.40 &   3.85 &   26.20  \\
+      9.76  &   9.72  &  9.29 &   3.92 &   26.37  \\
+      9.66  &   10.04 &  9.33 &        &          \\
+      9.83  &   9.96  &  9.33 &        &          \\
+      9.82  &   9.94  &  9.37 &        &          \\
+      9.46  &   9.87  &  9.26 &        &          \\
+      9.82  &   10.13 &  9.30 &        &          \\
+      \midrule
+      \multicolumn{5}{l}{Messdaten von Jana}\\
+      \midrule
+      9.58  &   10.03 &  8.96 &   3.86 &   25.72  \\
+      9.86  &   9.88  &  9.14 &   3.55 &   27.57  \\
+      9.92  &   9.90  &  9.03 &   3.35 &   26.58  \\
+      9.65  &   9.88  &  9.02 &   3.41 &   25.26  \\
+      9.89  &   9.92  &  9.16 &   3.54 &   26.10  \\
+      9.68  &   9.69  &  9.10 &        &          \\
+      9.51  &   9.60  &  9.04 &        &          \\
+      9.80  &   9.83  &  9.31 &        &          \\
+      9.92  &   9.75  &  9.42 &        &          \\
+      9.93  &   9.76  &  9.11 &        &          \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \noindent Analog zur kurzen Pendellänge werden die Mittelwerte nach den Formeln \eqref{eqn:mittel} und \eqref{eqn:fehlermittel} ermittelt. 
+  Für das rechte Pendel ergibt sich der Wert
+  \begin{equation*}
+    \bar{T}_{\text{rechts}} = \SI{1.949(7)}{\second}, 
+  \end{equation*}
+  für das linke Pendel eine von 
+  \begin{equation*}
+    \bar{T}_{\text{links}} = \SI{1.972(7)}{\second}. 
+  \end{equation*}
+  Damit ist die experimentell ermittelte Schwingungsdauer der gleichsinnigen Schwingung $ T_{+} = \SI{1.960(5)}{\second}$.
+  
+  \noindent Der Theoriewert der gleichsinnigen Schwingung berechnet sich über \eqref{eqn:Tplus} und lautet 
+  \begin{equation*}
+    T_{\text{theo, +}} = \SI{2.026}{\second}.
+  \end{equation*} \\ \\
+
+  \noindent Die Schwingungsdauer der gegensinnigen Schwingung ergibt sich zu 
+  \begin{equation*}
+      T_{-} = \bar{T}_{\text{gegen}} = \SI{1.848(7)}{\second}.
+  \end{equation*}
+  Somit kann nun die Kopplungskonstante $\kappa $ nach \eqref{eqn:kappa} bestimmt werden. Die Fehlerrechnung erfolgt analog zu kurzen Pendellänge
+  nach \eqref{eqn:fehlerk}. 
+  Die Kopplungskonstante $\kappa$ lautet 
+  \begin{equation*}
+      \kappa = \num{0.059(5)}.
+  \end{equation*}
+
+  \noindent Der Theoriewert der gegensinnigen Schwingung lässt sich nun zu 
+  \begin{equation*}
+      T_{\text{theo, -}} = \SI{2.0144(9)}{\second}, 
+  \end{equation*}
+  wobei sich der Fehler gemäß der Gauss'schen Fehlerfortpflanzung \eqref{eqn:gauss} über die Formel $\increment T_{-} = \increment \kappa \cdot 2 \pi \sqrt{\frac{l}{g + 2\kappa }^2} $ berechnet. \\ \\
+
+  \noindent Für die gekoppelte Schwingung berechnen sich die Schwingungsdauer und die Schwebungsdauer über die Mittelwerte gemäß der Formel \eqref{eqn:mittel} und \eqref{eqn:fehlermittel}. 
+  Die Schwingungsdauer ist 
+  \begin{equation*}
+    \bar{T}_{\text{schwing}} = \SI{1.821(31)}{\second}, 
+  \end{equation*} 
+  die Schwebungsdauer
+  \begin{equation*}
+    \bar{T}_{\text{schweb}} = \SI{26.32(18)}{\second}.
+  \end{equation*}
+
+  \noindent Der Theoriewert für die Schwebungsdauer wird mit der Formel \eqref{eqn:Ts} berechnet, der Fehler nach \eqref{eqn:fehlerts}.
+  Es ergibt sich
+  \begin{equation*}
+      T_ {\text{theo, s}} = \SI{340(26)}{\second}. 
+  \end{equation*} \\ \\
+
+  \noindent Die Kreisfrequenzen berechnen sich nach der Formel \eqref{eqn:omega} aus den gemessenen Schwingungsdauern. 
+  Die Werte lauten: 
+  \begin{align*}
+      \omega_{+} &= \SI{3.205(8)}{\hertz} &         \omega_{\text{theo}, +} &= \SI{3.100}{\hertz}  \\
+      \omega_{-} &= \SI{3.399(13)}{\hertz} &         \omega_{\text{theo}, -} &= \SI{3.1192(14)}{\hertz} \\
+      \omega_{\text{s}} &= \SI{0.2388(16)}{\hertz} &  \omega_{\text{theo, s}} &= \SI{-0.0185(14)}{\hertz} 
+  \end{align*}
+  Hierbei wird die Kreisfrequenz der Schwebung über die Formel \eqref{eqn:ws} gerechnet und der Fehler über die Gleichung \eqref{eqn:fehlerws}. 
