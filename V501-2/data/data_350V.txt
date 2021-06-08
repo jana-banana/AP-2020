@@ -1,0 +1,12 @@
+###U_b = 350 V
+###Nullauslenkung_y 1.75 Kästchen
+### auslenkung[kästchen]    U_d [V]
+4       -12.5
+3       -5.5
+2       -2.0
+1       6.6
+0       12.0
+-1      18.5
+-2      25.0
+-3      30.5
+-3.5    34.0
