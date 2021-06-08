@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1623074511 "/home/jana/Dokumente/AP-2020/V106/main.tex" "/home/jana/Dokumente/AP-2020/V106/main.pdf" "main" 1623074511
+["pdflatex"] 1623158528 "/home/jana/Dokumente/AP-2020/V501-2/main.tex" "/home/jana/Dokumente/AP-2020/V501-2/main.pdf" "main" 1623158528
   "../header.tex" 1620726845 3558 45ba406be5f49d83486c843580383554 ""
   "/home/jana/.local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/home/jana/.local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -46,11 +46,11 @@
   "/home/jana/.local/texlive/2020/texmf-dist/web2c/texmf.cnf" 1598393674 39451 15a3ebee027466ecb89701aa91dfebaf ""
   "/home/jana/.local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1601726024 2535090 7c5b4f56da36d76c2104e3f71459e378 ""
   "/home/jana/.local/texlive/2020/texmf.cnf" 1601725954 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "/home/jana/Dokumente/AP-2020/V106/main.aux" 1623074511 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/home/jana/Dokumente/AP-2020/V106/main.tex" 1622969609 406 847760a1c844c94fbb0cb599197b0244 ""
-  "main.aux" 1623074511 8 a94a2480d3289e625eea47cd1b285758 ""
-  "main.tex" 1622969609 406 847760a1c844c94fbb0cb599197b0244 ""
+  "/home/jana/Dokumente/AP-2020/V501-2/main.aux" 1623158528 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/jana/Dokumente/AP-2020/V501-2/main.tex" 1623079523 418 75d0daa73080a48af73521722e068728 ""
+  "main.aux" 1623158528 8 a94a2480d3289e625eea47cd1b285758 ""
+  "main.tex" 1623079523 418 75d0daa73080a48af73521722e068728 ""
   (generated)
   "main.log"
-  "/home/jana/Dokumente/AP-2020/V106/main.log"
-  "/home/jana/Dokumente/AP-2020/V106/main.pdf"
+  "/home/jana/Dokumente/AP-2020/V501-2/main.log"
+  "/home/jana/Dokumente/AP-2020/V501-2/main.pdf"
