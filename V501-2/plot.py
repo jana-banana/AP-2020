@@ -114,8 +114,9 @@ U_B = [1/180, 1/240, 1/275, 1/300, 1/350]
 U_B_ausgleich = [1/180, 1/240, 1/275, 1/350]
 
 
-plt.plot( U_B, A, '.',label= 'U_b gegen a')
-plt.errorbar( U_B, A, yerr = errA, fmt='o')
+plt.plot( U_B, A, 'b.',label= 'ermittelten Steigungen') 
+plt.errorbar( U_B, A, yerr = errA, fmt='b o') #######################
+#plt.errorbar( U_B, A, yerr = errA)
 
 plt.ylabel('$D/U_d$ /  mm/V')
 plt.xlabel('$1/U_B$ /  1/V')

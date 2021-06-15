@@ -8,24 +8,24 @@ Die nach \autoref{sec:Durchführung} aufgenommenen Messwerte sind in \autoref{ta
 Zudem wird zu jedem Messsatz eine lineare Ausgleichsrechnung nach $D = a \cdot U_d + b$ durchgeführt.
 Folgende Werte werden ermittelt:
 \begin{align*}
-    U_\text{b} = \SI{180}{\volt} :&  &a&= (-0.5371 \pm 0.0060) \si{\centi\metre\per\volt}\\
-    &  &b&= (-2.1190 \pm 0.1182)\si{\centi\metre}\\
+    U_\text{b} = \SI{180}{\volt} :&  &a&= (-0.5371 \pm 0.0060) \,\si{\centi\metre\per\volt}\\
+    &  &b&= (-2.1190 \pm 0.1182) \, \si{\centi\metre}\\
     \\
-    U_\text{b} = \SI{240}{\volt}:& &a&= (-0.7039 \pm 0.0048) \si{\centi\metre\per\volt}\\
-    & &b&= (-1.6669 \pm 0.0948) \si{\centi\metre}\\
+    U_\text{b} = \SI{240}{\volt}:& &a&= (-0.7039 \pm 0.0048) \, \si{\centi\metre\per\volt}\\
+    & &b&= (-1.6669 \pm 0.0948) \, \si{\centi\metre}\\
     \\
-    U_\text{b} = \SI{275}{\volt}:& &a&= (-0.7806 \pm 0.0041) \si{\centi\metre\per\volt}\\
-    & &b&= (0.0258 \pm 0.0819) \si{\centi\metre} \\
+    U_\text{b} = \SI{275}{\volt}:& &a&= (-0.7806 \pm 0.0041) \, \si{\centi\metre\per\volt}\\
+    & &b&= (0.0258 \pm 0.0819) \, \si{\centi\metre} \\
     \\
-    U_\text{b} = \SI{300}{\volt}: & &a& = (-0.6900 \pm 0.0804) \si{\centi\metre\per\volt}\\
-    & &b& = (-0.4568 \pm 1.5918) \si{\centi\metre}\\
+    U_\text{b} = \SI{300}{\volt}: & &a& = (-0.6900 \pm 0.0804) \, \si{\centi\metre\per\volt}\\
+    & &b& = (-0.4568 \pm 1.5918) \, \si{\centi\metre}\\
     \\
-    U_\text{b} = \SI{350}{\volt}: & &a& = (-0.9771 \pm 0.0173)\si{\centi\metre\per\volt} \\
-    & &b&= (1.3315 \pm 0.3310 )\si{\centi\metre}
+    U_\text{b} = \SI{350}{\volt}: & &a& = (-0.9771 \pm 0.0173) \, \si{\centi\metre\per\volt} \\
+    & &b&= (1.3315 \pm 0.3310 ) \, \si{\centi\metre}
 \end{align*}
 \noindent
-Diese Steigungen werden in ein $1/U_b - D/U_d$-Diagramm aufgetragen (siehe \autoref{fig:eFeldTeil1b}) und mithilfe von Python eine Ausgleichsrechnung durchgeführt.
-Der Punkt für $D/U_d = $ wird für die Ausgleichsrechnung nicht berücksichtigt, da dieser deutlich abweicht, auch die Messunsicherheit ist hier relativ groß.
+Diese Steigungen werden in ein $1/U_b - D/U_d$-Diagramm aufgetragen (siehe \autoref{fig:eFeldTeil1b}) und mithilfe von Python eine Ausgleichsrechnung durchgeführt. \\
+Der Punkt für $D/U_d = \SI{300}{\volt}$ wird für die Ausgleichsrechnung nicht berücksichtigt, da dieser deutlich abweicht, auch die Messunsicherheit ist hier relativ groß.
 Für diese Gerade mit der Form $\frac{D}{U_d} = a \cdot \frac{1}{U_b} + b$ werden folgende Werte bestimmt:
 \begin{align*}
     a &=  \SI{157.2805 \pm 22.9625}{\milli\metre} &b &= \SI{-1.3873 \pm 0.0958}{\milli\metre\per\volt}
@@ -39,17 +39,17 @@ Die Längen werden aus \autoref{fig:abmessung} entnommen und lauten:
     \text{Abstand der Ablenkplatten}& &d &= \SI{3.8}{\milli\metre} \\
     \text{Abstand zw. Ablenkplatte und Leuchtschirm}& &L &= \SI{143}{\milli\metre}
 \end{align*}
-Daraus ergibt sich für $\frac{p \cdot L}{2\cdot d} = \SI{357.5}{\milli\meter}$, was zu einer Abweichung von 43,9\% führt.
+Daraus ergibt sich für $\frac{p \cdot L}{2\cdot d} = \SI{357.5}{\milli\meter}$, somit weicht der ermittelte Wert um 43,9\% vom Theoriewert ab.
 
-\begin{table} 
+\begin{table}
     \centering
-    \caption{Die aufgenommenen Messergebnisse. } 
+    \caption{Die aufgenommenen Messergebnisse. $U_b$ wurde am Anfang jeder Messung verändert. $U_d$ wurde dann in Abhängigkeit von der Auslenkung $D$ notiert.} 
     \label{tab:eFeldTeil1}
     \begin{tabular}{c c c c c c}%{S[table-format=2.1] S[table-format=2.1] S[table-format=3.1] S[table-format=3.1] S[table-format=3.1] S[table-format=3.1]}
         \toprule
         & $U_\text{b} = \SI{180}{\volt}$ & $U_\text{b} = \SI{240}{\volt}$&  $U_\text{b} = \SI{275}{\volt} $ & $U_\text{b} = \SI{300}{\volt}$ & $U_\text{b} = \SI{350}{\volt}$\\
       \cmidrule(lr){2-6}
-      $ D / \SI{6,35}{\milli\metre}$ & \multicolumn{5}{c}{$U_\text{d}$}\\    %%%%%%%%%%%multicoloum 
+      $ D \, / \, \SI{6,35}{\milli\metre}$ & \multicolumn{5}{c}{$U_\text{d}$}\\    %%%%%%%%%%%multicoloum 
       \midrule
       4.0 & -10.0 & -11.5 & -11.0 & -12.5 & -12.5 \\
       3.0 & -6.5 & -7.5 & -6.2 & -6.5 & -5.5 \\
@@ -64,23 +64,24 @@ Daraus ergibt sich für $\frac{p \cdot L}{2\cdot d} = \SI{357.5}{\milli\meter}$,
     \end{tabular}
   \end{table}
 
-\begin{figure} 
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{bilder/E_Feld_Teil_1.pdf}
-    \caption{Die aufgenommenen Messwerte und die dazugehörigen Ausgleichsrechnungen.}
+    \caption{Die aufgenommenen Messwerte aus dem ersten Teil der E-Feld Untersuchung und die dazugehörigen Ausgleichsgeraden.}
     \label{fig:eFeldTeil1a}
 \end{figure}
 
-\begin{figure} 
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{bilder/E_Feld_Teil_1_2.pdf}
-    \caption{Die aufgenommenen Messwerte und die dazugehörigen Ausgleichsrechnungen.}
+    \caption{Die ermittelten Steigungen aus dem ersten Teil der E-Feld Untersuchung und dazugehörige Ausgleichsgerade.
+    Das Wertepaar zu $U_b = \SI{300}{\volt}$ wurde für die Ausgleichsrechnung vernachlässigt.}
     \label{fig:eFeldTeil1b}
 \end{figure}
-
+\noindent
 Das Kathodenstrahl-Oszilloskop wird nachgebaut und verschiedene Sägezahnfrequenzen werden durchlaufen, um die Frequenz der Sinuspannung zu ermittlen.
 Die aufgenommenen Messwerte sind in \autoref{tab:frequenzen} zu finden.
-Das Messpaar $\sfrac{3}{2}$ und $\nu_\text{Sä} = \SI{75}{\hertz}$ wird bei der weiteren Betrachtung vernachlässigt, da dieser nicht zu dem Verhältnis passt.
+Das Messpaar $n = \sfrac{3}{2}$ und $\nu_\text{Sä} = \SI{75}{\hertz}$ wird bei der weiteren Betrachtung vernachlässigt, da dieser nicht zu dem Verhältnis passt, das in Gleichung \eqref{eqn:frequenzen} beschrieben wird.
 Mithilfe von Gleichung \eqref{eqn:frequenzen} wird für die Sinusfrequenz $\nu_\text{Sin} = \SI{50}{\hertz}$ bestimmt, da sich aus den Messpaaren folgender Zusammenhang ergibt:
 \begin{align*}
     n_1 \cdot \nu_1 &= 2 \cdot \SI{25}{\hertz} = \SI{50}{\hertz}, \\
@@ -88,13 +89,13 @@ Mithilfe von Gleichung \eqref{eqn:frequenzen} wird für die Sinusfrequenz $\nu_\
     n_4 \cdot \nu_4 &=  \frac{1}{2} \cdot \SI{100}{\hertz} = \SI{50}{\hertz}.
 \end{align*}
 
-\begin{table} 
+\begin{table}[H]
     \centering
-    \caption{Die aufgenommenen Messergebnisse. } 
+    \caption{Die aufgenommenen Sägezahnfrequenzen $\nu_\text{Sä}$ in Abhängigkeit von den beobachteten Sinusperioden $n$. } 
     \label{tab:frequenzen}
     \begin{tabular}{S[table-format=3] S[table-format=2]}
     \toprule
-    n & $\nu_\text{Sä} /\si{\hertz}$\\
+    $n$ & $\nu_\text{Sä} \, / \,\si{\hertz}$\\
       \midrule
       2 & 25 \\
       1 & 50 \\
@@ -107,8 +108,9 @@ Mithilfe von Gleichung \eqref{eqn:frequenzen} wird für die Sinusfrequenz $\nu_\
 \subsection{Elektronen im B-Feld}
 \label{B-Feld}
 In diesem Teil soll nun die spezifische Ladung $\frac{\symup{e_0}}{\symup{m_0}}$ bestimmt werden.
-Die nach \autoref{sec:Durchführung} aufgenommenen Messwerte sind in \autoref{tab:bFeldTeil1}.
-Diese werden in \autoref{fig:bFeldTeil1} aufgetragen, für beide Messreihen werden lineare Ausgleichsrechnungen der Form $\frac{D}{L^2 + D^2} = a \cdot B + b$ durchgeführt.
+Die nach \autoref{sec:Durchführung} aufgenommenen Messwerte sind in \autoref{tab:bFeldTeil1} zu finden.
+Diese werden in \autoref{fig:bFeldTeil1} aufgetragen, für beide Messreihen wird eine lineare Ausgleichsrechnung der Form \\
+$\frac{D}{L^2 + D^2} = a \cdot B + b$ durchgeführt.
 Dabei ist $L = \SI{0.143}{\metre}$ und die Flussdichte $B$ kann mithilfe der Gleichung \eqref{eqn:B} bestimmt werden.
 % \begin{equation} \label{eq:B}
 %     B = \symup{\mu_0} \cdot \frac{8}{\sqrt{125}} \cdot \frac{N\cdot I}{R}
@@ -117,29 +119,31 @@ Hier ist $N$ die Windungszahl, $I$ der Spulenstrom, $R$ der Spulenradius und $\s
 Die Windungszahl $N$ beträgt 20 und der Spulenradius $R$ ist $\SI{0.282}{\metre}$.
 Für die Koeffizienten der Ausgleichsgeraden werden folgende Werte ermittelt:
 \begin{align*}
-U_b = \SI{250}{\volt}& &a &= -15.0649 \pm 0.0796\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                      &  &b &= 1.1955 \pm 0.0076\\ %%%%%%%%%%%%%%%%%% ist das schon richtig?
+U_b = \SI{250}{\volt}& &a &= (-15.0649 \pm 0.0796) \cdot 10^{-3} \si{\milli\tesla\per\metre}\\
+                      &  &b &= (1.1955 \pm 0.0076) \, \si{\metre^{-1}} \\ 
                       \\
-U_b = \SI{420}{\volt}& &a &= -11.6417 \pm 0.1543\\
-                   & &b &= -1.2456 \pm 0.0195\\
+U_b = \SI{420}{\volt}& &a &= (-11.6417 \pm 0.1543) \cdot 10^{-3} \si{\milli\tesla\per\metre}\\
+                   & &b &= (-1.2456 \pm 0.0195) \, \si{\metre^{-1}}\\
 \end{align*}
 Durch einen Vergleich mit der Gleichung \eqref{eq:e0_m0} ergibt sich jeweils für die spezifische Ladung:
 \begin{align*}
-    U_b = \SI{250}{\volt}& &\frac{\symup{e_0}}{\symup{m_0}} &= (4.5390\pm 0.0015) \cdot 10^{11} \si{\coulomb\per\kilo\gram}\\
+    U_b = \SI{250}{\volt}& &\frac{\symup{e_0}}{\symup{m_0}} &= (4.5390\pm 0.0015) \cdot 10^{11} \, \si{\coulomb\per\kilo\gram}\\
                       \\
-U_b = \SI{420}{\volt}& &\frac{\symup{e_0}}{\symup{m_0}} &= (2.7106\pm 0.0023) \cdot 10^{11} \si{\coulomb\per\kilo\gram}
+U_b = \SI{420}{\volt}& &\frac{\symup{e_0}}{\symup{m_0}} &= (2.7106\pm 0.0023) \cdot 10^{11} \, \si{\coulomb\per\kilo\gram}
 \end{align*}
-Daraus ergibt sich als Mittelwert für $\frac{\symup{e_0}}{\symup{m_0}} = (3.6248\pm 0.0014)\cdot 10^{11} \si{\coulomb\per\kilo\gram}$.
+Daraus ergibt sich als Mittelwert für die spezifische Ladung: \\
+$\frac{\symup{e_0}}{\symup{m_0}} = (3.6248\pm 0.0014) \cdot 10^{11} \, \si{\coulomb\per\kilo\gram}$.
 
 \begin{table} 
     \centering
-    \caption{Die aufgenommenen Messergebnisse. } 
+    \caption{Die aufgenommenen Stromstärken $I$ in Abhängigkeit der Auslenkung $D$.
+              Ähnlich wie in der E-Feld Untersuchung wurde die Beschleunigungsspannung zu Beginn eines Messdurchlaufes festgesetzt um danach die Ablenkungen und Stromstärken zu untersuchen. } 
     \label{tab:bFeldTeil1}
     \begin{tabular}{c c c }%{S[table-format=2.1] S[table-format=1.2] S[table-format=2.2]}
     \toprule
         & $U_\text{b} = \SI{250}{\volt}$ & $U_\text{b} = \SI{420}{\volt}$\\
     \cmidrule(lr){2-3}
-    $ D / \SI{6.35}{\milli\metre}$ & \multicolumn{2}{c}{$I /\si{\ampere} $ }\\
+    $ D \, / \, \SI{6.35}{\milli\metre}$ & \multicolumn{2}{c}{$I \, / \, \si{\ampere} $ }\\
       \midrule
       4.0 & 0.0 & -3.25 \\
       3.0 & 0.3 & -2.95 \\
@@ -157,15 +161,15 @@ Daraus ergibt sich als Mittelwert für $\frac{\symup{e_0}}{\symup{m_0}} = (3.624
   \begin{figure} 
     \centering
     \includegraphics[width=\textwidth]{bilder/B_Feld_Teil_1_beide.pdf}
-    \caption{Die aufgenommenen Messwerte und die dazugehörigen Ausgleichsrechnungen.}
+    \caption{$\frac{D}{L^2+D^2}$ gegen die Flussdichte $B$ aufgetragen. Die Messungen wurden für $U_b = \SI{250}{\volt}$ und $\SI{420}{\volt}$ durchgeführt.}
     \label{fig:bFeldTeil1}
 \end{figure}
-
+\noindent
 Nun soll das Erdmagnetfeld bestimmt werden. Wie in \autoref{sec:Durchführung} beschrieben, wird folgender Messwert notiert:
 \begin{align*}
     U_b = \SI{180}{\volt}& &I= \SI{0.55}{\ampere}.
 \end{align*}
 Mit der Gleichung \eqref{eqn:B} kann dann das Erdmagnetfeld ermittelt werden:
 \begin{align*}
-    B = \SI{3.5074 e-5}{\tesla}.
+    B = 3.5074 \cdot 10^{-5} \, \si{\tesla}.
 \end{align*}
