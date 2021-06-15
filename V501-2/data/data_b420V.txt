@@ -1,5 +1,5 @@
 ###U_b = 420V
-auslenkung [kästchen]       I[A]
+###auslenkung [kästchen]       I[A]
 4   -3.25
 3   -2.95
 2   -2.5

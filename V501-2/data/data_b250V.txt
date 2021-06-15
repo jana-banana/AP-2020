@@ -1,5 +1,5 @@
 ###U_b = 250V
-auslenkung [kästchen]       I[A]
+###auslenkung [kästchen]       I[A]
 4   0
 3   0.3
 2   0.6

@@ -75,9 +75,10 @@ etwa $\SI{e-6}{\milli\bar}$.
     \end{equation*}
     angegeben werden. Es wird die Kleinwinkelnäherung angenommen. Die messbare Verschiebung des angezeigen Punktes auf dem Leuchtschirm $D$ wird unter Benutzung der Kleinwinkelnäherung
     berechnet über
-    \begin{equation*}
+    \begin{equation}
+        \label{eqn:pL_2d}
         D = L \cdot \theta = \frac{e_0}{m_0} L \frac{U_{\text{d}}}{d} \frac{p}{v_{\text{z}}^2} = \frac{p}{2d} L \frac{U_{\text{d}}}{U_{\text{B}}}. 
-    \end{equation*}
+    \end{equation}
     Bei der letzten Umformung wird für $v_{\text{z}}$ die Relation aus Gleichung \eqref{eqn:v_z} eingesetzt. \\
 
     \noindent Aus den Formeln ist zu erkennen, dass für eine hohe Ablenkempfindlichkeit ein langer Ablenkkondensator $p$, ein langer Strahlenweg $L$ und eine geringe Beschleunigungsspannung 
@@ -90,9 +91,9 @@ etwa $\SI{e-6}{\milli\bar}$.
     auf die horizontal ablenkenden Platten angelegt wird. Die Sägezahnspannung steigt linear an und fällt beim Erreichen seines Maximalwertes schlagartig wieder auf die Null. 
     Damit sorgt sie dafür, dass der Elektronenstrahl gleichmäßig über den Leuchtschirm fährt und beim Erreichen des Ende des Leuchtschirms springt der Elektronenstrahl wieder an
     den Anfang des Leuchtschirms. Um ein stehendes Bild auf dem Schirm zu sehen, muss für die Frequenzen der folgende Zusammenhang gelten
-    \begin{equation*}
+    \begin{equation}\label{eqn:frequenzen}
         n \nu_{\text{Sä}} = m \nu_{\text{We}},
-    \end{equation*}
+    \end{equation}
     wobei $n,m \in \symbb{N}$ sind. Für $n=1, m=2$ bedeutet das, dass auf dem Schirm zwei Periodendauern der Wechselspannung zu sehen sind.
 
 \subsection{Ablenkung eines Elektronenstrahls im homogenen Magnetfeld}
@@ -138,6 +139,6 @@ etwa $\SI{e-6}{\milli\bar}$.
         L^2 + (r - D)^2 &= r^2  &\implies r &= \frac{L^2 + D^2}{2D}.
     \end{align*}
     Durch Einsetzen der Zusammenhänge \eqref{eqn:r} und \eqref{eqn:v_z} lässt sich ein Ausdruck für die spezifische Ladung aufstellen:
-    \begin{equation*}
+    \begin{equation}\label{eq:e0_m0}
         \frac{e_0}{m_0} = \frac{2 U_{\text{B}}}{B^2} \cdot \left(\frac{2D}{L^2 + D^2}\right)^2
-    \end{equation*}
+    \end{equation}
