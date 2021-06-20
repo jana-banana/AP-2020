@@ -99,8 +99,8 @@ lamd = 2 * d * np.sin(t_0 * np.pi / 180)
 
 #Poisson-Fehler auf Anzahl setzten 
 t = 200 #second
-N0_err = np.sqrt(N_0)   #np.sqrt(N_0 /t)
-Nal_err = np.sqrt(N_al) #np.sqrt(N_al /t)
+N0_err = np.sqrt(N_0 /t)
+Nal_err =np.sqrt(N_al /t)
 
 #let's make some ufloats
 N0 = unp.uarray(N_0, N0_err)
