@@ -23,9 +23,9 @@ def E(t): #ohne Umrechnung in Joule, aktuell in eV
     n = 2 * d * unp.sin(t * np.pi / 180) * const.e
     return z/n
 
-def diff(exp, lit):
+def diff(exp, lit): 
     d = 1 - (exp/lit)
-    return d * 100
+    return d * 100 #prozent
 
 def lam(theta): 
     l = 2 * d * unp.sin(theta * np.pi / 180)
@@ -98,8 +98,9 @@ lamd = 2 * d * np.sin(t_0 * np.pi / 180)
 # lamd = lam(t_0)
 
 #Poisson-Fehler auf Anzahl setzten 
-N0_err = np.sqrt(N_0)
-Nal_err = np.sqrt(N_al)
+t = 200 #second
+N0_err = np.sqrt(N_0)   #np.sqrt(N_0 /t)
+Nal_err = np.sqrt(N_al) #np.sqrt(N_al /t)
 
 #let's make some ufloats
 N0 = unp.uarray(N_0, N0_err)
@@ -127,6 +128,7 @@ plt.figure()
 plt.plot(lamd ,unp.nominal_values(T), 'r.', label="Messwerte")
 plt.plot(lamd_plot, params[0]*lamd_plot + params[1], 'k-', label='Lineare Regression')
 plt.errorbar(lamd , unp.nominal_values(T), yerr=unp.std_devs(T), fmt='r_')
+plt.grid()
 plt.legend()
 plt.xlabel(r'Wellenlänge $\lambda \, \mathbin{/} \si{\metre}$')
 plt.ylabel(r'Transmission')
@@ -157,4 +159,4 @@ print('lambda_2', lamd_2)
 
 lamd_c = lamd_2 - lamd_1
 print('Compton-Wellenlänge:', lamd_c)
-print('diff', diff(lamd_c, lamdc_lit))
+print('diff', diff(lamd_c, lamc_lit))
