@@ -3,7 +3,8 @@
 
 \subsection{Aufnahme des Emissionsspektrum der Kupfer-Röntgenröhre}
 
-
+  Es werden in einem Winkelbereich von $ \SI{8}{\degree} \leq \theta \leq \SI{25}{\degree} $ die Zählraten bei einer Integrationszeit von $t=\SI{10}{\second}$ 
+  aufgenommen, die Daten sind in der \autoref{tab:emissionsspektrum} zu finden. 
 
   \begin{table}
   \centering
@@ -56,16 +57,44 @@
   \end{tabular}
   \end{table}
 
+  \noindent Die Daten aus \autoref{tab:emissionsspektrum} sind in der \autoref{fig:emissionsspektrum} eingezeichnet. Es ist das Bremsspektrum der Röntgenstrahlung 
+  zu erkennen, sowie die charakteristischen $K_{\alpha}$- und $K_{\beta}$-Peaks. Diese markanten Punkte sind in der Abbildung gekennzeichnet. Diese Stellen lauten:
+  \begin{align*}
+    \text{für $K_{\alpha}$:} \quad \theta_{\alpha} &= \SI{22.5(1)}{\degree} & \implies E_{\alpha} &= \SI{8043(34)}{\electronvolt}\\
+                                    N_{\alpha} &= \SI{5050}{Imp\per\second} \\
+                                    \\
+    \text{für $K_{\beta}$:} \quad \theta_{\beta} &= \SI{20.2(1)}{\degree} & \implies E_{\beta} &= \SI{8910(40)}{\electronvolt}\\
+                                    N_{\beta} &= \SI{1599}{Imp\per\second} 
+  \end{align*}
+  Die Energien werden mithilfe der Bragg-Bedingung und dem Zusammenhang für Photonen $E = \frac{\symup{h} \symup{c}}{\lambda}$ über die Formel berechnet
+  \begin{equation*}
+    E = \frac{\symup{h} \cdot \symup{c}}{2 d \cdot \sin(\theta)}. 
+  \end{equation*}
+  Hier beschreibt $h$ das Planck'sche Wirkungsquantum und $c$ die Lichtgeschwindigkeit. 
+  
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{build/emissionsspektrum.pdf}
+    \caption{Die Messdaten des Emissionsspektrum aufgetragen gegen den Winkel.}
+    \label{fig:emissionsspektrum}
+  \end{figure}
+
 \subsection{Bestimmung der Transmission als Funktion der Wellenlänge}
+\label{subsec:T(lambda)}
+
+  Zur Bestimmung der Transmission wird die Zählrate für Winkel im Bereich von $\SI{7}{\degree}-\SI{10}{\degree}$ bei einer Integrationszeit von 
+  $t = \SI{200}{\second}$ einmal mit Aluminiumabsorber ($N_{\text{Al}}$) und einmal ohne ($N_0$) aufgenommen, in der \autoref{tab:aluabsorber} sind die Messdaten 
+  zu finden.
 
   \begin{table}
     \centering
     \caption{Die Daten der Zählratenmessung bei verändertem Winkel mit und Aluminiumabsorber.}
     \label{tab:aluabsorber}
-    \begin{tabular}{S[table-format=1.1] S[table-format=3.1] S[table-format=3.1] S[table-format=2.1] S[table-format=3.1] S[table-format=3.1]}
+    \begin{tabular}{c c c c c c } %{S[table-format=1.1] S[table-format=3.1] S[table-format=3.1] S[table-format=2.1] S[table-format=3.1] S[table-format=3.1]}
       \toprule
-      $\theta \, / \si{\degree}$ & $N_0 \, /si{Imp\per\second} $ & $ N_{\text{Al}} \, /si{Imp\per\second}  $ &
-      $\theta \, / \si{\degree}$ & $N_0 \, /si{Imp\per\second} $ & $ N_{\text{Al}} \, /si{Imp\per\second}  $ \\
+      $\theta \mathbin{/} \si{\degree}$ & $N_0 \mathbin{/} \si{Imp\per\second} $ & $ N_{\text{Al}} \mathbin{/} \si{Imp\per\second}  $ & %@{${}\pm{}$}
+      $\theta \mathbin{/} \si{\degree}$ & $N_0 \mathbin{/} \si{Imp\per\second} $ & $ N_{\text{Al}} \mathbin{/} \si{Imp\per\second}  $ \\ %\multicolumn{2}{c}{}
       \cmidrule(lr){1-3} \cmidrule(lr){4-6}
       7.0 & 	226.0 & 	113.5 &   8.6	 &  328.5 &  100.0  \\
       7.1 & 	232.0 & 	112.0 &   8.7	 &  332.5 &  100.5  \\
@@ -87,6 +116,93 @@
     \end{tabular}
   \end{table}
 
-\subsection{Bestimmung der Compton-Wellenlänge}
+  \noindent In der \autoref{tab:aluabsorber} sind auch die Messunsicherheiten eingetragen, es liegt eine Poisson-Verteilung bei der Anzahl der Röntgenquanten 
+  vor. Die Zählraten werden nun mit einer Totzeitkorrektur bereinigt
+  \begin{equation*}
+    I = \frac{N}{1 - \tau \cdot N}, 
+  \end{equation*}
+  wobei $\tau = \SI{90}{\micro\second}$ die Totzeit des benutzten Geiger-Müller-Zählrohr ist. Die Transmission berechnet sich dann über $T = \frac{I_{\text{Al}}}{I_0}$.
 
-  
+  \noindent Die Wellenlänge $\lambda $ berechnet sich aus dem Winkel über die Bragg Bedingung , die Beugungsordnung ist $n=1$ und die Gitterkonstante für einen 
+  LiF-Kristall $d = \SI{201.4}{\pico\metre}$. Die Transmission ist in der \autoref{fig:transmission} gegen die Wellenlänge aufgetragen.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{build/transmission.pdf}
+    \caption{Die Transmissions aufgetragen gegen die Wellenlänge $\lambda$ inklusive einer linearen Ausgleichsrechnung.}
+    \label{fig:transmission}
+  \end{figure}
+
+  \noindent Es wird außerdem eine lineare Ausgleichsrechnung $T = a \cdot \lambda + b$ mit python durchgeführt, welche auch in \autoref{fig:transmission} eingezeichnet 
+  sind. Die Koeffizienten ergeben sich zu:
+  \begin{align*}
+    a &= \SI{-15.195(239)e9}{1\per\metre}\\
+    b &= \num{1.225(14)}
+  \end{align*}
+
+
+\subsection{Bestimmung der Compton-Wellenlänge} %!!!!! WILL ICH EINE TABELLE ODER NICHT ?
+
+  Die Impulse werden bei einer Integrationszeit von $ t = \SI{300}{\second}$ für $I_0$ ohne Aluminiumabsorber, für $I_1$ mit Aluminiumabsorber zwischen der 
+  Röntgenröhre und dem Plexiglas-Streuer und für $I_2$ mit Aluminiumabsorber zwischen dem Plexiglas-Streuer und dem Geiger-Müller-Zählrohr. 
+  %Variante 1
+  Es ergeben sich 
+  folgende Werte:
+  \begin{align*}
+    I_0 &= \SI{2731}{Imp}\\
+    I_1 &= \SI{1180}{Imp}\\
+    I_2 &= \SI{1024}{Imp}
+  \end{align*}
+
+  \noindent Aus diesen Messwerten lässt sich die Transmission berechnen:
+  \begin{align*}
+    T_1 &= \frac{I_1}{I_0} = \num{0.432}\\
+    T_2 &= \frac{I_2}{I_0} = \num{0.375}
+  \end{align*}
+
+  \noindent Nun wird die Wellenlänge $\lambda$ zu den Transmissionen errechnet. Die lineare Abhängigkeit $T(\lambda) = a \cdot \lambda + b $, 
+  welche in der Teilaufgabe \ref{subsec:T(lambda)} ermittelt wird, wird so genutzt
+  \begin{equation*}
+    \lambda = \frac{(T - b)}{a}
+  \end{equation*}
+  mit den Koeffizienten
+  \begin{align*}
+    a &= \SI{-15.195(239)e9}{1\per\metre}\\
+    b &= \num{1.225(14)}.
+  \end{align*}
+  Es ergeben sich die Werte:
+  \begin{align*}
+    \lambda_ = \SI{52.2(12)}{\pico\metre}\\
+    \lambda_ = \SI{55.9(13)}{\pico\metre}
+  \end{align*}
+
+  \noindent Damit lässt sich die Compton-Wellenlänge bestimmen $\lambda_{\text{c}} = \lambda_2 - \lambda_1 = \SI{3.76(6)}{\pico\metre}$. 
+
+  %Variante 2
+  \begin{table}
+    \centering
+    \caption{Die Tabelle mit den gemessenen Impulsen und den damit berechneten Werte.}
+    \label{tab:c)}
+    \begin{tabular}{c c c c @{${}\pm{}$} c}
+      \toprule
+      Nr & $ I \, / \si{Imp}$ & $ T = \frac{I}{I_0}$ & \multicolumn{2}{c}{$ \lambda \, / \si{\pico\metre}$} \\
+      \midrule
+      0 & 2731  &          &     &     \\
+      1 & 1180  &  0.432   & 52.2&1.2  \\
+      2 & 1024  &  0.375   & 52.9&1.3  \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  \noindent In der \autoref{tab:c)} sind Impulse aufgeschrieben. Die Transmissionen werden über die Formel
+  \begin{equation*}
+    T_i = \frac{I_i}{I_0}
+  \end{equation*}
+  berechnet. Mithilfe des linearen Zusammenhangs $T(\lambda) = a \cdot \lambda + b $ aus dem Aufgabenteil \ref{subsec:T(lambda)} wird die Wellenlänge zu 
+  \begin{align*}
+    \lambda &= \frac{(T - b)}{a}\\
+    \\
+    \text{mit:} \quad     a &= \SI{15.19(24)e9}{1\per\metre}\\
+                          b &= \num{1.225(14)}
+  \end{align*} 
+  Die Compton-Wellenlänge ergibt sich nun aus der Differenz der ermittelten Wellenlängen: $\lambda_{\text{c}} = \lambda_2 - \lambda_1 = \SI{3.76(6)}{\pico\metre}$. 
