@@ -3,6 +3,7 @@ In diesem Versuch soll die Compton-Wellenlänge $\lambda_\text{C}$ eines Elektro
 
 \section{Theorie}
 \label{sec:Theorie}
+\subsection{Der Compton-Effekt}
 Ein Photon, das sich an einem Elektron streut und danach eine verlängerte Wellenlänge aufweist, beschreibt den Compton-Effekt.
 Bei diesem inelastischen Stoß überträgt das Photon Energie an das Elektron und wird um den Winkel $\theta$ abgelenkt.
 Hierdurch wird die Wellenlänge des Photons verlängert.
@@ -16,13 +17,14 @@ An Gleichung \eqref{eqn:diff_lambda} wird ersichtlich, dass bei $\theta = 0°$ d
 Bei $\theta = 180°$ ist sie maximal, $\increment \lambda = 2 \cdot \lambda_\text{C}$ .
 Dieser Vorgang wird durch \autoref{fig:Compton_Effekt} anschaulich dargestellt.
 
-\begin{figure}\label{fig:Compton_Effekt}
+\begin{figure}
     \centering
-    \width=\textwidth
-    \includegraphics{bilder/compton_effekt.pdf}
+    \includegraphics[width=0.4\textwidth]{bilder/compton_effekt.pdf}
     \caption{Der Compton Effekt anschaulich.}
+    \label{fig:Compton_Effekt}
 \end{figure}
-\\
+
+\subsection{Erzeugung von Röntgenstrahlung}
 \noindent
 Die für den Versuch benötigten Röntgenstrahlen werden mithilfe einer evakuierten Röhre aus einer Glühkathode erzeugt.
 In dieser werden  Elektronen emittiert und auf eine Anode hin beschleunigt.
@@ -31,11 +33,13 @@ Das Bremsspektrum resultiert aus der Abbremsung eines Elektrons im Coulombfeld d
 Ein Photon bzw. Röntgenquant wird durch dieses Abbremsen emittiert.
 Da seine Energie genau dem Energieverlust des abgebremsten Elektrons entspricht und das Elektron entweder einen Teil oder auch seine ganze kinetische Energie abgeben kann, entsteht das sogenannte kontinuierliche Bremsspektrum.
 \noindent
-Das Anodenmaterial wird so ioniesiert.
-Ein Elektron aus einer äußeren Schale kann nach emittieren eines Photons in eine innere fallen.
+Das Anodenmaterial wird so ionisiert.
+Ein Elektron aus einer äußeren Schale kann nach Emittieren eines Photons in eine Innere fallen.
 Hierbei hat das Photon genau die Energiedifferenz der beiden Energieniveaus, somit entsteht kein kontinuierliches sondern ein Spektrum aus scharfen Linien.
 Dieses sogenannte charakteristische Spektrum hängt vom Anodenmaterial der Röntgenröhre ab.
-\\
+
+
+\subsection{Transmission und Absorption bei Aluminium}
 \noindent
 Mithilfe der Absorption und Transmission von Röntgenstrahlung durch Aluminium kann die Compton-Wellenlänge bestimmt werden.
 Diese sind von der Wellenlänge abhängig.
@@ -47,7 +51,8 @@ Für die Absorption der Photonen in einer Materie der Dicke $d$ gilt für die In
 \end{equation*}
 wobei $I_0$ die einfallende Intensität und $\mu$ den Absorptionskoeffizienten beschreibt.
 Dieser Absorbtionskoeffizient setzt sich durch Addition der Absorbtionskoeffizienten für Paarbildung $\mu_\text{Paar}$, Photoeffekt $\mu_\text{Photo}$ und Comptoneffekt $\mu_\text{Com}$ zusammen.
-\\
+
+\subsection{Bragg Bedingung}
 Mithilfe der Bragg'schen Reflexion kann die Energie $E$ und somit die Wellenlänge $\lambda$ der Röntgenstrahlung bestimmt werden.
 Hierbei fällt Röntgenlicht auf ein dreidimensionales Gitter.
 Jedes Gitteratom sorgt für eine Beugung der Photonen.
