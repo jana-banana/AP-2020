@@ -12,7 +12,7 @@ Die Beschleunigungsspannung beträgt bei allen Messungen $\SI{35}{\kilo\volt}$ u
     \centering
     \includegraphics[width=\textwidth]{bilder/messaparatur.pdf}
     \caption{Die Messaparatur bestehend aus einer Kupfer-Röntgenröhre, einem LiF-Kristall bzw.
-            einem Plexiglas-Streuer und einem Geiger-Müller-Zählrohr. \cite{anleitung}. }
+            einem Plexiglas-Streuer und einem Geiger-Müller-Zählrohr. \cite{anleitung} }
     \label{fig:messapparatur}
 \end{figure}
 
@@ -27,12 +27,11 @@ Dieser Kristallwinkel wird in $\increment \alpha = 0.1°$ Schritten und einer In
 Dieselbe Messung wird ohne Aluminium-Absorber $N_0$ wiederholt.
 
 Es folgt eine Korrektur der gemessenen Zählrate mit der Totzeit $\tau = \SI{90}{\micro\second}$ des Geiger-Müller Zählrohrs:
-\begin{equation*}
+\begin{equation}\label{eqn:korrektur}
     I = \frac{N}{1 - \tau \cdot N} \, ,
-\end{equation*}
-hierbei steht I wiederum für eine Zählrate.
+\end{equation}
+hierbei steht I wiederum für eine Zählrate.\\
 
-\\
 \noindent
 Im weiteren Versuchsdurchlauf wird eine manuelle Messung durchgeführt.
 Hierzu wird das RS232-Kabel entfernt und das Röntgengerät auf Manuell gestellt.
@@ -57,6 +56,6 @@ Die Zählraten werden notiert.
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{bilder/plexiglas_aufbau.png}
-    \caption{Der experimentelle Aufbau der Messung mit dem Plexiglasstreuer \cite{anleitung}. }
+    \caption{Der experimentelle Aufbau der Messung mit dem Plexiglasstreuer. \cite{anleitung} }
     \label{fig:plexiglas}
 \end{figure}
