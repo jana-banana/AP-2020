@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.9)  28 JUN 2021 14:00
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.9)  28 JUN 2021 17:29
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1465,32 +1465,32 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15.
  [2
 
 ] (./content/theorie.tex
-Underfull \hbox (badness 10000) in paragraph at lines 12--16
+Underfull \hbox (badness 10000) in paragraph at lines 11--15
 
  []
 
 <bilder/prinzipieller_aufbau.png, id=62, 559.08875pt x 396.48125pt>
 File: bilder/prinzipieller_aufbau.png Graphic file (type png)
 <use bilder/prinzipieller_aufbau.png>
-Package luatex.def Info: bilder/prinzipieller_aufbau.png  used on input line 30.
+Package luatex.def Info: bilder/prinzipieller_aufbau.png  used on input line 29.
 (luatex.def)             Requested size: 250.95587pt x 177.96722pt.
 [3] [4<./bilder/prinzipieller_aufbau.png>]
 <bilder/idealer_Ub_Ia.png, id=83, 493.845pt x 336.25626pt>
 File: bilder/idealer_Ub_Ia.png Graphic file (type png)
 <use bilder/idealer_Ub_Ia.png>
-Package luatex.def Info: bilder/idealer_Ub_Ia.png  used on input line 70.
+Package luatex.def Info: bilder/idealer_Ub_Ia.png  used on input line 69.
 (luatex.def)             Requested size: 250.95587pt x 170.87271pt.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 71.
+(Font)              scaled to size 5.00053pt on input line 70.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 71.
+(Font)              scaled to size 4.99947pt on input line 70.
 <bilder/Potentialverhältnisse.png, id=88, 777.90625pt x 398.48875pt>
 File: bilder/Potentialverhältnisse.png Graphic file (type png)
 <use bilder/Potentialverhältnisse.png>
-Package luatex.def Info: bilder/Potentialverhältnisse.png  used on input line 101.
+Package luatex.def Info: bilder/Potentialverhältnisse.png  used on input line 100.
 (luatex.def)             Requested size: 292.7776pt x 149.98015pt.
  [5<./bilder/idealer_Ub_Ia.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 109--113
+Underfull \hbox (badness 10000) in paragraph at lines 108--112
 
  []
 
@@ -1498,13 +1498,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--113
 <bilder/Dampfdruckkurve.png, id=111, 462.72874pt x 622.325pt>
 File: bilder/Dampfdruckkurve.png Graphic file (type png)
 <use bilder/Dampfdruckkurve.png>
-Package luatex.def Info: bilder/Dampfdruckkurve.png  used on input line 137.
+Package luatex.def Info: bilder/Dampfdruckkurve.png  used on input line 136.
 (luatex.def)             Requested size: 292.7776pt x 393.7571pt.
  [7<./bilder/Dampfdruckkurve.png>]
 <bilder/Termschema.png, id=123, 840.13875pt x 443.6575pt>
 File: bilder/Termschema.png Graphic file (type png)
 <use bilder/Termschema.png>
-Package luatex.def Info: bilder/Termschema.png  used on input line 158.
+Package luatex.def Info: bilder/Termschema.png  used on input line 157.
 (luatex.def)             Requested size: 334.60571pt x 176.69487pt.
 ) (./content/durchfuehrung.tex
 <bilder/schaltung.png, id=128, 832.10875pt x 527.9725pt>
@@ -1524,64 +1524,63 @@ File: bilder/integral.pdf Graphic file (type pdf)
 <use bilder/integral.pdf>
 Package luatex.def Info: bilder/integral.pdf  used on input line 68.
 (luatex.def)             Requested size: 418.25555pt x 258.33495pt.
-<bilder/abstande.pdf, id=165, 417.7206pt x 258.0049pt>
+<bilder/abstande.pdf, id=167, 417.7206pt x 258.0049pt>
 File: bilder/abstande.pdf Graphic file (type pdf)
 <use bilder/abstande.pdf>
-Package luatex.def Info: bilder/abstande.pdf  used on input line 75.
+Package luatex.def Info: bilder/abstande.pdf  used on input line 77.
 (luatex.def)             Requested size: 418.25555pt x 258.33495pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--86
+Underfull \hbox (badness 10000) in paragraph at lines 82--88
 
  []
 
-[11]
-<bilder/ableitung.pdf, id=177, 417.7206pt x 258.0049pt>
+[11] [12<./bilder/integral.pdf>] [13<./bilder/abstande.pdf>]
+<bilder/ableitung.pdf, id=236, 417.7206pt x 258.0049pt>
 File: bilder/ableitung.pdf Graphic file (type pdf)
 <use bilder/ableitung.pdf>
-Package luatex.def Info: bilder/ableitung.pdf  used on input line 89.
+Package luatex.def Info: bilder/ableitung.pdf  used on input line 91.
 (luatex.def)             Requested size: 418.25555pt x 258.33495pt.
-LaTeX Font Info:    Calculating math sizes for size <7.63434> on input line 113.
+LaTeX Font Info:    Calculating math sizes for size <7.63434> on input line 116.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 7.63515pt on input line 113.
+(Font)              scaled to size 7.63515pt on input line 116.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 5.34457pt on input line 113.
+(Font)              scaled to size 5.34457pt on input line 116.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 3.81757pt on input line 113.
+(Font)              scaled to size 3.81757pt on input line 116.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 7.63351pt on input line 113.
+(Font)              scaled to size 7.63351pt on input line 116.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 5.34343pt on input line 113.
+(Font)              scaled to size 5.34343pt on input line 116.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 3.81676pt on input line 113.
- [12<./bilder/integral.pdf>] [13<./bilder/abstande.pdf>]
+(Font)              scaled to size 3.81676pt on input line 116.
+ [14<./bilder/ableitung.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 124.
+(hyperref)                removing `math shift' on input line 127.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 124.
+(hyperref)                removing `math shift' on input line 127.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--132
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 
  []
 
-[14<./bilder/ableitung.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 178.
+(hyperref)                removing `math shift' on input line 181.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 178.
+(hyperref)                removing `math shift' on input line 181.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
 
  []
 
-[15]) (./content/diskussion.tex
+[16]) (./content/diskussion.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--14
 
  []
@@ -1591,8 +1590,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--21
 
  []
 
-[16]) (./content/anhang.tex
-<bilder/versuch_teil1.pdf, id=295, 614.295pt x 845.1575pt>
+) (./content/anhang.tex
+<bilder/versuch_teil1.pdf, id=297, 614.295pt x 845.1575pt>
 File: bilder/versuch_teil1.pdf Graphic file (type pdf)
 <use bilder/versuch_teil1.pdf>
 Package luatex.def Info: bilder/versuch_teil1.pdf  used on input line 6.
@@ -1601,7 +1600,7 @@ Package luatex.def Info: bilder/versuch_teil1.pdf  used on input line 6.
 
 LaTeX Warning: Float too large for page by 13.64722pt on input line 9.
 
-<bilder/versuch_teil2.pdf, id=296, 614.295pt x 845.1575pt>
+<bilder/versuch_teil2.pdf, id=298, 614.295pt x 845.1575pt>
 File: bilder/versuch_teil2.pdf Graphic file (type pdf)
 <use bilder/versuch_teil2.pdf>
 Package luatex.def Info: bilder/versuch_teil2.pdf  used on input line 13.
@@ -1611,9 +1610,9 @@ LaTeX Warning: Float too large for page by 13.64722pt on input line 16.
 
 ) [17] [18<./bilder/versuch_teil1.pdf>] [19<./bilder/versuch_teil2.pdf>] [20] (./build/main.aux)
 Package rerunfilecheck Info: File `main.aux' has not changed.
-(rerunfilecheck)             Checksum: 2D71E82032538B10777D4EE09865ECFF;19035.
+(rerunfilecheck)             Checksum: 14F41ED5C8501E88772C851E8D25F0CD;19650.
 Package rerunfilecheck Info: File `main.toc' has not changed.
-(rerunfilecheck)             Checksum: 97C6FC05590B64AFC68D62C86A68B087;1932.
+(rerunfilecheck)             Checksum: D4965FB7055595D0FD42D9FCE21872AF;1932.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
@@ -1624,15 +1623,15 @@ Here is how much of LuaTeX's memory you used:
  100000,1977958 words of node,token memory allocated
  883 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 6 dir, 2 glue, 4 kern, 8 sub_mlist, 1 glyph, 67 attribute, 82 glue_spec, 35 attribute_list, 1 write, 1 pdf_action nodes
-   avail lists: 1:2,2:2038,3:325,4:69,5:423,6:60,7:6258,8:51,9:909,10:18,11:730
+   avail lists: 1:2,2:2143,3:353,4:69,5:568,6:60,7:6176,8:51,9:913,10:18,11:714
  54109 multiletter control sequences out of 65536+600000
  254 fonts using 93950995 bytes
  98i,17n,114p,10620b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
 </home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></home/sonia/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on main.pdf (20 pages, 3015560 bytes).
+Output written on main.pdf (20 pages, 3017279 bytes).
 
-PDF statistics: 469 PDF objects out of 1000 (max. 8388607)
- 351 compressed objects within 4 object streams
+PDF statistics: 471 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
  65 named destinations out of 1000 (max. 131072)
  153 words of extra memory for PDF output out of 10000 (max. 100000000)
 

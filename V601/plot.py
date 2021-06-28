@@ -22,10 +22,10 @@ print('I_A, ', I_A)
 print('U_A, ', U_A)
 
 
-plt.plot(U_A, I_A,'b.', label='schwarze Kurve')
+plt.plot(U_A, I_A,'k.', label='schwarze Kurve')
 
 plt.xlabel('$U_A  $ / V')
-plt.ylabel('$I_A  / \mu $ A')
+plt.ylabel('$I_A $ / $\mu $A')
 
 plt.grid()
 plt.legend()
@@ -33,9 +33,9 @@ plt.tight_layout()
 plt.savefig('bilder/integral.pdf')
 plt.clf()
 
-plt.plot(U_A, -1*d_y,'b.', label='schwarze Kurve abstand')
+plt.plot(U_A, -1*d_y,'k.', label='schwarze Kurve, Abstände des Auffängerstroms')
 plt.xlabel('$U_A  $ / V')
-plt.ylabel('$ I_A / \mu $ A')
+plt.ylabel('$\Delta I_A $ / $ \mu $A')
 
 plt.grid()
 plt.legend()
@@ -45,9 +45,11 @@ plt.clf()
 
 steigung = d_y/d_x
 
-plt.plot(U_A, steigung,'b.', label='schwarze Kurve ableitung')
+plt.vlines(8.75, 0 , 2.9, linestyles = 'solid', colors = 'r')
+plt.plot(U_A, steigung,'k.', label='schwarze Kurve, ermittelte Steigung')
 plt.xlabel('$U_A  $ / V')
-plt.ylabel('$ I_A/U_A / \mu $A/V')
+plt.ylabel('$ |I_A/U_A |$ / $ \mu $A/V')
+
 
 plt.grid()
 plt.legend()

@@ -1,5 +1,5 @@
-##delta_kästchen_x    delta_kästchen_y
-##delta_U_A  *(10V/210)  delta_I_A *(0.1 muA/10)
+##delta_kästchen_y    delta_kästchen_x
+##delta_I_A *(0.1 muA/10)	delta_U_A  *(10V/210)
 1   40
 1   16
 1   9

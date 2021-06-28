@@ -33,32 +33,32 @@ Zudem wird ein Plot für die Abstände des Auffängerstroms $\increment I_\text{
     \centering
     \caption{Die notierten Abstände, sowie die daraus ermittelten Messwerte $U_\text{A}$ und $I_\text{A}$.}
     \label{tab:Steigungsdreiecke}
-    \begin{tabular}{c c c c c c}
+    \begin{tabular}{r c c r c c}
     \toprule
     $\increment x /\text{Kästchen}$ & $\increment U_\text{A} / \si{\volt}$&  $ U_\text{A} / \si{\volt}$ & $\increment y / \text{Kästchen}$ & $\increment I_\text{A} / \si{\micro\ampere}$ & $I_\text{A} / \si{\micro\ampere}$\\
     \midrule
-        1  & 2.0  & 0    &  40 & 0.01 & 1.7 \\
-        1  & 0.8  & 2.0  &  16 & 0.01 & 1.69\\
-        1  & 0.45 & 2.8  &   9 & 0.01 & 1.68\\
-        2  & 0.75 & 3.25 &  15 & 0.02 & 1.67\\
-        2  & 0.75 & 4.0  &  15 & 0.02 & 1.65\\
-        2  & 0.5  & 4.75 &  10 & 0.02 & 1.63\\
-        2  & 0.4  & 5.25 &   8 & 0.02 & 1.61\\
-        2  & 0.35 & 5.65 &   7 & 0.02 & 1.59\\
-        4  & 0.5  & 6.0  &  10 & 0.04 & 1.57\\
-        4  & 0.45 & 6.5  &   9 & 0.04 & 1.53\\
-        4  & 0.3  & 6.95 &   6 & 0.04 & 1.49\\
-        4  & 0.25 & 7.25 &   5 & 0.04 & 1.45\\
-        5  & 0.25 & 7.5  &   5 & 0.05 & 1.41\\
-        6  & 0.25 & 7.75 &   5 & 0.06 & 1.36\\
-        8  & 0.25 & 8.0  &   5 & 0.08 & 1.23\\
-        10 & 0.2  & 8.25 &   4 & 0.10 & 1.22\\
-        12 & 0.15 & 8.45 &   3 & 0.12 & 1.11\\  
-        30 & 0.15 & 8.6  &   3 & 0.30 & 1.00\\
-        40 & 0.15 & 8.75 &   3 & 0.40 & 0.70\\
-        10 & 0.1  &  8.9 &   2 & 0.10 & 0.30\\ 
-        1  & 0.25 & 9.0  &   5 & 0.10 & 0.20\\
-        2  & 1.0  & 9.25 &  20 & 0.02 & 0.10\\
+        1  & 2.00  & 0     &  40 & 0.01 & 1.7 \\
+        1  & 0.80  & 2.00  &  16 & 0.01 & 1.69\\
+        1  & 0.45  & 2.80  &   9 & 0.01 & 1.68\\
+        2  & 0.75  & 3.25  &  15 & 0.02 & 1.67\\
+        2  & 0.75  & 4.00  &  15 & 0.02 & 1.65\\
+        2  & 0.50  & 4.75  &  10 & 0.02 & 1.63\\
+        2  & 0.40  & 5.25  &   8 & 0.02 & 1.61\\
+        2  & 0.35  & 5.65  &   7 & 0.02 & 1.59\\
+        4  & 0.50  & 6.00  &  10 & 0.04 & 1.57\\
+        4  & 0.45  & 6.50  &   9 & 0.04 & 1.53\\
+        4  & 0.30  & 6.95  &   6 & 0.04 & 1.49\\
+        4  & 0.25  & 7.25  &   5 & 0.04 & 1.45\\
+        5  & 0.25  & 7.50  &   5 & 0.05 & 1.41\\
+        6  & 0.25  & 7.75  &   5 & 0.06 & 1.36\\
+        8  & 0.25  & 8.00  &   5 & 0.08 & 1.23\\
+        10 & 0.20  & 8.25  &   4 & 0.10 & 1.22\\
+        12 & 0.15  & 8.45  &   3 & 0.12 & 1.11\\  
+        30 & 0.15  & 8.60  &   3 & 0.30 & 1.00\\
+        40 & 0.15  & 8.75  &   3 & 0.40 & 0.70\\
+        10 & 0.10  & 8.90  &   2 & 0.10 & 0.30\\ 
+        1  & 0.25  & 9.00  &   5 & 0.10 & 0.20\\
+        2  & 1.00  & 9.25  &  20 & 0.02 & 0.10\\
     \bottomrule
     \end{tabular}
 \end{table}
@@ -66,7 +66,9 @@ Zudem wird ein Plot für die Abstände des Auffängerstroms $\increment I_\text{
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{bilder/integral.pdf}
-    \caption{Die integrale Energieverteilung der Elektronen aus den ermittelten Messpaaren.}
+    \caption{Die integrale Energieverteilung der Elektronen aus den ermittelten Messpaaren.
+    Diese entspricht der schwarzen Kurve aus \autoref{fig:originaldaten_teil1}.
+    Die Temperatur beträgt hier $\SI{24}{\celsius}$, $U_\text{B}$ ist konstant bei $\SI{10}{\volt}$.}
     \label{fig:integral}
 \end{figure}
 
@@ -78,7 +80,7 @@ Zudem wird ein Plot für die Abstände des Auffängerstroms $\increment I_\text{
     \label{fig:abstande}
 \end{figure}
 \noindent
-In \autoref{fig:ableitung} ist die Steigung der integralen Energieverteilung geplottet.
+In \autoref{fig:ableitung} ist die Steigung der integralen Energieverteilung geplottet. \\
 Bei $U_\text{A} = \SI{8.75}{\volt}$ kann ein Peak beobachtet werden, dieser ist der Wendepunkt der aufgenommen Energieverteilung.
 Das Kontaktpotential kann hierdurch ermittelt werden.
 Da die wirkliche Beschleunigungsspannung nicht bei $U_\text{B} = \SI{10}{\volt}$ sondern bei $U_\text{B, eff} = \SI{8.75}{\volt}$ liegt,
@@ -87,7 +89,8 @@ folgt nach Gleichung \eqref{eqn:Kontaktpotential} für das Kontaktpotential $K =
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{bilder/ableitung.pdf}
-    \caption{Die Steigung der integralen Energieverteilung der Elektronen aus den ermittelten Abständen.}
+    \caption{Der Betrag der Steigung der integralen Energieverteilung der Elektronen aus den ermittelten Abständen.
+    Die rote Linie markiert die Wendestelle, welche die wirkliche Beschleunigungsspannung $U_\text{B, eff}$ markiert.}
     \label{fig:ableitung}
 \end{figure}
 
@@ -144,9 +147,9 @@ Die Ergebnisse sind in \autoref{tab:Abstande_200} zu finden.
     \centering
     \caption{Die notierten Abstände, sowie die daraus ermittelten Messwerte $\increment U_\text{B}$ bei $T=\SI{200}{\celsius}$.} 
     \label{tab:Abstande_200}
-    \begin{tabular}{c c}
+    \begin{tabular}{c S[table-format=1.4]}
     \toprule
-    $\increment x /\text{Kästchen}$ & $\increment U_\text{B} / \si{volt}$\\
+    $\increment x /\text{Kästchen}$ & $\increment U_\text{B} / \si{\volt}$\\
     \midrule
       26 &  5.0\\
       24 &  4.6154\\
@@ -192,9 +195,9 @@ Die Ergebnisse sind in \autoref{tab:Abstande_176} aufgenommen.
     \centering
     \caption{Die notierten Abstände, sowie die daraus ermittelten Messwerte $\increment U_\text{B}$ bei $T=\SI{176}{\celsius}$.} 
     \label{tab:Abstande_176}
-    \begin{tabular}{c c}
+    \begin{tabular}{c S[table-format=1.4]}
     \toprule
-     $\increment x /\text{Kästchen}$ & $\increment U_\text{B} / \si{volt}$\\
+     $\increment x /\text{Kästchen}$ & $\increment U_\text{B} / \si{\volt}$\\
     \midrule
       26 &  5.0\\
       25 &  4.8077\\
