@@ -1,0 +1,13 @@
+##delta_kästchen_x    delta_kästchen_y
+##delta_U_A  *(10V/210)  delta_I_A *(10 nA/10)
+2   3
+5   8
+10  14
+10  14
+10  13
+10  14
+10  15
+4   24
+1   18
+2   30
+3   35
