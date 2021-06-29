@@ -136,11 +136,14 @@ plt.savefig('build/transmission.pdf')
 
 #---------------------------------------------------------------------------------------------------------
 #3.Bestimmung der Compton-Wellenlänge
+print('Bestimmung der Compton-Wellenlänge')
 
 #Daten einlesen
-I_0 = 2731 #Impulse
-I_1 = 1180 #Impulse
-I_2 = 1024 #Impulse
+I_0 = ufloat(2731, np.sqrt(2731)) #Impulse
+I_1 = ufloat(1180, np.sqrt(1180)) #Impulse
+I_2 = ufloat(1024, np.sqrt(1024)) #Impulse
+
+print(f'I_0: {I_0} \n I_1: {I_1} \n I_2: {I_2}')
 
 #Transmissionen
 T_1 = I_1 / I_0
@@ -158,5 +161,6 @@ print('lambda_1', lamd_1)
 print('lambda_2', lamd_2)
 
 lamd_c = lamd_2 - lamd_1
-print('Compton-Wellenlänge:', lamd_c)
+print('Compton-Wellenlänge, exp:', lamd_c)
+print('Compton-Wellenlänge, lit:', lamc_lit)
 print('diff', diff(lamd_c, lamc_lit))
