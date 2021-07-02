@@ -1,2 +1,75 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+
+Alle Experimente werden auf einer transparenten Grundplatte durch geführt. Diese wird auf vreschiedene ausgedruckte Vorlagen gestellt. Beim Verändern des 
+Einfallswinkel ist es aufgrund des leicht schwerfälligen Laufes des Lasers möglich, dass die Platte auf der Vorlage leicht verschoben wird. 
+Außerdem werden die Winkel bei der Mesung mit dem Prisma und Beugung am Gitter an einer aufgestellten Pappe abgelesen. Diese wird vorsichtig an die liegende
+Winkelskala angepasst, jedoch ist sie nur durch zwei Aufsteller festgehalten und bewegt sich schnell, auch bei leichter Berührung. 
+Also sind systematische Fehler definitiv nicht auszuschließen und können durch andere Messapparate minimiert werden. 
+
+\subsection{Reflexionsgesetz}
+
+  In der Auswertung zur Überprüfung des Reflexionsgesetzes wird eine lineare Ausgleichsgerade $\beta = A \cdot \alpha + B$ gelegt. Die Theoriewerte für die 
+  Parameter sind $A = 1$ und $B=0$. 
+  \begin{align*}
+    A_{\text{theo}} &= \num{1} & \implies \increment A &= \SI{-3.54}{\percent} \\
+    A_{\text{exp}} &= \num{1.035(5)} 
+  \end{align*}
+  Es ist zu sehen, dass der Fit-Parameter recht nah an der Theorie liegt. Mögliche Fehlerquellen sind Fehler beim Ablesen. Der Punkt lässt sich auf dem Reflexionsschirm 
+  nicht gut ablesen, da dieser mehrere Millimeter breit ist. 
+
+\subsection{Brechungsgesetz} 
+
+  Außerdem wird der Brechungsinex für Plexiglas ermittelt, aus welchem dann auch die Lichtgeschwindigkeit in Plexiglas errechnet wird. 
+  \begin{align*}
+    n_{\text{Plexiglas, theo}} &= \num{1.49}  \text{\cite{theo_brechzahl}} & \implies \increment n_{\text{Plexiglas}} &= \SI{1.79}{\percent}\\
+    n_{\text{Plexiglas, exp}} &= \num{1.463(8)}\\
+    \\
+    V_{\text{c, Plexiglas, theo}} &= \SI{201202991}{\metre\per\second} \text{\cite{theo_brechzahl}} & \implies \increment v_{\text{c, Plexiglas}} &= \SI{1.83}{\percent}\\
+    V_{\text{c, Plexiglas, exp}} &= \SI{204884121(1181566)}{\metre\per\second} 
+  \end{align*}
+  Der experimentell ermittelte Wert ist sehr nah an dem Theoriewert. Da sich die Lichtgeschwindigkeit in Plexiglas nur aus der Vakuumlichtgeschwindigkeit und 
+  dem Brechungsindex besteht, ist dies hier dann natürlich auch der Fall. 
+
+\subsection{Planparallele Platten}
+
+  Bei der verschiedenen Berechnung des Strahlenversatzes fallen keine großen Unterschiede zwischen den errechneten Werten auf. Der gemessene Brechungswinkel ist dem
+  errechneten Winkel sehr nah, welches nochmal zeigt, dass der Wert für den Brechungsindex recht gut ermittelt wird. Es ist zu sagen, dass die Methode über den 
+  gemessenen Winkel natürlich mehr anfällig für Messfehler ist, jedoch wird der Brechungswinkel mit dem experimentell ermittelten Brechungsindex berechnnet, 
+  sodass sich hier die Fehler fortpflanzen.
+
+\subsection{Prisma}
+
+  Hier werden die Ablenkungen $\delta$ für die verschiedenen Einfallswinkel berechnet. Aus den gemessenen Einfalls- und Ausfallswinkel sind die Brechungswinkel 
+  zu berechnen, deren Summe eigentlich konstant dem brechenden Winkel $\gamma = \SI{60}{\degree}$ entspricht.Hier ist das jedoch nicht der Fall. Dies kann 
+  ein Resultat von ungenau abgelesenen Winkeln sein, ein geringer Fehler kann auch von den numerischen Näherungen der Berechnungen vom Rechner herrühren. 
+
+
+\subsection{Beugung am Gitter}
+
+  Die Ermittlung der Wellenlängen der Laser durch Beugung am Gitter hat diese Ergebnisse ergeben:
+  \begin{align*}
+    \lambda_{\text{grün, theo}} &= \SI{532}{\nano\metre} \text{\cite{anleitung}} & \implies \increment \lambda_{\text{grün}} &= \SI{-0.27}{\percent} \\
+    \lambda_{\text{grün, exp}} &= \SI{533(8)}{\nano\metre}\\
+    \\
+    \lambda_{\text{rot, theo}} &= \SI{635}{\nano\metre} \text{\cite{anleitung}} & \implies \increment \lambda_{\text{rot}} &= \SI{-0.83}{\percent} \\
+    \lambda_{\text{rot, exp}} &= \SI{640(5)}{\nano\metre}
+  \end{align*}
+  Dies sind sehr gute Ergebnisse, besonders bei Erinnerung an den Versuchsaufbau. 
+
+% \begin{table}
+%     \centering
+%     \caption{Ein Vergleich der experimentell ermittelten und theoretischen Werten. }
+%     \label{tab:vergleich}
+%     \begin{tabular}{c c@{${}\pm{}$} c c c }
+%       \toprule
+%       {Wert} & {experimenteller Wert} & {theoretischer Wert} & {Abweichung $/ \si{\degree} $} \\
+%       \midrule
+%       $\text{Parameter} A$ & 1.035 & 0.005 & 1 & -3.54 \\
+%       $n_{\text{Plexiglas}}$ & 1.463 & 0.008 & 1.49  \cite{theo_brechzahl} & 1.79 \\
+%       $v_{\text{c, Plexiglas}}$ & 204884121 & 1181566$\si{\metre\per\second}$ & 201202991 $\si{\metre\per\second}$& -1.83 \\
+%       $\lambda_{\text{grün}}$ & 533 & 8 $\si{\nano\metre}$ & 532 $\si{\nano\metre}$ \cite{anleitung} & -0.27 \\
+%       $\lambda_{\text{rot}}$ & 640 & 5 $\si{\nano\metre}$ & 635 $\si{\nano\metre}$ \cite{anleitung} & -0.83 \\
+%       \bottomrule 
+%     \end{tabular}
+%   \end{table}
