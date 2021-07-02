@@ -114,9 +114,9 @@ I_al = tot(Nal)
 T = I_al / I_0
 
 #ausgleichsgerade
-params, cov = np.polyfit(lamd , unp.nominal_values(T), deg=1, cov=True)
-errs = np.sqrt(np.diag(cov))
-for name, value, error in zip('ab', params, errs):
+params1, cov = np.polyfit(lamd , unp.nominal_values(T), deg=1, cov=True)
+errs1 = np.sqrt(np.diag(cov))
+for name, value, error in zip('ab', params1, errs1):
     print(f'{name} = {value:.3f} +- {error:.3f}')
 
 #plot 
@@ -126,13 +126,50 @@ lamd_plot = np.linspace(lamd_start, lamd_stop, 1000)
 
 plt.figure()
 plt.plot(lamd ,unp.nominal_values(T), 'r.', label="Messwerte")
-plt.plot(lamd_plot, params[0]*lamd_plot + params[1], 'k-', label='Lineare Regression')
+plt.plot(lamd_plot, params1[0]*lamd_plot + params1[1], 'k-', label='Lineare Regression')
 plt.errorbar(lamd , unp.nominal_values(T), yerr=unp.std_devs(T), fmt='r_')
 plt.grid()
 plt.legend()
 plt.xlabel(r'Wellenlänge $\lambda \, \mathbin{/} \si{\metre}$')
 plt.ylabel(r'Transmission')
 plt.savefig('build/transmission.pdf')
+
+#------------------------------------------K O R R E K T U R --------------------------------------------------------------------------
+#Poisson-Fehler 
+t = 200 #second
+N0_err = np.sqrt(N_0)
+Nal_err =np.sqrt(N_al)
+
+#let's make some ufloats
+N0 = unp.uarray(N_0, N0_err)
+Nal = unp.uarray(N_al, Nal_err)
+
+#Totzeitkorrektur
+I_0 = tot(N0)
+I_al = tot(Nal)
+
+#Transmission
+T = I_al / I_0
+#ausgleichsgerade
+params2, cov = np.polyfit(lamd , unp.nominal_values(T), deg=1, cov=True)
+errs2 = np.sqrt(np.diag(cov))
+for name, value, error in zip('ab', params2, errs2):
+    print(f'{name} = {value:.3f} +- {error:.3f}')
+
+#plot 
+lamd_start = lam(7)
+lamd_stop = lam(10) 
+lamd_plot = np.linspace(lamd_start, lamd_stop, 1000)
+
+plt.figure()
+plt.plot(lamd ,unp.nominal_values(T), 'r.', label="Messwerte")
+plt.plot(lamd_plot, params2[0]*lamd_plot + params2[1], 'k-', label='Lineare Regression')
+plt.errorbar(lamd , unp.nominal_values(T), yerr=unp.std_devs(T), fmt='r_')
+plt.grid()
+plt.legend()
+plt.xlabel(r'Wellenlänge $\lambda \, \mathbin{/} \si{\metre}$')
+plt.ylabel(r'Transmission')
+plt.savefig('build/transmission2.pdf')
 
 #---------------------------------------------------------------------------------------------------------
 #3.Bestimmung der Compton-Wellenlänge
@@ -151,8 +188,8 @@ T_2 = I_2 / I_0
 print('T_1:', T_1)
 print('T_2:', T_2)
 
-a = unp.uarray(params[0], errs[0])
-b = unp.uarray(params[1], errs[1])
+a = unp.uarray(params1[0], errs1[0])
+b = unp.uarray(params1[1], errs1[1])
 
 #wellenlängen ausrechnen
 lamd_1 = (T_1 - b)/a

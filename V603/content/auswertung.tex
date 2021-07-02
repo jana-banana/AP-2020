@@ -126,13 +126,22 @@
   wobei $\tau = \SI{90}{\micro\second}$ die Totzeit des benutzten Geiger-Müller-Zählrohr ist. Die Transmission berechnet sich dann über $T = \frac{I_{\text{Al}}}{I_0}$.
 
   \noindent Die Wellenlänge $\lambda $ berechnet sich aus dem Winkel über die Bragg Bedingung , die Beugungsordnung ist $n=1$ und die Gitterkonstante für einen 
-  LiF-Kristall $d = \SI{201.4}{\pico\metre}$. Die Transmission ist in der \autoref{fig:transmission} gegen die Wellenlänge aufgetragen.
+  LiF-Kristall $d = \SI{201.4}{\pico\metre}$. Die Transmission ist in der \autoref{fig:transmission} bzw \autoref{fig:transmission2} gegen die Wellenlänge aufgetragen.
 
   \begin{figure}[H]
     \centering
     \includegraphics[width = \textwidth]{build/transmission.pdf}
-    \caption{Die Transmissions aufgetragen gegen die Wellenlänge $\lambda$ inklusive einer linearen Ausgleichsrechnung.}
+    \caption{Die Transmissions aufgetragen gegen die Wellenlänge $\lambda$ inklusive einer linearen Ausgleichsrechnung. Die Fehler sind bestimmt als $ \increment
+    N = \sqrt{\frac{N}{t}}$. }
     \label{fig:transmission}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{build/transmission2.pdf}
+    \caption{Die Transmissions aufgetragen gegen die Wellenlänge $\lambda$ inklusive einer linearen Ausgleichsrechnung. Die Fehler sind bestimmt als $\increment
+    N = \sqrt{N}$.}
+    \label{fig:transmission2}
   \end{figure}
 
   \noindent Es wird außerdem eine lineare Ausgleichsrechnung $T = a \cdot \lambda + b$ mit python durchgeführt, welche auch in \autoref{fig:transmission} eingezeichnet 
