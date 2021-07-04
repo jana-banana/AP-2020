@@ -25,7 +25,7 @@
     \end{tabular}
   \end{table}
 
-  \noindent Die Messdaten werden in einem $\alpha - \beta $-Diagramm aufgetragen sowie eine lineare Ausgleichsrechung der Form $\beta = A \cdot \alpha + B$. Diese
+  \noindent Die Messdaten werden in einem $\alpha$ - $\beta $ - Diagramm aufgetragen sowie eine lineare Ausgleichsrechung der Form $\beta = A \cdot \alpha + B$. Diese
   wird mit python errechnet und ist in der \autoref{fig:refl} zu sehen. 
 
   \begin{figure}[H]
@@ -84,8 +84,17 @@
 
 \subsection{Planparallele Platten}
 
-  Zur Bestimmung des Strahlenversatz werden keine neuen Winkel ausgemessen, sondern die Daten der Brechungswinkel aus dem vorherigen Aufgabenteil genutzt. 
-  Der Strahlenversatz berechnet sich über 
+  Zur Bestimmung des Strahlenversatz werden keine neuen Winkel ausgemessen, sondern die Daten der Brechungswinkel aus dem vorherigen Aufgabenteil genutzt.
+  In der \autoref{fig:planpar} ist schematisch der Strahlenweg ohne Brechung (gestrichelt) und der mit Brechung an dem Plexiglasquader dargestellt. 
+  
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{bilder/planparallel.png}
+    \caption{Eine Skizze zum auftretenen Strahlenversatz. \cite{anleitung}}
+    \label{fig:planpar}
+  \end{figure}
+
+  \noindent Der Strahlenversatz berechnet sich über 
   \begin{equation*}
     s = d \frac{\sin(\alpha - \beta)}{\cos(\beta)}. 
   \end{equation*}
@@ -122,7 +131,16 @@
 \subsection{Prisma}
 
   Es werden für den roten und für den grünen Laser jeweils die Einfallswinkel $\alpha_1$ und Ausfallswinkel $\alpha_2$ bei Bestrahlung eines Prismas notiert. 
-  Die zu betrachtene Ablenkung $\delta$ wird mit 
+  In der \autoref{fig:prism} sind die zu nutzenden Winkel bei der Brechung des Lichtstrahls am Prisma sowie die Ablenkung $\delta$ eingezeichnet. 
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{bilder/prisma.png}
+    \caption{Skizze der Strahlengänge im Prisma \cite{anleitung}.}
+    \label{fig:prism}
+  \end{figure}
+
+  \noindent Die zu betrachtene Ablenkung $\delta$ wird mit 
   \begin{equation*}
     \delta = \left(\alpha_1 + \alpha_2\right) - \left(\beta_1 + \beta_2\right)
   \end{equation*}
