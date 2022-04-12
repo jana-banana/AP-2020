@@ -1,0 +1,10 @@
+# Dateien, die hier drin stehen, werden nicht committet (hoffe ich mal)
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.bbl
+*.bcf
+*.toc
+*.blg
+*.xml
